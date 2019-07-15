@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14835.7"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -702,6 +703,42 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="5bI-j8-Pj5">
+            <objects>
+                <windowController id="oS6-Na-5JH" customClass="CMSecondWindowController" sceneMemberID="viewController">
+                    <window key="window" title="小window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="3Ag-fQ-AXD">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <contentBorderThickness minY="22"/>
+                        <connections>
+                            <binding destination="UbS-4l-QMV" name="title" keyPath="values" id="KGE-St-8GE"/>
+                            <outlet property="delegate" destination="oS6-Na-5JH" id="x1p-kt-tnZ"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="FWN-uJ-PDC" kind="relationship" relationship="window.shadowedContentViewController" id="4tQ-rf-3fF"/>
+                    </connections>
+                </windowController>
+                <customObject id="OoH-hc-euc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="UbS-4l-QMV"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="655"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="3M2-uP-WeE">
+            <objects>
+                <viewController id="FWN-uJ-PDC" customClass="CMSecondViewController" sceneMemberID="viewController">
+                    <view key="view" id="n5b-ER-5z2">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="Idq-Z0-ODe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276" y="655"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -709,6 +746,23 @@
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-xC-cad">
+                                <rect key="frame" x="73" y="203" width="67" height="32"/>
+                                <buttonCell key="cell" type="push" title="点击" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElT-wj-o8r">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="oS6-Na-5JH" kind="show" id="4is-bT-jUm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dhu-xC-cad" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="79" id="NGB-kE-kpo"/>
+                            <constraint firstItem="dhu-xC-cad" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="39" id="t80-Za-Ig8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dhu-xC-cad" secondAttribute="trailing" constant="20" symbolic="YES" id="ydG-ux-DVc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

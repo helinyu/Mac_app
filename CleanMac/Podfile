@@ -7,6 +7,7 @@ target 'CleanMac' do
 
   # Pods for CleanMac
   pod 'Masonry', '~> 1.1.0'
+  pod 'ReactiveCocoa', '~> 2.5'
 
   target 'CleanMacTests' do
     inherit! :search_paths

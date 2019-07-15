@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B42363A11343B95954A1C8 /* libPods-CleanMacUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */; };
 		4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885A22D2FA9700B89F9E /* AppDelegate.m */; };
 		4123885E22D2FA9700B89F9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885D22D2FA9700B89F9E /* ViewController.m */; };
 		4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4123885F22D2FA9A00B89F9E /* Assets.xcassets */; };
@@ -14,6 +15,10 @@
 		4123886622D2FA9A00B89F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
 		4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887022D2FA9A00B89F9E /* CleanMacTests.m */; };
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
+		41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098DC22DC557400679541 /* CMSecondViewController.m */; };
+		41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E122DC56F200679541 /* CMSecondWindowController.m */; };
+		4FD1B66242429981E6391828 /* libPods-CleanMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */; };
+		C1E0DBE7992C30785C85EDB6 /* libPods-CleanMacTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885622D2FA9700B89F9E /* CleanMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885922D2FA9700B89F9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4123885A22D2FA9700B89F9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +56,18 @@
 		4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanMacUITests.m; sourceTree = "<group>"; };
 		4123887D22D2FA9A00B89F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41C098DB22DC557400679541 /* CMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondViewController.h; sourceTree = "<group>"; };
+		41C098DC22DC557400679541 /* CMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondViewController.m; sourceTree = "<group>"; };
+		41C098E022DC56F200679541 /* CMSecondWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondWindowController.h; sourceTree = "<group>"; };
+		41C098E122DC56F200679541 /* CMSecondWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondWindowController.m; sourceTree = "<group>"; };
+		53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.debug.xcconfig"; sourceTree = "<group>"; };
+		5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.release.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.release.xcconfig"; sourceTree = "<group>"; };
+		8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD1B66242429981E6391828 /* libPods-CleanMac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E0DBE7992C30785C85EDB6 /* libPods-CleanMacTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B42363A11343B95954A1C8 /* libPods-CleanMacUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +105,8 @@
 				4123886F22D2FA9A00B89F9E /* CleanMacTests */,
 				4123887A22D2FA9A00B89F9E /* CleanMacUITests */,
 				4123885722D2FA9700B89F9E /* Products */,
+				8BED761FB2C5CC8D08CAE6F3 /* Pods */,
+				F58B340B034B47AB2ECA32EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +127,10 @@
 				4123885A22D2FA9700B89F9E /* AppDelegate.m */,
 				4123885C22D2FA9700B89F9E /* ViewController.h */,
 				4123885D22D2FA9700B89F9E /* ViewController.m */,
+				41C098E022DC56F200679541 /* CMSecondWindowController.h */,
+				41C098E122DC56F200679541 /* CMSecondWindowController.m */,
+				41C098DB22DC557400679541 /* CMSecondViewController.h */,
+				41C098DC22DC557400679541 /* CMSecondViewController.m */,
 				4123885F22D2FA9A00B89F9E /* Assets.xcassets */,
 				4123886122D2FA9A00B89F9E /* Main.storyboard */,
 				4123886422D2FA9A00B89F9E /* Info.plist */,
@@ -131,6 +158,29 @@
 			path = CleanMacUITests;
 			sourceTree = "<group>";
 		};
+		8BED761FB2C5CC8D08CAE6F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */,
+				78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */,
+				5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */,
+				FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */,
+				C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */,
+				A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F58B340B034B47AB2ECA32EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */,
+				8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */,
+				5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4123888022D2FA9A00B89F9E /* Build configuration list for PBXNativeTarget "CleanMac" */;
 			buildPhases = (
+				6E911D282FA141D81EC54A52 /* [CP] Check Pods Manifest.lock */,
 				4123885222D2FA9700B89F9E /* Sources */,
 				4123885322D2FA9700B89F9E /* Frameworks */,
 				4123885422D2FA9700B89F9E /* Resources */,
@@ -155,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4123888322D2FA9A00B89F9E /* Build configuration list for PBXNativeTarget "CleanMacTests" */;
 			buildPhases = (
+				5517484D5C47AE98C7CA88C2 /* [CP] Check Pods Manifest.lock */,
 				4123886822D2FA9A00B89F9E /* Sources */,
 				4123886922D2FA9A00B89F9E /* Frameworks */,
 				4123886A22D2FA9A00B89F9E /* Resources */,
@@ -173,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4123888622D2FA9A00B89F9E /* Build configuration list for PBXNativeTarget "CleanMacUITests" */;
 			buildPhases = (
+				D134B717DB016922F81E110B /* [CP] Check Pods Manifest.lock */,
 				4123887322D2FA9A00B89F9E /* Sources */,
 				4123887422D2FA9A00B89F9E /* Frameworks */,
 				4123887522D2FA9A00B89F9E /* Resources */,
@@ -255,13 +308,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5517484D5C47AE98C7CA88C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanMacTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E911D282FA141D81EC54A52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanMac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D134B717DB016922F81E110B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanMacUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4123885222D2FA9700B89F9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4123885E22D2FA9700B89F9E /* ViewController.m in Sources */,
+				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
 				4123886622D2FA9A00B89F9E /* main.m in Sources */,
+				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -413,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -422,6 +546,7 @@
 		};
 		4123888122D2FA9A00B89F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
@@ -440,6 +565,7 @@
 		};
 		4123888222D2FA9A00B89F9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
@@ -458,6 +584,7 @@
 		};
 		4123888422D2FA9A00B89F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -477,6 +604,7 @@
 		};
 		4123888522D2FA9A00B89F9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +624,7 @@
 		};
 		4123888722D2FA9A00B89F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -514,6 +643,7 @@
 		};
 		4123888822D2FA9A00B89F9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
