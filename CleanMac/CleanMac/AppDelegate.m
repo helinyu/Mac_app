@@ -125,5 +125,28 @@
 - (void)onWillCloseAction:(NSNotification *)noti {
     NSLog(@"lt- onWillCloseAction:%@", noti);
 }
+- (IBAction)onFileOpenAction:(id)sender {
+    NSLog(@"file open action:");
+    
+    NSOpenPanel *openDlg = [NSOpenPanel openPanel];
+    openDlg.canChooseFiles = YES ;
+    openDlg.canChooseDirectories = YES;
+    openDlg.allowsMultipleSelection = YES;
+    openDlg.allowedFileTypes = @[@"txt",@"png"];
+    [openDlg beginWithCompletionHandler: ^(NSInteger result){
+        if(result==NSFileHandlingPanelOKButton){
+            NSArray *fileURLs = [openDlg URLs];
+            for(NSURL *url in fileURLs) {
+                NSError *error;
+                NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+                if(!error){
+//                     获取到了文件夹， 怎么获取文件呢？
+                    NSLog(@"lt- string ;T%@", string);
+//                    self.textView.string = string;
+                }
+            }
+        }
+    }];
+}
 
 @end

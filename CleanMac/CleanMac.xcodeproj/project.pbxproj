@@ -17,6 +17,9 @@
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
 		41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098DC22DC557400679541 /* CMSecondViewController.m */; };
 		41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E122DC56F200679541 /* CMSecondWindowController.m */; };
+		41C098E622DC6D9000679541 /* CMPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E522DC6D9000679541 /* CMPanel.m */; };
+		41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098EA22DC6E2200679541 /* CMThirdWindowController.m */; };
+		41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098ED22DC6E4200679541 /* CMThirdViewController.m */; };
 		4FD1B66242429981E6391828 /* libPods-CleanMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */; };
 		C1E0DBE7992C30785C85EDB6 /* libPods-CleanMacTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */; };
 /* End PBXBuildFile section */
@@ -60,6 +63,12 @@
 		41C098DC22DC557400679541 /* CMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondViewController.m; sourceTree = "<group>"; };
 		41C098E022DC56F200679541 /* CMSecondWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondWindowController.h; sourceTree = "<group>"; };
 		41C098E122DC56F200679541 /* CMSecondWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondWindowController.m; sourceTree = "<group>"; };
+		41C098E422DC6D9000679541 /* CMPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPanel.h; sourceTree = "<group>"; };
+		41C098E522DC6D9000679541 /* CMPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPanel.m; sourceTree = "<group>"; };
+		41C098E922DC6E2200679541 /* CMThirdWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMThirdWindowController.h; sourceTree = "<group>"; };
+		41C098EA22DC6E2200679541 /* CMThirdWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMThirdWindowController.m; sourceTree = "<group>"; };
+		41C098EC22DC6E4200679541 /* CMThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMThirdViewController.h; sourceTree = "<group>"; };
+		41C098ED22DC6E4200679541 /* CMThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMThirdViewController.m; sourceTree = "<group>"; };
 		53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.debug.xcconfig"; sourceTree = "<group>"; };
 		5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,14 +132,13 @@
 		4123885822D2FA9700B89F9E /* CleanMac */ = {
 			isa = PBXGroup;
 			children = (
+				41C098E822DC6E0900679541 /* Third */,
+				41C098E722DC6DEE00679541 /* Second */,
+				41C098E322DC6D7100679541 /* CommonUI */,
 				4123885922D2FA9700B89F9E /* AppDelegate.h */,
 				4123885A22D2FA9700B89F9E /* AppDelegate.m */,
 				4123885C22D2FA9700B89F9E /* ViewController.h */,
 				4123885D22D2FA9700B89F9E /* ViewController.m */,
-				41C098E022DC56F200679541 /* CMSecondWindowController.h */,
-				41C098E122DC56F200679541 /* CMSecondWindowController.m */,
-				41C098DB22DC557400679541 /* CMSecondViewController.h */,
-				41C098DC22DC557400679541 /* CMSecondViewController.m */,
 				4123885F22D2FA9A00B89F9E /* Assets.xcassets */,
 				4123886122D2FA9A00B89F9E /* Main.storyboard */,
 				4123886422D2FA9A00B89F9E /* Info.plist */,
@@ -156,6 +164,37 @@
 				4123887D22D2FA9A00B89F9E /* Info.plist */,
 			);
 			path = CleanMacUITests;
+			sourceTree = "<group>";
+		};
+		41C098E322DC6D7100679541 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				41C098E422DC6D9000679541 /* CMPanel.h */,
+				41C098E522DC6D9000679541 /* CMPanel.m */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		41C098E722DC6DEE00679541 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				41C098E022DC56F200679541 /* CMSecondWindowController.h */,
+				41C098E122DC56F200679541 /* CMSecondWindowController.m */,
+				41C098DB22DC557400679541 /* CMSecondViewController.h */,
+				41C098DC22DC557400679541 /* CMSecondViewController.m */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		41C098E822DC6E0900679541 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				41C098E922DC6E2200679541 /* CMThirdWindowController.h */,
+				41C098EA22DC6E2200679541 /* CMThirdWindowController.m */,
+				41C098EC22DC6E4200679541 /* CMThirdViewController.h */,
+				41C098ED22DC6E4200679541 /* CMThirdViewController.m */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		8BED761FB2C5CC8D08CAE6F3 /* Pods */ = {
@@ -384,8 +423,11 @@
 			files = (
 				4123885E22D2FA9700B89F9E /* ViewController.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
+				41C098E622DC6D9000679541 /* CMPanel.m in Sources */,
 				4123886622D2FA9A00B89F9E /* main.m in Sources */,
+				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
+				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
