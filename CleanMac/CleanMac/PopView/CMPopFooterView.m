@@ -71,11 +71,11 @@
 }
 
 - (void)onShowMainViewAction:(NSButton *)sender {
-    
+    NSLog(@"心事主页");
 }
 
 - (void)onSettingAction:(NSButton *)sender {
-    
+    NSLog(@"显示关闭等内容");
 }
 
 @end
