@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14835.7"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CMTopClassCItem">
+            <connections>
+                <outlet property="avaibleLabel" destination="mcE-dU-XJ2" id="53G-p2-kXw"/>
+                <outlet property="bgView" destination="ses-Rd-P6E" id="dXN-mL-iDI"/>
+                <outlet property="bottomBgView" destination="MPw-XK-HSS" id="1Ri-cE-BJE"/>
+                <outlet property="curBusinessIconView" destination="bt1-Tk-wxg" id="hcw-dS-AB2"/>
+                <outlet property="progressView" destination="sPj-pd-IVl" id="hFi-0r-qS4"/>
+                <outlet property="rightBottomLabel" destination="0qh-eZ-Veh" id="aKw-Y2-dvl"/>
+                <outlet property="rightTopImgView" destination="Qgl-0Z-bRU" id="nQ6-M9-zcl"/>
+                <outlet property="rightTopLabel" destination="7xZ-Rj-aGb" id="joO-zV-Fpq"/>
+                <outlet property="titleLabel" destination="STO-5o-Rq0" id="dP2-Ac-FDx"/>
+                <outlet property="topBgView" destination="InG-vZ-whp" id="X5n-T6-5UN"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ses-Rd-P6E">
+                    <rect key="frame" x="10" y="10" width="580" height="580"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="InG-vZ-whp">
+                            <rect key="frame" x="0.0" y="560" width="580" height="20"/>
+                            <subviews>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bt1-Tk-wxg" userLabel="curBusinessIconView">
+                                    <rect key="frame" x="20" y="-7" width="40" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="8TC-SM-MAd"/>
+                                </imageView>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="STO-5o-Rq0" userLabel="titleLabel">
+                                    <rect key="frame" x="239" y="-6" width="101" height="32"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="WCr-7n-6tN">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="gDc-0A-e8g"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="MPw-XK-HSS">
+                            <rect key="frame" x="0.0" y="0.0" width="580" height="560"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcE-dU-XJ2" userLabel="avaibleLabel">
+                                    <rect key="frame" x="233" y="269" width="114" height="23"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="bOf-BL-x1n">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgl-0Z-bRU" userLabel="electricImgView">
+                                    <rect key="frame" x="142" y="438" width="66" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Tg9-qq-sw1"/>
+                                </imageView>
+                            </subviews>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="MPw-XK-HSS" secondAttribute="bottom" id="5L5-0u-U1Z"/>
+                        <constraint firstItem="MPw-XK-HSS" firstAttribute="leading" secondItem="ses-Rd-P6E" secondAttribute="leading" id="MGX-Uj-O59"/>
+                        <constraint firstItem="MPw-XK-HSS" firstAttribute="top" secondItem="InG-vZ-whp" secondAttribute="bottom" id="Qe4-pU-SF9"/>
+                        <constraint firstAttribute="trailing" secondItem="InG-vZ-whp" secondAttribute="trailing" id="XZh-dh-BDh"/>
+                        <constraint firstItem="InG-vZ-whp" firstAttribute="leading" secondItem="ses-Rd-P6E" secondAttribute="leading" id="XrO-xT-UQZ"/>
+                        <constraint firstAttribute="trailing" secondItem="MPw-XK-HSS" secondAttribute="trailing" id="k1h-Aw-7Kj"/>
+                        <constraint firstItem="InG-vZ-whp" firstAttribute="top" secondItem="ses-Rd-P6E" secondAttribute="top" id="uOg-IR-Sh9"/>
+                    </constraints>
+                </customView>
+                <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" doubleValue="50" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="sPj-pd-IVl" userLabel="avaibleProgressView">
+                    <rect key="frame" x="27" y="483" width="146" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </progressIndicator>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xZ-Rj-aGb" userLabel="electricDescLabel">
+                    <rect key="frame" x="465" y="555" width="67" height="16"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="syU-YS-KEt">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qh-eZ-Veh">
+                    <rect key="frame" x="359" y="172" width="65" height="64"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="c22-U7-mxj">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ses-Rd-P6E" secondAttribute="trailing" constant="10" id="Ue9-pX-feK"/>
+                <constraint firstAttribute="bottom" secondItem="ses-Rd-P6E" secondAttribute="bottom" constant="10" id="gWv-mb-4iT"/>
+                <constraint firstItem="ses-Rd-P6E" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="isu-tu-Ibn"/>
+                <constraint firstItem="ses-Rd-P6E" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="xBV-ce-4ug"/>
+            </constraints>
+            <point key="canvasLocation" x="76" y="129"/>
+        </customView>
+    </objects>
+</document>

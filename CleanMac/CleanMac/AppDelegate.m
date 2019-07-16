@@ -11,70 +11,79 @@
     
 
 #import "AppDelegate.h"
+#import "CMPopViewController.h"
 
 @interface AppDelegate ()
+
+@property (strong,nonatomic) NSStatusItem *rightTopStatusitem;
+@property (nonatomic ,strong) NSPopover *popover;
+@property(nonatomic)BOOL  isShow;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationWillFinishLaunching:(NSNotification *)notification;{
-    NSLog(@"lt- applicationWillFinishLaunching ;%@",self.window);
+//    NSLog(@"lt- applicationWillFinishLaunching ;%@",self.window);
     
     [self onBind];
+    [self createRightTipStatusItem];
 }
 - (void)applicationDidFinishLaunching:(NSNotification *)notification;{
-    NSLog(@"lt- applicationDidFinishLaunching ;%@",self.window);
+//    NSLog(@"lt- applicationDidFinishLaunching ;%@",self.window);
 }
 - (void)applicationWillHide:(NSNotification *)notification;{
-    NSLog(@"lt- applicationWillHide ;%@",self.window);
+//    NSLog(@"lt- applicationWillHide ;%@",self.window);
 
 }
 - (void)applicationDidHide:(NSNotification *)notification;{
-    NSLog(@"lt- applicationDidHide ;%@",self.window);
+//    NSLog(@"lt- applicationDidHide ;%@",self.window);
 
 }
 - (void)applicationWillUnhide:(NSNotification *)notification;{
-    NSLog(@"lt- applicationWillUnhide ;%@",self.window);
+//    NSLog(@"lt- applicationWillUnhide ;%@",self.window);
 
 }
 - (void)applicationDidUnhide:(NSNotification *)notification;{
-    NSLog(@"lt- applicationDidUnhide ;%@",self.window);
+//    NSLog(@"lt- applicationDidUnhide ;%@",self.window);
 
 }
 - (void)applicationWillBecomeActive:(NSNotification *)notification;{
-    NSLog(@"lt- applicationWillBecomeActive ;%@",self.window);
+//    NSLog(@"lt- applicationWillBecomeActive ;%@",self.window);
 
 }
 - (void)applicationDidBecomeActive:(NSNotification *)notification;{
-    NSLog(@"lt- applicationDidBecomeActive ;%@",self.window);
+//    NSLog(@"lt- applicationDidBecomeActive ;%@",self.window);
 
 }
 - (void)applicationWillResignActive:(NSNotification *)notification;{
-    NSLog(@"lt- applicationWillResignActive ;%@",self.window);
+//    NSLog(@"lt- applicationWillResignActive ;%@",self.window);
 
 }
 - (void)applicationDidResignActive:(NSNotification *)notification{
-    NSLog(@"lt- applicationDidResignActive ;%@",self.window);
+//    NSLog(@"lt- applicationDidResignActive ;%@",self.window);
 
 }
 - (void)applicationWillUpdate:(NSNotification *)notification {
-    NSLog(@"lt- applicationWillUpdate ;%@",self.window);
+//    NSLog(@"lt- applicationWillUpdate ;%@",self.window);
 
 }
 - (void)applicationDidUpdate:(NSNotification *)notification {
-    NSLog(@"lt- applicationDidUpdate ;%@",self.window);
+//    NSLog(@"lt- applicationDidUpdate ;%@",self.window);
 
 }
 - (void)applicationWillTerminate:(NSNotification *)notification {
-    NSLog(@"lt- applicationWillTerminate ;%@",self.window);
+//    NSLog(@"lt- applicationWillTerminate ;%@",self.window);
+    
+    NSStatusBar *statusBar = [NSStatusBar systemStatusBar];
+    [statusBar removeStatusItem:self.rightTopStatusitem];
 
 }
 - (void)applicationDidChangeScreenParameters:(NSNotification *)notification {
-    NSLog(@"lt- applicationDidChangeScreenParameters ;%@",self.window);
+//    NSLog(@"lt- applicationDidChangeScreenParameters ;%@",self.window);
 }
 - (void)applicationDidChangeOcclusionState:(NSNotification *)notification API_AVAILABLE(macos(10.9)) {
-    NSLog(@"lt- applicationDidChangeOcclusionState ;%@",self.window);
+//    NSLog(@"lt- applicationDidChangeOcclusionState ;%@",self.window);
 }
 
 
@@ -99,34 +108,34 @@
 }
 
 - (void)onDidBecomeKeyAction:(NSNotification *)noti {
-    NSLog(@"lt- onDidBecomeKeyAction:%@", noti);
+//    NSLog(@"lt- onDidBecomeKeyAction:%@", noti);
 }
 
 - (void)onDidBecomeMainAction:(NSNotification *)noti {
-    NSLog(@"lt- onDidBecomeMainAction:%@", noti);
+//    NSLog(@"lt- onDidBecomeMainAction:%@", noti);
 }
 
 - (void)onDidMoveAction:(NSNotification *)noti {
-    NSLog(@"lt- onDidMoveAction:%@", noti);
+//    NSLog(@"lt- onDidMoveAction:%@", noti);
 }
 
 - (void)onDidResignKeyAction:(NSNotification *)noti {
-    NSLog(@"lt- onDidResignKeyAction:%@", noti);
+//    NSLog(@"lt- onDidResignKeyAction:%@", noti);
 }
 
 - (void)onDidResignMainAction:(NSNotification *)noti {
-    NSLog(@"lt- onDidResignMainAction:%@", noti);
+//    NSLog(@"lt- onDidResignMainAction:%@", noti);
 }
 
 - (void)onDidResizeAction:(NSNotification *)noti {
-    NSLog(@"lt- onDidResizeAction:%@", noti);
+//    NSLog(@"lt- onDidResizeAction:%@", noti);
 }
 
 - (void)onWillCloseAction:(NSNotification *)noti {
-    NSLog(@"lt- onWillCloseAction:%@", noti);
+//    NSLog(@"lt- onWillCloseAction:%@", noti);
 }
 - (IBAction)onFileOpenAction:(id)sender {
-    NSLog(@"file open action:");
+//    NSLog(@"file open action:");
     
     NSOpenPanel *openDlg = [NSOpenPanel openPanel];
     openDlg.canChooseFiles = YES ;
@@ -148,5 +157,61 @@
         }
     }];
 }
+
+// 系统的方法， 右下图片youji
+-(NSMenu *)applicationDockMenu:(NSApplication *)sender {
+    NSMenu *menu = [self createMenu];
+    return menu;
+}
+
+- (NSMenu *)createMenu {
+    NSMenu *customMenu = [[NSMenu alloc]init];
+    NSMenuItem *openMenuItem = [[NSMenuItem alloc]initWithTitle:@"Open" action:@selector(menuClicked:) keyEquivalent:@"O"];
+    [openMenuItem setKeyEquivalentModifierMask:NSShiftKeyMask];
+    NSMenuItem *openRecentMenuItem = [[NSMenuItem alloc]initWithTitle:@"Open Recent..." action:nil keyEquivalent:@""];
+    NSMenu *recentMenu = [[NSMenu alloc]init];
+    [openRecentMenuItem setSubmenu:recentMenu];
+    NSMenuItem *file1MenuItem = [[NSMenuItem alloc]initWithTitle:@"File1" action:@selector(menuClicked:) keyEquivalent:@""];
+    [recentMenu addItem:file1MenuItem];
+    [customMenu addItem:openMenuItem];
+    [customMenu addItem:openRecentMenuItem];
+    return customMenu;
+}
+
+- (void)menuClicked:(id)sender {
+    NSLog(@"file 1：%@",sender);
+}
+
+// 右上角的图标
+- (void)createRightTipStatusItem {
+    //获取系统单例NSStatusBar对象
+    NSStatusBar *statusBar = [NSStatusBar systemStatusBar];
+    //创建固定宽度的NSStatusItem
+    NSStatusItem *item = [statusBar statusItemWithLength:NSVariableStatusItemLength];
+    [item.button setTarget:self];
+    [item.button setAction:@selector(itemAction:)];
+    item.button.image = [NSImage imageNamed:@"icon_clear"];
+    self.rightTopStatusitem = item;
+    [self setUpPopover];
+}
+
+// pop view
+-(void)setUpPopover {
+    self.popover = [[NSPopover alloc] init];
+    self.popover.contentViewController = [CMPopViewController new];
+    self.popover.contentViewController.view.frame = NSMakeRect(0.f, 0.f, 400.f, 500.f);
+    self.popover.behavior = NSPopoverBehaviorTransient;
+    self.popover.animates = YES;
+}
+
+-(void)itemAction:(id)sender {
+    if (!self.isShow) {
+        [self.popover showRelativeToRect:NSZeroRect ofView:[self rightTopStatusitem].button preferredEdge:NSRectEdgeMinY];
+    } else {
+        [self.popover close];
+    }
+    self.isShow = !self.isShow;
+}
+
 
 @end

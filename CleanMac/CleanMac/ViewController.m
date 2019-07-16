@@ -59,4 +59,24 @@
 }
 
 
+// test method
+- (IBAction)onAlertAction:(id)sender {
+//    NSString *password = self.passwordField.stringValue;
+//    if([password length]<6) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        //增加一个按钮
+        [alert addButtonWithTitle:@"Ok"];
+        //提示的标题
+        [alert setMessageText:@"Alert"];
+        //提示的详细内容
+        [alert setInformativeText:@"password length must be more than 6 "];
+        //设置告警风格
+        [alert setAlertStyle:NSInformationalAlertStyle];
+        //开始显示告警
+    
+    [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
+        NSLog(@"resutn count ;%ld", (long)returnCode);
+    }];
+}
+
 @end

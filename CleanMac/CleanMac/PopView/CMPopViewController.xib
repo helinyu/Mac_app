@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14835.7"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CMPopViewController">
+            <connections>
+                <outlet property="collectionView" destination="qdU-9L-coY" id="B6I-X3-Gng"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="603" height="372"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbb-iO-jft">
+                    <rect key="frame" x="0.0" y="0.0" width="603" height="372"/>
+                    <clipView key="contentView" id="D1V-ZY-ef0">
+                        <rect key="frame" x="1" y="1" width="601" height="370"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView id="qdU-9L-coY">
+                                <rect key="frame" x="0.0" y="0.0" width="601" height="370"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="primaryBackgroundColor" red="0.41960784313725491" green="0.40000000000000002" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="itemPrototype" destination="Npo-Xa-dJU" id="9KR-T0-oUG"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="2vJ-hC-raM">
+                        <rect key="frame" x="-100" y="-100" width="601" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="fFc-j1-yaH">
+                        <rect key="frame" x="586" y="1" width="16" height="310"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fbb-iO-jft" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="K5X-tb-980"/>
+                <constraint firstItem="fbb-iO-jft" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="apN-cq-aNn"/>
+                <constraint firstAttribute="bottom" secondItem="fbb-iO-jft" secondAttribute="bottom" id="uPH-Jl-bNd"/>
+                <constraint firstAttribute="trailing" secondItem="fbb-iO-jft" secondAttribute="trailing" id="v6G-Ry-css"/>
+            </constraints>
+            <point key="canvasLocation" x="201.5" y="204"/>
+        </customView>
+        <collectionViewItem id="Npo-Xa-dJU">
+            <connections>
+                <outlet property="view" destination="RXA-qc-oWD" id="h9q-z9-tkd"/>
+            </connections>
+        </collectionViewItem>
+        <view id="RXA-qc-oWD">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <point key="canvasLocation" x="259" y="-97"/>
+        </view>
+    </objects>
+</document>

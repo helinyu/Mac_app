@@ -25,6 +25,20 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Menu" id="LdQ-ri-I4v">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Menu" id="cNJ-xH-AhN">
+                                                <items>
+                                                    <menuItem title="Item" id="qwi-Eg-vLi">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="Eip-RB-8yy"/>
+                                                    <menuItem title="Item" id="vQb-Vk-qd3">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
@@ -684,12 +698,59 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="CMMainWindowController" sceneMemberID="viewController">
                     <window key="window" title="CleanMac" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="C5FBEFA4-590F-43CB-A6F4-77AAF7D467AE" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="qWf-Ib-NFX">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="OXu-7x-jQA"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="CkR-SC-6uM"/>
+                                <toolbarItem implicitItemIdentifier="297EE91B-B6FE-4C1B-9AB6-1BEE8C3BBB99" label="open" paletteLabel="open" tag="-1" image="NSFolder" id="j7t-8B-qyM">
+                                    <size key="minSize" width="32" height="32"/>
+                                    <size key="maxSize" width="32" height="32"/>
+                                    <connections>
+                                        <action selector="onFileOpenAction:" target="B8D-0N-5wS" id="lvW-za-SF3"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="edg-7y-C1t"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="TTZ-EP-lhw"/>
+                                <toolbarItem implicitItemIdentifier="56D53DF3-0A10-4588-812C-02BDFEAED4BF" label="按钮" paletteLabel="按钮" sizingBehavior="auto" id="ioC-jt-Su3">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="Zmy-QF-Ozn">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ih5-vE-GGa">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="FED3E266-9C19-451E-95A1-8817EB4E483F" label="搜索" paletteLabel="搜索" sizingBehavior="auto" id="2ml-kg-vlF">
+                                    <nil key="toolTip"/>
+                                    <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" id="gvy-PN-etT">
+                                        <rect key="frame" x="0.0" y="14" width="96" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="Zc8-0u-642">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </searchFieldCell>
+                                    </searchField>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="j7t-8B-qyM"/>
+                                <toolbarItem reference="CkR-SC-6uM"/>
+                                <toolbarItem reference="OXu-7x-jQA"/>
+                                <toolbarItem reference="edg-7y-C1t"/>
+                                <toolbarItem reference="TTZ-EP-lhw"/>
+                                <toolbarItem reference="2ml-kg-vlF"/>
+                                <toolbarItem reference="ioC-jt-Su3"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <contentBorderThickness minY="30"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -701,7 +762,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="81" y="323"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="5bI-j8-Pj5">
@@ -748,7 +809,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-xC-cad">
-                                <rect key="frame" x="73" y="203" width="67" height="32"/>
+                                <rect key="frame" x="73" y="203" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="点击" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElT-wj-o8r">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -757,9 +818,8 @@
                                     <segue destination="oS6-Na-5JH" kind="show" id="4is-bT-jUm"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yBL-pm-E7h">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yBL-pm-E7h">
                                 <rect key="frame" x="67" y="142" width="80" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="第三个" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vi3-5n-bkj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -768,9 +828,24 @@
                                     <segue destination="O6p-pw-CCl" kind="show" id="Cub-jE-l8N"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8y3-kE-Hep">
+                                <rect key="frame" x="73" y="95" width="68" height="32"/>
+                                <buttonCell key="cell" type="push" title="alert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q4b-mA-zy2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onAlertAction:" target="XfG-lQ-9wD" id="JZx-oO-46S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="yBL-pm-E7h" firstAttribute="top" secondItem="dhu-xC-cad" secondAttribute="bottom" constant="40" id="0ea-Xa-DqN"/>
+                            <constraint firstItem="yBL-pm-E7h" firstAttribute="centerX" secondItem="8y3-kE-Hep" secondAttribute="centerX" id="JDb-xA-paD"/>
+                            <constraint firstItem="yBL-pm-E7h" firstAttribute="centerX" secondItem="dhu-xC-cad" secondAttribute="centerX" id="Kys-Md-Y5H"/>
                             <constraint firstItem="dhu-xC-cad" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="79" id="NGB-kE-kpo"/>
+                            <constraint firstItem="8y3-kE-Hep" firstAttribute="top" secondItem="yBL-pm-E7h" secondAttribute="bottom" constant="26" id="UAd-FI-lcN"/>
+                            <constraint firstItem="yBL-pm-E7h" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="73" id="f9a-mL-Xaw"/>
                             <constraint firstItem="dhu-xC-cad" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="39" id="t80-Za-Ig8"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dhu-xC-cad" secondAttribute="trailing" constant="20" symbolic="YES" id="ydG-ux-DVc"/>
                         </constraints>
@@ -846,4 +921,7 @@
             <point key="canvasLocation" x="757" y="1082"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSFolder" width="32" height="32"/>
+    </resources>
 </document>
