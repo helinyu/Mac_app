@@ -838,6 +838,17 @@
                                     <action selector="onAlertAction:" target="XfG-lQ-9wD" id="JZx-oO-46S"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-mF-37T">
+                                <rect key="frame" x="74" y="50" width="67" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="主页" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qhp-M6-9Lt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="Z82-SM-CpH" kind="show" id="LRI-k2-Tfd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="yBL-pm-E7h" firstAttribute="top" secondItem="dhu-xC-cad" secondAttribute="bottom" constant="40" id="0ea-Xa-DqN"/>
@@ -874,6 +885,40 @@
                 <customObject id="k89-dG-SIV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="1089"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="hYi-oj-Vp1">
+            <objects>
+                <windowController id="Z82-SM-CpH" customClass="CMMainPageWindowController" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="u1U-5z-Qap">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="Z82-SM-CpH" id="ohB-Xu-Wva"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="q01-m4-cKY" kind="relationship" relationship="window.shadowedContentViewController" id="IxF-zq-1w1"/>
+                    </connections>
+                </windowController>
+                <customObject id="pa9-4o-rbY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="1569"/>
+        </scene>
+        <!--Main Page View Controller-->
+        <scene sceneID="06M-Rn-lIB">
+            <objects>
+                <viewController id="q01-m4-cKY" customClass="CMMainPageViewController" sceneMemberID="viewController">
+                    <view key="view" id="uHg-jA-KgY">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="CTa-BJ-39t" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="1544"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="rVg-3Z-xvh">
