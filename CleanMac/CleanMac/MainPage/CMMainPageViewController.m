@@ -14,6 +14,8 @@
 
 @interface CMMainPageViewController ()
 
+@property (weak) IBOutlet NSTableColumn *tableColumn;
+
 @end
 
 @implementation CMMainPageViewController
