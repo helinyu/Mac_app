@@ -6,4 +6,7 @@ collect mac app develop by myself
 
 
 接下来主要处理主页上面的内容；
+1、主页上面的tableview 基本上可以使用
+2、显示右边的内容；
+
 
