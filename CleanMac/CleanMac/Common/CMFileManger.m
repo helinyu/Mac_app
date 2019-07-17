@@ -14,14 +14,17 @@
 
 @implementation CMFileManger
 
-+ (NSArray<NSString *> *)getMainClassInfo {
-
++ (NSArray<NSString *> *)getMainClassInfos {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"classList" ofType:@"plist"];
     NSArray<NSString *> *classes = [[NSArray alloc] initWithContentsOfFile:path];
-//    NSData *data = [NSData dataWithContentsOfFile:path];
-//    NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//    NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     return classes;
+}
+
++ (NSDictionary *)getMainClassInfoDic {
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"classListDic" ofType:@"plist"];
+    NSDictionary *classDic = [[NSDictionary alloc] initWithContentsOfFile:path];
+    return classDic;
 }
 
 @end

@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CMFileManger : NSObject
 
-+ (NSArray<NSString *> *)getMainClassInfo;
++ (NSArray<NSString *> *)getMainClassInfos;
+
++ (NSDictionary *)getMainClassInfoDic;
 
 @end
 

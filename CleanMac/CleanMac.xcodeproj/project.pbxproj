@@ -17,6 +17,26 @@
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
 		415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */; };
 		415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */; };
+		4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */; };
+		4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */; };
+		4165FBC222DF235F00656E00 /* NSView+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC122DF235F00656E00 /* NSView+CMAdd.m */; };
+		4165FBC522DF3B3D00656E00 /* CMTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC422DF3B3D00656E00 /* CMTrashView.m */; };
+		4165FBC822DF3C0200656E00 /* CMTrashOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC722DF3C0200656E00 /* CMTrashOptionView.m */; };
+		4165FBCA22DF416200656E00 /* classListDic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4165FBC922DF416200656E00 /* classListDic.plist */; };
+		4165FBCF22DF465800656E00 /* CMSystemTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBCE22DF465800656E00 /* CMSystemTrashView.m */; };
+		4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD322DF468100656E00 /* CMPhotoTrashView.m */; };
+		4165FBD822DF469B00656E00 /* CMEmailTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD722DF469B00656E00 /* CMEmailTrashView.m */; };
+		4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */; };
+		4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDF22DF46E900656E00 /* CMPrivacyView.m */; };
+		4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE322DF471000656E00 /* CMOptimizationView.m */; };
+		4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE722DF473300656E00 /* CMMaintainView.m */; };
+		4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEB22DF483200656E00 /* CMUnloaderView.m */; };
+		4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */; };
+		4165FBF422DF488000656E00 /* CMExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF322DF488000656E00 /* CMExtendView.m */; };
+		4165FBF822DF48A600656E00 /* CMSpaceLensView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF722DF48A600656E00 /* CMSpaceLensView.m */; };
+		4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFB22DF48D700656E00 /* CMLODcumentView.m */; };
+		4165FC0022DF499700656E00 /* CMShredderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFF22DF499700656E00 /* CMShredderView.m */; };
+		4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
@@ -75,6 +95,45 @@
 		415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageWindowController.m; sourceTree = "<group>"; };
 		415B5B8E22DDFABD00E43F03 /* CMMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageViewController.h; sourceTree = "<group>"; };
 		415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageViewController.m; sourceTree = "<group>"; };
+		4165FBB922DF17D700656E00 /* CMIntelligenceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMIntelligenceView.h; sourceTree = "<group>"; };
+		4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMIntelligenceView.m; sourceTree = "<group>"; };
+		4165FBBC22DF1D9D00656E00 /* NSButton+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSButton+CMAdd.h"; sourceTree = "<group>"; };
+		4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSButton+CMAdd.m"; sourceTree = "<group>"; };
+		4165FBC022DF235F00656E00 /* NSView+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+CMAdd.h"; sourceTree = "<group>"; };
+		4165FBC122DF235F00656E00 /* NSView+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+CMAdd.m"; sourceTree = "<group>"; };
+		4165FBC322DF3B3D00656E00 /* CMTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashView.h; sourceTree = "<group>"; };
+		4165FBC422DF3B3D00656E00 /* CMTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashView.m; sourceTree = "<group>"; };
+		4165FBC622DF3C0200656E00 /* CMTrashOptionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashOptionView.h; sourceTree = "<group>"; };
+		4165FBC722DF3C0200656E00 /* CMTrashOptionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashOptionView.m; sourceTree = "<group>"; };
+		4165FBC922DF416200656E00 /* classListDic.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classListDic.plist; sourceTree = "<group>"; };
+		4165FBCD22DF465800656E00 /* CMSystemTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSystemTrashView.h; sourceTree = "<group>"; };
+		4165FBCE22DF465800656E00 /* CMSystemTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSystemTrashView.m; sourceTree = "<group>"; };
+		4165FBD222DF468100656E00 /* CMPhotoTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPhotoTrashView.h; sourceTree = "<group>"; };
+		4165FBD322DF468100656E00 /* CMPhotoTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPhotoTrashView.m; sourceTree = "<group>"; };
+		4165FBD622DF469B00656E00 /* CMEmailTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMEmailTrashView.h; sourceTree = "<group>"; };
+		4165FBD722DF469B00656E00 /* CMEmailTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMEmailTrashView.m; sourceTree = "<group>"; };
+		4165FBDA22DF46CB00656E00 /* CMMaliciousSoftwareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMaliciousSoftwareView.h; sourceTree = "<group>"; };
+		4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMaliciousSoftwareView.m; sourceTree = "<group>"; };
+		4165FBDE22DF46E900656E00 /* CMPrivacyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPrivacyView.h; sourceTree = "<group>"; };
+		4165FBDF22DF46E900656E00 /* CMPrivacyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPrivacyView.m; sourceTree = "<group>"; };
+		4165FBE222DF471000656E00 /* CMOptimizationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMOptimizationView.h; sourceTree = "<group>"; };
+		4165FBE322DF471000656E00 /* CMOptimizationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMOptimizationView.m; sourceTree = "<group>"; };
+		4165FBE622DF473300656E00 /* CMMaintainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMaintainView.h; sourceTree = "<group>"; };
+		4165FBE722DF473300656E00 /* CMMaintainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMaintainView.m; sourceTree = "<group>"; };
+		4165FBEA22DF483200656E00 /* CMUnloaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMUnloaderView.h; sourceTree = "<group>"; };
+		4165FBEB22DF483200656E00 /* CMUnloaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMUnloaderView.m; sourceTree = "<group>"; };
+		4165FBED22DF484A00656E00 /* CMUpdateProgramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMUpdateProgramView.h; sourceTree = "<group>"; };
+		4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMUpdateProgramView.m; sourceTree = "<group>"; };
+		4165FBF222DF488000656E00 /* CMExtendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMExtendView.h; sourceTree = "<group>"; };
+		4165FBF322DF488000656E00 /* CMExtendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMExtendView.m; sourceTree = "<group>"; };
+		4165FBF622DF48A600656E00 /* CMSpaceLensView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSpaceLensView.h; sourceTree = "<group>"; };
+		4165FBF722DF48A600656E00 /* CMSpaceLensView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSpaceLensView.m; sourceTree = "<group>"; };
+		4165FBFA22DF48D700656E00 /* CMLODcumentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMLODcumentView.h; sourceTree = "<group>"; };
+		4165FBFB22DF48D700656E00 /* CMLODcumentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMLODcumentView.m; sourceTree = "<group>"; };
+		4165FBFE22DF499700656E00 /* CMShredderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMShredderView.h; sourceTree = "<group>"; };
+		4165FBFF22DF499700656E00 /* CMShredderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMShredderView.m; sourceTree = "<group>"; };
+		4165FC0522DF4B1900656E00 /* CMItunesTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMItunesTrashView.h; sourceTree = "<group>"; };
+		4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMItunesTrashView.m; sourceTree = "<group>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
@@ -208,6 +267,22 @@
 		415B5B8A22DDFA4C00E43F03 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				4165FBB822DF17B500656E00 /* Intelligence */,
+				4165FBCC22DF463C00656E00 /* system */,
+				4165FBD122DF467000656E00 /* photo */,
+				4165FBD522DF468E00656E00 /* email */,
+				4165FC0122DF4AE800656E00 /* itunes trash */,
+				4165FBCB22DF461800656E00 /* Trash */,
+				4165FBD922DF46B800656E00 /* malicious software  */,
+				4165FBDD22DF46DE00656E00 /* Privacy */,
+				4165FBE122DF46FC00656E00 /* optimization  */,
+				4165FBE522DF472600656E00 /* Maintain  */,
+				4165FBE922DF482600656E00 /* Unloader */,
+				4165FBF022DF485500656E00 /* update grogram */,
+				4165FBF122DF486900656E00 /* extend */,
+				4165FBF522DF489300656E00 /* Space lens */,
+				4165FBF922DF48C300656E00 /* Large and Old Documents */,
+				4165FBFD22DF48EB00656E00 /* Shredder */,
 				415B5B8B22DDFAA200E43F03 /* CMMainPageWindowController.h */,
 				415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */,
 				415B5B8E22DDFABD00E43F03 /* CMMainPageViewController.h */,
@@ -218,10 +293,168 @@
 			path = MainPage;
 			sourceTree = "<group>";
 		};
+		4165FBB822DF17B500656E00 /* Intelligence */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBB922DF17D700656E00 /* CMIntelligenceView.h */,
+				4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */,
+			);
+			path = Intelligence;
+			sourceTree = "<group>";
+		};
+		4165FBBF22DF234A00656E00 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBBC22DF1D9D00656E00 /* NSButton+CMAdd.h */,
+				4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */,
+				4165FBC022DF235F00656E00 /* NSView+CMAdd.h */,
+				4165FBC122DF235F00656E00 /* NSView+CMAdd.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		4165FBCB22DF461800656E00 /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBC322DF3B3D00656E00 /* CMTrashView.h */,
+				4165FBC422DF3B3D00656E00 /* CMTrashView.m */,
+				4165FBC622DF3C0200656E00 /* CMTrashOptionView.h */,
+				4165FBC722DF3C0200656E00 /* CMTrashOptionView.m */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		4165FBCC22DF463C00656E00 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBCD22DF465800656E00 /* CMSystemTrashView.h */,
+				4165FBCE22DF465800656E00 /* CMSystemTrashView.m */,
+			);
+			path = system;
+			sourceTree = "<group>";
+		};
+		4165FBD122DF467000656E00 /* photo */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBD222DF468100656E00 /* CMPhotoTrashView.h */,
+				4165FBD322DF468100656E00 /* CMPhotoTrashView.m */,
+			);
+			path = photo;
+			sourceTree = "<group>";
+		};
+		4165FBD522DF468E00656E00 /* email */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBD622DF469B00656E00 /* CMEmailTrashView.h */,
+				4165FBD722DF469B00656E00 /* CMEmailTrashView.m */,
+			);
+			path = email;
+			sourceTree = "<group>";
+		};
+		4165FBD922DF46B800656E00 /* malicious software  */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBDA22DF46CB00656E00 /* CMMaliciousSoftwareView.h */,
+				4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */,
+			);
+			path = "malicious software ";
+			sourceTree = "<group>";
+		};
+		4165FBDD22DF46DE00656E00 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBDE22DF46E900656E00 /* CMPrivacyView.h */,
+				4165FBDF22DF46E900656E00 /* CMPrivacyView.m */,
+			);
+			path = Privacy;
+			sourceTree = "<group>";
+		};
+		4165FBE122DF46FC00656E00 /* optimization  */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBE222DF471000656E00 /* CMOptimizationView.h */,
+				4165FBE322DF471000656E00 /* CMOptimizationView.m */,
+			);
+			path = "optimization ";
+			sourceTree = "<group>";
+		};
+		4165FBE522DF472600656E00 /* Maintain  */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBE622DF473300656E00 /* CMMaintainView.h */,
+				4165FBE722DF473300656E00 /* CMMaintainView.m */,
+			);
+			path = "Maintain ";
+			sourceTree = "<group>";
+		};
+		4165FBE922DF482600656E00 /* Unloader */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBEA22DF483200656E00 /* CMUnloaderView.h */,
+				4165FBEB22DF483200656E00 /* CMUnloaderView.m */,
+			);
+			path = Unloader;
+			sourceTree = "<group>";
+		};
+		4165FBF022DF485500656E00 /* update grogram */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBED22DF484A00656E00 /* CMUpdateProgramView.h */,
+				4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */,
+			);
+			path = "update grogram";
+			sourceTree = "<group>";
+		};
+		4165FBF122DF486900656E00 /* extend */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBF222DF488000656E00 /* CMExtendView.h */,
+				4165FBF322DF488000656E00 /* CMExtendView.m */,
+			);
+			path = extend;
+			sourceTree = "<group>";
+		};
+		4165FBF522DF489300656E00 /* Space lens */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBF622DF48A600656E00 /* CMSpaceLensView.h */,
+				4165FBF722DF48A600656E00 /* CMSpaceLensView.m */,
+			);
+			path = "Space lens";
+			sourceTree = "<group>";
+		};
+		4165FBF922DF48C300656E00 /* Large and Old Documents */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBFA22DF48D700656E00 /* CMLODcumentView.h */,
+				4165FBFB22DF48D700656E00 /* CMLODcumentView.m */,
+			);
+			path = "Large and Old Documents";
+			sourceTree = "<group>";
+		};
+		4165FBFD22DF48EB00656E00 /* Shredder */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBFE22DF499700656E00 /* CMShredderView.h */,
+				4165FBFF22DF499700656E00 /* CMShredderView.m */,
+			);
+			path = Shredder;
+			sourceTree = "<group>";
+		};
+		4165FC0122DF4AE800656E00 /* itunes trash */ = {
+			isa = PBXGroup;
+			children = (
+				4165FC0522DF4B1900656E00 /* CMItunesTrashView.h */,
+				4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */,
+			);
+			path = "itunes trash";
+			sourceTree = "<group>";
+		};
 		41BAFD2E22DF005700AD96AC /* resource */ = {
 			isa = PBXGroup;
 			children = (
 				41BAFD2F22DF007400AD96AC /* classList.plist */,
+				4165FBC922DF416200656E00 /* classListDic.plist */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -238,6 +471,7 @@
 		41C098E322DC6D7100679541 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				4165FBBF22DF234A00656E00 /* category */,
 				41C098E422DC6D9000679541 /* CMPanel.h */,
 				41C098E522DC6D9000679541 /* CMPanel.m */,
 			);
@@ -414,6 +648,7 @@
 			files = (
 				41C098FA22DCA8EF00679541 /* CMPopViewController.xib in Resources */,
 				4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */,
+				4165FBCA22DF416200656E00 /* classListDic.plist in Resources */,
 				4123886322D2FA9A00B89F9E /* Main.storyboard in Resources */,
 				41BAFD3022DF007400AD96AC /* classList.plist in Resources */,
 				41C0990222DDB14500679541 /* CMTopClassCItem.xib in Resources */,
@@ -510,23 +745,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4165FC0022DF499700656E00 /* CMShredderView.m in Sources */,
 				4123885E22D2FA9700B89F9E /* ViewController.m in Sources */,
+				4165FBC222DF235F00656E00 /* NSView+CMAdd.m in Sources */,
+				4165FBF822DF48A600656E00 /* CMSpaceLensView.m in Sources */,
+				4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */,
+				4165FBC822DF3C0200656E00 /* CMTrashOptionView.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
+				4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */,
 				41C098E622DC6D9000679541 /* CMPanel.m in Sources */,
 				4123886622D2FA9A00B89F9E /* main.m in Sources */,
+				4165FBCF22DF465800656E00 /* CMSystemTrashView.m in Sources */,
 				41C0990822DDB90800679541 /* CMPopFooterView.m in Sources */,
+				4165FBD822DF469B00656E00 /* CMEmailTrashView.m in Sources */,
 				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
+				4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */,
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
+				4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */,
 				415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */,
+				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
 				41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
+				4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */,
+				4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */,
 				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
+				4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,
 				41C0990122DDB14500679541 /* CMTopClassCItem.m in Sources */,
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
+				4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */,
+				4165FBF422DF488000656E00 /* CMExtendView.m in Sources */,
+				4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */,
+				4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */,
+				4165FBC522DF3B3D00656E00 /* CMTrashView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

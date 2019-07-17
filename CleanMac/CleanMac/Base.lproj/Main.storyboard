@@ -911,16 +911,16 @@
             <objects>
                 <viewController id="q01-m4-cKY" customClass="CMMainPageViewController" sceneMemberID="viewController">
                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-jA-KgY">
-                        <rect key="frame" x="0.0" y="0.0" width="468" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-wK-cuU">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="400"/>
                                 <clipView key="contentView" id="Gb0-Rm-nYm">
-                                    <rect key="frame" x="1" y="0.0" width="148" height="299"/>
+                                    <rect key="frame" x="1" y="0.0" width="148" height="399"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="bus-qA-hAL" viewBased="YES" id="ChR-Ep-gnL">
-                                            <rect key="frame" x="0.0" y="0.0" width="148" height="274"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="374"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>

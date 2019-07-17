@@ -15,10 +15,52 @@
 #import "CMMainPageClassTCellView.h"
 #import "CMFileManger.h"
 
+#import "CMIntelligenceView.h"
+#import "CMSystemTrashView.h"
+#import "CMPhotoTrashView.h"
+#import "CMEmailTrashView.h"
+#import "CMItunesTrashView.h"
+#import "CMTrashView.h"
+#import "CMMaliciousSoftwareView.h"
+#import "CMPrivacyView.h"
+#import "CMOptimizationView.h"
+#import "CMMaintainView.h"
+#import "CMUnloaderView.h"
+#import "CMUpdateProgramView.h"
+#import "CMExtendView.h"
+#import "CMSpaceLensView.h"
+#import "CMLODcumentView.h"
+#import "CMShredderView.h"
+
+#define Create_right_view(cls) ([self createRightViewWithClass:[cls new]])
+
 @interface CMMainPageViewController ()<NSTableViewDataSource, NSTableViewDelegate>
 
 @property (weak) IBOutlet NSTableView *classTableView;
 @property (nonatomic, strong) NSArray<NSString *> *datasources;
+@property (nonatomic, strong) NSDictionary<NSString *, NSNumber *> *datasourceDic;
+@property (nonatomic, strong) NSArray<NSView *> *rightViews;
+
+@property (nonatomic, strong) CMIntelligenceView *intelligenceView;
+@property (nonatomic, strong) CMSystemTrashView *systemTrashView;
+@property (nonatomic, strong) CMPhotoTrashView *photoTrashView;
+@property (nonatomic, strong) CMEmailTrashView *emailTrashView;
+@property (nonatomic, strong) CMItunesTrashView *itunesTranshView;
+@property (nonatomic, strong) CMTrashView *trashView;
+@property (nonatomic, strong) CMMaliciousSoftwareView * maliciousSoftwareView;
+@property (nonatomic, strong) CMPrivacyView *privacyView;
+@property (nonatomic, strong) CMOptimizationView *optimizationView;
+@property (nonatomic, strong) CMMaintainView *maintainView;
+@property (nonatomic, strong) CMUnloaderView *unloaderView;
+@property (nonatomic, strong) CMUpdateProgramView *updateProgramView;
+@property (nonatomic, strong) CMExtendView *extendView;
+@property (nonatomic, strong) CMSpaceLensView *spaceLensView;
+@property (nonatomic, strong) CMLODcumentView *loDocumentView;
+@property (nonatomic, strong) CMShredderView *shredderView;
+
+@property (nonatomic, strong) CMTrashView *transhView;
+
+@property (nonatomic, assign) NSInteger curRow;
 
 @end
 
@@ -33,9 +75,43 @@
 - (void)viewInit {
     self.view.window.backgroundColor = [NSColor cyanColor];
     
-    NSArray<NSString *> *classInfo = [CMFileManger getMainClassInfo];
-    self.datasources = classInfo;
+    self.datasourceDic = [CMFileManger getMainClassInfoDic];
+    self.datasources = [CMFileManger getMainClassInfos];
     [self.classTableView reloadData];
+    
+    _intelligenceView = Create_right_view(CMIntelligenceView);
+    _systemTrashView = Create_right_view(CMSystemTrashView);
+    _photoTrashView = Create_right_view(CMPhotoTrashView);
+    _emailTrashView = Create_right_view(CMEmailTrashView);
+    _itunesTranshView = Create_right_view(CMItunesTrashView);
+    _transhView = Create_right_view(CMTrashView);
+    _maliciousSoftwareView = Create_right_view(CMMaliciousSoftwareView);
+    _privacyView = Create_right_view(CMPrivacyView);
+    _optimizationView = Create_right_view(CMOptimizationView);
+    _maintainView = Create_right_view(CMMaintainView);
+    _unloaderView = Create_right_view(CMUnloaderView);
+    _updateProgramView = Create_right_view(CMUpdateProgramView);
+    _extendView = Create_right_view(CMExtendView);
+    _spaceLensView = Create_right_view(CMSpaceLensView);
+    _loDocumentView = Create_right_view(CMLODcumentView);
+    _shredderView = Create_right_view(CMShredderView);
+    
+    _rightViews = @[_intelligenceView, _systemTrashView, _photoTrashView, _emailTrashView, _itunesTranshView, _transhView, _maliciousSoftwareView, _privacyView, _optimizationView, _maintainView, _unloaderView, _updateProgramView, _extendView, _spaceLensView, _loDocumentView, _shredderView];
+    
+    for (NSView *rightView in _rightViews) {
+        rightView.hidden = YES;
+    }
+    _intelligenceView.hidden = NO;
+
+}
+
+- (id)createRightViewWithClass:(NSView *)rightView {
+    [self.view addSubview:rightView];
+    [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.right.bottom.equalTo(self.view);
+        make.left.equalTo(self.classTableView.mas_right);
+    }];
+    return rightView;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -58,11 +134,32 @@
 }
 
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
+    [self updateCurRowAndView:row];
     return YES;
 }
 
 -(void)tableViewSelectionDidChange:(nonnull NSNotification *)notification{
     NSLog(@"didSelect：%@",notification.object);
+}
+
+#pragma mark -- custom method
+
+- (void)updateCurRowAndView:(NSInteger)row {
+    if (row >= self.datasourceDic.count) {
+        return;
+    }
+    
+    
+    NSString *key = [self.datasources objectAtIndex:_curRow];
+    [self.datasourceDic setValue:@(NO) forKey:key];
+    [self.rightViews objectAtIndex:_curRow].hidden = YES;
+    _curRow = row;
+    NSString *newKey = [self.datasources objectAtIndex:_curRow];
+    [self.datasourceDic setValue:@(YES) forKey:newKey];
+    [self.rightViews objectAtIndex:_curRow].hidden = NO;
+    
+    
+//    [self.classTableView reloadDataForRowIndexes:(nonnull NSIndexSet *) columnIndexes:<#(nonnull NSIndexSet *)#>];
 }
 
 @end
