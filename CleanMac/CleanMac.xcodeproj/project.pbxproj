@@ -17,6 +17,7 @@
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
 		415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */; };
 		415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */; };
+		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098DC22DC557400679541 /* CMSecondViewController.m */; };
 		41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E122DC56F200679541 /* CMSecondWindowController.m */; };
 		41C098E622DC6D9000679541 /* CMPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E522DC6D9000679541 /* CMPanel.m */; };
@@ -72,6 +73,8 @@
 		415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageWindowController.m; sourceTree = "<group>"; };
 		415B5B8E22DDFABD00E43F03 /* CMMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageViewController.h; sourceTree = "<group>"; };
 		415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageViewController.m; sourceTree = "<group>"; };
+		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
+		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41C098DB22DC557400679541 /* CMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondViewController.h; sourceTree = "<group>"; };
 		41C098DC22DC557400679541 /* CMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondViewController.m; sourceTree = "<group>"; };
 		41C098E022DC56F200679541 /* CMSecondWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondWindowController.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */,
 				415B5B8E22DDFABD00E43F03 /* CMMainPageViewController.h */,
 				415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */,
+				41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */,
+				41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
+				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,
 				41C0990122DDB14500679541 /* CMTopClassCItem.m in Sources */,
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
