@@ -809,7 +809,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-xC-cad">
-                                <rect key="frame" x="73" y="203" width="68" height="32"/>
+                                <rect key="frame" x="74" y="203" width="67" height="32"/>
                                 <buttonCell key="cell" type="push" title="点击" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElT-wj-o8r">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -838,9 +838,8 @@
                                     <action selector="onAlertAction:" target="XfG-lQ-9wD" id="JZx-oO-46S"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-mF-37T">
-                                <rect key="frame" x="74" y="50" width="67" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-mF-37T">
+                                <rect key="frame" x="73" y="50" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="主页" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qhp-M6-9Lt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -851,12 +850,14 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="2Hr-mF-37T" firstAttribute="top" secondItem="8y3-kE-Hep" secondAttribute="bottom" constant="24" id="03Q-4u-xkg"/>
                             <constraint firstItem="yBL-pm-E7h" firstAttribute="top" secondItem="dhu-xC-cad" secondAttribute="bottom" constant="40" id="0ea-Xa-DqN"/>
+                            <constraint firstItem="2Hr-mF-37T" firstAttribute="centerX" secondItem="8y3-kE-Hep" secondAttribute="centerX" id="613-GQ-qnS"/>
                             <constraint firstItem="yBL-pm-E7h" firstAttribute="centerX" secondItem="8y3-kE-Hep" secondAttribute="centerX" id="JDb-xA-paD"/>
                             <constraint firstItem="yBL-pm-E7h" firstAttribute="centerX" secondItem="dhu-xC-cad" secondAttribute="centerX" id="Kys-Md-Y5H"/>
-                            <constraint firstItem="dhu-xC-cad" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="79" id="NGB-kE-kpo"/>
                             <constraint firstItem="8y3-kE-Hep" firstAttribute="top" secondItem="yBL-pm-E7h" secondAttribute="bottom" constant="26" id="UAd-FI-lcN"/>
                             <constraint firstItem="yBL-pm-E7h" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="73" id="f9a-mL-Xaw"/>
+                            <constraint firstItem="2Hr-mF-37T" firstAttribute="trailing" secondItem="8y3-kE-Hep" secondAttribute="trailing" id="hww-dU-HjA"/>
                             <constraint firstItem="dhu-xC-cad" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="39" id="t80-Za-Ig8"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dhu-xC-cad" secondAttribute="trailing" constant="20" symbolic="YES" id="ydG-ux-DVc"/>
                         </constraints>
@@ -864,7 +865,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="7" y="730"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="mKm-Co-FVY">
@@ -884,7 +885,7 @@
                 </windowController>
                 <customObject id="k89-dG-SIV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1089"/>
+            <point key="canvasLocation" x="-53" y="1319"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="hYi-oj-Vp1">
@@ -930,7 +931,7 @@
                                             <tableColumns>
                                                 <tableColumn width="145" minWidth="16" maxWidth="1000" id="tYr-w3-Noc">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                        <font key="font" metaFont="controlContent" size="11"/>
+                                                        <font key="font" metaFont="system" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
