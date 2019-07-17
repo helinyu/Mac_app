@@ -18,6 +18,8 @@
 		415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */; };
 		415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
+		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
+		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
 		41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098DC22DC557400679541 /* CMSecondViewController.m */; };
 		41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E122DC56F200679541 /* CMSecondWindowController.m */; };
 		41C098E622DC6D9000679541 /* CMPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E522DC6D9000679541 /* CMPanel.m */; };
@@ -75,6 +77,9 @@
 		415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageViewController.m; sourceTree = "<group>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
+		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
+		41BAFD3222DF028F00AD96AC /* CMFileManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFileManger.h; sourceTree = "<group>"; };
+		41BAFD3322DF028F00AD96AC /* CMFileManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFileManger.m; sourceTree = "<group>"; };
 		41C098DB22DC557400679541 /* CMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondViewController.h; sourceTree = "<group>"; };
 		41C098DC22DC557400679541 /* CMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondViewController.m; sourceTree = "<group>"; };
 		41C098E022DC56F200679541 /* CMSecondWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondWindowController.h; sourceTree = "<group>"; };
@@ -160,11 +165,13 @@
 		4123885822D2FA9700B89F9E /* CleanMac */ = {
 			isa = PBXGroup;
 			children = (
+				41BAFD2E22DF005700AD96AC /* resource */,
 				415B5B8A22DDFA4C00E43F03 /* MainPage */,
 				41C098F222DCA2E400679541 /* PopView */,
 				41C098E822DC6E0900679541 /* Third */,
 				41C098E722DC6DEE00679541 /* Second */,
 				41C098E322DC6D7100679541 /* CommonUI */,
+				41BAFD3122DF026D00AD96AC /* Common */,
 				4123885922D2FA9700B89F9E /* AppDelegate.h */,
 				4123885A22D2FA9700B89F9E /* AppDelegate.m */,
 				4123885C22D2FA9700B89F9E /* ViewController.h */,
@@ -209,6 +216,23 @@
 				41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		41BAFD2E22DF005700AD96AC /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				41BAFD2F22DF007400AD96AC /* classList.plist */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		41BAFD3122DF026D00AD96AC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				41BAFD3222DF028F00AD96AC /* CMFileManger.h */,
+				41BAFD3322DF028F00AD96AC /* CMFileManger.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		41C098E322DC6D7100679541 /* CommonUI */ = {
@@ -391,6 +415,7 @@
 				41C098FA22DCA8EF00679541 /* CMPopViewController.xib in Resources */,
 				4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */,
 				4123886322D2FA9A00B89F9E /* Main.storyboard in Resources */,
+				41BAFD3022DF007400AD96AC /* classList.plist in Resources */,
 				41C0990222DDB14500679541 /* CMTopClassCItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +521,7 @@
 				415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
+				41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
 				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,

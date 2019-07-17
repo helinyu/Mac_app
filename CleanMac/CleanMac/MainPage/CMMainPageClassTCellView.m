@@ -11,6 +11,7 @@
     
 
 #import "CMMainPageClassTCellView.h"
+#import <Masonry.h>
 
 @interface CMMainPageClassTCellView ()
 
@@ -19,11 +20,6 @@
 @end
 
 @implementation CMMainPageClassTCellView
-
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-}
 
 - (instancetype)initWithFrame:(NSRect)frame
 {
@@ -34,12 +30,28 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
 - (void)baseInit {
+    
     _titleTF = [NSTextField new];
     [self addSubview:_titleTF];
-    _titleTF.cell.title = @"title";
-    [_titleTF setTextColor:[NSColor redColor]];
+    [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.equalTo(self);
+        make.edges.equalTo(self);
+    }];
     
+    _titleTF.textColor = [NSColor redColor];
+    _titleTF.font = [NSFont systemFontOfSize:12.f];
+    _titleTF.cell.title = @"nam11e";
+    _titleTF.cell.alignment = NSTextAlignmentLeft;
 }
 
 @end

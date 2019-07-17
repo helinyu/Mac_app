@@ -693,7 +693,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-236" y="-190"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -701,8 +701,7 @@
                 <windowController id="B8D-0N-5wS" customClass="CMMainWindowController" sceneMemberID="viewController">
                     <window key="window" title="CleanMac" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="400" y="300" width="600" height="400"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="C5FBEFA4-590F-43CB-A6F4-77AAF7D467AE" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="qWf-Ib-NFX">
                             <allowedToolbarItems>
@@ -762,7 +761,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="323"/>
+            <point key="canvasLocation" x="-165" y="165"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="5bI-j8-Pj5">
@@ -785,7 +784,7 @@
                 <customObject id="OoH-hc-euc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="UbS-4l-QMV"/>
             </objects>
-            <point key="canvasLocation" x="636" y="655"/>
+            <point key="canvasLocation" x="520" y="386"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="3M2-uP-WeE">
@@ -798,28 +797,18 @@
                 </viewController>
                 <customObject id="Idq-Z0-ODe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276" y="655"/>
+            <point key="canvasLocation" x="1123" y="379"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-xC-cad">
-                                <rect key="frame" x="74" y="203" width="67" height="32"/>
-                                <buttonCell key="cell" type="push" title="点击" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElT-wj-o8r">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="oS6-Na-5JH" kind="show" id="4is-bT-jUm"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yBL-pm-E7h">
-                                <rect key="frame" x="67" y="142" width="80" height="32"/>
+                                <rect key="frame" x="67" y="272" width="80" height="32"/>
                                 <buttonCell key="cell" type="push" title="第三个" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vi3-5n-bkj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -829,7 +818,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8y3-kE-Hep">
-                                <rect key="frame" x="73" y="95" width="68" height="32"/>
+                                <rect key="frame" x="73" y="225" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="alert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q4b-mA-zy2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -839,13 +828,23 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-mF-37T">
-                                <rect key="frame" x="73" y="50" width="68" height="32"/>
+                                <rect key="frame" x="73" y="180" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="主页" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qhp-M6-9Lt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="Z82-SM-CpH" kind="show" id="LRI-k2-Tfd"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-xC-cad">
+                                <rect key="frame" x="74" y="333" width="67" height="32"/>
+                                <buttonCell key="cell" type="push" title="点击" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElT-wj-o8r">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="oS6-Na-5JH" kind="show" id="4is-bT-jUm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -865,7 +864,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="730"/>
+            <point key="canvasLocation" x="-165" y="698"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="mKm-Co-FVY">
@@ -885,7 +884,7 @@
                 </windowController>
                 <customObject id="k89-dG-SIV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-53" y="1319"/>
+            <point key="canvasLocation" x="-195" y="1287"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="hYi-oj-Vp1">
@@ -893,8 +892,7 @@
                 <windowController id="Z82-SM-CpH" customClass="CMMainPageWindowController" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="u1U-5z-Qap">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="contentRect" x="600" y="400" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
                         <connections>
                             <outlet property="delegate" destination="Z82-SM-CpH" id="ohB-Xu-Wva"/>
@@ -906,20 +904,87 @@
                 </windowController>
                 <customObject id="pa9-4o-rbY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="1805"/>
+            <point key="canvasLocation" x="-105" y="1776"/>
         </scene>
         <!--Main Page View Controller-->
         <scene sceneID="06M-Rn-lIB">
             <objects>
                 <viewController id="q01-m4-cKY" customClass="CMMainPageViewController" sceneMemberID="viewController">
-                    <view key="view" id="uHg-jA-KgY">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-jA-KgY">
+                        <rect key="frame" x="0.0" y="0.0" width="468" height="300"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-wK-cuU">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                                <clipView key="contentView" id="Gb0-Rm-nYm">
+                                    <rect key="frame" x="1" y="0.0" width="148" height="299"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="bus-qA-hAL" viewBased="YES" id="ChR-Ep-gnL">
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="274"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn width="145" minWidth="40" maxWidth="1000" id="AUZ-nC-XRu">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="分类">
+                                                        <font key="font" metaFont="controlContent" size="11"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="xGE-6q-LIg">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView identifier="CMMainPageClassTCellView" id="ox0-ZQ-F1S" customClass="CMMainPageClassTCellView">
+                                                            <rect key="frame" x="1" y="1" width="145" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <accessibility identifier="CMMainPageClassTCellView"/>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="q01-m4-cKY" id="5hq-1l-u5g"/>
+                                                <outlet property="delegate" destination="q01-m4-cKY" id="I9u-To-byD"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6cL-mL-nRP"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="igh-9Z-jaR">
+                                    <rect key="frame" x="1" y="383" width="148" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="XjQ-o0-rwO">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="bus-qA-hAL">
+                                    <rect key="frame" x="0.0" y="0.0" width="148" height="25"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bo6-wK-cuU" firstAttribute="height" secondItem="uHg-jA-KgY" secondAttribute="height" id="7MI-Cd-JA7"/>
+                            <constraint firstItem="bo6-wK-cuU" firstAttribute="leading" secondItem="uHg-jA-KgY" secondAttribute="leading" id="M3j-9B-UeU"/>
+                            <constraint firstItem="bo6-wK-cuU" firstAttribute="top" secondItem="uHg-jA-KgY" secondAttribute="top" id="c27-jx-efo"/>
+                            <constraint firstAttribute="bottom" secondItem="bo6-wK-cuU" secondAttribute="bottom" id="mdA-4x-C0G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="classTableView" destination="ChR-Ep-gnL" id="Fth-gd-gph"/>
+                    </connections>
                 </viewController>
                 <customObject id="CTa-BJ-39t" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="1938"/>
+            <point key="canvasLocation" x="682" y="1900"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="rVg-3Z-xvh">
@@ -964,7 +1029,7 @@
                 </viewController>
                 <customObject id="XJH-Ra-fut" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="1082"/>
+            <point key="canvasLocation" x="616" y="808"/>
         </scene>
     </scenes>
     <resources>

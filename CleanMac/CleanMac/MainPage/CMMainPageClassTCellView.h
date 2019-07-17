@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CMMainPageClassTCellView : NSTableCellView
 
+@property (nonatomic, strong, readonly) NSTextField *titleTF;
+
 @end
 
 NS_ASSUME_NONNULL_END
