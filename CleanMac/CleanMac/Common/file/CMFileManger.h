@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)single;
 
+
+- (NSArray *)mountedVolumefileURls;
+
 @end
 
 @interface CMFileManger (ClassMathod)

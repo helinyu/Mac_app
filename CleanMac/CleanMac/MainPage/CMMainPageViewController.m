@@ -70,6 +70,7 @@
     [super viewDidLoad];
   
     [self viewInit];
+    [self dataInit];
 }
 
 - (void)viewInit {
@@ -105,6 +106,11 @@
 
 }
 
+- (void)dataInit {
+    NSArray*volumes =[[CMFileManger single] mountedVolumefileURls]; // 加载的券的内容
+    NSLog(@"volumes :%@",volumes);
+}
+
 - (id)createRightViewWithClass:(NSView *)rightView {
     [self.view addSubview:rightView];
     [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -116,7 +122,7 @@
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return self.datasources.count;
-}
+} 
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
     CMMainPageClassTCellView *cellView = [tableView makeViewWithIdentifier:NSStringFromClass([CMMainPageClassTCellView class]) owner:self];

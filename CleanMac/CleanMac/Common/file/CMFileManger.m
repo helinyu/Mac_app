@@ -38,7 +38,7 @@
     
 }
 
-- (void)mountedVolume {
+- (NSArray *)mountedVolumefileURls {
     NSArray<NSURLResourceKey> *urlSourceKeys = @[
         NSURLNameKey,
         NSURLLocalizedNameKey,
@@ -86,6 +86,7 @@
         NSURLFileResourceTypeKey
     ];
     NSArray *mountedURLs = [_originFileManger mountedVolumeURLsIncludingResourceValuesForKeys:urlSourceKeys options:NSVolumeEnumerationProduceFileReferenceURLs];
+    return mountedURLs;
 }
 
 @end
