@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28B42363A11343B95954A1C8 /* libPods-CleanMacUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */; };
+		11CDE21E29B4830AFDDE12ED /* Pods_CleanMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */; };
 		4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885A22D2FA9700B89F9E /* AppDelegate.m */; };
 		4123885E22D2FA9700B89F9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885D22D2FA9700B89F9E /* ViewController.m */; };
 		4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4123885F22D2FA9A00B89F9E /* Assets.xcassets */; };
@@ -37,6 +37,50 @@
 		4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFB22DF48D700656E00 /* CMLODcumentView.m */; };
 		4165FC0022DF499700656E00 /* CMShredderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFF22DF499700656E00 /* CMShredderView.m */; };
 		4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */; };
+		4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0A22E00A6B00656E00 /* CMBaseView.m */; };
+		4165FC0F22E00BF400656E00 /* CMShredderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFF22DF499700656E00 /* CMShredderView.m */; };
+		4165FC1022E00BF400656E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885D22D2FA9700B89F9E /* ViewController.m */; };
+		4165FC1122E00BF400656E00 /* NSView+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC122DF235F00656E00 /* NSView+CMAdd.m */; };
+		4165FC1222E00BF400656E00 /* CMSpaceLensView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF722DF48A600656E00 /* CMSpaceLensView.m */; };
+		4165FC1322E00BF400656E00 /* CMUpdateProgramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */; };
+		4165FC1422E00BF400656E00 /* CMTrashOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC722DF3C0200656E00 /* CMTrashOptionView.m */; };
+		4165FC1522E00BF400656E00 /* CMSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E122DC56F200679541 /* CMSecondWindowController.m */; };
+		4165FC1622E00BF400656E00 /* CMPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098F722DCA8EF00679541 /* CMPopViewController.m */; };
+		4165FC1722E00BF400656E00 /* CMMaliciousSoftwareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */; };
+		4165FC1822E00BF400656E00 /* CMPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E522DC6D9000679541 /* CMPanel.m */; };
+		4165FC1922E00BF400656E00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
+		4165FC1A22E00BF400656E00 /* CMSystemTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBCE22DF465800656E00 /* CMSystemTrashView.m */; };
+		4165FC1B22E00BF400656E00 /* CMPopFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990722DDB90800679541 /* CMPopFooterView.m */; };
+		4165FC1C22E00BF400656E00 /* CMEmailTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD722DF469B00656E00 /* CMEmailTrashView.m */; };
+		4165FC1D22E00BF400656E00 /* CMThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098ED22DC6E4200679541 /* CMThirdViewController.m */; };
+		4165FC1E22E00BF400656E00 /* CMUnloaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEB22DF483200656E00 /* CMUnloaderView.m */; };
+		4165FC1F22E00BF400656E00 /* CMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098DC22DC557400679541 /* CMSecondViewController.m */; };
+		4165FC2022E00BF400656E00 /* CMPrivacyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDF22DF46E900656E00 /* CMPrivacyView.m */; };
+		4165FC2122E00BF400656E00 /* CMMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */; };
+		4165FC2222E00BF400656E00 /* CMPhotoTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD322DF468100656E00 /* CMPhotoTrashView.m */; };
+		4165FC2322E00BF400656E00 /* CMPopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990422DDB87300679541 /* CMPopHeaderView.m */; };
+		4165FC2422E00BF400656E00 /* CMMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098F022DC9B0A00679541 /* CMMainWindowController.m */; };
+		4165FC2522E00BF400656E00 /* CMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0A22E00A6B00656E00 /* CMBaseView.m */; };
+		4165FC2622E00BF400656E00 /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
+		4165FC2722E00BF400656E00 /* CMThirdWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098EA22DC6E2200679541 /* CMThirdWindowController.m */; };
+		4165FC2822E00BF400656E00 /* NSButton+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */; };
+		4165FC2922E00BF400656E00 /* CMOptimizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE322DF471000656E00 /* CMOptimizationView.m */; };
+		4165FC2A22E00BF400656E00 /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
+		4165FC2B22E00BF400656E00 /* CMLODcumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFB22DF48D700656E00 /* CMLODcumentView.m */; };
+		4165FC2C22E00BF400656E00 /* CMMainPageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */; };
+		4165FC2D22E00BF400656E00 /* CMTopClassCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098FF22DDB14500679541 /* CMTopClassCItem.m */; };
+		4165FC2E22E00BF400656E00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885A22D2FA9700B89F9E /* AppDelegate.m */; };
+		4165FC2F22E00BF400656E00 /* CMItunesTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */; };
+		4165FC3022E00BF400656E00 /* CMExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF322DF488000656E00 /* CMExtendView.m */; };
+		4165FC3122E00BF400656E00 /* CMMaintainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE722DF473300656E00 /* CMMaintainView.m */; };
+		4165FC3222E00BF400656E00 /* CMIntelligenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */; };
+		4165FC3322E00BF400656E00 /* CMTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC422DF3B3D00656E00 /* CMTrashView.m */; };
+		4165FC3722E00BF400656E00 /* CMPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C098F822DCA8EF00679541 /* CMPopViewController.xib */; };
+		4165FC3822E00BF400656E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4123885F22D2FA9A00B89F9E /* Assets.xcassets */; };
+		4165FC3922E00BF400656E00 /* classListDic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4165FBC922DF416200656E00 /* classListDic.plist */; };
+		4165FC3A22E00BF400656E00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4123886122D2FA9A00B89F9E /* Main.storyboard */; };
+		4165FC3B22E00BF400656E00 /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
+		4165FC3C22E00BF400656E00 /* CMTopClassCItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C0990022DDB14500679541 /* CMTopClassCItem.xib */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
@@ -52,8 +96,8 @@
 		41C0990222DDB14500679541 /* CMTopClassCItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C0990022DDB14500679541 /* CMTopClassCItem.xib */; };
 		41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990422DDB87300679541 /* CMPopHeaderView.m */; };
 		41C0990822DDB90800679541 /* CMPopFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990722DDB90800679541 /* CMPopFooterView.m */; };
-		4FD1B66242429981E6391828 /* libPods-CleanMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */; };
-		C1E0DBE7992C30785C85EDB6 /* libPods-CleanMacTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */; };
+		9C120DDDCCDE16B6E458C4A9 /* Pods_CleanMacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFB26663AB7990C5FBB1F4 /* Pods_CleanMacTests.framework */; };
+		EB6A0B3E8052CAD7BE14FFD9 /* Pods_CleanMacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA197CBD8C5266553E2FA47 /* Pods_CleanMacUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +118,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885622D2FA9700B89F9E /* CleanMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885922D2FA9700B89F9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4123885A22D2FA9700B89F9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,6 +177,10 @@
 		4165FBFF22DF499700656E00 /* CMShredderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMShredderView.m; sourceTree = "<group>"; };
 		4165FC0522DF4B1900656E00 /* CMItunesTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMItunesTrashView.h; sourceTree = "<group>"; };
 		4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMItunesTrashView.m; sourceTree = "<group>"; };
+		4165FC0922E00A6B00656E00 /* CMBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBaseView.h; sourceTree = "<group>"; };
+		4165FC0A22E00A6B00656E00 /* CMBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBaseView.m; sourceTree = "<group>"; };
+		4165FC4022E00BF400656E00 /* CleanMac copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CleanMac copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4165FC4122E00BF500656E00 /* CleanMac copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CleanMac copy-Info.plist"; path = "/Users/felix/my_own_project/Mac_app/CleanMac/CleanMac copy-Info.plist"; sourceTree = "<absolute>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
@@ -161,14 +208,15 @@
 		41C0990422DDB87300679541 /* CMPopHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopHeaderView.m; sourceTree = "<group>"; };
 		41C0990622DDB90800679541 /* CMPopFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPopFooterView.h; sourceTree = "<group>"; };
 		41C0990722DDB90800679541 /* CMPopFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopFooterView.m; sourceTree = "<group>"; };
-		53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.debug.xcconfig"; sourceTree = "<group>"; };
-		5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50DFB26663AB7990C5FBB1F4 /* Pods_CleanMacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMacTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.release.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.release.xcconfig"; sourceTree = "<group>"; };
-		8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.release.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.release.xcconfig"; sourceTree = "<group>"; };
 		A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.debug.xcconfig"; sourceTree = "<group>"; };
 		C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDA197CBD8C5266553E2FA47 /* Pods_CleanMacUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMacUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD1B66242429981E6391828 /* libPods-CleanMac.a in Frameworks */,
+				11CDE21E29B4830AFDDE12ED /* Pods_CleanMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E0DBE7992C30785C85EDB6 /* libPods-CleanMacTests.a in Frameworks */,
+				9C120DDDCCDE16B6E458C4A9 /* Pods_CleanMacTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +240,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B42363A11343B95954A1C8 /* libPods-CleanMacUITests.a in Frameworks */,
+				EB6A0B3E8052CAD7BE14FFD9 /* Pods_CleanMacUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4165FC3422E00BF400656E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +263,7 @@
 				4123885722D2FA9700B89F9E /* Products */,
 				8BED761FB2C5CC8D08CAE6F3 /* Pods */,
 				F58B340B034B47AB2ECA32EA /* Frameworks */,
+				4165FC4122E00BF500656E00 /* CleanMac copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +273,7 @@
 				4123885622D2FA9700B89F9E /* CleanMac.app */,
 				4123886C22D2FA9A00B89F9E /* CleanMacTests.xctest */,
 				4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */,
+				4165FC4022E00BF400656E00 /* CleanMac copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -450,6 +507,15 @@
 			path = "itunes trash";
 			sourceTree = "<group>";
 		};
+		4165FC0822E00A5B00656E00 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				4165FC0922E00A6B00656E00 /* CMBaseView.h */,
+				4165FC0A22E00A6B00656E00 /* CMBaseView.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
 		41BAFD2E22DF005700AD96AC /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +537,7 @@
 		41C098E322DC6D7100679541 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				4165FC0822E00A5B00656E00 /* BaseClass */,
 				4165FBBF22DF234A00656E00 /* category */,
 				41C098E422DC6D9000679541 /* CMPanel.h */,
 				41C098E522DC6D9000679541 /* CMPanel.m */,
@@ -520,12 +587,12 @@
 		8BED761FB2C5CC8D08CAE6F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */,
-				78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */,
 				5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */,
 				FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */,
 				C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */,
 				A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */,
+				B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */,
+				79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -533,9 +600,9 @@
 		F58B340B034B47AB2ECA32EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */,
-				8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */,
-				5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */,
+				CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */,
+				50DFB26663AB7990C5FBB1F4 /* Pods_CleanMacTests.framework */,
+				FDA197CBD8C5266553E2FA47 /* Pods_CleanMacUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -551,6 +618,7 @@
 				4123885222D2FA9700B89F9E /* Sources */,
 				4123885322D2FA9700B89F9E /* Frameworks */,
 				4123885422D2FA9700B89F9E /* Resources */,
+				360E5967E7CDCE0678F82E37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -599,6 +667,23 @@
 			productReference = 4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4165FC0C22E00BF400656E00 /* CleanMac copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4165FC3D22E00BF400656E00 /* Build configuration list for PBXNativeTarget "CleanMac copy" */;
+			buildPhases = (
+				4165FC0E22E00BF400656E00 /* Sources */,
+				4165FC3422E00BF400656E00 /* Frameworks */,
+				4165FC3622E00BF400656E00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CleanMac copy";
+			productName = CleanMac;
+			productReference = 4165FC4022E00BF400656E00 /* CleanMac copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -637,6 +722,7 @@
 				4123885522D2FA9700B89F9E /* CleanMac */,
 				4123886B22D2FA9A00B89F9E /* CleanMacTests */,
 				4123887622D2FA9A00B89F9E /* CleanMacUITests */,
+				4165FC0C22E00BF400656E00 /* CleanMac copy */,
 			);
 		};
 /* End PBXProject section */
@@ -669,9 +755,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4165FC3622E00BF400656E00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4165FC3722E00BF400656E00 /* CMPopViewController.xib in Resources */,
+				4165FC3822E00BF400656E00 /* Assets.xcassets in Resources */,
+				4165FC3922E00BF400656E00 /* classListDic.plist in Resources */,
+				4165FC3A22E00BF400656E00 /* Main.storyboard in Resources */,
+				4165FC3B22E00BF400656E00 /* classList.plist in Resources */,
+				4165FC3C22E00BF400656E00 /* CMTopClassCItem.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		360E5967E7CDCE0678F82E37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5517484D5C47AE98C7CA88C2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -767,6 +892,7 @@
 				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
+				4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */,
 				41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
 				4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */,
@@ -797,6 +923,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4165FC0E22E00BF400656E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4165FC0F22E00BF400656E00 /* CMShredderView.m in Sources */,
+				4165FC1022E00BF400656E00 /* ViewController.m in Sources */,
+				4165FC1122E00BF400656E00 /* NSView+CMAdd.m in Sources */,
+				4165FC1222E00BF400656E00 /* CMSpaceLensView.m in Sources */,
+				4165FC1322E00BF400656E00 /* CMUpdateProgramView.m in Sources */,
+				4165FC1422E00BF400656E00 /* CMTrashOptionView.m in Sources */,
+				4165FC1522E00BF400656E00 /* CMSecondWindowController.m in Sources */,
+				4165FC1622E00BF400656E00 /* CMPopViewController.m in Sources */,
+				4165FC1722E00BF400656E00 /* CMMaliciousSoftwareView.m in Sources */,
+				4165FC1822E00BF400656E00 /* CMPanel.m in Sources */,
+				4165FC1922E00BF400656E00 /* main.m in Sources */,
+				4165FC1A22E00BF400656E00 /* CMSystemTrashView.m in Sources */,
+				4165FC1B22E00BF400656E00 /* CMPopFooterView.m in Sources */,
+				4165FC1C22E00BF400656E00 /* CMEmailTrashView.m in Sources */,
+				4165FC1D22E00BF400656E00 /* CMThirdViewController.m in Sources */,
+				4165FC1E22E00BF400656E00 /* CMUnloaderView.m in Sources */,
+				4165FC1F22E00BF400656E00 /* CMSecondViewController.m in Sources */,
+				4165FC2022E00BF400656E00 /* CMPrivacyView.m in Sources */,
+				4165FC2122E00BF400656E00 /* CMMainPageViewController.m in Sources */,
+				4165FC2222E00BF400656E00 /* CMPhotoTrashView.m in Sources */,
+				4165FC2322E00BF400656E00 /* CMPopHeaderView.m in Sources */,
+				4165FC2422E00BF400656E00 /* CMMainWindowController.m in Sources */,
+				4165FC2522E00BF400656E00 /* CMBaseView.m in Sources */,
+				4165FC2622E00BF400656E00 /* CMFileManger.m in Sources */,
+				4165FC2722E00BF400656E00 /* CMThirdWindowController.m in Sources */,
+				4165FC2822E00BF400656E00 /* NSButton+CMAdd.m in Sources */,
+				4165FC2922E00BF400656E00 /* CMOptimizationView.m in Sources */,
+				4165FC2A22E00BF400656E00 /* CMMainPageClassTCellView.m in Sources */,
+				4165FC2B22E00BF400656E00 /* CMLODcumentView.m in Sources */,
+				4165FC2C22E00BF400656E00 /* CMMainPageWindowController.m in Sources */,
+				4165FC2D22E00BF400656E00 /* CMTopClassCItem.m in Sources */,
+				4165FC2E22E00BF400656E00 /* AppDelegate.m in Sources */,
+				4165FC2F22E00BF400656E00 /* CMItunesTrashView.m in Sources */,
+				4165FC3022E00BF400656E00 /* CMExtendView.m in Sources */,
+				4165FC3122E00BF400656E00 /* CMMaintainView.m in Sources */,
+				4165FC3222E00BF400656E00 /* CMIntelligenceView.m in Sources */,
+				4165FC3322E00BF400656E00 /* CMTrashView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,7 +1110,7 @@
 		};
 		4123888122D2FA9A00B89F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */;
+			baseConfigurationReference = B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
@@ -960,7 +1130,7 @@
 		};
 		4123888222D2FA9A00B89F9E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */;
+			baseConfigurationReference = 79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
@@ -1056,6 +1226,44 @@
 			};
 			name = Release;
 		};
+		4165FC3E22E00BF400656E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D2XBEJ6876;
+				INFOPLIST_FILE = "CleanMac copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4165FC3F22E00BF400656E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D2XBEJ6876;
+				INFOPLIST_FILE = "CleanMac copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1091,6 +1299,15 @@
 			buildConfigurations = (
 				4123888722D2FA9A00B89F9E /* Debug */,
 				4123888822D2FA9A00B89F9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4165FC3D22E00BF400656E00 /* Build configuration list for PBXNativeTarget "CleanMac copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4165FC3E22E00BF400656E00 /* Debug */,
+				4165FC3F22E00BF400656E00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

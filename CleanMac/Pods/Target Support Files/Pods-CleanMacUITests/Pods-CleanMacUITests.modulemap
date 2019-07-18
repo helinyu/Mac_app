@@ -1,0 +1,6 @@
+framework module Pods_CleanMacUITests {
+  umbrella header "Pods-CleanMacUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

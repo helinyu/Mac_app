@@ -12,7 +12,28 @@
 
 #import "CMFileManger.h"
 
+@interface CMFileManger ()
+
+@end
+
 @implementation CMFileManger
+
++ (instancetype)single {
+    static CMFileManger *thiz;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        thiz = [CMFileManger new];
+    });
+    return thiz;
+}
+
+- (void)scanfile {
+    
+}
+
+@end
+
+@implementation CMFileManger (ClassMathod)
 
 + (NSArray<NSString *> *)getMainClassInfos {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"classList" ofType:@"plist"];

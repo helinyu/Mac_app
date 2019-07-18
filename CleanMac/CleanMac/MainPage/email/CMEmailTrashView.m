@@ -14,10 +14,17 @@
 
 @implementation CMEmailTrashView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+- (instancetype)initWithFrame:(NSRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
+- (void)baseInit {
     
-    // Drawing code here.
 }
 
 @end

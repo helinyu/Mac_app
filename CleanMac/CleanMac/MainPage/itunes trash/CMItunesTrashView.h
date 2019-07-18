@@ -11,10 +11,10 @@
     
 
 #import <Cocoa/Cocoa.h>
-
+#import "CMBaseView.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMItunesTrashView : NSView
+@interface CMItunesTrashView : CMBaseView
 
 @end
 

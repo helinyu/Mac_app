@@ -11,10 +11,11 @@
     
 
 #import <Cocoa/Cocoa.h>
+#import "CMBaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMExtendView : NSView
+@interface CMExtendView :CMBaseView
 
 @end
 

@@ -34,15 +34,6 @@ static CGFloat kTrashMarginLeft = 20.f;
 
 @implementation CMTrashView
 
-- (instancetype)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self baseInit];
-    }
-    return self;
-}
-
 - (void)baseInit {
     _titleTF = [NSTextField new];
     _descTF = [NSTextField new];
@@ -63,11 +54,6 @@ static CGFloat kTrashMarginLeft = 20.f;
         make.centerY.equalTo(self);
     }];
     
-//    [_finderItemOptionView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self).offset(kTrashMarginLeft);
-//        make.bottom.equalTo(self.trashItemOptionView.mas_top).offset(-10.f);
-//    }];
-
     [_finderItemOptionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kTrashMarginLeft);
         make.top.equalTo(self.trashItemOptionView.mas_bottom).offset(10.f);

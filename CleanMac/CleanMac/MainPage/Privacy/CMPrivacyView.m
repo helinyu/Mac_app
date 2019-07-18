@@ -14,10 +14,8 @@
 
 @implementation CMPrivacyView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+- (void)baseInit {
     
-    // Drawing code here.
 }
 
 @end

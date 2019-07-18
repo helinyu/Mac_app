@@ -14,8 +14,8 @@
 
 @implementation CMShredderView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+- (void)baseInit {
+    
 }
 
 @end

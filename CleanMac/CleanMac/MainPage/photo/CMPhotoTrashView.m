@@ -14,10 +14,19 @@
 
 @implementation CMPhotoTrashView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
+- (instancetype)initWithFrame:(NSRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
 }
 
+- (void)baseInit {
+    
+    self.layer = CALayer.layer;
+    self.layer.backgroundColor = [NSColor redColor].CGColor;
+    
+}
 @end
