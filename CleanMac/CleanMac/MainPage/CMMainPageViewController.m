@@ -14,6 +14,8 @@
 #import <Masonry.h>
 #import "CMMainPageClassTCellView.h"
 #import "CMFileManger.h"
+//#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "CMFileManger.h"
 
 #import "CMIntelligenceView.h"
 #import "CMSystemTrashView.h"
@@ -45,7 +47,7 @@
 @property (nonatomic, strong) CMSystemTrashView *systemTrashView;
 @property (nonatomic, strong) CMPhotoTrashView *photoTrashView;
 @property (nonatomic, strong) CMEmailTrashView *emailTrashView;
-@property (nonatomic, strong) CMItunesTrashView *itunesTranshView;
+@property (nonatomic, strong) CMItunesTrashView *itunestrashView;
 @property (nonatomic, strong) CMTrashView *trashView;
 @property (nonatomic, strong) CMMaliciousSoftwareView * maliciousSoftwareView;
 @property (nonatomic, strong) CMPrivacyView *privacyView;
@@ -58,8 +60,6 @@
 @property (nonatomic, strong) CMLODcumentView *loDocumentView;
 @property (nonatomic, strong) CMShredderView *shredderView;
 
-@property (nonatomic, strong) CMTrashView *transhView;
-
 @property (nonatomic, assign) NSInteger curRow;
 
 @end
@@ -71,6 +71,7 @@
   
     [self viewInit];
     [self dataInit];
+    [self bindInit];
 }
 
 - (void)viewInit {
@@ -84,8 +85,8 @@
     _systemTrashView = Create_right_view(CMSystemTrashView);
     _photoTrashView = Create_right_view(CMPhotoTrashView);
     _emailTrashView = Create_right_view(CMEmailTrashView);
-    _itunesTranshView = Create_right_view(CMItunesTrashView);
-    _transhView = Create_right_view(CMTrashView);
+    _itunestrashView = Create_right_view(CMItunesTrashView);
+    _trashView = Create_right_view(CMTrashView);
     _maliciousSoftwareView = Create_right_view(CMMaliciousSoftwareView);
     _privacyView = Create_right_view(CMPrivacyView);
     _optimizationView = Create_right_view(CMOptimizationView);
@@ -97,13 +98,12 @@
     _loDocumentView = Create_right_view(CMLODcumentView);
     _shredderView = Create_right_view(CMShredderView);
     
-    _rightViews = @[_intelligenceView, _systemTrashView, _photoTrashView, _emailTrashView, _itunesTranshView, _transhView, _maliciousSoftwareView, _privacyView, _optimizationView, _maintainView, _unloaderView, _updateProgramView, _extendView, _spaceLensView, _loDocumentView, _shredderView];
+    _rightViews = @[_intelligenceView, _systemTrashView, _photoTrashView, _emailTrashView, _itunestrashView, _trashView, _maliciousSoftwareView, _privacyView, _optimizationView, _maintainView, _unloaderView, _updateProgramView, _extendView, _spaceLensView, _loDocumentView, _shredderView];
     
     for (NSView *rightView in _rightViews) {
         rightView.hidden = YES;
     }
     _intelligenceView.hidden = NO;
-
 }
 
 - (void)dataInit {
@@ -126,6 +126,27 @@
     }];
     return rightView;
 }
+
+#pragma mark -- method
+
+- (void)bindInit {
+
+    __weak typeof (self) weakSelf = self;
+    _trashView.actionScanBlock = ^{
+        NSLog(@"开始三秒垃圾桶");
+        [CMFileManger scanTrashFolderThen:^(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size) {
+            if (finished) {
+                weakSelf.trashView.scanState = CMScanStateEnd;
+            }
+            else {
+                weakSelf.trashView.scanState = CMScanStateEnd;
+            }
+            NSLog(@"lt- scan finished:%d , path: %@, size:%ld",finished, path, (long)size);
+        }];
+    };
+}
+
+#pragma mark -- dataosurce & delegate
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return self.datasources.count;

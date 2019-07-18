@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSTextField *titleTF;
 @property (nonatomic, strong, readonly) NSTextField *descTF;
 
+- (void)configImgName:(NSString *)imgName title:(NSString *)title desc:(NSString *)desc;
+
 @end
 
 NS_ASSUME_NONNULL_END

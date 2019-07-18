@@ -12,12 +12,27 @@
 
 #import "CMFileManger.h"
 
+#if defined(__LP64__) && __LP64__
+
+typedef NSInteger kInteger;
+
+#else
+
+typedef long long kInteger;
+
+#endif
+
+static NSInteger k32VoidPointByteLength = 4; // 32位
+static NSInteger k64VoidPointByteLength = 8; // 66位
+
 
 @interface CMFileManger ()
 
 @property (nonatomic, strong) NSFileManager *originFileManger;
 
 @end
+
+static CGFloat const kMagnitude = 1024.f;
 
 @implementation CMFileManger
 
@@ -107,86 +122,116 @@
     NSString *trashPath =NSSearchPathForDirectoriesInDomains(NSTrashDirectory, NSAllDomainsMask, YES).firstObject;
     NSArray *files = [_originFileManger contentsOfDirectoryAtPath:trashPath error:&error];
     NSLog(@"trashFiles :%@",files);
-    
-    NSString *homePath =NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSAllDomainsMask, YES).firstObject;
-    NSString *uniPath = [homePath stringByAppendingPathComponent:@"Untitled-1.oc"];
-    NSArray *contents = [_originFileManger contentsOfDirectoryAtPath:homePath error:&error];
-
-    long long fileSize2 = [[_originFileManger attributesOfItemAtPath:trashPath error:nil] fileSize];
-    [self folderSizeAtPath:trashPath];
-    NSLog(@"trash file size :%lld",fileSize2);
-
-    NSURL *unitUrl = [NSURL fileURLWithPath:uniPath];
-    long long unitFileSize1 = [[_originFileManger attributesOfItemAtPath:uniPath error:nil] fileSize];
-    NSNumber *unitFileSize;
-    [unitUrl getResourceValue:&unitFileSize forKey:NSURLFileSizeKey error:NULL];
-    NSLog(@"lt- unit fize size;%@ , unit size 1 ;%lld",unitFileSize,unitFileSize1);
-
-    
-    long long fileSize1 =  [self folderSizeAtPath:homePath];
-    NSLog(@"file size :%lld",fileSize1);
-    
-    long long fileSize = [self calculateSizeWithPath:trashPath];
-    NSLog(@"lt-, file size :%lld",fileSize);
     return files;
 }
 
-- (long long)calculateSizeWithPath:(NSString *)folderPath {
-    NSURL *diskCacheURL = [NSURL fileURLWithPath:folderPath isDirectory:YES];
-    
-        NSUInteger fileCount = 0;
-        NSUInteger totalSize = 0;
-        
-        NSDirectoryEnumerator *fileEnumerator = [self.originFileManger enumeratorAtURL:diskCacheURL
-                                                       includingPropertiesForKeys:@[NSFileSize]
-                                                                          options:NSDirectoryEnumerationSkipsHiddenFiles
-                                                                     errorHandler:NULL];
-        
-        for (NSURL *fileURL in fileEnumerator) {
-            NSNumber *fileSize;
-            [fileURL getResourceValue:&fileSize forKey:NSURLFileSizeKey error:NULL];
-            totalSize += fileSize.unsignedIntegerValue;
-            fileCount += 1;
-        }
+@end
 
-    NSLog(@"lt- file size ;%lu",(unsigned long)totalSize);
-    return totalSize;
+@implementation CMFileManger (Path)
+
++ (NSString *)getPathWithUrlResourceKey:(NSSearchPathDirectory)pathDirectory {
+    NSString *path =NSSearchPathForDirectoriesInDomains(pathDirectory, NSAllDomainsMask, YES).firstObject;
+    return path;
 }
 
-- (long long) fileSizeAtPath:(NSString*) filePath{
-    
++ (NSString *)trashPath {
+   return [CMFileManger getPathWithUrlResourceKey:NSTrashDirectory];
+}
+
+@end
+
+@implementation CMFileManger (Size)
+
++ (kInteger)sizeOfFilePath:(NSString*)filePath{
     NSFileManager* manager = [NSFileManager defaultManager];
     if ([manager fileExistsAtPath:filePath]){
         return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
     }
     return 0;
-    
 }
 
-- (long long)folderSizeAtPath:(NSString *)folderPath {
++ (kInteger)sizeOfFilePathUrl:(NSURL *)filePathUrl {
+    NSNumber *fileSize;
+    [filePathUrl getResourceValue:&fileSize forKey:NSURLFileSizeKey error:NULL];
+    
+    return fileSize.unsignedToInteger;
+}
+
++ (BOOL)is64BitSystem {
+    if (sizeof(void *) == k64VoidPointByteLength) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
+
++ (kInteger)sizeTotalOfFolderPath:(NSString *)folderPath {
     NSFileManager* manager = [NSFileManager defaultManager];
+    
     if (![manager fileExistsAtPath:folderPath]) return 0;
     NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
     NSString* fileName;
-    long long folderSize = 0;
+    kInteger folderSize = 0;
     while ((fileName = [childFilesEnumerator nextObject]) != nil){
         NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
-        folderSize += [self fileSizeAtPath:fileAbsolutePath];
+        folderSize += [CMFileManger sizeOfFilePath:fileAbsolutePath];
     }
-//    return [self sizeOfFile:folderSize];
     return folderSize;
 }
 
-- (NSString *)sizeOfFile:(long long)folderSize {
-    if (folderSize < 1024.0) {
-        return  [NSString stringWithFormat:@"%.2fB",folderSize * 1.0];
-    }else if (folderSize >= 1024.0 && folderSize < (1024.0*1024.0)){
-        return  [NSString stringWithFormat:@"%.2fKB",folderSize/1024.0];
-    }if (folderSize >= (1024.0*1024.0) && folderSize < (1024.0*1024.0*1024.0)) {
-        return [NSString stringWithFormat:@"%.2fMB", folderSize/(1024.0*1024.0)];
++ (NSString *)fileSizeTranslateToLargerUnitWithOriginSize:(kInteger)originSize {
+    if (originSize < kMagnitude) {
+        return  [NSString stringWithFormat:@"%ld Byte",(long)originSize];
+    }else if (originSize >= kMagnitude && originSize < (kMagnitude *kMagnitude)){
+        return  [NSString stringWithFormat:@"%.2f KB",originSize *1.f/kMagnitude];
+    }if (originSize >= (kMagnitude *kMagnitude) && originSize < (kMagnitude *kMagnitude *kMagnitude)) {
+        return [NSString stringWithFormat:@"%.2fMB", originSize/(kMagnitude *kMagnitude)];
     }else{
-        return [NSString stringWithFormat:@"%.2fGB", folderSize/(1024.0*1024.0*1024.0)];
+        return [NSString stringWithFormat:@"%.2fGB", originSize/(kMagnitude *kMagnitude *kMagnitude)];
     }
+}
+
++ (kInteger)sizeOfSkinHiddenFilesFolderPath:(NSString *)folderPath {
+    NSURL *diskCacheURL = [NSURL fileURLWithPath:folderPath isDirectory:YES];
+    
+    NSUInteger fileCount = 0;
+    NSUInteger totalSize = 0;
+    
+    //     一般都是不计算隐藏文件的
+    NSDirectoryEnumerator *fileEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:diskCacheURL
+                                                        includingPropertiesForKeys:@[NSFileSize]
+                                                                           options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                                      errorHandler:NULL];
+    
+    for (NSURL *fileURL in fileEnumerator) {
+        kInteger fileSize = [self sizeOfFilePathUrl:fileURL];
+        totalSize += fileSize;
+        fileCount += 1;
+    }
+    
+    return totalSize;
+}
+
++ (void)sizeOfSkinHiddenFilesFolderPath:(NSString *)folderPath then:(ScanResultBlock)resultBlock {
+    NSURL *diskCacheURL = [NSURL fileURLWithPath:folderPath isDirectory:YES];
+    NSUInteger fileCount = 0;
+    NSUInteger totalSize = 0;
+    NSDirectoryEnumerator *fileEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:diskCacheURL includingPropertiesForKeys:@[NSFileSize] options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:NULL];
+    
+    for (NSURL *fileURL in fileEnumerator) {
+        kInteger fileSize = [self sizeOfFilePathUrl:fileURL];
+        totalSize += fileSize;
+        fileCount += 1;
+        !resultBlock? :resultBlock(NO, nil,fileURL.absoluteString, totalSize);
+    }
+    
+    !resultBlock? :resultBlock(YES, nil, @"", totalSize);
+}
+
++ (void)scanTrashFolderThen:(ScanResultBlock)resultBlock {
+    NSString *trashPath = [CMFileManger trashPath];
+    [CMFileManger sizeOfSkinHiddenFilesFolderPath:trashPath then:resultBlock];
 }
 
 @end

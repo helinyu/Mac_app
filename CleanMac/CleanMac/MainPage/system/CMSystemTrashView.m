@@ -28,6 +28,8 @@
     self.layer = CALayer.layer;
     self.layer.backgroundColor = [NSColor orangeColor].CGColor;
     
+    
+    
 }
 
 @end

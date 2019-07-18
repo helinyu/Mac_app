@@ -13,9 +13,18 @@
 #import <Cocoa/Cocoa.h>
 #import "CMBaseView.h"
 
+typedef NS_ENUM(NSUInteger, CMScanState) {
+    CMScanStateBegin,
+    CMScanStateScaning,
+    CMScanStateEnd,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CMTrashView : CMBaseView
+
+@property (nonatomic, copy) void(^actionScanBlock)(void);
+@property (nonatomic, assign) CMScanState scanState;
 
 @end
 

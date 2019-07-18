@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11CDE21E29B4830AFDDE12ED /* Pods_CleanMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */; };
+		4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */; };
+		4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4114460922E0797F00E5B4B6 /* KMSystem.m */; };
 		4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885A22D2FA9700B89F9E /* AppDelegate.m */; };
 		4123885E22D2FA9700B89F9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885D22D2FA9700B89F9E /* ViewController.m */; };
 		4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4123885F22D2FA9A00B89F9E /* Assets.xcassets */; };
@@ -122,6 +124,10 @@
 /* Begin PBXFileReference section */
 		29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac_copy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4114460322E042AA00E5B4B6 /* CleanMacDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = CleanMacDebug.entitlements; path = ../../../../.Trash/CleanMacDebug.entitlements; sourceTree = "<group>"; };
+		4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CMAdd.h"; sourceTree = "<group>"; };
+		4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CMAdd.m"; sourceTree = "<group>"; };
+		4114460822E0797F00E5B4B6 /* KMSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMSystem.h; sourceTree = "<group>"; };
+		4114460922E0797F00E5B4B6 /* KMSystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMSystem.m; sourceTree = "<group>"; };
 		4123885622D2FA9700B89F9E /* CleanMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885922D2FA9700B89F9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4123885A22D2FA9700B89F9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -262,6 +268,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4114460422E077FA00E5B4B6 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */,
+				4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		4123884D22D2FA9700B89F9E = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +546,8 @@
 				41BAFD3222DF028F00AD96AC /* CMFileManger.h */,
 				41BAFD3322DF028F00AD96AC /* CMFileManger.m */,
 				4165FC4422E014C400656E00 /* NSURLResourceKey.plist */,
+				4114460822E0797F00E5B4B6 /* KMSystem.h */,
+				4114460922E0797F00E5B4B6 /* KMSystem.m */,
 			);
 			path = file;
 			sourceTree = "<group>";
@@ -547,6 +564,7 @@
 		41BAFD3122DF026D00AD96AC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4114460422E077FA00E5B4B6 /* category */,
 				4165FC4622E014CC00656E00 /* file */,
 			);
 			path = Common;
@@ -961,6 +979,7 @@
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
 				4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */,
 				415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */,
+				4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */,
 				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
@@ -977,6 +996,7 @@
 				4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */,
 				4165FBF422DF488000656E00 /* CMExtendView.m in Sources */,
 				4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */,
+				4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */,
 				4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */,
 				4165FBC522DF3B3D00656E00 /* CMTrashView.m in Sources */,
 			);

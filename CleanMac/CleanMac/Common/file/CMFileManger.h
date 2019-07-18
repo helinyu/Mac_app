@@ -11,6 +11,11 @@
     
 
 #import <Foundation/Foundation.h>
+#import "NSNumber+CMAdd.h"
+#import "KMSystem.h"
+
+
+typedef void(^ScanResultBlock)(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +27,29 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)mountedVolumefileURls;
 - (NSArray *)fileUrls;
 - (NSArray *)trashFiles;
+
+@end
+
+@interface CMFileManger (Path)
+
+// common get path method
++ (NSString *)getPathWithUrlResourceKey:(NSSearchPathDirectory)pathDirectory;
+
++ (NSString *)trashPath;
+
+@end
+
+@interface CMFileManger (Size)
+
++ (kInteger)sizeOfFilePath:(NSString*)filePath;
++ (kInteger)sizeOfFilePathUrl:(NSURL *)filePathUrl;
++ (kInteger)sizeTotalOfFolderPath:(NSString *)folderPath;
++ (NSString *)fileSizeTranslateToLargerUnitWithOriginSize:(kInteger)originSize;
++ (kInteger)sizeOfSkinHiddenFilesFolderPath:(NSString *)folderPath;
++ (void)sizeOfSkinHiddenFilesFolderPath:(NSString *)folderPath then:(ScanResultBlock)resultBlock;
+
+// 扫描垃圾桶的大小
++ (void)scanTrashFolderThen:(ScanResultBlock)resultBlock;
 
 @end
 
