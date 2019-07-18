@@ -81,6 +81,7 @@
 		4165FC3A22E00BF400656E00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4123886122D2FA9A00B89F9E /* Main.storyboard */; };
 		4165FC3B22E00BF400656E00 /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		4165FC3C22E00BF400656E00 /* CMTopClassCItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C0990022DDB14500679541 /* CMTopClassCItem.xib */; };
+		4165FC4522E014C400656E00 /* NSURLResourceKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4165FC4422E014C400656E00 /* NSURLResourceKey.plist */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
@@ -96,8 +97,9 @@
 		41C0990222DDB14500679541 /* CMTopClassCItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C0990022DDB14500679541 /* CMTopClassCItem.xib */; };
 		41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990422DDB87300679541 /* CMPopHeaderView.m */; };
 		41C0990822DDB90800679541 /* CMPopFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990722DDB90800679541 /* CMPopFooterView.m */; };
-		9C120DDDCCDE16B6E458C4A9 /* Pods_CleanMacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFB26663AB7990C5FBB1F4 /* Pods_CleanMacTests.framework */; };
-		EB6A0B3E8052CAD7BE14FFD9 /* Pods_CleanMacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA197CBD8C5266553E2FA47 /* Pods_CleanMacUITests.framework */; };
+		5ECE43D7D59EA1FDBE48D249 /* Pods_CleanMac_copy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */; };
+		90CCC380AF44038895ED3985 /* libPods-CleanMacUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96260F9EAF95D9F434553C2D /* libPods-CleanMacUITests.a */; };
+		E82291D9DA51F992834C9BAB /* libPods-CleanMacTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9ACD2C7934F29F631FEBA9 /* libPods-CleanMacTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac_copy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885622D2FA9700B89F9E /* CleanMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885922D2FA9700B89F9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4123885A22D2FA9700B89F9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,6 +184,7 @@
 		4165FC0A22E00A6B00656E00 /* CMBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBaseView.m; sourceTree = "<group>"; };
 		4165FC4022E00BF400656E00 /* CleanMac copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CleanMac copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4165FC4122E00BF500656E00 /* CleanMac copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CleanMac copy-Info.plist"; path = "/Users/felix/my_own_project/Mac_app/CleanMac/CleanMac copy-Info.plist"; sourceTree = "<absolute>"; };
+		4165FC4422E014C400656E00 /* NSURLResourceKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NSURLResourceKey.plist; sourceTree = "<group>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
@@ -208,15 +212,17 @@
 		41C0990422DDB87300679541 /* CMPopHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopHeaderView.m; sourceTree = "<group>"; };
 		41C0990622DDB90800679541 /* CMPopFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPopFooterView.h; sourceTree = "<group>"; };
 		41C0990722DDB90800679541 /* CMPopFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopFooterView.m; sourceTree = "<group>"; };
-		50DFB26663AB7990C5FBB1F4 /* Pods_CleanMacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMacTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.release.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.release.xcconfig"; sourceTree = "<group>"; };
+		8367E1E81FF15E78E7E44170 /* Pods-CleanMac copy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac copy.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy.debug.xcconfig"; sourceTree = "<group>"; };
+		96260F9EAF95D9F434553C2D /* libPods-CleanMacUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97325BCD41B56A9F6D501CD4 /* Pods-CleanMac copy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac copy.release.xcconfig"; path = "Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy.release.xcconfig"; sourceTree = "<group>"; };
+		9A9ACD2C7934F29F631FEBA9 /* libPods-CleanMacTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.debug.xcconfig"; sourceTree = "<group>"; };
 		C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.release.xcconfig"; sourceTree = "<group>"; };
-		FDA197CBD8C5266553E2FA47 /* Pods_CleanMacUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMacUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C120DDDCCDE16B6E458C4A9 /* Pods_CleanMacTests.framework in Frameworks */,
+				E82291D9DA51F992834C9BAB /* libPods-CleanMacTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB6A0B3E8052CAD7BE14FFD9 /* Pods_CleanMacUITests.framework in Frameworks */,
+				90CCC380AF44038895ED3985 /* libPods-CleanMacUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECE43D7D59EA1FDBE48D249 /* Pods_CleanMac_copy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +523,16 @@
 			path = BaseClass;
 			sourceTree = "<group>";
 		};
+		4165FC4622E014CC00656E00 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				41BAFD3222DF028F00AD96AC /* CMFileManger.h */,
+				41BAFD3322DF028F00AD96AC /* CMFileManger.m */,
+				4165FC4422E014C400656E00 /* NSURLResourceKey.plist */,
+			);
+			path = file;
+			sourceTree = "<group>";
+		};
 		41BAFD2E22DF005700AD96AC /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,8 +545,7 @@
 		41BAFD3122DF026D00AD96AC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				41BAFD3222DF028F00AD96AC /* CMFileManger.h */,
-				41BAFD3322DF028F00AD96AC /* CMFileManger.m */,
+				4165FC4622E014CC00656E00 /* file */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -593,6 +609,8 @@
 				A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */,
 				B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */,
 				79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */,
+				8367E1E81FF15E78E7E44170 /* Pods-CleanMac copy.debug.xcconfig */,
+				97325BCD41B56A9F6D501CD4 /* Pods-CleanMac copy.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -601,8 +619,9 @@
 			isa = PBXGroup;
 			children = (
 				CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */,
-				50DFB26663AB7990C5FBB1F4 /* Pods_CleanMacTests.framework */,
-				FDA197CBD8C5266553E2FA47 /* Pods_CleanMacUITests.framework */,
+				9A9ACD2C7934F29F631FEBA9 /* libPods-CleanMacTests.a */,
+				96260F9EAF95D9F434553C2D /* libPods-CleanMacUITests.a */,
+				29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -671,9 +690,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4165FC3D22E00BF400656E00 /* Build configuration list for PBXNativeTarget "CleanMac copy" */;
 			buildPhases = (
+				DBFA2047D7F0C046729EFF95 /* [CP] Check Pods Manifest.lock */,
 				4165FC0E22E00BF400656E00 /* Sources */,
 				4165FC3422E00BF400656E00 /* Frameworks */,
 				4165FC3622E00BF400656E00 /* Resources */,
+				E0A20542DC912F0DE00C0287 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -736,6 +757,7 @@
 				4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */,
 				4165FBCA22DF416200656E00 /* classListDic.plist in Resources */,
 				4123886322D2FA9A00B89F9E /* Main.storyboard in Resources */,
+				4165FC4522E014C400656E00 /* NSURLResourceKey.plist in Resources */,
 				41BAFD3022DF007400AD96AC /* classList.plist in Resources */,
 				41C0990222DDB14500679541 /* CMTopClassCItem.xib in Resources */,
 			);
@@ -861,6 +883,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBFA2047D7F0C046729EFF95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanMac copy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0A20542DC912F0DE00C0287 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1228,6 +1298,7 @@
 		};
 		4165FC3E22E00BF400656E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8367E1E81FF15E78E7E44170 /* Pods-CleanMac copy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
@@ -1247,6 +1318,7 @@
 		};
 		4165FC3F22E00BF400656E00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97325BCD41B56A9F6D501CD4 /* Pods-CleanMac copy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
