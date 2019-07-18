@@ -121,6 +121,7 @@
 
 /* Begin PBXFileReference section */
 		29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac_copy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4114460322E042AA00E5B4B6 /* CleanMacDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = CleanMacDebug.entitlements; path = ../../../../.Trash/CleanMacDebug.entitlements; sourceTree = "<group>"; };
 		4123885622D2FA9700B89F9E /* CleanMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885922D2FA9700B89F9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4123885A22D2FA9700B89F9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -288,6 +289,7 @@
 		4123885822D2FA9700B89F9E /* CleanMac */ = {
 			isa = PBXGroup;
 			children = (
+				4114460322E042AA00E5B4B6 /* CleanMacDebug.entitlements */,
 				41BAFD2E22DF005700AD96AC /* resource */,
 				415B5B8A22DDFA4C00E43F03 /* MainPage */,
 				41C098F222DCA2E400679541 /* PopView */,
@@ -1183,7 +1185,7 @@
 			baseConfigurationReference = B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMacDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1301,7 +1303,7 @@
 			baseConfigurationReference = 8367E1E81FF15E78E7E44170 /* Pods-CleanMac copy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "CleanMac copyDebug.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

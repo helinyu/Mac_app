@@ -109,6 +109,13 @@
 - (void)dataInit {
     NSArray*volumes =[[CMFileManger single] mountedVolumefileURls]; // 加载的券的内容
     NSLog(@"volumes :%@",volumes);
+    
+    NSArray *contents = [[CMFileManger single]  fileUrls];
+    NSLog(@"contents :%@",contents);
+    
+    NSArray *trashFiles = [[CMFileManger single]  trashFiles];
+    NSLog(@"trashFiles :%@",trashFiles);
+
 }
 
 - (id)createRightViewWithClass:(NSView *)rightView {

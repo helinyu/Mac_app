@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (NSArray *)mountedVolumefileURls;
+- (NSArray *)fileUrls;
+- (NSArray *)trashFiles;
 
 @end
 
