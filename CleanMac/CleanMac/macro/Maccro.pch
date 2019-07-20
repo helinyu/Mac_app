@@ -1,0 +1,30 @@
+//
+//  Maccro.pch
+//  CleanMac
+//
+//  独学而无友 则孤陋寡闻
+//
+//  Created by helinyu on 2019/7/20 19:47 .
+//  Copyright © 2019 Aka. All rights reserved.
+//  xcode 10.15 .
+//
+    
+
+#ifndef Maccro_pch
+#define Maccro_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Masonry.h>
+
+#import "NSView+CMAdd.h"
+#import "NSButton+CMAdd.h"
+
+
+#pragma mark -- block
+
+typedef void(^VoidBlock)(void);
+typedef void(^IntegerBlock)(NSInteger flag);
+
+#endif /* Maccro_pch */

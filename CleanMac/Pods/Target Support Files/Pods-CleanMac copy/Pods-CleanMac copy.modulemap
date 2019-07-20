@@ -1,0 +1,6 @@
+framework module Pods_CleanMac_copy {
+  umbrella header "Pods-CleanMac copy-umbrella.h"
+
+  export *
+  module * { export * }
+}

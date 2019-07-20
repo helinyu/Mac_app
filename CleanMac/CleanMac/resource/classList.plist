@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>智能扫描</string>
+    
+	<string>系统垃圾</string>
+	<string>照片垃圾</string>
+	<string>邮件附件</string>
+	<string>itunes垃圾</string>
+	<string>废纸篓</string>
+    
+	<string>移除恶意软件</string>
+	<string>隐私</string>
+    
+	<string>优化</string>
+	<string>维护</string>
+    
+	<string>卸载器</string>
+    <string>更新程序</string>
+    <string>扩展</string>
+    
+    <string>空间透镜</string>
+    <string>大型和旧文件</string>
+    <string>碎纸机</string>
+
+</array>
+</plist>

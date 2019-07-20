@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28B42363A11343B95954A1C8 /* libPods-CleanMacUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */; };
+		11CDE21E29B4830AFDDE12ED /* Pods_CleanMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */; };
+		4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */; };
+		4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4114460922E0797F00E5B4B6 /* KMSystem.m */; };
 		4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885A22D2FA9700B89F9E /* AppDelegate.m */; };
 		4123885E22D2FA9700B89F9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885D22D2FA9700B89F9E /* ViewController.m */; };
 		4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4123885F22D2FA9A00B89F9E /* Assets.xcassets */; };
@@ -15,8 +17,89 @@
 		4123886622D2FA9A00B89F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
 		4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887022D2FA9A00B89F9E /* CleanMacTests.m */; };
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
+		41571E9A22E2DA3A0090352D /* CMFilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571E9922E2DA3A0090352D /* CMFilePresenter.m */; };
+		41571E9E22E32E6E0090352D /* CMRightBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571E9D22E32E6E0090352D /* CMRightBaseView.m */; };
+		41571EA122E32ECE0090352D /* CMRightItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA022E32ECE0090352D /* CMRightItemView.m */; };
+		41571EA222E331040090352D /* CMRightItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA022E32ECE0090352D /* CMRightItemView.m */; };
+		41571EA322E3310D0090352D /* CMRightBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571E9D22E32E6E0090352D /* CMRightBaseView.m */; };
+		41571EA622E333070090352D /* CMRightScaningBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA522E333070090352D /* CMRightScaningBaseView.m */; };
+		41571EA722E3330D0090352D /* CMRightScaningBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA522E333070090352D /* CMRightScaningBaseView.m */; };
+		41571EAA22E333540090352D /* CMRightLogoBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA922E333540090352D /* CMRightLogoBaseView.m */; };
+		41571EAB22E334EB0090352D /* CMRightLogoBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA922E333540090352D /* CMRightLogoBaseView.m */; };
+		41571EAE22E3355D0090352D /* CMTrashWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EAD22E3355D0090352D /* CMTrashWrapperView.m */; };
+		41571EB122E335820090352D /* CMTrashScaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EB022E335820090352D /* CMTrashScaningView.m */; };
+		41571EB422E3358F0090352D /* CMTrashEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EB322E3358F0090352D /* CMTrashEndView.m */; };
+		41571EB522E335D50090352D /* CMTrashWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EAD22E3355D0090352D /* CMTrashWrapperView.m */; };
+		41571EB622E335DC0090352D /* CMTrashScaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EB022E335820090352D /* CMTrashScaningView.m */; };
+		41571EB722E335DE0090352D /* CMTrashEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EB322E3358F0090352D /* CMTrashEndView.m */; };
 		415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */; };
 		415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */; };
+		4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */; };
+		4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */; };
+		4165FBC222DF235F00656E00 /* NSView+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC122DF235F00656E00 /* NSView+CMAdd.m */; };
+		4165FBC522DF3B3D00656E00 /* CMTrashScanBeforeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC422DF3B3D00656E00 /* CMTrashScanBeforeView.m */; };
+		4165FBCA22DF416200656E00 /* classListDic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4165FBC922DF416200656E00 /* classListDic.plist */; };
+		4165FBCF22DF465800656E00 /* CMSystemTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBCE22DF465800656E00 /* CMSystemTrashView.m */; };
+		4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD322DF468100656E00 /* CMPhotoTrashView.m */; };
+		4165FBD822DF469B00656E00 /* CMEmailTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD722DF469B00656E00 /* CMEmailTrashView.m */; };
+		4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */; };
+		4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDF22DF46E900656E00 /* CMPrivacyView.m */; };
+		4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE322DF471000656E00 /* CMOptimizationView.m */; };
+		4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE722DF473300656E00 /* CMMaintainView.m */; };
+		4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEB22DF483200656E00 /* CMUnloaderView.m */; };
+		4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */; };
+		4165FBF422DF488000656E00 /* CMExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF322DF488000656E00 /* CMExtendView.m */; };
+		4165FBF822DF48A600656E00 /* CMSpaceLensView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF722DF48A600656E00 /* CMSpaceLensView.m */; };
+		4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFB22DF48D700656E00 /* CMLODcumentView.m */; };
+		4165FC0022DF499700656E00 /* CMShredderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFF22DF499700656E00 /* CMShredderView.m */; };
+		4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */; };
+		4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0A22E00A6B00656E00 /* CMBaseView.m */; };
+		4165FC0F22E00BF400656E00 /* CMShredderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFF22DF499700656E00 /* CMShredderView.m */; };
+		4165FC1022E00BF400656E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885D22D2FA9700B89F9E /* ViewController.m */; };
+		4165FC1122E00BF400656E00 /* NSView+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC122DF235F00656E00 /* NSView+CMAdd.m */; };
+		4165FC1222E00BF400656E00 /* CMSpaceLensView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF722DF48A600656E00 /* CMSpaceLensView.m */; };
+		4165FC1322E00BF400656E00 /* CMUpdateProgramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */; };
+		4165FC1522E00BF400656E00 /* CMSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E122DC56F200679541 /* CMSecondWindowController.m */; };
+		4165FC1622E00BF400656E00 /* CMPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098F722DCA8EF00679541 /* CMPopViewController.m */; };
+		4165FC1722E00BF400656E00 /* CMMaliciousSoftwareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */; };
+		4165FC1822E00BF400656E00 /* CMPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E522DC6D9000679541 /* CMPanel.m */; };
+		4165FC1922E00BF400656E00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
+		4165FC1A22E00BF400656E00 /* CMSystemTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBCE22DF465800656E00 /* CMSystemTrashView.m */; };
+		4165FC1B22E00BF400656E00 /* CMPopFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990722DDB90800679541 /* CMPopFooterView.m */; };
+		4165FC1C22E00BF400656E00 /* CMEmailTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD722DF469B00656E00 /* CMEmailTrashView.m */; };
+		4165FC1D22E00BF400656E00 /* CMThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098ED22DC6E4200679541 /* CMThirdViewController.m */; };
+		4165FC1E22E00BF400656E00 /* CMUnloaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBEB22DF483200656E00 /* CMUnloaderView.m */; };
+		4165FC1F22E00BF400656E00 /* CMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098DC22DC557400679541 /* CMSecondViewController.m */; };
+		4165FC2022E00BF400656E00 /* CMPrivacyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBDF22DF46E900656E00 /* CMPrivacyView.m */; };
+		4165FC2122E00BF400656E00 /* CMMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */; };
+		4165FC2222E00BF400656E00 /* CMPhotoTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBD322DF468100656E00 /* CMPhotoTrashView.m */; };
+		4165FC2322E00BF400656E00 /* CMPopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990422DDB87300679541 /* CMPopHeaderView.m */; };
+		4165FC2422E00BF400656E00 /* CMMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098F022DC9B0A00679541 /* CMMainWindowController.m */; };
+		4165FC2522E00BF400656E00 /* CMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0A22E00A6B00656E00 /* CMBaseView.m */; };
+		4165FC2622E00BF400656E00 /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
+		4165FC2722E00BF400656E00 /* CMThirdWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098EA22DC6E2200679541 /* CMThirdWindowController.m */; };
+		4165FC2822E00BF400656E00 /* NSButton+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */; };
+		4165FC2922E00BF400656E00 /* CMOptimizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE322DF471000656E00 /* CMOptimizationView.m */; };
+		4165FC2A22E00BF400656E00 /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
+		4165FC2B22E00BF400656E00 /* CMLODcumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBFB22DF48D700656E00 /* CMLODcumentView.m */; };
+		4165FC2C22E00BF400656E00 /* CMMainPageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */; };
+		4165FC2D22E00BF400656E00 /* CMTopClassCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098FF22DDB14500679541 /* CMTopClassCItem.m */; };
+		4165FC2E22E00BF400656E00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885A22D2FA9700B89F9E /* AppDelegate.m */; };
+		4165FC2F22E00BF400656E00 /* CMItunesTrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */; };
+		4165FC3022E00BF400656E00 /* CMExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBF322DF488000656E00 /* CMExtendView.m */; };
+		4165FC3122E00BF400656E00 /* CMMaintainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBE722DF473300656E00 /* CMMaintainView.m */; };
+		4165FC3222E00BF400656E00 /* CMIntelligenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */; };
+		4165FC3322E00BF400656E00 /* CMTrashScanBeforeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC422DF3B3D00656E00 /* CMTrashScanBeforeView.m */; };
+		4165FC3722E00BF400656E00 /* CMPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C098F822DCA8EF00679541 /* CMPopViewController.xib */; };
+		4165FC3822E00BF400656E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4123885F22D2FA9A00B89F9E /* Assets.xcassets */; };
+		4165FC3922E00BF400656E00 /* classListDic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4165FBC922DF416200656E00 /* classListDic.plist */; };
+		4165FC3A22E00BF400656E00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4123886122D2FA9A00B89F9E /* Main.storyboard */; };
+		4165FC3B22E00BF400656E00 /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
+		4165FC3C22E00BF400656E00 /* CMTopClassCItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C0990022DDB14500679541 /* CMTopClassCItem.xib */; };
+		4165FC4522E014C400656E00 /* NSURLResourceKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4165FC4422E014C400656E00 /* NSURLResourceKey.plist */; };
+		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
+		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
+		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
 		41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098DC22DC557400679541 /* CMSecondViewController.m */; };
 		41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E122DC56F200679541 /* CMSecondWindowController.m */; };
 		41C098E622DC6D9000679541 /* CMPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C098E522DC6D9000679541 /* CMPanel.m */; };
@@ -29,8 +112,9 @@
 		41C0990222DDB14500679541 /* CMTopClassCItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C0990022DDB14500679541 /* CMTopClassCItem.xib */; };
 		41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990422DDB87300679541 /* CMPopHeaderView.m */; };
 		41C0990822DDB90800679541 /* CMPopFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0990722DDB90800679541 /* CMPopFooterView.m */; };
-		4FD1B66242429981E6391828 /* libPods-CleanMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */; };
-		C1E0DBE7992C30785C85EDB6 /* libPods-CleanMacTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */; };
+		5ECE43D7D59EA1FDBE48D249 /* Pods_CleanMac_copy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */; };
+		90CCC380AF44038895ED3985 /* libPods-CleanMacUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96260F9EAF95D9F434553C2D /* libPods-CleanMacUITests.a */; };
+		E82291D9DA51F992834C9BAB /* libPods-CleanMacTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9ACD2C7934F29F631FEBA9 /* libPods-CleanMacTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +135,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac_copy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CMAdd.h"; sourceTree = "<group>"; };
+		4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CMAdd.m"; sourceTree = "<group>"; };
+		4114460822E0797F00E5B4B6 /* KMSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMSystem.h; sourceTree = "<group>"; };
+		4114460922E0797F00E5B4B6 /* KMSystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMSystem.m; sourceTree = "<group>"; };
 		4123885622D2FA9700B89F9E /* CleanMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123885922D2FA9700B89F9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4123885A22D2FA9700B89F9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,10 +156,74 @@
 		4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanMacUITests.m; sourceTree = "<group>"; };
 		4123887D22D2FA9A00B89F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41571E9822E2DA3A0090352D /* CMFilePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFilePresenter.h; sourceTree = "<group>"; };
+		41571E9922E2DA3A0090352D /* CMFilePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFilePresenter.m; sourceTree = "<group>"; };
+		41571E9C22E32E6E0090352D /* CMRightBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightBaseView.h; sourceTree = "<group>"; };
+		41571E9D22E32E6E0090352D /* CMRightBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRightBaseView.m; sourceTree = "<group>"; };
+		41571E9F22E32ECE0090352D /* CMRightItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightItemView.h; sourceTree = "<group>"; };
+		41571EA022E32ECE0090352D /* CMRightItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRightItemView.m; sourceTree = "<group>"; };
+		41571EA422E333070090352D /* CMRightScaningBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightScaningBaseView.h; sourceTree = "<group>"; };
+		41571EA522E333070090352D /* CMRightScaningBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRightScaningBaseView.m; sourceTree = "<group>"; };
+		41571EA822E333540090352D /* CMRightLogoBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightLogoBaseView.h; sourceTree = "<group>"; };
+		41571EA922E333540090352D /* CMRightLogoBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRightLogoBaseView.m; sourceTree = "<group>"; };
+		41571EAC22E3355D0090352D /* CMTrashWrapperView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashWrapperView.h; sourceTree = "<group>"; };
+		41571EAD22E3355D0090352D /* CMTrashWrapperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashWrapperView.m; sourceTree = "<group>"; };
+		41571EAF22E335820090352D /* CMTrashScaningView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashScaningView.h; sourceTree = "<group>"; };
+		41571EB022E335820090352D /* CMTrashScaningView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashScaningView.m; sourceTree = "<group>"; };
+		41571EB222E3358F0090352D /* CMTrashEndView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashEndView.h; sourceTree = "<group>"; };
+		41571EB322E3358F0090352D /* CMTrashEndView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashEndView.m; sourceTree = "<group>"; };
+		41571EB922E336CF0090352D /* Maccro.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Maccro.pch; sourceTree = "<group>"; };
 		415B5B8B22DDFAA200E43F03 /* CMMainPageWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageWindowController.h; sourceTree = "<group>"; };
 		415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageWindowController.m; sourceTree = "<group>"; };
 		415B5B8E22DDFABD00E43F03 /* CMMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageViewController.h; sourceTree = "<group>"; };
 		415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageViewController.m; sourceTree = "<group>"; };
+		4165FBB922DF17D700656E00 /* CMIntelligenceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMIntelligenceView.h; sourceTree = "<group>"; };
+		4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMIntelligenceView.m; sourceTree = "<group>"; };
+		4165FBBC22DF1D9D00656E00 /* NSButton+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSButton+CMAdd.h"; sourceTree = "<group>"; };
+		4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSButton+CMAdd.m"; sourceTree = "<group>"; };
+		4165FBC022DF235F00656E00 /* NSView+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+CMAdd.h"; sourceTree = "<group>"; };
+		4165FBC122DF235F00656E00 /* NSView+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+CMAdd.m"; sourceTree = "<group>"; };
+		4165FBC322DF3B3D00656E00 /* CMTrashScanBeforeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashScanBeforeView.h; sourceTree = "<group>"; };
+		4165FBC422DF3B3D00656E00 /* CMTrashScanBeforeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashScanBeforeView.m; sourceTree = "<group>"; };
+		4165FBC922DF416200656E00 /* classListDic.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classListDic.plist; sourceTree = "<group>"; };
+		4165FBCD22DF465800656E00 /* CMSystemTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSystemTrashView.h; sourceTree = "<group>"; };
+		4165FBCE22DF465800656E00 /* CMSystemTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSystemTrashView.m; sourceTree = "<group>"; };
+		4165FBD222DF468100656E00 /* CMPhotoTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPhotoTrashView.h; sourceTree = "<group>"; };
+		4165FBD322DF468100656E00 /* CMPhotoTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPhotoTrashView.m; sourceTree = "<group>"; };
+		4165FBD622DF469B00656E00 /* CMEmailTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMEmailTrashView.h; sourceTree = "<group>"; };
+		4165FBD722DF469B00656E00 /* CMEmailTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMEmailTrashView.m; sourceTree = "<group>"; };
+		4165FBDA22DF46CB00656E00 /* CMMaliciousSoftwareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMaliciousSoftwareView.h; sourceTree = "<group>"; };
+		4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMaliciousSoftwareView.m; sourceTree = "<group>"; };
+		4165FBDE22DF46E900656E00 /* CMPrivacyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPrivacyView.h; sourceTree = "<group>"; };
+		4165FBDF22DF46E900656E00 /* CMPrivacyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPrivacyView.m; sourceTree = "<group>"; };
+		4165FBE222DF471000656E00 /* CMOptimizationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMOptimizationView.h; sourceTree = "<group>"; };
+		4165FBE322DF471000656E00 /* CMOptimizationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMOptimizationView.m; sourceTree = "<group>"; };
+		4165FBE622DF473300656E00 /* CMMaintainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMaintainView.h; sourceTree = "<group>"; };
+		4165FBE722DF473300656E00 /* CMMaintainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMaintainView.m; sourceTree = "<group>"; };
+		4165FBEA22DF483200656E00 /* CMUnloaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMUnloaderView.h; sourceTree = "<group>"; };
+		4165FBEB22DF483200656E00 /* CMUnloaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMUnloaderView.m; sourceTree = "<group>"; };
+		4165FBED22DF484A00656E00 /* CMUpdateProgramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMUpdateProgramView.h; sourceTree = "<group>"; };
+		4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMUpdateProgramView.m; sourceTree = "<group>"; };
+		4165FBF222DF488000656E00 /* CMExtendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMExtendView.h; sourceTree = "<group>"; };
+		4165FBF322DF488000656E00 /* CMExtendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMExtendView.m; sourceTree = "<group>"; };
+		4165FBF622DF48A600656E00 /* CMSpaceLensView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSpaceLensView.h; sourceTree = "<group>"; };
+		4165FBF722DF48A600656E00 /* CMSpaceLensView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSpaceLensView.m; sourceTree = "<group>"; };
+		4165FBFA22DF48D700656E00 /* CMLODcumentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMLODcumentView.h; sourceTree = "<group>"; };
+		4165FBFB22DF48D700656E00 /* CMLODcumentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMLODcumentView.m; sourceTree = "<group>"; };
+		4165FBFE22DF499700656E00 /* CMShredderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMShredderView.h; sourceTree = "<group>"; };
+		4165FBFF22DF499700656E00 /* CMShredderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMShredderView.m; sourceTree = "<group>"; };
+		4165FC0522DF4B1900656E00 /* CMItunesTrashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMItunesTrashView.h; sourceTree = "<group>"; };
+		4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMItunesTrashView.m; sourceTree = "<group>"; };
+		4165FC0922E00A6B00656E00 /* CMBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBaseView.h; sourceTree = "<group>"; };
+		4165FC0A22E00A6B00656E00 /* CMBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBaseView.m; sourceTree = "<group>"; };
+		4165FC4022E00BF400656E00 /* CleanMac copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CleanMac copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4165FC4122E00BF500656E00 /* CleanMac copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CleanMac copy-Info.plist"; path = "/Users/felix/my_own_project/Mac_app/CleanMac/CleanMac copy-Info.plist"; sourceTree = "<absolute>"; };
+		4165FC4422E014C400656E00 /* NSURLResourceKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NSURLResourceKey.plist; sourceTree = "<group>"; };
+		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
+		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
+		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
+		41BAFD3222DF028F00AD96AC /* CMFileManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFileManger.h; sourceTree = "<group>"; };
+		41BAFD3322DF028F00AD96AC /* CMFileManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFileManger.m; sourceTree = "<group>"; };
 		41C098DB22DC557400679541 /* CMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondViewController.h; sourceTree = "<group>"; };
 		41C098DC22DC557400679541 /* CMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondViewController.m; sourceTree = "<group>"; };
 		41C098E022DC56F200679541 /* CMSecondWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondWindowController.h; sourceTree = "<group>"; };
@@ -94,13 +246,16 @@
 		41C0990422DDB87300679541 /* CMPopHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopHeaderView.m; sourceTree = "<group>"; };
 		41C0990622DDB90800679541 /* CMPopFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPopFooterView.h; sourceTree = "<group>"; };
 		41C0990722DDB90800679541 /* CMPopFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopFooterView.m; sourceTree = "<group>"; };
-		53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.debug.xcconfig"; sourceTree = "<group>"; };
-		5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.release.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.release.xcconfig"; sourceTree = "<group>"; };
-		8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.release.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.release.xcconfig"; sourceTree = "<group>"; };
+		8367E1E81FF15E78E7E44170 /* Pods-CleanMac copy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac copy.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy.debug.xcconfig"; sourceTree = "<group>"; };
+		96260F9EAF95D9F434553C2D /* libPods-CleanMacUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97325BCD41B56A9F6D501CD4 /* Pods-CleanMac copy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac copy.release.xcconfig"; path = "Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy.release.xcconfig"; sourceTree = "<group>"; };
+		9A9ACD2C7934F29F631FEBA9 /* libPods-CleanMacTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanMacTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMac.debug.xcconfig"; path = "Target Support Files/Pods-CleanMac/Pods-CleanMac.debug.xcconfig"; sourceTree = "<group>"; };
 		C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacUITests.debug.xcconfig"; path = "Target Support Files/Pods-CleanMacUITests/Pods-CleanMacUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMacTests.release.xcconfig"; path = "Target Support Files/Pods-CleanMacTests/Pods-CleanMacTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD1B66242429981E6391828 /* libPods-CleanMac.a in Frameworks */,
+				11CDE21E29B4830AFDDE12ED /* Pods_CleanMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E0DBE7992C30785C85EDB6 /* libPods-CleanMacTests.a in Frameworks */,
+				E82291D9DA51F992834C9BAB /* libPods-CleanMacTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,13 +280,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B42363A11343B95954A1C8 /* libPods-CleanMacUITests.a in Frameworks */,
+				90CCC380AF44038895ED3985 /* libPods-CleanMacUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4165FC3422E00BF400656E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ECE43D7D59EA1FDBE48D249 /* Pods_CleanMac_copy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4114460422E077FA00E5B4B6 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */,
+				4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		4123884D22D2FA9700B89F9E = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +313,7 @@
 				4123885722D2FA9700B89F9E /* Products */,
 				8BED761FB2C5CC8D08CAE6F3 /* Pods */,
 				F58B340B034B47AB2ECA32EA /* Frameworks */,
+				4165FC4122E00BF500656E00 /* CleanMac copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +323,7 @@
 				4123885622D2FA9700B89F9E /* CleanMac.app */,
 				4123886C22D2FA9A00B89F9E /* CleanMacTests.xctest */,
 				4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */,
+				4165FC4022E00BF400656E00 /* CleanMac copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,11 +331,14 @@
 		4123885822D2FA9700B89F9E /* CleanMac */ = {
 			isa = PBXGroup;
 			children = (
+				41571EB822E336B30090352D /* macro */,
+				41BAFD2E22DF005700AD96AC /* resource */,
 				415B5B8A22DDFA4C00E43F03 /* MainPage */,
 				41C098F222DCA2E400679541 /* PopView */,
 				41C098E822DC6E0900679541 /* Third */,
 				41C098E722DC6DEE00679541 /* Second */,
 				41C098E322DC6D7100679541 /* CommonUI */,
+				41BAFD3122DF026D00AD96AC /* Common */,
 				4123885922D2FA9700B89F9E /* AppDelegate.h */,
 				4123885A22D2FA9700B89F9E /* AppDelegate.m */,
 				4123885C22D2FA9700B89F9E /* ViewController.h */,
@@ -195,20 +372,266 @@
 			path = CleanMacUITests;
 			sourceTree = "<group>";
 		};
+		41571E9B22E32E5E0090352D /* right base view */ = {
+			isa = PBXGroup;
+			children = (
+				41571EA822E333540090352D /* CMRightLogoBaseView.h */,
+				41571EA922E333540090352D /* CMRightLogoBaseView.m */,
+				41571E9C22E32E6E0090352D /* CMRightBaseView.h */,
+				41571E9D22E32E6E0090352D /* CMRightBaseView.m */,
+				41571E9F22E32ECE0090352D /* CMRightItemView.h */,
+				41571EA022E32ECE0090352D /* CMRightItemView.m */,
+				41571EA422E333070090352D /* CMRightScaningBaseView.h */,
+				41571EA522E333070090352D /* CMRightScaningBaseView.m */,
+			);
+			path = "right base view";
+			sourceTree = "<group>";
+		};
+		41571EB822E336B30090352D /* macro */ = {
+			isa = PBXGroup;
+			children = (
+				41571EB922E336CF0090352D /* Maccro.pch */,
+			);
+			path = macro;
+			sourceTree = "<group>";
+		};
 		415B5B8A22DDFA4C00E43F03 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				41571E9B22E32E5E0090352D /* right base view */,
+				4165FBB822DF17B500656E00 /* Intelligence */,
+				4165FBCC22DF463C00656E00 /* system */,
+				4165FBD122DF467000656E00 /* photo */,
+				4165FBD522DF468E00656E00 /* email */,
+				4165FC0122DF4AE800656E00 /* itunes trash */,
+				4165FBCB22DF461800656E00 /* Trash */,
+				4165FBD922DF46B800656E00 /* malicious software  */,
+				4165FBDD22DF46DE00656E00 /* Privacy */,
+				4165FBE122DF46FC00656E00 /* optimization  */,
+				4165FBE522DF472600656E00 /* Maintain  */,
+				4165FBE922DF482600656E00 /* Unloader */,
+				4165FBF022DF485500656E00 /* update grogram */,
+				4165FBF122DF486900656E00 /* extend */,
+				4165FBF522DF489300656E00 /* Space lens */,
+				4165FBF922DF48C300656E00 /* Large and Old Documents */,
+				4165FBFD22DF48EB00656E00 /* Shredder */,
 				415B5B8B22DDFAA200E43F03 /* CMMainPageWindowController.h */,
 				415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */,
 				415B5B8E22DDFABD00E43F03 /* CMMainPageViewController.h */,
 				415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */,
+				41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */,
+				41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		4165FBB822DF17B500656E00 /* Intelligence */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBB922DF17D700656E00 /* CMIntelligenceView.h */,
+				4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */,
+			);
+			path = Intelligence;
+			sourceTree = "<group>";
+		};
+		4165FBBF22DF234A00656E00 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBBC22DF1D9D00656E00 /* NSButton+CMAdd.h */,
+				4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */,
+				4165FBC022DF235F00656E00 /* NSView+CMAdd.h */,
+				4165FBC122DF235F00656E00 /* NSView+CMAdd.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		4165FBCB22DF461800656E00 /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				41571EAC22E3355D0090352D /* CMTrashWrapperView.h */,
+				41571EAD22E3355D0090352D /* CMTrashWrapperView.m */,
+				4165FBC322DF3B3D00656E00 /* CMTrashScanBeforeView.h */,
+				4165FBC422DF3B3D00656E00 /* CMTrashScanBeforeView.m */,
+				41571EAF22E335820090352D /* CMTrashScaningView.h */,
+				41571EB022E335820090352D /* CMTrashScaningView.m */,
+				41571EB222E3358F0090352D /* CMTrashEndView.h */,
+				41571EB322E3358F0090352D /* CMTrashEndView.m */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		4165FBCC22DF463C00656E00 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBCD22DF465800656E00 /* CMSystemTrashView.h */,
+				4165FBCE22DF465800656E00 /* CMSystemTrashView.m */,
+			);
+			path = system;
+			sourceTree = "<group>";
+		};
+		4165FBD122DF467000656E00 /* photo */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBD222DF468100656E00 /* CMPhotoTrashView.h */,
+				4165FBD322DF468100656E00 /* CMPhotoTrashView.m */,
+			);
+			path = photo;
+			sourceTree = "<group>";
+		};
+		4165FBD522DF468E00656E00 /* email */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBD622DF469B00656E00 /* CMEmailTrashView.h */,
+				4165FBD722DF469B00656E00 /* CMEmailTrashView.m */,
+			);
+			path = email;
+			sourceTree = "<group>";
+		};
+		4165FBD922DF46B800656E00 /* malicious software  */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBDA22DF46CB00656E00 /* CMMaliciousSoftwareView.h */,
+				4165FBDB22DF46CB00656E00 /* CMMaliciousSoftwareView.m */,
+			);
+			path = "malicious software ";
+			sourceTree = "<group>";
+		};
+		4165FBDD22DF46DE00656E00 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBDE22DF46E900656E00 /* CMPrivacyView.h */,
+				4165FBDF22DF46E900656E00 /* CMPrivacyView.m */,
+			);
+			path = Privacy;
+			sourceTree = "<group>";
+		};
+		4165FBE122DF46FC00656E00 /* optimization  */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBE222DF471000656E00 /* CMOptimizationView.h */,
+				4165FBE322DF471000656E00 /* CMOptimizationView.m */,
+			);
+			path = "optimization ";
+			sourceTree = "<group>";
+		};
+		4165FBE522DF472600656E00 /* Maintain  */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBE622DF473300656E00 /* CMMaintainView.h */,
+				4165FBE722DF473300656E00 /* CMMaintainView.m */,
+			);
+			path = "Maintain ";
+			sourceTree = "<group>";
+		};
+		4165FBE922DF482600656E00 /* Unloader */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBEA22DF483200656E00 /* CMUnloaderView.h */,
+				4165FBEB22DF483200656E00 /* CMUnloaderView.m */,
+			);
+			path = Unloader;
+			sourceTree = "<group>";
+		};
+		4165FBF022DF485500656E00 /* update grogram */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBED22DF484A00656E00 /* CMUpdateProgramView.h */,
+				4165FBEE22DF484A00656E00 /* CMUpdateProgramView.m */,
+			);
+			path = "update grogram";
+			sourceTree = "<group>";
+		};
+		4165FBF122DF486900656E00 /* extend */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBF222DF488000656E00 /* CMExtendView.h */,
+				4165FBF322DF488000656E00 /* CMExtendView.m */,
+			);
+			path = extend;
+			sourceTree = "<group>";
+		};
+		4165FBF522DF489300656E00 /* Space lens */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBF622DF48A600656E00 /* CMSpaceLensView.h */,
+				4165FBF722DF48A600656E00 /* CMSpaceLensView.m */,
+			);
+			path = "Space lens";
+			sourceTree = "<group>";
+		};
+		4165FBF922DF48C300656E00 /* Large and Old Documents */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBFA22DF48D700656E00 /* CMLODcumentView.h */,
+				4165FBFB22DF48D700656E00 /* CMLODcumentView.m */,
+			);
+			path = "Large and Old Documents";
+			sourceTree = "<group>";
+		};
+		4165FBFD22DF48EB00656E00 /* Shredder */ = {
+			isa = PBXGroup;
+			children = (
+				4165FBFE22DF499700656E00 /* CMShredderView.h */,
+				4165FBFF22DF499700656E00 /* CMShredderView.m */,
+			);
+			path = Shredder;
+			sourceTree = "<group>";
+		};
+		4165FC0122DF4AE800656E00 /* itunes trash */ = {
+			isa = PBXGroup;
+			children = (
+				4165FC0522DF4B1900656E00 /* CMItunesTrashView.h */,
+				4165FC0622DF4B1900656E00 /* CMItunesTrashView.m */,
+			);
+			path = "itunes trash";
+			sourceTree = "<group>";
+		};
+		4165FC0822E00A5B00656E00 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				4165FC0922E00A6B00656E00 /* CMBaseView.h */,
+				4165FC0A22E00A6B00656E00 /* CMBaseView.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		4165FC4622E014CC00656E00 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				41BAFD3222DF028F00AD96AC /* CMFileManger.h */,
+				41BAFD3322DF028F00AD96AC /* CMFileManger.m */,
+				4165FC4422E014C400656E00 /* NSURLResourceKey.plist */,
+				4114460822E0797F00E5B4B6 /* KMSystem.h */,
+				4114460922E0797F00E5B4B6 /* KMSystem.m */,
+				41571E9822E2DA3A0090352D /* CMFilePresenter.h */,
+				41571E9922E2DA3A0090352D /* CMFilePresenter.m */,
+			);
+			path = file;
+			sourceTree = "<group>";
+		};
+		41BAFD2E22DF005700AD96AC /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				41BAFD2F22DF007400AD96AC /* classList.plist */,
+				4165FBC922DF416200656E00 /* classListDic.plist */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		41BAFD3122DF026D00AD96AC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4114460422E077FA00E5B4B6 /* category */,
+				4165FC4622E014CC00656E00 /* file */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		41C098E322DC6D7100679541 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				4165FC0822E00A5B00656E00 /* BaseClass */,
+				4165FBBF22DF234A00656E00 /* category */,
 				41C098E422DC6D9000679541 /* CMPanel.h */,
 				41C098E522DC6D9000679541 /* CMPanel.m */,
 			);
@@ -257,12 +680,14 @@
 		8BED761FB2C5CC8D08CAE6F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */,
-				78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */,
 				5890B596E16A2A3F65FF78A2 /* Pods-CleanMacTests.debug.xcconfig */,
 				FC2B38C4B0B2E6A400899E0F /* Pods-CleanMacTests.release.xcconfig */,
 				C685829FC9814C26332C8FDB /* Pods-CleanMacUITests.debug.xcconfig */,
 				A02102A2BA46DEEDA01E7B1F /* Pods-CleanMacUITests.release.xcconfig */,
+				B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */,
+				79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */,
+				8367E1E81FF15E78E7E44170 /* Pods-CleanMac copy.debug.xcconfig */,
+				97325BCD41B56A9F6D501CD4 /* Pods-CleanMac copy.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -270,9 +695,10 @@
 		F58B340B034B47AB2ECA32EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3BE068C30D05663C3C5698B1 /* libPods-CleanMac.a */,
-				8C0F01C78B312A36110AA4D3 /* libPods-CleanMacTests.a */,
-				5677F96CE34057C7DE19159C /* libPods-CleanMacUITests.a */,
+				CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */,
+				9A9ACD2C7934F29F631FEBA9 /* libPods-CleanMacTests.a */,
+				96260F9EAF95D9F434553C2D /* libPods-CleanMacUITests.a */,
+				29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,6 +714,7 @@
 				4123885222D2FA9700B89F9E /* Sources */,
 				4123885322D2FA9700B89F9E /* Frameworks */,
 				4123885422D2FA9700B89F9E /* Resources */,
+				360E5967E7CDCE0678F82E37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,6 +763,25 @@
 			productReference = 4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4165FC0C22E00BF400656E00 /* CleanMac copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4165FC3D22E00BF400656E00 /* Build configuration list for PBXNativeTarget "CleanMac copy" */;
+			buildPhases = (
+				DBFA2047D7F0C046729EFF95 /* [CP] Check Pods Manifest.lock */,
+				4165FC0E22E00BF400656E00 /* Sources */,
+				4165FC3422E00BF400656E00 /* Frameworks */,
+				4165FC3622E00BF400656E00 /* Resources */,
+				E0A20542DC912F0DE00C0287 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CleanMac copy";
+			productName = CleanMac;
+			productReference = 4165FC4022E00BF400656E00 /* CleanMac copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -374,6 +820,7 @@
 				4123885522D2FA9700B89F9E /* CleanMac */,
 				4123886B22D2FA9A00B89F9E /* CleanMacTests */,
 				4123887622D2FA9A00B89F9E /* CleanMacUITests */,
+				4165FC0C22E00BF400656E00 /* CleanMac copy */,
 			);
 		};
 /* End PBXProject section */
@@ -385,7 +832,10 @@
 			files = (
 				41C098FA22DCA8EF00679541 /* CMPopViewController.xib in Resources */,
 				4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */,
+				4165FBCA22DF416200656E00 /* classListDic.plist in Resources */,
 				4123886322D2FA9A00B89F9E /* Main.storyboard in Resources */,
+				4165FC4522E014C400656E00 /* NSURLResourceKey.plist in Resources */,
+				41BAFD3022DF007400AD96AC /* classList.plist in Resources */,
 				41C0990222DDB14500679541 /* CMTopClassCItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,9 +854,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4165FC3622E00BF400656E00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4165FC3722E00BF400656E00 /* CMPopViewController.xib in Resources */,
+				4165FC3822E00BF400656E00 /* Assets.xcassets in Resources */,
+				4165FC3922E00BF400656E00 /* classListDic.plist in Resources */,
+				4165FC3A22E00BF400656E00 /* Main.storyboard in Resources */,
+				4165FC3B22E00BF400656E00 /* classList.plist in Resources */,
+				4165FC3C22E00BF400656E00 /* CMTopClassCItem.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		360E5967E7CDCE0678F82E37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5517484D5C47AE98C7CA88C2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +962,54 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DBFA2047D7F0C046729EFF95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleanMac copy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0A20542DC912F0DE00C0287 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -480,21 +1017,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4165FC0022DF499700656E00 /* CMShredderView.m in Sources */,
+				41571E9E22E32E6E0090352D /* CMRightBaseView.m in Sources */,
 				4123885E22D2FA9700B89F9E /* ViewController.m in Sources */,
+				4165FBC222DF235F00656E00 /* NSView+CMAdd.m in Sources */,
+				4165FBF822DF48A600656E00 /* CMSpaceLensView.m in Sources */,
+				41571EB122E335820090352D /* CMTrashScaningView.m in Sources */,
+				4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */,
+				41571EB422E3358F0090352D /* CMTrashEndView.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
+				4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */,
 				41C098E622DC6D9000679541 /* CMPanel.m in Sources */,
 				4123886622D2FA9A00B89F9E /* main.m in Sources */,
+				4165FBCF22DF465800656E00 /* CMSystemTrashView.m in Sources */,
 				41C0990822DDB90800679541 /* CMPopFooterView.m in Sources */,
+				4165FBD822DF469B00656E00 /* CMEmailTrashView.m in Sources */,
 				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
+				4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */,
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
+				4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */,
 				415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */,
+				4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */,
+				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
+				4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */,
+				41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */,
+				41571EAE22E3355D0090352D /* CMTrashWrapperView.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
+				4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */,
+				4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */,
+				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
+				4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,
 				41C0990122DDB14500679541 /* CMTopClassCItem.m in Sources */,
+				41571EAA22E333540090352D /* CMRightLogoBaseView.m in Sources */,
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
+				4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */,
+				4165FBF422DF488000656E00 /* CMExtendView.m in Sources */,
+				4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */,
+				41571E9A22E2DA3A0090352D /* CMFilePresenter.m in Sources */,
+				41571EA122E32ECE0090352D /* CMRightItemView.m in Sources */,
+				4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */,
+				4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */,
+				41571EA622E333070090352D /* CMRightScaningBaseView.m in Sources */,
+				4165FBC522DF3B3D00656E00 /* CMTrashScanBeforeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +1079,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4165FC0E22E00BF400656E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4165FC0F22E00BF400656E00 /* CMShredderView.m in Sources */,
+				4165FC1022E00BF400656E00 /* ViewController.m in Sources */,
+				4165FC1122E00BF400656E00 /* NSView+CMAdd.m in Sources */,
+				4165FC1222E00BF400656E00 /* CMSpaceLensView.m in Sources */,
+				4165FC1322E00BF400656E00 /* CMUpdateProgramView.m in Sources */,
+				4165FC1522E00BF400656E00 /* CMSecondWindowController.m in Sources */,
+				4165FC1622E00BF400656E00 /* CMPopViewController.m in Sources */,
+				4165FC1722E00BF400656E00 /* CMMaliciousSoftwareView.m in Sources */,
+				4165FC1822E00BF400656E00 /* CMPanel.m in Sources */,
+				4165FC1922E00BF400656E00 /* main.m in Sources */,
+				4165FC1A22E00BF400656E00 /* CMSystemTrashView.m in Sources */,
+				4165FC1B22E00BF400656E00 /* CMPopFooterView.m in Sources */,
+				41571EB522E335D50090352D /* CMTrashWrapperView.m in Sources */,
+				4165FC1C22E00BF400656E00 /* CMEmailTrashView.m in Sources */,
+				4165FC1D22E00BF400656E00 /* CMThirdViewController.m in Sources */,
+				4165FC1E22E00BF400656E00 /* CMUnloaderView.m in Sources */,
+				4165FC1F22E00BF400656E00 /* CMSecondViewController.m in Sources */,
+				4165FC2022E00BF400656E00 /* CMPrivacyView.m in Sources */,
+				41571EA222E331040090352D /* CMRightItemView.m in Sources */,
+				4165FC2122E00BF400656E00 /* CMMainPageViewController.m in Sources */,
+				4165FC2222E00BF400656E00 /* CMPhotoTrashView.m in Sources */,
+				4165FC2322E00BF400656E00 /* CMPopHeaderView.m in Sources */,
+				41571EB722E335DE0090352D /* CMTrashEndView.m in Sources */,
+				4165FC2422E00BF400656E00 /* CMMainWindowController.m in Sources */,
+				41571EA322E3310D0090352D /* CMRightBaseView.m in Sources */,
+				4165FC2522E00BF400656E00 /* CMBaseView.m in Sources */,
+				4165FC2622E00BF400656E00 /* CMFileManger.m in Sources */,
+				4165FC2722E00BF400656E00 /* CMThirdWindowController.m in Sources */,
+				4165FC2822E00BF400656E00 /* NSButton+CMAdd.m in Sources */,
+				4165FC2922E00BF400656E00 /* CMOptimizationView.m in Sources */,
+				41571EB622E335DC0090352D /* CMTrashScaningView.m in Sources */,
+				41571EA722E3330D0090352D /* CMRightScaningBaseView.m in Sources */,
+				4165FC2A22E00BF400656E00 /* CMMainPageClassTCellView.m in Sources */,
+				4165FC2B22E00BF400656E00 /* CMLODcumentView.m in Sources */,
+				4165FC2C22E00BF400656E00 /* CMMainPageWindowController.m in Sources */,
+				4165FC2D22E00BF400656E00 /* CMTopClassCItem.m in Sources */,
+				4165FC2E22E00BF400656E00 /* AppDelegate.m in Sources */,
+				4165FC2F22E00BF400656E00 /* CMItunesTrashView.m in Sources */,
+				4165FC3022E00BF400656E00 /* CMExtendView.m in Sources */,
+				4165FC3122E00BF400656E00 /* CMMaintainView.m in Sources */,
+				41571EAB22E334EB0090352D /* CMRightLogoBaseView.m in Sources */,
+				4165FC3222E00BF400656E00 /* CMIntelligenceView.m in Sources */,
+				4165FC3322E00BF400656E00 /* CMTrashScanBeforeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +1200,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/macro/Maccro.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -639,6 +1259,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/macro/Maccro.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -654,10 +1276,10 @@
 		};
 		4123888122D2FA9A00B89F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53596E0FB74FBDCD87F58A4B /* Pods-CleanMac.debug.xcconfig */;
+			baseConfigurationReference = B063C9E702F42DB9BF051008 /* Pods-CleanMac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMacDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -674,7 +1296,7 @@
 		};
 		4123888222D2FA9A00B89F9E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78865DCA435F762B064283CB /* Pods-CleanMac.release.xcconfig */;
+			baseConfigurationReference = 79E226E93A9A72D3C5C8263C /* Pods-CleanMac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
@@ -770,6 +1392,46 @@
 			};
 			name = Release;
 		};
+		4165FC3E22E00BF400656E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8367E1E81FF15E78E7E44170 /* Pods-CleanMac copy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CleanMac copyDebug.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D2XBEJ6876;
+				INFOPLIST_FILE = "CleanMac copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4165FC3F22E00BF400656E00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97325BCD41B56A9F6D501CD4 /* Pods-CleanMac copy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CleanMac/CleanMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D2XBEJ6876;
+				INFOPLIST_FILE = "CleanMac copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -805,6 +1467,15 @@
 			buildConfigurations = (
 				4123888722D2FA9A00B89F9E /* Debug */,
 				4123888822D2FA9A00B89F9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4165FC3D22E00BF400656E00 /* Build configuration list for PBXNativeTarget "CleanMac copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4165FC3E22E00BF400656E00 /* Debug */,
+				4165FC3F22E00BF400656E00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
