@@ -13,6 +13,7 @@
 #import "CMTrashScanBeforeView.h"
 #import "NSView+CMAdd.h"
 #import "NSButton+CMAdd.h"
+#import "CMRightItemView.h"
 #import <Masonry.h>
 
 @interface CMTrashScanBeforeView ()
@@ -33,11 +34,16 @@
 }
 
 - (void)initTrashBeforeView {
+    
     [self.rightLogoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self).multipliedBy(3.f/2);
         make.centerY.equalTo(self);
         make.width.height.mas_equalTo(100.f);
     }];
+    
+    [self.firstItemView configImgName:@"icon_trash_dustbin" title:@"立即倾倒所有垃圾" desc:@"无需浏览所有的驱动器和应用查找它们的废纸篓"];
+    [self.secondItemView configImgName:@"icon_finder" title:@"避免各种\"访达\"错误" desc:@"确保倾倒您的废纸篓,不管是否有任何问题"];
+
 }
 
 @end

@@ -55,6 +55,7 @@
     [_descTF setFont:[NSFont systemFontOfSize:10.f]];
     _descTF.bordered = NO;
     _descTF.backgroundColor = [NSColor clearColor];
+    _descTF.maximumNumberOfLines = 0;
     
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.iconImgView.mas_right).offset(10.f);
@@ -65,6 +66,7 @@
     [_titleTF setFont:[NSFont systemFontOfSize:12.f]];
     _titleTF.bordered = NO;
     _titleTF.backgroundColor = [NSColor clearColor];
+    _titleTF.maximumNumberOfLines = 0;
     
 }
 

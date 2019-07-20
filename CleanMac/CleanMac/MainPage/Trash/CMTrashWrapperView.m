@@ -16,6 +16,8 @@
 #import "CMTrashEndView.h"
 #import <Masonry.h>
 
+#import "CMFileManger.h"
+
 @interface CMTrashWrapperView ()
 
 @property (nonatomic, strong) CMTrashScanBeforeView *scanBeforeView;
@@ -97,10 +99,21 @@ static CGFloat const kBottomHeight = 100.f;
     
     [self configureWithState:scanState];
     [self configureScanViewWithState:scanState];
+    
+    [self configExtensionViewWithState:scanState];
 }
 
 - (void)onScanAction:(id)sender {
     !_actionScanBlock? :_actionScanBlock(_scanState);
+}
+
+
+- (void)configExtensionViewWithState:(CMScanState)scanState {
+    if (scanState == CMScanStateScanBefore) {
+        self.scanEndView.trashDataTF.cell.title = @"";
+        [self.scanEndView configDataUIHidden:YES];
+        [self.scanEndView configNoDataUIHidden:YES];
+    }
 }
 
 - (void)configureWithState:(CMScanState)scanState {
@@ -127,6 +140,18 @@ static CGFloat const kBottomHeight = 100.f;
 //     为什么只是刷新最后一个值呢？
     if (path.length >0) {
         self.scaningView.curFilePathTF.cell.title = path;
+    }
+}
+
+- (void)configureEndScanSize:(long long) size {
+    if (size >0) {
+            NSString *sizeText =[CMFileManger fileSizeTranslateToLargerUnitWithOriginSize:size];
+        self.scanEndView.trashDataTF.cell.title = sizeText;
+        self.scanEndView.totalDataSizeTF.cell.title = sizeText;
+        [self.scanEndView configDataIsEmpty:NO];
+    }
+    else {
+        [self.scanEndView configDataIsEmpty:YES];
     }
 }
 

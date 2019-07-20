@@ -77,6 +77,9 @@ static CGFloat kTrashMarginLeft = 20.f;
     _descTF.backgroundColor = [NSColor clearColor];
     [_descTF setTextColor:[NSColor colorWithWhite:1.f alpha:0.8]];
     _descTF.bordered = NO;
+    _descTF.maximumNumberOfLines = 0;
+    _descTF.alignment = NSTextAlignmentLeft;
+    [_descTF sizeToFit];
     
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kTrashMarginLeft);

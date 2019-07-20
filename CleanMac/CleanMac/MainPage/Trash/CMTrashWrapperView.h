@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, CMScanState) {
 
 - (void)configScaningPath:(NSString *)path;
 - (void)configureEndScanSizeText:(NSString *)sizeText;
+- (void)configureEndScanSize:(long long) size;
 
 @end
 

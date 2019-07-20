@@ -12,12 +12,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CMRightLogoBaseView.h"
+@class CMRightItemView;
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CMRightBaseView : CMRightLogoBaseView
 
+@property (nonatomic, strong, readonly) CMRightItemView *firstItemView;
+@property (nonatomic, strong, readonly) CMRightItemView *secondItemView;
 
 @end
 

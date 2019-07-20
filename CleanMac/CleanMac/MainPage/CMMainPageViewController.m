@@ -143,8 +143,9 @@
                 if (finished) {
                     weakSelf.trashView.scanState = CMScanStateScanEnd;
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        NSString *sizeText =[CMFileManger fileSizeTranslateToLargerUnitWithOriginSize:size];
-                        [weakSelf.trashView configureEndScanSizeText:sizeText];
+//                        NSString *sizeText =[CMFileManger fileSizeTranslateToLargerUnitWithOriginSize:size];
+//                        [weakSelf.trashView configureEndScanSizeText:sizeText];
+                        [weakSelf.trashView configureEndScanSize:size];
                     });
                 }
                 else {

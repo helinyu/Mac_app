@@ -283,9 +283,17 @@ static CGFloat const kMagnitude = 1024.f;
         return  NO;
     }
     
+    BOOL flag = YES;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&flag]) {
+        path = [NSString stringWithFormat:@"%@/.",path];
+    }
+    
     NSError *error = nil;
     [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
     if (error) {
+        if (error.code == 512) {
+            return  YES;
+        }
         return NO;
     }
     return YES;

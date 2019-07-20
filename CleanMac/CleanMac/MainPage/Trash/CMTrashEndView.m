@@ -24,6 +24,10 @@
 @property (nonatomic, strong) NSButton *lookAtBtn;
 @property (nonatomic, strong) NSTextField *totalDataSizeTF;
 
+@property (nonatomic, strong) NSImageView *noDataIconView;
+@property (nonatomic, strong) NSTextField *noDataTitleTF;
+@property (nonatomic, strong) NSTextField *noDataDescTF;
+
 @end
 
 static CGFloat const kMarginLeft = 10.f;
@@ -159,8 +163,70 @@ static CGFloat const kVerticalSpace = 4.f;
     _totalDataSizeTF.bordered = NO;
     [_totalDataSizeTF sizeToFit];
     
+    _noDataIconView = [NSImageView new];
+    _noDataTitleTF = [NSTextField new];
+    _noDataDescTF = [NSTextField new];
+    [self cm_addSubviews:@[_noDataIconView,_noDataTitleTF, _noDataDescTF]];
+
+    [_noDataIconView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.mas_centerY);
+        make.left.equalTo(self.rightLogoImgView.mas_right).offset(10.f);
+        make.width.height.mas_equalTo(25.f);
+    }];
+    _noDataIconView.image = [NSImage imageNamed:@"icon_trahs_end_empty"];
+    
+    [_noDataTitleTF mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.noDataIconView);
+        make.left.equalTo(self.noDataIconView.mas_right).offset(2.f);
+    }];
+    _noDataTitleTF.font = [NSFont systemFontOfSize:23.f];
+    _noDataTitleTF.textColor = [NSColor whiteColor];
+    _noDataTitleTF.backgroundColor = [NSColor clearColor];
+    _noDataTitleTF.bordered = NO;
+    _noDataTitleTF.alignment = NSTextAlignmentLeft;
+    _noDataTitleTF.cell.title = @"非常干净";
+    [_noDataTitleTF sizeToFit];
+    
+    [_noDataDescTF mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.noDataTitleTF.mas_bottom).offset(6.f);
+        make.left.equalTo(self.noDataIconView);
+    }];
+    _noDataDescTF.font = [NSFont systemFontOfSize:13.f];
+    _noDataDescTF.textColor = [NSColor colorWithWhite:0.8 alpha:1.f];
+    _noDataDescTF.backgroundColor = [NSColor clearColor];
+    _noDataDescTF.bordered = NO;
+    _noDataDescTF.alignment = NSTextAlignmentLeft;
+    _noDataDescTF.cell.title = @"任何废纸篓中都没有文件";
+    [_noDataDescTF sizeToFit];
+    
+//    init state
+    [self configDataUIHidden:YES];
+    [self configNoDataUIHidden:YES];
 }
 
+- (void)configDataIsEmpty:(BOOL)isEmtpy {
+    [self configNoDataUIHidden:!isEmtpy];
+    [self configDataUIHidden:isEmtpy];
+
+}
+
+- (void)configDataUIHidden:(BOOL)isHidden {
+    _titleTF.hidden = isHidden;
+    _titleBottomLine.hidden = isHidden;
+    _trashDataTF.hidden = isHidden;
+    _intelligenceDescTF.hidden = isHidden;
+    _trashDataBottomLine.hidden = isHidden;
+    _includeTitleTF.hidden = isHidden;
+    _includeContentTF.hidden = isHidden;
+    _lookAtBtn.hidden = isHidden;
+    _totalDataSizeTF.hidden = isHidden;
+}
+
+- (void)configNoDataUIHidden:(BOOL)isHidden {
+    _noDataTitleTF.hidden = isHidden;
+    _noDataDescTF.hidden = isHidden;
+    _noDataIconView.hidden = isHidden;
+}
 
 - (void)onLookAtMoreAction:(id)sender {
     NSLog(@"look at more project");

@@ -19,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSTextField *trashDataTF;
 @property (nonatomic, strong, readonly) NSTextField *totalDataSizeTF;
 
+- (void)configDataIsEmpty:(BOOL)isEmtpy;
+
+- (void)configDataUIHidden:(BOOL)isHidden;
+- (void)configNoDataUIHidden:(BOOL)isHidden;
+
 @end
 
 NS_ASSUME_NONNULL_END
