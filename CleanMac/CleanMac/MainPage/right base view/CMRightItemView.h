@@ -1,5 +1,5 @@
 //
-//  CMTrashOptionView.h
+//  CMRightItemView.h
 //  CleanMac
 //
 //  独学而无友 则孤陋寡闻
@@ -8,13 +8,13 @@
 //  Copyright © 2019 Aka. All rights reserved.
 //  xcode 10.15 .
 //
-    
+
 
 #import <Cocoa/Cocoa.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMTrashOptionView : NSView
+@interface CMRightItemView : NSView
 
 @property (nonatomic, strong, readonly) NSImageView *iconImgView;
 @property (nonatomic, strong, readonly) NSTextField *titleTF;

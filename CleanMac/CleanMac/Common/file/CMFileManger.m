@@ -11,6 +11,9 @@
     
 
 #import "CMFileManger.h"
+#import "NSNumber+CMAdd.h"
+#import "KMSystem.h"
+#import <Foundation/NSFileCoordinator.h>
 
 #if defined(__LP64__) && __LP64__
 
@@ -22,8 +25,8 @@ typedef long long kInteger;
 
 #endif
 
-static NSInteger k32VoidPointByteLength = 4; // 32位
-static NSInteger k64VoidPointByteLength = 8; // 66位
+//static NSInteger k32VoidPointByteLength = 4; // 32位
+//static NSInteger k64VoidPointByteLength = 8; // 66位
 
 
 @interface CMFileManger ()
@@ -121,8 +124,13 @@ static CGFloat const kMagnitude = 1024.f;
     NSError *error = nil;
     NSString *trashPath =NSSearchPathForDirectoriesInDomains(NSTrashDirectory, NSAllDomainsMask, YES).firstObject;
     NSArray *files = [_originFileManger contentsOfDirectoryAtPath:trashPath error:&error];
-    NSLog(@"trashFiles :%@",files);
     return files;
+}
+
+
+// protocol
+- (NSURL *)presentedItemURL {
+    return [NSURL URLWithString:@"http://www.baidu.com"];
 }
 
 @end
@@ -153,18 +161,17 @@ static CGFloat const kMagnitude = 1024.f;
 + (kInteger)sizeOfFilePathUrl:(NSURL *)filePathUrl {
     NSNumber *fileSize;
     [filePathUrl getResourceValue:&fileSize forKey:NSURLFileSizeKey error:NULL];
-    
-    return fileSize.unsignedToInteger;
+    return fileSize.unsignedLongLongValue;
 }
 
-+ (BOOL)is64BitSystem {
-    if (sizeof(void *) == k64VoidPointByteLength) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
-}
+//+ (BOOL)is64BitSystem {
+//    if (sizeof(void *) == k64VoidPointByteLength) {
+//        return YES;
+//    }
+//    else {
+//        return NO;
+//    }
+//}
 
 + (kInteger)sizeTotalOfFolderPath:(NSString *)folderPath {
     NSFileManager* manager = [NSFileManager defaultManager];
@@ -178,6 +185,29 @@ static CGFloat const kMagnitude = 1024.f;
         folderSize += [CMFileManger sizeOfFilePath:fileAbsolutePath];
     }
     return folderSize;
+}
+
++ (void)sizeTotalOfFolderPath:(NSString *)folderPath then:(ScanResultBlock)resultBlock {
+    NSFileManager* manager = [NSFileManager defaultManager];
+    if (![manager fileExistsAtPath:folderPath]) {
+        !resultBlock? :resultBlock(NO, nil, folderPath, 0);
+        !resultBlock? :resultBlock(YES, nil, folderPath, 0);
+        return ;
+    }
+    
+    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
+    NSString* fileName;
+    kInteger folderSize = 0;
+    while ((fileName = [childFilesEnumerator nextObject]) != nil){
+        NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
+        kInteger curFileSize = [CMFileManger sizeOfFilePath:fileAbsolutePath];
+        folderSize += curFileSize;
+        NSLog(@"trash :%@ cur file size ;%ld",fileName, (long)curFileSize);
+        NSString *totalFileName = [NSString stringWithFormat:@"%@/%@",folderPath,fileName];
+        !resultBlock? :resultBlock(NO, nil, totalFileName, folderSize);
+    }
+    !resultBlock? :resultBlock(YES, nil, @"", folderSize);
+//    return folderSize;
 }
 
 + (NSString *)fileSizeTranslateToLargerUnitWithOriginSize:(kInteger)originSize {
@@ -223,15 +253,46 @@ static CGFloat const kMagnitude = 1024.f;
         kInteger fileSize = [self sizeOfFilePathUrl:fileURL];
         totalSize += fileSize;
         fileCount += 1;
+        NSLog(@"trash url:%@ , size:%ld",fileURL,fileSize);
         !resultBlock? :resultBlock(NO, nil,fileURL.absoluteString, totalSize);
     }
     
     !resultBlock? :resultBlock(YES, nil, @"", totalSize);
 }
 
-+ (void)scanTrashFolderThen:(ScanResultBlock)resultBlock {
++ (NSString *)scanTrashFolderThen:(ScanResultBlock)resultBlock {
     NSString *trashPath = [CMFileManger trashPath];
-    [CMFileManger sizeOfSkinHiddenFilesFolderPath:trashPath then:resultBlock];
+//    [CMFileManger sizeOfSkinHiddenFilesFolderPath:trashPath then:resultBlock];
+    [CMFileManger sizeTotalOfFolderPath:trashPath then:resultBlock];
+    return trashPath;
+}
+
++ (void)clearTrashFolderThen:(BoolBlock)then {
+//    NSFilePresenter 删除
+//    这个类进行操作；
+//    [NSFilePresenter Comment];
+    
+}
+
++ (BOOL)removePath:(NSString *)path {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        return YES;
+    }
+    
+    if (![[NSFileManager defaultManager] isDeletableFileAtPath:path]) {
+        return  NO;
+    }
+    
+    NSError *error = nil;
+    [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+    if (error) {
+        return NO;
+    }
+    return YES;
+}
+
++ (BOOL)removePathUrl:(NSURL *)pathUrl {
+    return [CMFileManger removePath:pathUrl.path];
 }
 
 @end
@@ -250,5 +311,16 @@ static CGFloat const kMagnitude = 1024.f;
     NSDictionary *classDic = [[NSDictionary alloc] initWithContentsOfFile:path];
     return classDic;
 }
+
+@end
+
+
+@implementation CMFileManger (NSFileCoordinator)
+
+
++ (NSFileCoordinator *)fileCoordinator {
+   return [[NSFileCoordinator alloc] initWithFilePresenter:self];
+}
+
 
 @end

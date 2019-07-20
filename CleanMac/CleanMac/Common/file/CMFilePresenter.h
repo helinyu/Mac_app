@@ -1,10 +1,10 @@
 //
-//  CMBaseView.h
+//  CMFilePresenter.h
 //  CleanMac
 //
 //  独学而无友 则孤陋寡闻
 //
-//  Created by helinyu on 2019/7/18 10:01 .
+//  Created by helinyu on 2019/7/20 13:12 .
 //  Copyright © 2019 Aka. All rights reserved.
 //  xcode 10.15 .
 //
@@ -14,11 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMBaseView : NSView
-
-@property (nonatomic, assign) NSInteger viewTag;
-
-- (void)baseInit;
+@interface CMFilePresenter : NSFilePresenter
 
 @end
 

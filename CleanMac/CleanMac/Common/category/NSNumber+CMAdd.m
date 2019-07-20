@@ -11,13 +11,13 @@
     
 
 #import "NSNumber+CMAdd.h"
-
 #import <AppKit/AppKit.h>
+#import "KMSystem.h"
 
 @implementation NSNumber (CMAdd)
 
 - (kInteger)unsignedToInteger {
-    if ([NSNumber is64BitSystem]) {
+    if ([KMSystem is64BitSystem]) {
         return self.unsignedIntegerValue;
     }
     else {

@@ -1,5 +1,5 @@
 //
-//  CMTrashOptionView.m
+//  CMRightItemView.m
 //  CleanMac
 //
 //  独学而无友 则孤陋寡闻
@@ -8,13 +8,13 @@
 //  Copyright © 2019 Aka. All rights reserved.
 //  xcode 10.15 .
 //
-    
 
-#import "CMTrashOptionView.h"
+
+#import "CMRightItemView.h"
 #import "NSView+CMAdd.h"
 #import <Masonry.h>
 
-@interface CMTrashOptionView ()
+@interface CMRightItemView ()
 
 @property (nonatomic, strong) NSImageView *iconImgView;
 @property (nonatomic, strong) NSTextField *titleTF;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation CMTrashOptionView
+@implementation CMRightItemView
 
 - (instancetype)initWithFrame:(NSRect)frame
 {

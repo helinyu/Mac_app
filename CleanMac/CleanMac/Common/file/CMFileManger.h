@@ -15,7 +15,8 @@
 #import "KMSystem.h"
 
 
-typedef void(^ScanResultBlock)(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size);
+typedef void(^ScanResultBlock)(BOOL finished, NSError * _Nullable error, NSString * _Nullable path, kInteger size);
+typedef void(^BoolBlock)(BOOL flag);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,13 +44,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (kInteger)sizeOfFilePath:(NSString*)filePath;
 + (kInteger)sizeOfFilePathUrl:(NSURL *)filePathUrl;
-+ (kInteger)sizeTotalOfFolderPath:(NSString *)folderPath;
+
+
 + (NSString *)fileSizeTranslateToLargerUnitWithOriginSize:(kInteger)originSize;
+
++ (kInteger)sizeTotalOfFolderPath:(NSString *)folderPath;
++ (void)sizeTotalOfFolderPath:(NSString *)folderPath then:(ScanResultBlock)resultBlock;
+
 + (kInteger)sizeOfSkinHiddenFilesFolderPath:(NSString *)folderPath;
 + (void)sizeOfSkinHiddenFilesFolderPath:(NSString *)folderPath then:(ScanResultBlock)resultBlock;
 
 // 扫描垃圾桶的大小
-+ (void)scanTrashFolderThen:(ScanResultBlock)resultBlock;
++ (NSString *)scanTrashFolderThen:(ScanResultBlock)resultBlock;
++ (void)clearTrashFolderThen:(BoolBlock)then;
+
++ (BOOL)removePath:(NSString *)filePath;
++ (BOOL)removePathUrl:(NSURL *)pathUrl;
+
 
 @end
 
@@ -57,6 +68,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray<NSString *> *)getMainClassInfos;
 + (NSDictionary *)getMainClassInfoDic;
+
+@end
+
+// 文件协调
+@interface CMFileManger (NSFileCoordinator)<NSFilePresenter>
+
+
 
 @end
 

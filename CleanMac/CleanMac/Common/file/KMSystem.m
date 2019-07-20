@@ -14,13 +14,13 @@
 
 @implementation KMSystem
 
-+ (BOOL)is64BitSystem {
-    if (sizeof(void *) == k64VoidPointByteLength) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
-}
+//+ (BOOL)is64BitSystem {
+//    if (sizeof(void *) == k64VoidPointByteLength) {
+//        return YES;
+//    }
+//    else {
+//        return NO;
+//    }
+//}
 
 @end

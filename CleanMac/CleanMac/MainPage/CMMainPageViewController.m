@@ -22,7 +22,7 @@
 #import "CMPhotoTrashView.h"
 #import "CMEmailTrashView.h"
 #import "CMItunesTrashView.h"
-#import "CMTrashView.h"
+#import "CMTrashScanBeforeView.h"
 #import "CMMaliciousSoftwareView.h"
 #import "CMPrivacyView.h"
 #import "CMOptimizationView.h"
@@ -33,6 +33,7 @@
 #import "CMSpaceLensView.h"
 #import "CMLODcumentView.h"
 #import "CMShredderView.h"
+#import "CMTrashWrapperView.h"
 
 #define Create_right_view(cls) ([self createRightViewWithClass:[cls new]])
 
@@ -48,7 +49,10 @@
 @property (nonatomic, strong) CMPhotoTrashView *photoTrashView;
 @property (nonatomic, strong) CMEmailTrashView *emailTrashView;
 @property (nonatomic, strong) CMItunesTrashView *itunestrashView;
-@property (nonatomic, strong) CMTrashView *trashView;
+
+@property (nonatomic, strong) CMTrashWrapperView *trashView;
+@property (nonatomic, copy) NSString *trashFolderPath;
+
 @property (nonatomic, strong) CMMaliciousSoftwareView * maliciousSoftwareView;
 @property (nonatomic, strong) CMPrivacyView *privacyView;
 @property (nonatomic, strong) CMOptimizationView *optimizationView;
@@ -86,7 +90,7 @@
     _photoTrashView = Create_right_view(CMPhotoTrashView);
     _emailTrashView = Create_right_view(CMEmailTrashView);
     _itunestrashView = Create_right_view(CMItunesTrashView);
-    _trashView = Create_right_view(CMTrashView);
+    _trashView = Create_right_view(CMTrashWrapperView);
     _maliciousSoftwareView = Create_right_view(CMMaliciousSoftwareView);
     _privacyView = Create_right_view(CMPrivacyView);
     _optimizationView = Create_right_view(CMOptimizationView);
@@ -108,13 +112,13 @@
 
 - (void)dataInit {
     NSArray*volumes =[[CMFileManger single] mountedVolumefileURls]; // 加载的券的内容
-    NSLog(@"volumes :%@",volumes);
+//    NSLog(@"volumes :%@",volumes);
     
     NSArray *contents = [[CMFileManger single]  fileUrls];
-    NSLog(@"contents :%@",contents);
+//    NSLog(@"contents :%@",contents);
     
     NSArray *trashFiles = [[CMFileManger single]  trashFiles];
-    NSLog(@"trashFiles :%@",trashFiles);
+//    NSLog(@"trashFiles :%@",trashFiles);
 
 }
 
@@ -132,17 +136,42 @@
 - (void)bindInit {
 
     __weak typeof (self) weakSelf = self;
-    _trashView.actionScanBlock = ^{
-        NSLog(@"开始三秒垃圾桶");
-        [CMFileManger scanTrashFolderThen:^(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size) {
-            if (finished) {
-                weakSelf.trashView.scanState = CMScanStateEnd;
+    _trashView.actionScanBlock = ^(NSInteger scanState) {
+        if (scanState == CMScanStateScanBefore) {
+            weakSelf.trashView.scanState = CMScanStateScaning;
+            NSString *folderPath = [CMFileManger scanTrashFolderThen:^(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size) {
+                if (finished) {
+                    weakSelf.trashView.scanState = CMScanStateScanEnd;
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        NSString *sizeText =[CMFileManger fileSizeTranslateToLargerUnitWithOriginSize:size];
+                        [weakSelf.trashView configureEndScanSizeText:sizeText];
+                    });
+                }
+                else {
+                    weakSelf.trashView.scanState = CMScanStateScaning;
+                    if (!path) {
+                        [weakSelf.trashView configScaningPath:path];
+                    }
+                }
+            }];
+            weakSelf.trashFolderPath = folderPath;
+        }
+        else if (scanState == CMScanStateScaning) {
+            NSLog(@"取消扫描");// 方法药设置l为实例方法
+            weakSelf.trashView.scanState = CMScanStateScanBefore;
+        }
+        else {
+            NSLog(@"清除");
+            BOOL flag = [CMFileManger removePath:weakSelf.trashFolderPath];
+            if (flag) {
+                NSLog(@"清除完成");
+                weakSelf.trashView.scanState = CMScanStateScanBefore;
             }
             else {
-                weakSelf.trashView.scanState = CMScanStateEnd;
+                NSLog(@"清除失败");
             }
-            NSLog(@"lt- scan finished:%d , path: %@, size:%ld",finished, path, (long)size);
-        }];
+        }
+       
     };
 }
 
