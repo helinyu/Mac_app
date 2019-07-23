@@ -4,6 +4,10 @@
 <h2>CleanMac 项目</h2><br>
 [详情技术连接](https://helinyu.github.io/mac/)
 
+欢迎加入微信群一起交流：
+![./Mac_app/img/281563878944_.pic.jpg](281563878944_.pic.jpg)
+
+
 
 基本的界面架构：
 1、节本的界面结构已经设置了
