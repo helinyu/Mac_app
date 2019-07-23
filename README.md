@@ -1,7 +1,8 @@
 # Mac_app
 
 
-<h2>CleanMac 项目</h2><br>
+<h2>CleanMac 项目</h2><br/>
+
 [详情技术连接](https://helinyu.github.io/mac/)
 
 欢迎加入微信群一起交流：
