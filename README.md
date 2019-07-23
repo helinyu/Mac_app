@@ -1,7 +1,9 @@
 # Mac_app
 
 
-CleanMac 项目
+<h2>CleanMac 项目</h2><br>
+[详情技术连接](https://helinyu.github.io/mac/)
+
 
 基本的界面架构：
 1、节本的界面结构已经设置了
