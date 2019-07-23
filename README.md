@@ -5,7 +5,7 @@
 [详情技术连接](https://helinyu.github.io/mac/)
 
 欢迎加入微信群一起交流：
-![微信群](./Mac_app/img/281563878944_.pic.jpg)
+![微信群](./img/281563878944_.pic.jpg)
 
 
 
