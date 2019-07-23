@@ -17,7 +17,6 @@
 		4123886622D2FA9A00B89F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
 		4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887022D2FA9A00B89F9E /* CleanMacTests.m */; };
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
-		41571E9A22E2DA3A0090352D /* CMFilePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571E9922E2DA3A0090352D /* CMFilePresenter.m */; };
 		41571E9E22E32E6E0090352D /* CMRightBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571E9D22E32E6E0090352D /* CMRightBaseView.m */; };
 		41571EA122E32ECE0090352D /* CMRightItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA022E32ECE0090352D /* CMRightItemView.m */; };
 		41571EA222E331040090352D /* CMRightItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA022E32ECE0090352D /* CMRightItemView.m */; };
@@ -156,8 +155,6 @@
 		4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanMacUITests.m; sourceTree = "<group>"; };
 		4123887D22D2FA9A00B89F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41571E9822E2DA3A0090352D /* CMFilePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFilePresenter.h; sourceTree = "<group>"; };
-		41571E9922E2DA3A0090352D /* CMFilePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFilePresenter.m; sourceTree = "<group>"; };
 		41571E9C22E32E6E0090352D /* CMRightBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightBaseView.h; sourceTree = "<group>"; };
 		41571E9D22E32E6E0090352D /* CMRightBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRightBaseView.m; sourceTree = "<group>"; };
 		41571E9F22E32ECE0090352D /* CMRightItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightItemView.h; sourceTree = "<group>"; };
@@ -603,8 +600,6 @@
 				4165FC4422E014C400656E00 /* NSURLResourceKey.plist */,
 				4114460822E0797F00E5B4B6 /* KMSystem.h */,
 				4114460922E0797F00E5B4B6 /* KMSystem.m */,
-				41571E9822E2DA3A0090352D /* CMFilePresenter.h */,
-				41571E9922E2DA3A0090352D /* CMFilePresenter.m */,
 			);
 			path = file;
 			sourceTree = "<group>";
@@ -1057,7 +1052,6 @@
 				4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */,
 				4165FBF422DF488000656E00 /* CMExtendView.m in Sources */,
 				4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */,
-				41571E9A22E2DA3A0090352D /* CMFilePresenter.m in Sources */,
 				41571EA122E32ECE0090352D /* CMRightItemView.m in Sources */,
 				4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */,
 				4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */,

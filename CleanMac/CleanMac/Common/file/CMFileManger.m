@@ -25,9 +25,6 @@ typedef long long kInteger;
 
 #endif
 
-//static NSInteger k32VoidPointByteLength = 4; // 32位
-//static NSInteger k64VoidPointByteLength = 8; // 66位
-
 
 @interface CMFileManger ()
 

@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KMSystem : NSObject
 
-//+ (BOOL)is64BitSystem;
++ (BOOL)is64BitSystem;
 
 @end
 
