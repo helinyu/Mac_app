@@ -163,7 +163,8 @@
         }
         else {
             NSLog(@"清除");
-            BOOL flag = [CMFileManger removePath:weakSelf.trashFolderPath];
+            NSString *trashFolderFilesPath = [NSString stringWithFormat:@"%@/.",weakSelf.trashFolderPath];
+            BOOL flag = [CMFileManger removePath:trashFolderFilesPath];
             if (flag) {
                 NSLog(@"清除完成");
                 weakSelf.trashView.scanState = CMScanStateScanBefore;
