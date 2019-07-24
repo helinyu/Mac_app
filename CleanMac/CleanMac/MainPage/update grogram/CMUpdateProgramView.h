@@ -12,10 +12,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CMBaseView.h"
+#import "CMRightBaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMUpdateProgramView : CMBaseView
+@interface CMUpdateProgramView : CMRightBaseView
+
+
 
 @end
 

@@ -20,6 +20,7 @@
 
 #import "NSView+CMAdd.h"
 #import "NSButton+CMAdd.h"
+#import "PermissionsKit.h"
 
 
 #pragma mark -- block

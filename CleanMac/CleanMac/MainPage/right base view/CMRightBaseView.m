@@ -40,19 +40,22 @@ static CGFloat kTrashMarginLeft = 20.f;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self rightBaseViewInit];
+        [self createUI];
+        [self InitBaseConfig];
     }
     return self;
 }
 
-- (void)rightBaseViewInit {
-    
+- (void)createUI {
     _titleTF = [NSTextField new];
     _descTF = [NSTextField new];
     _firstItemView = [CMRightItemView new];
     _secondItemView = [CMRightItemView new];
     [self cm_addSubviews:@[_titleTF, _descTF, _firstItemView, _secondItemView]];
-        
+}
+
+- (void)InitBaseConfig {
+    
     [_firstItemView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kTrashMarginLeft);
         make.centerY.equalTo(self);

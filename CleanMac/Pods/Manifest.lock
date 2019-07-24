@@ -1,4 +1,8 @@
 PODS:
+  - CocoaLumberjack (3.5.3):
+    - CocoaLumberjack/Core (= 3.5.3)
+  - CocoaLumberjack/Core (3.5.3)
+  - DevMateKit (1.9.3)
   - Masonry (1.1.0)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -10,21 +14,27 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - CocoaLumberjack (~> 3.5.3)
+  - DevMateKit (~> 1.9.3)
   - Masonry (~> 1.1.0)
   - ReactiveCocoa (~> 2.5)
   - YYModel (~> 1.0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
+    - DevMateKit
     - Masonry
     - ReactiveCocoa
     - YYModel
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  DevMateKit: a7a46f498d4c549125109d826e858a49d508cbb8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: dabee5fe553c5816e359085e4158884432c7a322
+PODFILE CHECKSUM: 4e90bfca055b10ca5b4c315e87717ea3f7e6dfea
 
 COCOAPODS: 1.6.2

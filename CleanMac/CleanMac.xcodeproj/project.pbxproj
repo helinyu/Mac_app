@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		11CDE21E29B4830AFDDE12ED /* Pods_CleanMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF60AA348D749AEB656268BB /* Pods_CleanMac.framework */; };
+		410BA0FC22E878DE006ABC35 /* MPPermissionsKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0E722E878DE006ABC35 /* MPPermissionsKit.m */; };
+		410BA0FD22E878DE006ABC35 /* MPPermissionsKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0E722E878DE006ABC35 /* MPPermissionsKit.m */; };
+		410BA0FE22E878DE006ABC35 /* MPCalendarAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0EE22E878DE006ABC35 /* MPCalendarAuthorizer.m */; };
+		410BA0FF22E878DE006ABC35 /* MPCalendarAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0EE22E878DE006ABC35 /* MPCalendarAuthorizer.m */; };
+		410BA10022E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0F222E878DE006ABC35 /* MPContactsAuthorizer.m */; };
+		410BA10122E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0F222E878DE006ABC35 /* MPContactsAuthorizer.m */; };
+		410BA10222E878DE006ABC35 /* MPContactsAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0F322E878DE006ABC35 /* MPContactsAuthorization.m */; };
+		410BA10322E878DE006ABC35 /* MPContactsAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0F322E878DE006ABC35 /* MPContactsAuthorization.m */; };
+		410BA10422E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0F522E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m */; };
+		410BA10522E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0F522E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m */; };
+		410BA10622E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0FA22E878DE006ABC35 /* MPPhotosAuthorizer.m */; };
+		410BA10722E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 410BA0FA22E878DE006ABC35 /* MPPhotosAuthorizer.m */; };
+		410BA10822E878DE006ABC35 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 410BA0FB22E878DE006ABC35 /* Info.plist */; };
+		410BA10922E878DE006ABC35 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 410BA0FB22E878DE006ABC35 /* Info.plist */; };
 		4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */; };
 		4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4114460922E0797F00E5B4B6 /* KMSystem.m */; };
 		4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123885A22D2FA9700B89F9E /* AppDelegate.m */; };
@@ -135,6 +149,23 @@
 
 /* Begin PBXFileReference section */
 		29064268D52E9CD7A8EBA641 /* Pods_CleanMac_copy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMac_copy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		410BA0E522E878DE006ABC35 /* PermissionsKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionsKit.h; sourceTree = "<group>"; };
+		410BA0E722E878DE006ABC35 /* MPPermissionsKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPermissionsKit.m; sourceTree = "<group>"; };
+		410BA0E822E878DE006ABC35 /* MPAuthorizationStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAuthorizationStatus.h; sourceTree = "<group>"; };
+		410BA0E922E878DE006ABC35 /* MPPermissionsKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPermissionsKit.h; sourceTree = "<group>"; };
+		410BA0EA22E878DE006ABC35 /* MPPermissionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPermissionType.h; sourceTree = "<group>"; };
+		410BA0ED22E878DE006ABC35 /* MPCalendarAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCalendarAuthorizer.h; sourceTree = "<group>"; };
+		410BA0EE22E878DE006ABC35 /* MPCalendarAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCalendarAuthorizer.m; sourceTree = "<group>"; };
+		410BA0F022E878DE006ABC35 /* MPContactsAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPContactsAuthorizer.h; sourceTree = "<group>"; };
+		410BA0F122E878DE006ABC35 /* MPContactsAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPContactsAuthorization.h; sourceTree = "<group>"; };
+		410BA0F222E878DE006ABC35 /* MPContactsAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPContactsAuthorizer.m; sourceTree = "<group>"; };
+		410BA0F322E878DE006ABC35 /* MPContactsAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPContactsAuthorization.m; sourceTree = "<group>"; };
+		410BA0F522E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFullDiskAccessAuthorizer.m; sourceTree = "<group>"; };
+		410BA0F622E878DE006ABC35 /* MPFullDiskAccessAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFullDiskAccessAuthorizer.h; sourceTree = "<group>"; };
+		410BA0F722E878DE006ABC35 /* MPAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAuthorizer.h; sourceTree = "<group>"; };
+		410BA0F922E878DE006ABC35 /* MPPhotosAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPhotosAuthorizer.h; sourceTree = "<group>"; };
+		410BA0FA22E878DE006ABC35 /* MPPhotosAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPhotosAuthorizer.m; sourceTree = "<group>"; };
+		410BA0FB22E878DE006ABC35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CMAdd.h"; sourceTree = "<group>"; };
 		4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CMAdd.m"; sourceTree = "<group>"; };
 		4114460822E0797F00E5B4B6 /* KMSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMSystem.h; sourceTree = "<group>"; };
@@ -292,6 +323,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410BA0E322E878CB006ABC35 /* thirdpart */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0E422E878DE006ABC35 /* PermissionsKit */,
+			);
+			path = thirdpart;
+			sourceTree = "<group>";
+		};
+		410BA0E422E878DE006ABC35 /* PermissionsKit */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0E522E878DE006ABC35 /* PermissionsKit.h */,
+				410BA0E622E878DE006ABC35 /* Public */,
+				410BA0EB22E878DE006ABC35 /* Private */,
+				410BA0FB22E878DE006ABC35 /* Info.plist */,
+			);
+			path = PermissionsKit;
+			sourceTree = "<group>";
+		};
+		410BA0E622E878DE006ABC35 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0E722E878DE006ABC35 /* MPPermissionsKit.m */,
+				410BA0E822E878DE006ABC35 /* MPAuthorizationStatus.h */,
+				410BA0E922E878DE006ABC35 /* MPPermissionsKit.h */,
+				410BA0EA22E878DE006ABC35 /* MPPermissionType.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		410BA0EB22E878DE006ABC35 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0EC22E878DE006ABC35 /* Calendar */,
+				410BA0EF22E878DE006ABC35 /* Contacts */,
+				410BA0F422E878DE006ABC35 /* FullDiskAccess */,
+				410BA0F722E878DE006ABC35 /* MPAuthorizer.h */,
+				410BA0F822E878DE006ABC35 /* Photos */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		410BA0EC22E878DE006ABC35 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0ED22E878DE006ABC35 /* MPCalendarAuthorizer.h */,
+				410BA0EE22E878DE006ABC35 /* MPCalendarAuthorizer.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		410BA0EF22E878DE006ABC35 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0F022E878DE006ABC35 /* MPContactsAuthorizer.h */,
+				410BA0F122E878DE006ABC35 /* MPContactsAuthorization.h */,
+				410BA0F222E878DE006ABC35 /* MPContactsAuthorizer.m */,
+				410BA0F322E878DE006ABC35 /* MPContactsAuthorization.m */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		410BA0F422E878DE006ABC35 /* FullDiskAccess */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0F522E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m */,
+				410BA0F622E878DE006ABC35 /* MPFullDiskAccessAuthorizer.h */,
+			);
+			path = FullDiskAccess;
+			sourceTree = "<group>";
+		};
+		410BA0F822E878DE006ABC35 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				410BA0F922E878DE006ABC35 /* MPPhotosAuthorizer.h */,
+				410BA0FA22E878DE006ABC35 /* MPPhotosAuthorizer.m */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		4114460422E077FA00E5B4B6 /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +727,7 @@
 		41BAFD3122DF026D00AD96AC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				410BA0E322E878CB006ABC35 /* thirdpart */,
 				4114460422E077FA00E5B4B6 /* category */,
 				4165FC4622E014CC00656E00 /* file */,
 			);
@@ -710,6 +822,7 @@
 				4123885322D2FA9700B89F9E /* Frameworks */,
 				4123885422D2FA9700B89F9E /* Resources */,
 				360E5967E7CDCE0678F82E37 /* [CP] Embed Pods Frameworks */,
+				7727C26B830E2C01C3264614 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -767,6 +880,7 @@
 				4165FC3422E00BF400656E00 /* Frameworks */,
 				4165FC3622E00BF400656E00 /* Resources */,
 				E0A20542DC912F0DE00C0287 /* [CP] Embed Pods Frameworks */,
+				61B11F712B7AD8D65AB39F14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -825,6 +939,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410BA10822E878DE006ABC35 /* Info.plist in Resources */,
 				41C098FA22DCA8EF00679541 /* CMPopViewController.xib in Resources */,
 				4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */,
 				4165FBCA22DF416200656E00 /* classListDic.plist in Resources */,
@@ -859,6 +974,7 @@
 				4165FC3A22E00BF400656E00 /* Main.storyboard in Resources */,
 				4165FC3B22E00BF400656E00 /* classList.plist in Resources */,
 				4165FC3C22E00BF400656E00 /* CMTopClassCItem.xib in Resources */,
+				410BA10922E878DE006ABC35 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,6 +990,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
@@ -882,6 +1000,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
@@ -913,6 +1033,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		61B11F712B7AD8D65AB39F14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-resources.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E911D282FA141D81EC54A52 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -933,6 +1075,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7727C26B830E2C01C3264614 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-resources.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D134B717DB016922F81E110B /* [CP] Check Pods Manifest.lock */ = {
@@ -988,6 +1152,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
@@ -996,6 +1162,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
@@ -1022,25 +1190,31 @@
 				41571EB422E3358F0090352D /* CMTrashEndView.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
+				410BA10022E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
 				4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */,
 				41C098E622DC6D9000679541 /* CMPanel.m in Sources */,
 				4123886622D2FA9A00B89F9E /* main.m in Sources */,
 				4165FBCF22DF465800656E00 /* CMSystemTrashView.m in Sources */,
+				410BA0FC22E878DE006ABC35 /* MPPermissionsKit.m in Sources */,
 				41C0990822DDB90800679541 /* CMPopFooterView.m in Sources */,
 				4165FBD822DF469B00656E00 /* CMEmailTrashView.m in Sources */,
 				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
 				4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */,
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
+				410BA10422E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */,
 				4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */,
+				410BA0FE22E878DE006ABC35 /* MPCalendarAuthorizer.m in Sources */,
 				415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */,
 				4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */,
 				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
+				410BA10622E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */,
 				4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */,
 				41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */,
 				41571EAE22E3355D0090352D /* CMTrashWrapperView.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
+				410BA10222E878DE006ABC35 /* MPContactsAuthorization.m in Sources */,
 				4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */,
 				4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */,
 				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
@@ -1088,14 +1262,17 @@
 				4165FC1522E00BF400656E00 /* CMSecondWindowController.m in Sources */,
 				4165FC1622E00BF400656E00 /* CMPopViewController.m in Sources */,
 				4165FC1722E00BF400656E00 /* CMMaliciousSoftwareView.m in Sources */,
+				410BA0FF22E878DE006ABC35 /* MPCalendarAuthorizer.m in Sources */,
 				4165FC1822E00BF400656E00 /* CMPanel.m in Sources */,
 				4165FC1922E00BF400656E00 /* main.m in Sources */,
 				4165FC1A22E00BF400656E00 /* CMSystemTrashView.m in Sources */,
+				410BA10722E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */,
 				4165FC1B22E00BF400656E00 /* CMPopFooterView.m in Sources */,
 				41571EB522E335D50090352D /* CMTrashWrapperView.m in Sources */,
 				4165FC1C22E00BF400656E00 /* CMEmailTrashView.m in Sources */,
 				4165FC1D22E00BF400656E00 /* CMThirdViewController.m in Sources */,
 				4165FC1E22E00BF400656E00 /* CMUnloaderView.m in Sources */,
+				410BA10522E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */,
 				4165FC1F22E00BF400656E00 /* CMSecondViewController.m in Sources */,
 				4165FC2022E00BF400656E00 /* CMPrivacyView.m in Sources */,
 				41571EA222E331040090352D /* CMRightItemView.m in Sources */,
@@ -1106,6 +1283,7 @@
 				4165FC2422E00BF400656E00 /* CMMainWindowController.m in Sources */,
 				41571EA322E3310D0090352D /* CMRightBaseView.m in Sources */,
 				4165FC2522E00BF400656E00 /* CMBaseView.m in Sources */,
+				410BA10322E878DE006ABC35 /* MPContactsAuthorization.m in Sources */,
 				4165FC2622E00BF400656E00 /* CMFileManger.m in Sources */,
 				4165FC2722E00BF400656E00 /* CMThirdWindowController.m in Sources */,
 				4165FC2822E00BF400656E00 /* NSButton+CMAdd.m in Sources */,
@@ -1122,6 +1300,8 @@
 				4165FC3122E00BF400656E00 /* CMMaintainView.m in Sources */,
 				41571EAB22E334EB0090352D /* CMRightLogoBaseView.m in Sources */,
 				4165FC3222E00BF400656E00 /* CMIntelligenceView.m in Sources */,
+				410BA0FD22E878DE006ABC35 /* MPPermissionsKit.m in Sources */,
+				410BA10122E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
 				4165FC3322E00BF400656E00 /* CMTrashScanBeforeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1401,6 +1581,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1421,6 +1602,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
