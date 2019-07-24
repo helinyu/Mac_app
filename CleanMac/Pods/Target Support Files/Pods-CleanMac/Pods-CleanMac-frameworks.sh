@@ -157,6 +157,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/DevMateKit/DevMateKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework"
+  install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
+  install_dsym "${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -164,6 +166,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/DevMateKit/DevMateKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework"
+  install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
+  install_dsym "${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
