@@ -13,6 +13,7 @@ target 'CleanMac' do
     pod 'CocoaLumberjack', '~> 3.5.3'
    pod 'DevMateKit', '~> 1.9.3'
    pod 'Sparkle', '~> 1.21.3'
+   pod 'SDWebImage', '~> 5.0.6'
 #   pod 'PermissionsKit-macOS'
 end
 
@@ -27,6 +28,7 @@ target 'CleanMac copy' do
    pod 'CocoaLumberjack', '~> 3.5.3'
     pod 'DevMateKit', '~> 1.9.3'
     pod 'Sparkle', '~> 1.21.3'
+    pod 'SDWebImage', '~> 5.0.6'
 #  pod 'PermissionsKit-macOS'
 #   pod 'coobjc', '~> 1.2.0'
 
