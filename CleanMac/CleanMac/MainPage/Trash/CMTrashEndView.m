@@ -110,6 +110,11 @@ static CGFloat const kVerticalSpace = 4.f;
 }
 
 - (void)initContentConstraints {
+    [self initTrashDataContstraints];
+    [self initIncludeConstraints];
+}
+
+- (void)initTrashDataContstraints {
     [_trashDataTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
         make.top.equalTo(self.titleBottomLine.mas_bottom).offset(kVerticalSpace);
@@ -127,7 +132,9 @@ static CGFloat const kVerticalSpace = 4.f;
         make.right.equalTo(self).offset(-kMarginRight);
         make.height.mas_equalTo(1.f);
     }];
-    
+}
+
+- (void)initIncludeConstraints {
     [_includeTitleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
         make.top.equalTo(self.trashDataBottomLine.mas_bottom).offset(kVerticalSpace);
@@ -138,9 +145,7 @@ static CGFloat const kVerticalSpace = 4.f;
         make.top.equalTo(self.includeTitleTF.mas_bottom).offset(1.f);
         make.right.equalTo(self).offset(-kMarginRight);
     }];
-    
 }
-
 - (void)initBottomConstraints {
     [_lookAtBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
@@ -172,38 +177,28 @@ static CGFloat const kVerticalSpace = 4.f;
 }
 
 - (void)initContentStyle {
-    _trashDataTF.font = [NSFont systemFontOfSize:25.f];
-    _trashDataTF.textColor = [NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f];
-    _trashDataTF.bordered = NO;
-    _trashDataTF.backgroundColor = [NSColor clearColor];
-    _trashDataTF.cell.title = @"垃圾的数据";
-    [_trashDataTF sizeToFit];
+
+    [self initWithTF:_trashDataTF font:[NSFont systemFontOfSize:25.f] textColor:[NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f] borderd:NO title:@"垃圾的数据" backgroundColr:[NSColor clearColor]];
     
-    _intelligenceDescTF.cell.title = @"智能选择";
-    _intelligenceDescTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.7];
-    _intelligenceDescTF.bordered = NO;
-    _intelligenceDescTF.font = [NSFont systemFontOfSize:11.f];
+    [self initWithTF:_intelligenceDescTF font:[NSFont systemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.8 alpha:0.7] borderd:NO title:@"智能选择" backgroundColr:[NSColor clearColor]];
     _intelligenceDescTF.alignment = NSTextAlignmentRight;
-    _intelligenceDescTF.backgroundColor = [NSColor clearColor];
     
     _trashDataBottomLine.layer = CALayer.layer;
     _trashDataBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
     
-    _includeTitleTF.cell.title = @"包括";
-    _includeTitleTF.backgroundColor = [NSColor clearColor];
-    _includeTitleTF.font = [NSFont systemFontOfSize:11.f];
-    _includeTitleTF.textColor = [NSColor colorWithWhite:0.9 alpha:1.f];
+    [self initWithTF:_includeTitleTF font:[NSFont systemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.9 alpha:1.f] borderd:NO title:@"包括" backgroundColr:[NSColor clearColor]];
     _includeTitleTF.alignment = NSTextAlignmentLeft;
-    _includeTitleTF.backgroundColor = [NSColor clearColor];
-    _includeTitleTF.bordered = NO;
-    [_includeTitleTF sizeToFit];
-    
-    _includeContentTF.cell.title = @"· Macintosh HD 上的废纸篓";
-    _includeContentTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.7];
-    _includeContentTF.bordered = NO;
-    _includeContentTF.font = [NSFont boldSystemFontOfSize:11.f];
-    _includeContentTF.backgroundColor = [NSColor clearColor];
-    [_includeTitleTF sizeToFit];
+
+    [self initWithTF:_includeContentTF font:[NSFont boldSystemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.8 alpha:0.7] borderd:NO title:@"· Macintosh HD 上的废纸篓" backgroundColr:[NSColor clearColor]];
+}
+
+- (void)initWithTF:(NSTextField *)tf font:(NSFont *)font textColor:(NSColor *)textColor borderd:(BOOL)borderd title:(NSString *)title backgroundColr:(NSColor *)gbColor {
+    tf.font = [NSFont systemFontOfSize:25.f];
+    tf.textColor = [NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f];
+    tf.bordered = NO;
+    tf.backgroundColor = [NSColor clearColor];
+    tf.cell.title = @"垃圾的数据";
+    [tf sizeToFit];
 }
 
 - (void)initBottomStyle {
