@@ -25,18 +25,22 @@
 - (instancetype)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self initScaningView];
+        [self initView];
+        [self initContraints];
+        [self initStyle];
     }
     return self;
 }
 
-- (void)initScaningView {
-    
+- (void)initView {
     _titleTF = [NSTextField new];
     _curFilePathTF = [NSTextField new];
     _folderNameTF = [NSTextField new];
     [self cm_addSubviews:@[_titleTF, _curFilePathTF, _folderNameTF]];
     
+}
+
+- (void)initContraints {
     [self.rightLogoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self).offset(-10.f);
         make.centerX.equalTo(self);
@@ -48,36 +52,48 @@
         make.centerX.equalTo(self);
         make.left.right.equalTo(self);
     }];
-    [_titleTF setTextColor:[NSColor whiteColor]];
-    [_titleTF setFont:[NSFont systemFontOfSize:18.f]];
-    _titleTF.bordered = NO;
-    _titleTF.backgroundColor = [NSColor clearColor];
-    _titleTF.alignment = NSTextAlignmentCenter;
-    _titleTF.cell.title = @"正在计算废纸篓文件夹的大小...";
     
     [_curFilePathTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self.titleTF.mas_bottom).offset(10.f);
         make.left.right.equalTo(self);
     }];
-    [_curFilePathTF setTextColor:[NSColor colorWithWhite:0.9 alpha:0.9]];
-    [_curFilePathTF setFont:[NSFont systemFontOfSize:14.f]];
-    _curFilePathTF.bordered = NO;
-    _curFilePathTF.backgroundColor = [NSColor clearColor];
-//    _curFilePathTF.cell.title = @"path";
-    _curFilePathTF.alignment = NSTextAlignmentCenter;
-
+    
     [_folderNameTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self.curFilePathTF.mas_bottom).offset(10.f);
         make.left.right.equalTo(self);
     }];
-    [_folderNameTF setTextColor:[NSColor colorWithWhite:0.9 alpha:0.9]];
-    [_folderNameTF setFont:[NSFont systemFontOfSize:14.f]];
-    _folderNameTF.bordered = NO;
-    _folderNameTF.backgroundColor = [NSColor clearColor];
-    _folderNameTF.cell.title = @"系统废纸篓";
-    _folderNameTF.alignment = NSTextAlignmentCenter;
+}
+
+- (void)initStyle {
+    {
+        [_titleTF setTextColor:[NSColor whiteColor]];
+        [_titleTF setFont:[NSFont systemFontOfSize:18.f]];
+        _titleTF.bordered = NO;
+        _titleTF.backgroundColor = [NSColor clearColor];
+        _titleTF.alignment = NSTextAlignmentCenter;
+        _titleTF.cell.title = @"正在计算废纸篓文件夹的大小...";
+    }
+    
+    {
+        
+        [_curFilePathTF setTextColor:[NSColor colorWithWhite:0.9 alpha:0.9]];
+        [_curFilePathTF setFont:[NSFont systemFontOfSize:14.f]];
+        _curFilePathTF.bordered = NO;
+        _curFilePathTF.backgroundColor = [NSColor clearColor];
+        _curFilePathTF.alignment = NSTextAlignmentCenter;
+    }
+    
+    {
+        [_folderNameTF setTextColor:[NSColor colorWithWhite:0.9 alpha:0.9]];
+        [_folderNameTF setFont:[NSFont systemFontOfSize:14.f]];
+        _folderNameTF.bordered = NO;
+        _folderNameTF.backgroundColor = [NSColor clearColor];
+        _folderNameTF.cell.title = @"系统废纸篓";
+        _folderNameTF.alignment = NSTextAlignmentCenter;
+    }
+    
 }
 
 @end

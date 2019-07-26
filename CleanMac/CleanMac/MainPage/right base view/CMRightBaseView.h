@@ -22,8 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) CMRightItemView *firstItemView;
 @property (nonatomic, strong, readonly) CMRightItemView *secondItemView;
 
-- (void)InitBaseConfig;
-
 @end
 
 NS_ASSUME_NONNULL_END

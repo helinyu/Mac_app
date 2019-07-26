@@ -33,34 +33,55 @@ static NSString *const kStopText = @"停止";
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self baseInit];
+        [self initView];
+        [self initContraints];
+        [self initStyle];
     }
     return self;
 }
 
-- (void)baseInit {
-    
-    self.layer = CALayer.layer;
-    self.layer.backgroundColor = [NSColor colorWithRed:0.f green:161.f/255.f blue:217.f alpha:1.f].CGColor;
-    
+- (void)initView {
     _logoImgView = [NSImageView new];
     _titleTF = [NSTextField new];
     _descTF = [NSTextField new];
     _scanBtn = [NSButton cm_buttonWithTitle:kScanText target:self action:@selector(onScanAction:)];
     [self cm_addSubviews:@[_logoImgView, _titleTF, _descTF, _scanBtn]];
     
+}
+
+- (void)initContraints {
+    
     [_logoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self).offset(-100.f);
         make.centerX.equalTo(self);
         make.width.height.mas_equalTo(150.f);
     }];
-    _logoImgView.image = [NSImage imageNamed:@"icon_logo_large_clear"];
     
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self.logoImgView.mas_bottom).offset(10.f);
         make.left.right.equalTo(self);
     }];
+    
+    [_descTF mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.titleTF.mas_bottom).offset(10.f);
+        make.centerX.equalTo(self);
+        make.left.right.equalTo(self);
+    }];
+    
+    [_scanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(80.f);
+        make.centerX.equalTo(self);
+        make.bottom.equalTo(self).offset(-10.f);
+    }];
+}
+
+- (void)initStyle {
+    self.layer = CALayer.layer;
+    self.layer.backgroundColor = [NSColor colorWithRed:0.f green:161.f/255.f blue:217.f alpha:1.f].CGColor;
+    
+    _logoImgView.image = [NSImage imageNamed:@"icon_logo_large_clear"];
+
     _titleTF.font = [NSFont systemFontOfSize:30.f weight:NSFontWeightBold];
     _titleTF.textColor = [NSColor whiteColor];
     _titleTF.cell.title = @"欢迎使用Clean Mac";
@@ -70,11 +91,6 @@ static NSString *const kStopText = @"停止";
     _titleTF.editable = NO;
     [_titleTF sizeToFit];
     
-    [_descTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.titleTF.mas_bottom).offset(10.f);
-        make.centerX.equalTo(self);
-        make.left.right.equalTo(self);
-    }];
     _descTF.textColor = [NSColor whiteColor];
     _descTF.font = [NSFont systemFontOfSize:15.f];
     _descTF.cell.title = @"开始全面、仔细扫描您的Mac";
@@ -84,11 +100,6 @@ static NSString *const kStopText = @"停止";
     _descTF.editable = NO;
     [_descTF sizeToFit];
     
-    [_scanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.mas_equalTo(80.f);
-        make.centerX.equalTo(self);
-        make.bottom.equalTo(self).offset(-10.f);
-    }];
     _scanBtn.layer = CALayer.layer;
     _scanBtn.layer.backgroundColor = [NSColor blackColor].CGColor;
     _scanBtn.layer.cornerRadius = 38.f;

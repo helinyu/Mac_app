@@ -28,16 +28,21 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self baseInit];
+        [self initView];
+        [self initContraints];
+        [self initStyle];
     }
     return self;
 }
 
-- (void)baseInit {
+- (void)initView {
     _iconImgView = [NSImageView new];
     _titleTF = [NSTextField new];
     _descTF = [NSTextField new];
     [self cm_addSubviews:@[_iconImgView, _titleTF, _descTF]];
+}
+
+- (void)initContraints {
     
     [_iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
@@ -51,24 +56,32 @@
         make.left.equalTo(self.iconImgView.mas_right).offset(10.f);
         make.right.equalTo(self);
     }];
-    [_descTF setTextColor:[NSColor colorWithWhite:1.f alpha:0.9]];
-    [_descTF setFont:[NSFont systemFontOfSize:10.f]];
-    _descTF.bordered = NO;
-    _descTF.backgroundColor = [NSColor clearColor];
-    _descTF.maximumNumberOfLines = 0;
     
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.iconImgView.mas_right).offset(10.f);
         make.right.equalTo(self);
         make.bottom.equalTo(self.descTF.mas_top).offset(-5.f);
     }];
-    [_titleTF setTextColor:[NSColor colorWithWhite:1.f alpha:1.f]];
-    [_titleTF setFont:[NSFont systemFontOfSize:12.f]];
-    _titleTF.bordered = NO;
-    _titleTF.backgroundColor = [NSColor clearColor];
-    _titleTF.maximumNumberOfLines = 0;
-    
 }
+
+- (void)initStyle {
+    {
+        [_descTF setTextColor:[NSColor colorWithWhite:1.f alpha:0.9]];
+        [_descTF setFont:[NSFont systemFontOfSize:10.f]];
+        _descTF.bordered = NO;
+        _descTF.backgroundColor = [NSColor clearColor];
+        _descTF.maximumNumberOfLines = 0;
+    }
+    
+    {
+        [_titleTF setTextColor:[NSColor colorWithWhite:1.f alpha:1.f]];
+        [_titleTF setFont:[NSFont systemFontOfSize:12.f]];
+        _titleTF.bordered = NO;
+        _titleTF.backgroundColor = [NSColor clearColor];
+        _titleTF.maximumNumberOfLines = 0;
+    }
+}
+
 
 - (void)configImgName:(NSString *)imgName title:(NSString *)title desc:(NSString *)desc {
     _iconImgView.image = [NSImage imageNamed:imgName];

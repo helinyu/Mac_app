@@ -40,13 +40,15 @@ static CGFloat kTrashMarginLeft = 20.f;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self createUI];
-        [self InitBaseConfig];
+        [self initView];
+        [self initContraints];
+        [self initStyle];
     }
     return self;
 }
 
-- (void)createUI {
+
+- (void)initView {
     _titleTF = [NSTextField new];
     _descTF = [NSTextField new];
     _firstItemView = [CMRightItemView new];
@@ -54,46 +56,54 @@ static CGFloat kTrashMarginLeft = 20.f;
     [self cm_addSubviews:@[_titleTF, _descTF, _firstItemView, _secondItemView]];
 }
 
-- (void)InitBaseConfig {
-    
+- (void)initContraints {
     [_firstItemView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kTrashMarginLeft);
         make.centerY.equalTo(self);
         make.right.equalTo(self.rightLogoImgView.mas_left);
     }];
-    [_firstItemView configImgName:@"icon_trash_dustbin" title:@"立即倾倒所有垃圾" desc:@"无需浏览所有的驱动器和应用查找它们的废纸篓"];
     
     [_secondItemView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kTrashMarginLeft);
         make.top.equalTo(self.firstItemView.mas_bottom).offset(0.f);
         make.right.equalTo(self.rightLogoImgView.mas_left);
     }];
-    [_secondItemView configImgName:@"icon_trash_dustbin" title:@"立即倾倒所有垃圾" desc:@"无需浏览所有的驱动器和应用查找它们的废纸篓"];
     
     [_descTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kTrashMarginLeft);
         make.bottom.equalTo(self.firstItemView.mas_top).offset(-10.f);
         make.right.equalTo(self.rightLogoImgView.mas_left);
     }];
-    _descTF.cell.title = @"倾倒mac上的所有废纸篓,包括图片和照片图库垃圾";
-    [_descTF setFont:[NSFont systemFontOfSize:13.f]];
-    _descTF.backgroundColor = [NSColor clearColor];
-    [_descTF setTextColor:[NSColor colorWithWhite:1.f alpha:0.8]];
-    _descTF.bordered = NO;
-    _descTF.maximumNumberOfLines = 0;
-    _descTF.alignment = NSTextAlignmentLeft;
-    [_descTF sizeToFit];
     
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kTrashMarginLeft);
         make.bottom.equalTo(self.descTF.mas_top).offset(-10.f);
         make.right.equalTo(self.rightLogoImgView.mas_left);
     }];
-    _titleTF.cell.title = @"废纸篓";
-    [_titleTF setFont:[NSFont systemFontOfSize:16.f]];
-    _titleTF.bordered = NO;
-    _titleTF.backgroundColor = [NSColor clearColor];
-    [_titleTF setTextColor:[NSColor whiteColor]];
+}
+
+- (void)initStyle {
+    [_firstItemView configImgName:@"icon_trash_dustbin" title:@"立即倾倒所有垃圾" desc:@"无需浏览所有的驱动器和应用查找它们的废纸篓"];
+  [_secondItemView configImgName:@"icon_trash_dustbin" title:@"立即倾倒所有垃圾" desc:@"无需浏览所有的驱动器和应用查找它们的废纸篓"];
+    
+    {
+        _descTF.cell.title = @"倾倒mac上的所有废纸篓,包括图片和照片图库垃圾";
+        [_descTF setFont:[NSFont systemFontOfSize:13.f]];
+        _descTF.backgroundColor = [NSColor clearColor];
+        [_descTF setTextColor:[NSColor colorWithWhite:1.f alpha:0.8]];
+        _descTF.bordered = NO;
+        _descTF.maximumNumberOfLines = 0;
+        _descTF.alignment = NSTextAlignmentLeft;
+        [_descTF sizeToFit];
+    }
+    
+    {
+        _titleTF.cell.title = @"废纸篓";
+        [_titleTF setFont:[NSFont systemFontOfSize:16.f]];
+        _titleTF.bordered = NO;
+        _titleTF.backgroundColor = [NSColor clearColor];
+        [_titleTF setTextColor:[NSColor whiteColor]];
+    }
 }
 
 - (void)baseScaningInit {
