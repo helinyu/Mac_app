@@ -170,33 +170,42 @@ static CGFloat const kVerticalSpace = 4.f;
 }
 
 - (void)initStyle {
-    _titleTF.cell.title = @"扫描完毕";
-    _titleTF.textColor = [NSColor whiteColor];
-    _titleTF.bordered = NO;
-    _titleTF.font = [NSFont systemFontOfSize:20.f];
-    _titleTF.backgroundColor = [NSColor clearColor];
+    {
+        _titleTF.cell.title = @"扫描完毕";
+        _titleTF.textColor = [NSColor whiteColor];
+        _titleTF.bordered = NO;
+        _titleTF.font = [NSFont systemFontOfSize:20.f];
+        _titleTF.backgroundColor = [NSColor clearColor];
+    }
+    {
+       _titleBottomLine.layer = CALayer.layer;
+        _titleBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
+    }
     
-    _titleBottomLine.layer = CALayer.layer;
-    _titleBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
+    {
+        _trashDataTF.font = [NSFont systemFontOfSize:25.f];
+        _trashDataTF.textColor = [NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f];
+        _trashDataTF.bordered = NO;
+        _trashDataTF.backgroundColor = [NSColor clearColor];
+        _trashDataTF.cell.title = @"垃圾的数据";
+        [_trashDataTF sizeToFit];
+    }
+   
+    {
+        _intelligenceDescTF.cell.title = @"智能选择";
+        _intelligenceDescTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.7];
+        _intelligenceDescTF.bordered = NO;
+        _intelligenceDescTF.font = [NSFont systemFontOfSize:11.f];
+        _intelligenceDescTF.alignment = NSTextAlignmentRight;
+        _intelligenceDescTF.backgroundColor = [NSColor clearColor];
+    }
+  
+    {
+        _trashDataBottomLine.layer = CALayer.layer;
+        _trashDataBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
+    }
     
-    _trashDataTF.font = [NSFont systemFontOfSize:25.f];
-    _trashDataTF.textColor = [NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f];
-    _trashDataTF.bordered = NO;
-    _trashDataTF.backgroundColor = [NSColor clearColor];
-    _trashDataTF.cell.title = @"垃圾的数据";
-    [_trashDataTF sizeToFit];
-    
-    _intelligenceDescTF.cell.title = @"智能选择";
-    _intelligenceDescTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.7];
-    _intelligenceDescTF.bordered = NO;
-    _intelligenceDescTF.font = [NSFont systemFontOfSize:11.f];
-    _intelligenceDescTF.alignment = NSTextAlignmentRight;
-    _intelligenceDescTF.backgroundColor = [NSColor clearColor];
-    
-    _trashDataBottomLine.layer = CALayer.layer;
-    _trashDataBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
-    
-    
+{
     _includeTitleTF.cell.title = @"包括";
     _includeTitleTF.backgroundColor = [NSColor clearColor];
     _includeTitleTF.font = [NSFont systemFontOfSize:11.f];
@@ -205,28 +214,26 @@ static CGFloat const kVerticalSpace = 4.f;
     _includeTitleTF.backgroundColor = [NSColor clearColor];
     _includeTitleTF.bordered = NO;
     [_includeTitleTF sizeToFit];
-    
-    _includeContentTF.cell.title = @"· Macintosh HD 上的废纸篓";
+    }
+    {_includeContentTF.cell.title = @"· Macintosh HD 上的废纸篓";
     _includeContentTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.7];
     _includeContentTF.bordered = NO;
     _includeContentTF.font = [NSFont boldSystemFontOfSize:11.f];
     _includeContentTF.backgroundColor = [NSColor clearColor];
-    [_includeTitleTF sizeToFit];
+    [_includeTitleTF sizeToFit];}
     
-    _lookAtBtn.title = @"查看项目";
+  {  _lookAtBtn.title = @"查看项目";
     _lookAtBtn.font  = [NSFont systemFontOfSize:11.f];
     _lookAtBtn.layer = CALayer.layer;
     _lookAtBtn.layer.backgroundColor = [NSColor blackColor].CGColor;
     _lookAtBtn.layer.cornerRadius = 2.f;
-    _lookAtBtn.layer.masksToBounds  = YES;
+    _lookAtBtn.layer.masksToBounds  = YES;}
     
-    _totalDataSizeTF.font = [NSFont systemFontOfSize:11.f];
+  {  _totalDataSizeTF.font = [NSFont systemFontOfSize:11.f];
     _totalDataSizeTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.6];
     _totalDataSizeTF.backgroundColor = [NSColor clearColor];
     _totalDataSizeTF.bordered = NO;
-    [_totalDataSizeTF sizeToFit];
-    
-
+    [_totalDataSizeTF sizeToFit];}
 }
 
 
