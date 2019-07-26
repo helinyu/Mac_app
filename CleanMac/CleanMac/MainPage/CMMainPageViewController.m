@@ -137,44 +137,51 @@
 
     __weak typeof (self) weakSelf = self;
     _trashView.actionScanBlock = ^(NSInteger scanState) {
-        if (scanState == CMScanStateScanBefore) {
-            weakSelf.trashView.scanState = CMScanStateScaning;
-            NSString *folderPath = [CMFileManger scanTrashFolderThen:^(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size) {
-                if (finished) {
-                    weakSelf.trashView.scanState = CMScanStateScanEnd;
-                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                        NSString *sizeText =[CMFileManger fileSizeTranslateToLargerUnitWithOriginSize:size];
-//                        [weakSelf.trashView configureEndScanSizeText:sizeText];
-                        [weakSelf.trashView configureEndScanSize:size];
-                    });
-                }
-                else {
-                    weakSelf.trashView.scanState = CMScanStateScaning;
-                    if (!path) {
-                        [weakSelf.trashView configScaningPath:path];
-                    }
-                }
-            }];
-            weakSelf.trashFolderPath = folderPath;
-        }
-        else if (scanState == CMScanStateScaning) {
-            NSLog(@"取消扫描");// 方法药设置l为实例方法
-            weakSelf.trashView.scanState = CMScanStateScanBefore;
+        [weakSelf dealWithState:scanState];
+    };
+}
+
+#pragma mark -- trash View deal with
+
+- (void)dealWithState:(NSInteger)scanState {
+    if (scanState == CMScanStateScanBefore) {
+        self.trashView.scanState = CMScanStateScaning;
+        [self scaningTrashFolder];
+    }
+    else if (scanState == CMScanStateScaning) {
+        NSLog(@"取消扫描");// 方法药设置l为实例方法
+        self.trashView.scanState = CMScanStateScanBefore;
+    }
+    else {
+        NSLog(@"清除");
+        NSString *trashFolderFilesPath = [NSString stringWithFormat:@"%@/.",self.trashFolderPath];
+        BOOL flag = [CMFileManger removePath:trashFolderFilesPath];
+        if (flag) {
+            NSLog(@"清除完成");
+            self.trashView.scanState = CMScanStateScanBefore;
         }
         else {
-            NSLog(@"清除");
-            NSString *trashFolderFilesPath = [NSString stringWithFormat:@"%@/.",weakSelf.trashFolderPath];
-            BOOL flag = [CMFileManger removePath:trashFolderFilesPath];
-            if (flag) {
-                NSLog(@"清除完成");
-                weakSelf.trashView.scanState = CMScanStateScanBefore;
-            }
-            else {
-                NSLog(@"清除失败");
+            NSLog(@"清除失败");
+        }
+    }
+}
+
+- (void)scaningTrashFolder {
+    NSString *folderPath = [CMFileManger scanTrashFolderThen:^(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size) {
+        if (finished) {
+            self.trashView.scanState = CMScanStateScanEnd;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.trashView configureEndScanSize:size];
+            });
+        }
+        else {
+            self.trashView.scanState = CMScanStateScaning;
+            if (!path) {
+                [self.trashView configScaningPath:path];
             }
         }
-       
-    };
+    }];
+    self.trashFolderPath = folderPath;
 }
 
 #pragma mark -- dataosurce & delegate
