@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSTextField (CMAdd)
 
+- (void)configNoBorderedClearBGWithTextColor:(NSColor *)textColor font:(NSFont *)font title:(NSString *)title;
 - (void)configNoBorderedClearBGWithTextColor:(NSColor *)textColor font:(NSFont *)font title:(NSString *)title alignment:(NSTextAlignment)alignment;
 - (void)configNoBorderedWithTextColor:(NSColor *)textColor font:(NSFont *)font bgColor:(NSColor *)bgColor title:(NSString *)title alignment:(NSTextAlignment)alignment;
 - (void)configWithTextColor:(NSColor *)textColor font:(NSFont *)font bordered:(BOOL)bordered bgColor:(NSColor *)bgColor title:(NSString *)title alignment:(NSTextAlignment)alignment;

@@ -17,6 +17,10 @@
 
 @implementation NSTextField (CMAdd)
 
+- (void)configNoBorderedClearBGWithTextColor:(NSColor *)textColor font:(NSFont *)font title:(NSString *)title {
+    [self configWithTextColor:textColor font:font bordered:NO bgColor:[NSColor clearColor] title:title alignment:NSTextAlignmentLeft];
+}
+
 - (void)configNoBorderedClearBGWithTextColor:(NSColor *)textColor font:(NSFont *)font title:(NSString *)title alignment:(NSTextAlignment)alignment {
     [self configWithTextColor:textColor font:font bordered:NO bgColor:[NSColor clearColor] title:title alignment:alignment];
 }
