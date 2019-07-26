@@ -11,6 +11,7 @@
     
 
 #import "CMTrashScaningView.h"
+#import "NSTextField+CMAdd.h"
 
 @interface CMTrashScaningView ()
 
@@ -67,33 +68,11 @@
 }
 
 - (void)initStyle {
-    {
-        [_titleTF setTextColor:[NSColor whiteColor]];
-        [_titleTF setFont:[NSFont systemFontOfSize:18.f]];
-        _titleTF.bordered = NO;
-        _titleTF.backgroundColor = [NSColor clearColor];
-        _titleTF.alignment = NSTextAlignmentCenter;
-        _titleTF.cell.title = @"正在计算废纸篓文件夹的大小...";
-    }
-    
-    {
-        
-        [_curFilePathTF setTextColor:[NSColor colorWithWhite:0.9 alpha:0.9]];
-        [_curFilePathTF setFont:[NSFont systemFontOfSize:14.f]];
-        _curFilePathTF.bordered = NO;
-        _curFilePathTF.backgroundColor = [NSColor clearColor];
-        _curFilePathTF.alignment = NSTextAlignmentCenter;
-    }
-    
-    {
-        [_folderNameTF setTextColor:[NSColor colorWithWhite:0.9 alpha:0.9]];
-        [_folderNameTF setFont:[NSFont systemFontOfSize:14.f]];
-        _folderNameTF.bordered = NO;
-        _folderNameTF.backgroundColor = [NSColor clearColor];
-        _folderNameTF.cell.title = @"系统废纸篓";
-        _folderNameTF.alignment = NSTextAlignmentCenter;
-    }
-    
+    [_titleTF configNoBorderedClearBGWithTextColor:[NSColor whiteColor] font:[NSFont systemFontOfSize:18.f] title: @"正在计算废纸篓文件夹的大小..." alignment:NSTextAlignmentCenter];
+   
+    [_curFilePathTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:0.9] font:[NSFont systemFontOfSize:14.f] title:@"" alignment:NSTextAlignmentCenter];
+ 
+    [_folderNameTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:0.9] font:[NSFont systemFontOfSize:14.f] title:@"系统废纸篓" alignment:NSTextAlignmentCenter];
 }
 
 @end

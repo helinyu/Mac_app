@@ -47,6 +47,7 @@
 		41571EB722E335DE0090352D /* CMTrashEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EB322E3358F0090352D /* CMTrashEndView.m */; };
 		415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */; };
 		415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */; };
+		4165EEFA22EAFAB200C67C22 /* NSTextField+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165EEF922EAFAB200C67C22 /* NSTextField+CMAdd.m */; };
 		4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */; };
 		4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */; };
 		4165FBC222DF235F00656E00 /* NSView+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165FBC122DF235F00656E00 /* NSView+CMAdd.m */; };
@@ -217,6 +218,8 @@
 		415B5B8C22DDFAA200E43F03 /* CMMainPageWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageWindowController.m; sourceTree = "<group>"; };
 		415B5B8E22DDFABD00E43F03 /* CMMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageViewController.h; sourceTree = "<group>"; };
 		415B5B8F22DDFABD00E43F03 /* CMMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageViewController.m; sourceTree = "<group>"; };
+		4165EEF822EAFAB200C67C22 /* NSTextField+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextField+CMAdd.h"; sourceTree = "<group>"; };
+		4165EEF922EAFAB200C67C22 /* NSTextField+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTextField+CMAdd.m"; sourceTree = "<group>"; };
 		4165FBB922DF17D700656E00 /* CMIntelligenceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMIntelligenceView.h; sourceTree = "<group>"; };
 		4165FBBA22DF17D700656E00 /* CMIntelligenceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMIntelligenceView.m; sourceTree = "<group>"; };
 		4165FBBC22DF1D9D00656E00 /* NSButton+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSButton+CMAdd.h"; sourceTree = "<group>"; };
@@ -418,8 +421,8 @@
 		4114460422E077FA00E5B4B6 /* category */ = {
 			isa = PBXGroup;
 			children = (
-				4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */,
-				4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */,
+				4165EEF722EAFA9100C67C22 /* var */,
+				4165EEF622EAFA8700C67C22 /* UI */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -543,6 +546,24 @@
 				41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		4165EEF622EAFA8700C67C22 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4165EEF822EAFAB200C67C22 /* NSTextField+CMAdd.h */,
+				4165EEF922EAFAB200C67C22 /* NSTextField+CMAdd.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4165EEF722EAFA9100C67C22 /* var */ = {
+			isa = PBXGroup;
+			children = (
+				4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */,
+				4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */,
+			);
+			path = var;
 			sourceTree = "<group>";
 		};
 		4165FBB822DF17B500656E00 /* Intelligence */ = {
@@ -1229,6 +1250,7 @@
 				410BA10422E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */,
 				4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */,
 				410BA0FE22E878DE006ABC35 /* MPCalendarAuthorizer.m in Sources */,
+				4165EEFA22EAFAB200C67C22 /* NSTextField+CMAdd.m in Sources */,
 				415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */,
 				4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */,
 				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
