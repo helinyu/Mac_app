@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)single;
 
 
-- (NSArray *)mountedVolumefileURls;
+//- (NSArray *)mountedVolumefileURls;
 - (NSArray *)fileUrls;
 - (NSArray *)trashFiles;
 

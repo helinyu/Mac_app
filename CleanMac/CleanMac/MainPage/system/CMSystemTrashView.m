@@ -18,18 +18,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self baseInit];
+        self.layer = CALayer.layer;
+        self.layer.backgroundColor = [NSColor orangeColor].CGColor;
     }
     return self;
-}
-
-- (void)baseInit {
-    
-    self.layer = CALayer.layer;
-    self.layer.backgroundColor = [NSColor orangeColor].CGColor;
-    
-    
-    
 }
 
 @end

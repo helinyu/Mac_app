@@ -53,59 +53,59 @@ static CGFloat const kMagnitude = 1024.f;
     
 }
 
-- (NSArray *)mountedVolumefileURls {
-    NSArray<NSURLResourceKey> *urlSourceKeys = @[
-        NSURLNameKey,
-        NSURLLocalizedNameKey,
-        NSURLIsRegularFileKey,
-        NSURLIsDirectoryKey,
-        NSURLIsSymbolicLinkKey,
-        NSURLIsVolumeKey,
-        NSURLIsPackageKey,
-        NSURLIsApplicationKey,
-        NSURLApplicationIsScriptableKey,
-        NSURLIsSystemImmutableKey,
-        NSURLIsUserImmutableKey,
-        NSURLIsHiddenKey,
-        NSURLHasHiddenExtensionKey,
-        NSURLCreationDateKey,
-        NSURLContentAccessDateKey,
-        NSURLContentModificationDateKey,
-        NSURLAttributeModificationDateKey,
-        NSURLLinkCountKey,
-        NSURLParentDirectoryURLKey,
-        NSURLVolumeURLKey,
-        NSURLTypeIdentifierKey,
-        NSURLLocalizedTypeDescriptionKey,
-        NSURLLabelNumberKey,
-        NSURLLabelColorKey,
-        NSURLLocalizedLabelKey,
-        NSURLEffectiveIconKey,
-        NSURLCustomIconKey,
-        NSURLFileResourceIdentifierKey,
-        NSURLVolumeIdentifierKey,
-        NSURLPreferredIOBlockSizeKey,
-        NSURLIsReadableKey,
-        NSURLIsWritableKey,
-        NSURLIsExecutableKey,
-        NSURLFileSecurityKey,
-        NSURLIsExcludedFromBackupKey,
-        NSURLTagNamesKey,
-        NSURLPathKey,
-        NSURLCanonicalPathKey,
-        NSURLIsMountTriggerKey,
-        NSURLGenerationIdentifierKey,
-        NSURLDocumentIdentifierKey,
-        NSURLAddedToDirectoryDateKey,
-        NSURLQuarantinePropertiesKey,
-        NSURLFileResourceTypeKey
-    ];
-    NSArray *mountedURLs = [_originFileManger mountedVolumeURLsIncludingResourceValuesForKeys:urlSourceKeys options:NSVolumeEnumerationProduceFileReferenceURLs];
-//    挂载volume
-//    - (void)unmountVolumeAtURL:(NSURL *)url options:(NSFileManagerUnmountOptions)mask completionHandler:(void (^)(NSError * _Nullable errorOrNil))completionHandler API_AVAILABLE(macos(10.11)) API_UNAVAILABLE(ios, watchos, tvos);
-//     卸载volume
-    return mountedURLs;
-}
+//- (NSArray *)mountedVolumefileURls {
+//    NSArray<NSURLResourceKey> *urlSourceKeys = @[
+//        NSURLNameKey,
+//        NSURLLocalizedNameKey,
+//        NSURLIsRegularFileKey,
+//        NSURLIsDirectoryKey,
+//        NSURLIsSymbolicLinkKey,
+//        NSURLIsVolumeKey,
+//        NSURLIsPackageKey,
+//        NSURLIsApplicationKey,
+//        NSURLApplicationIsScriptableKey,
+//        NSURLIsSystemImmutableKey,
+//        NSURLIsUserImmutableKey,
+//        NSURLIsHiddenKey,
+//        NSURLHasHiddenExtensionKey,
+//        NSURLCreationDateKey,
+//        NSURLContentAccessDateKey,
+//        NSURLContentModificationDateKey,
+//        NSURLAttributeModificationDateKey,
+//        NSURLLinkCountKey,
+//        NSURLParentDirectoryURLKey,
+//        NSURLVolumeURLKey,
+//        NSURLTypeIdentifierKey,
+//        NSURLLocalizedTypeDescriptionKey,
+//        NSURLLabelNumberKey,
+//        NSURLLabelColorKey,
+//        NSURLLocalizedLabelKey,
+//        NSURLEffectiveIconKey,
+//        NSURLCustomIconKey,
+//        NSURLFileResourceIdentifierKey,
+//        NSURLVolumeIdentifierKey,
+//        NSURLPreferredIOBlockSizeKey,
+//        NSURLIsReadableKey,
+//        NSURLIsWritableKey,
+//        NSURLIsExecutableKey,
+//        NSURLFileSecurityKey,
+//        NSURLIsExcludedFromBackupKey,
+//        NSURLTagNamesKey,
+//        NSURLPathKey,
+//        NSURLCanonicalPathKey,
+//        NSURLIsMountTriggerKey,
+//        NSURLGenerationIdentifierKey,
+//        NSURLDocumentIdentifierKey,
+//        NSURLAddedToDirectoryDateKey,
+//        NSURLQuarantinePropertiesKey,
+//        NSURLFileResourceTypeKey
+//    ];
+//    NSArray *mountedURLs = [_originFileManger mountedVolumeURLsIncludingResourceValuesForKeys:urlSourceKeys options:NSVolumeEnumerationProduceFileReferenceURLs];
+////    挂载volume
+////    - (void)unmountVolumeAtURL:(NSURL *)url options:(NSFileManagerUnmountOptions)mask completionHandler:(void (^)(NSError * _Nullable errorOrNil))completionHandler API_AVAILABLE(macos(10.11)) API_UNAVAILABLE(ios, watchos, tvos);
+////     卸载volume
+//    return mountedURLs;
+//}
 
 - (NSArray *)fileUrls {
 //    - (nullable NSArray<NSURL *> *)contentsOfDirectoryAtURL:(NSURL *)url includingPropertiesForKeys:(nullable NSArray<NSURLResourceKey> *)keys options:(NSDirectoryEnumerationOptions)mask error:(NSError **)error API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));

@@ -178,26 +178,26 @@ static CGFloat const kVerticalSpace = 4.f;
 
 - (void)initContentStyle {
 
-    [self initWithTF:_trashDataTF font:[NSFont systemFontOfSize:25.f] textColor:[NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f] borderd:NO title:@"垃圾的数据" backgroundColr:[NSColor clearColor]];
+    [self initWithTF:_trashDataTF font:[NSFont systemFontOfSize:25.f] textColor:[NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f] title:@"垃圾的数据" backgroundColr:[NSColor clearColor]];
     
-    [self initWithTF:_intelligenceDescTF font:[NSFont systemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.8 alpha:0.7] borderd:NO title:@"智能选择" backgroundColr:[NSColor clearColor]];
+    [self initWithTF:_intelligenceDescTF font:[NSFont systemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.8 alpha:0.7] title:@"智能选择" backgroundColr:[NSColor clearColor]];
     _intelligenceDescTF.alignment = NSTextAlignmentRight;
     
     _trashDataBottomLine.layer = CALayer.layer;
     _trashDataBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
     
-    [self initWithTF:_includeTitleTF font:[NSFont systemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.9 alpha:1.f] borderd:NO title:@"包括" backgroundColr:[NSColor clearColor]];
+    [self initWithTF:_includeTitleTF font:[NSFont systemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.9 alpha:1.f] title:@"包括" backgroundColr:[NSColor clearColor]];
     _includeTitleTF.alignment = NSTextAlignmentLeft;
 
-    [self initWithTF:_includeContentTF font:[NSFont boldSystemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.8 alpha:0.7] borderd:NO title:@"· Macintosh HD 上的废纸篓" backgroundColr:[NSColor clearColor]];
+    [self initWithTF:_includeContentTF font:[NSFont boldSystemFontOfSize:11.f] textColor:[NSColor colorWithWhite:0.8 alpha:0.7] title:@"· Macintosh HD 上的废纸篓" backgroundColr:[NSColor clearColor]];
 }
 
-- (void)initWithTF:(NSTextField *)tf font:(NSFont *)font textColor:(NSColor *)textColor borderd:(BOOL)borderd title:(NSString *)title backgroundColr:(NSColor *)gbColor {
-    tf.font = [NSFont systemFontOfSize:25.f];
-    tf.textColor = [NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f];
+- (void)initWithTF:(NSTextField *)tf font:(NSFont *)font textColor:(NSColor *)textColor title:(NSString *)title backgroundColr:(NSColor *)bgColor {
+    tf.font = font;
+    tf.textColor = textColor;
     tf.bordered = NO;
-    tf.backgroundColor = [NSColor clearColor];
-    tf.cell.title = @"垃圾的数据";
+    tf.backgroundColor = bgColor;
+    tf.cell.title = title;
     [tf sizeToFit];
 }
 
