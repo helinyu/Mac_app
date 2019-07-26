@@ -41,57 +41,68 @@ static CGFloat const kBottomHeight = 100.f;
     self = [super initWithFrame:frame];
     if (self) {
         [self initWrapperView];
+        [self initConstraints];
+        [self initData];
+        [self initStyle];
     }
     return self;
 }
 
 - (void)initWrapperView {
-    
-    self.layer = CALayer.layer;
-    self.layer.backgroundColor = [NSColor colorWithRed:75.f/255.f green:98.f/255.f blue:98.f/255.f alpha:1.f].CGColor;
-    
     _scanBeforeView = [CMTrashScanBeforeView new];
     _scaningView = [CMTrashScaningView new];
     _scanEndView = [CMTrashEndView new];
     [self cm_addSubviews:@[_scanEndView, _scaningView, _scanBeforeView]];
     
+    _scanBtn = [NSButton cm_buttonWithTitle:@"扫描" target:self action:@selector(onScanAction:)];
+    [self addSubview:_scanBtn];
+    
+    _backBtn = [NSButton cm_buttonWithTitle:@"返回" target:self action:@selector(onBackAction:)];
+    [self addSubview:_backBtn];
+}
+
+- (void)initConstraints {
     [_scanEndView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(self);
         make.bottom.equalTo(self).offset(-kBottomHeight);
     }];
-    _scanEndView.viewTag = CMScanStateScanEnd;
     
     [_scaningView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(self);
         make.bottom.equalTo(self).offset(-kBottomHeight);
     }];
-    _scaningView.viewTag = CMScanStateScaning;
     
     [_scanBeforeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(self);
         make.bottom.equalTo(self).offset(-kBottomHeight);
     }];
-    _scanBeforeView.viewTag = CMScanStateScanBefore;
-    
-    _scanBtn = [NSButton cm_buttonWithTitle:@"扫描" target:self action:@selector(onScanAction:)];
-    [self addSubview:_scanBtn];
+
     [_scanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.bottom.equalTo(self);
         make.width.height.mas_equalTo(50.f);
     }];
-    
-//     init state
-    _scanBtnTexts = @[@"扫描",@"暂停",@"清除"];
-    self.scanState = CMScanStateScanBefore;
-    
-    _backBtn = [NSButton cm_buttonWithTitle:@"返回" target:self action:@selector(onBackAction:)];
-    [self addSubview:_backBtn];
+   
     [_backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(10.f);
         make.bottom.equalTo(self).offset(-10.f);
     }];
+}
+
+- (void)initStyle {
+    self.layer = CALayer.layer;
+    self.layer.backgroundColor = [NSColor colorWithRed:75.f/255.f green:98.f/255.f blue:98.f/255.f alpha:1.f].CGColor;
+}
+
+- (void)initData {
     
+    _scanBtnTexts = @[@"扫描",@"暂停",@"清除"];
+
+    _scanBeforeView.viewTag = CMScanStateScanBefore;
+    _scaningView.viewTag = CMScanStateScaning;
+    _scanEndView.viewTag = CMScanStateScanEnd;
+
+    self.scanState = CMScanStateScanBefore;
 }
 
 - (void)setScanState:(CMScanState)scanState {
