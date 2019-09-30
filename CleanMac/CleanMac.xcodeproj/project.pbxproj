@@ -31,6 +31,12 @@
 		4123886622D2FA9A00B89F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
 		4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887022D2FA9A00B89F9E /* CleanMacTests.m */; };
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
+		414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEC233E578D00019A3E /* CMPreScanView.m */; };
+		414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */; };
+		414E1EF3233E585800019A3E /* CMPreScanLeftCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EF2233E585800019A3E /* CMPreScanLeftCellView.m */; };
+		414E1EF6233E61CC00019A3E /* CMPreScanTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EF5233E61CC00019A3E /* CMPreScanTitleModel.m */; };
+		414E1EF9233E623100019A3E /* CMPreScanContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EF8233E623100019A3E /* CMPreScanContentModel.m */; };
+		414E1EFC2340480900019A3E /* NSFont+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EFB2340480900019A3E /* NSFont+CMAdd.m */; };
 		41571E9E22E32E6E0090352D /* CMRightBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571E9D22E32E6E0090352D /* CMRightBaseView.m */; };
 		41571EA122E32ECE0090352D /* CMRightItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA022E32ECE0090352D /* CMRightItemView.m */; };
 		41571EA222E331040090352D /* CMRightItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41571EA022E32ECE0090352D /* CMRightItemView.m */; };
@@ -199,6 +205,18 @@
 		4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanMacUITests.m; sourceTree = "<group>"; };
 		4123887D22D2FA9A00B89F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		414E1EEB233E578D00019A3E /* CMPreScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanView.h; sourceTree = "<group>"; };
+		414E1EEC233E578D00019A3E /* CMPreScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPreScanView.m; sourceTree = "<group>"; };
+		414E1EEE233E582200019A3E /* CMPreScanLeftTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanLeftTitleView.h; sourceTree = "<group>"; };
+		414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPreScanLeftTitleView.m; sourceTree = "<group>"; };
+		414E1EF1233E585800019A3E /* CMPreScanLeftCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanLeftCellView.h; sourceTree = "<group>"; };
+		414E1EF2233E585800019A3E /* CMPreScanLeftCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPreScanLeftCellView.m; sourceTree = "<group>"; };
+		414E1EF4233E61CC00019A3E /* CMPreScanTitleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanTitleModel.h; sourceTree = "<group>"; };
+		414E1EF5233E61CC00019A3E /* CMPreScanTitleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPreScanTitleModel.m; sourceTree = "<group>"; };
+		414E1EF7233E623100019A3E /* CMPreScanContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanContentModel.h; sourceTree = "<group>"; };
+		414E1EF8233E623100019A3E /* CMPreScanContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPreScanContentModel.m; sourceTree = "<group>"; };
+		414E1EFA2340480900019A3E /* NSFont+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFont+CMAdd.h"; sourceTree = "<group>"; };
+		414E1EFB2340480900019A3E /* NSFont+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFont+CMAdd.m"; sourceTree = "<group>"; };
 		41571E9C22E32E6E0090352D /* CMRightBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightBaseView.h; sourceTree = "<group>"; };
 		41571E9D22E32E6E0090352D /* CMRightBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRightBaseView.m; sourceTree = "<group>"; };
 		41571E9F22E32ECE0090352D /* CMRightItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRightItemView.h; sourceTree = "<group>"; };
@@ -495,6 +513,45 @@
 			path = CleanMacUITests;
 			sourceTree = "<group>";
 		};
+		414E1EEA233E574400019A3E /* PreScanView */ = {
+			isa = PBXGroup;
+			children = (
+				414E1EEB233E578D00019A3E /* CMPreScanView.h */,
+				414E1EEC233E578D00019A3E /* CMPreScanView.m */,
+				414E1EEE233E582200019A3E /* CMPreScanLeftTitleView.h */,
+				414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */,
+				414E1EF1233E585800019A3E /* CMPreScanLeftCellView.h */,
+				414E1EF2233E585800019A3E /* CMPreScanLeftCellView.m */,
+				414E1EF4233E61CC00019A3E /* CMPreScanTitleModel.h */,
+				414E1EF5233E61CC00019A3E /* CMPreScanTitleModel.m */,
+				414E1EF7233E623100019A3E /* CMPreScanContentModel.h */,
+				414E1EF8233E623100019A3E /* CMPreScanContentModel.m */,
+			);
+			path = PreScanView;
+			sourceTree = "<group>";
+		};
+		414E1EFD2340480F00019A3E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				41C098E422DC6D9000679541 /* CMPanel.h */,
+				41C098E522DC6D9000679541 /* CMPanel.m */,
+				4165FBBC22DF1D9D00656E00 /* NSButton+CMAdd.h */,
+				4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */,
+				4165FBC022DF235F00656E00 /* NSView+CMAdd.h */,
+				4165FBC122DF235F00656E00 /* NSView+CMAdd.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		414E1EFE2340481B00019A3E /* NS */ = {
+			isa = PBXGroup;
+			children = (
+				414E1EFA2340480900019A3E /* NSFont+CMAdd.h */,
+				414E1EFB2340480900019A3E /* NSFont+CMAdd.m */,
+			);
+			path = NS;
+			sourceTree = "<group>";
+		};
 		41571E9B22E32E5E0090352D /* right base view */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +578,7 @@
 		415B5B8A22DDFA4C00E43F03 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				414E1EEA233E574400019A3E /* PreScanView */,
 				41571E9B22E32E5E0090352D /* right base view */,
 				4165FBB822DF17B500656E00 /* Intelligence */,
 				4165FBCC22DF463C00656E00 /* system */,
@@ -578,10 +636,8 @@
 		4165FBBF22DF234A00656E00 /* category */ = {
 			isa = PBXGroup;
 			children = (
-				4165FBBC22DF1D9D00656E00 /* NSButton+CMAdd.h */,
-				4165FBBD22DF1D9D00656E00 /* NSButton+CMAdd.m */,
-				4165FBC022DF235F00656E00 /* NSView+CMAdd.h */,
-				4165FBC122DF235F00656E00 /* NSView+CMAdd.m */,
+				414E1EFE2340481B00019A3E /* NS */,
+				414E1EFD2340480F00019A3E /* views */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -772,8 +828,6 @@
 			children = (
 				4165FC0822E00A5B00656E00 /* BaseClass */,
 				4165FBBF22DF234A00656E00 /* category */,
-				41C098E422DC6D9000679541 /* CMPanel.h */,
-				41C098E522DC6D9000679541 /* CMPanel.m */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -1228,10 +1282,12 @@
 			files = (
 				4165FC0022DF499700656E00 /* CMShredderView.m in Sources */,
 				41571E9E22E32E6E0090352D /* CMRightBaseView.m in Sources */,
+				414E1EF9233E623100019A3E /* CMPreScanContentModel.m in Sources */,
 				4123885E22D2FA9700B89F9E /* ViewController.m in Sources */,
 				4165FBC222DF235F00656E00 /* NSView+CMAdd.m in Sources */,
 				4165FBF822DF48A600656E00 /* CMSpaceLensView.m in Sources */,
 				41571EB122E335820090352D /* CMTrashScaningView.m in Sources */,
+				414E1EFC2340480900019A3E /* NSFont+CMAdd.m in Sources */,
 				4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */,
 				41571EB422E3358F0090352D /* CMTrashEndView.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
@@ -1265,10 +1321,12 @@
 				4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */,
 				4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */,
 				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
+				414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */,
 				4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,
 				41C0990122DDB14500679541 /* CMTopClassCItem.m in Sources */,
 				41571EAA22E333540090352D /* CMRightLogoBaseView.m in Sources */,
+				414E1EF6233E61CC00019A3E /* CMPreScanTitleModel.m in Sources */,
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
 				4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */,
 				4165FBF422DF488000656E00 /* CMExtendView.m in Sources */,
@@ -1277,7 +1335,9 @@
 				4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */,
 				4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */,
 				41571EA622E333070090352D /* CMRightScaningBaseView.m in Sources */,
+				414E1EF3233E585800019A3E /* CMPreScanLeftCellView.m in Sources */,
 				4165FBC522DF3B3D00656E00 /* CMTrashScanBeforeView.m in Sources */,
+				414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

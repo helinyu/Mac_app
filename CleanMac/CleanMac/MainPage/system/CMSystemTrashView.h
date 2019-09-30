@@ -11,10 +11,13 @@
     
 
 #import <Cocoa/Cocoa.h>
+#import "CMPreScanView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CMSystemTrashView : NSView
+
+@property (nonatomic, strong) CMPreScanView *scanView;
 
 @end
 

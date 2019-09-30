@@ -44,7 +44,6 @@
     _titleTF = [NSTextField new];
     [self addSubview:_titleTF];
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.equalTo(self);
         make.edges.equalTo(self);
     }];
     

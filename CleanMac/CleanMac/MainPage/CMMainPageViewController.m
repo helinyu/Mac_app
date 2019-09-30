@@ -229,9 +229,7 @@
     NSString *newKey = [self.datasources objectAtIndex:_curRow];
     [self.datasourceDic setValue:@(YES) forKey:newKey];
     [self.rightViews objectAtIndex:_curRow].hidden = NO;
-    
-    
-//    [self.classTableView reloadDataForRowIndexes:(nonnull NSIndexSet *) columnIndexes:<#(nonnull NSIndexSet *)#>];
+
 }
 
 @end
