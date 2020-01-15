@@ -21,7 +21,7 @@
 #import "NSView+CMAdd.h"
 #import "NSButton+CMAdd.h"
 #import "PermissionsKit.h"
-
+#import "KMAbbreviationMacroExpress.h"
 
 #pragma mark -- block
 

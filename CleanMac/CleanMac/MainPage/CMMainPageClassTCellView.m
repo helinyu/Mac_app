@@ -41,16 +41,23 @@
 
 - (void)baseInit {
     
+    self.layer = CALayer.layer;
+    self.layer.backgroundColor = [NSColor clearColor].CGColor;
+    
     _titleTF = [NSTextField new];
     [self addSubview:_titleTF];
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-    
-    _titleTF.textColor = [NSColor redColor];
+
+    [_titleTF setTextColor:[NSColor colorWithWhite:1.f alpha:0.8]];
+    _titleTF.backgroundColor = [NSColor clearColor];
     _titleTF.font = [NSFont systemFontOfSize:12.f];
-    _titleTF.cell.title = @"nam11e";
+    _titleTF.cell.title = @"";
     _titleTF.cell.alignment = NSTextAlignmentLeft;
+    [_titleTF sizeToFit];
+    _titleTF.editable = NO;
+    _titleTF.bordered = NO; // 这个要设置， 背景颜色设置透明才会有效
 }
 
 @end

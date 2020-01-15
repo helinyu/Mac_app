@@ -44,6 +44,7 @@ static CGFloat const kBottomHeight = 100.f;
         [self initConstraints];
         [self initData];
         [self initStyle];
+        [self initBind];
     }
     return self;
 }
@@ -90,8 +91,8 @@ static CGFloat const kBottomHeight = 100.f;
 }
 
 - (void)initStyle {
-    self.layer = CALayer.layer;
-    self.layer.backgroundColor = [NSColor colorWithRed:75.f/255.f green:98.f/255.f blue:98.f/255.f alpha:1.f].CGColor;
+//    self.layer = CALayer.layer;
+//    self.layer.backgroundColor = [NSColor colorWithRed:75.f/255.f green:98.f/255.f blue:98.f/255.f alpha:1.f].CGColor;
 }
 
 - (void)initData {
@@ -105,7 +106,13 @@ static CGFloat const kBottomHeight = 100.f;
     self.scanState = CMScanStateScanBefore;
 }
 
+- (void)initBind {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onBackAction:) name:@"back.notification" object:nil];
+}
+
 - (void)setScanState:(CMScanState)scanState {
+//     添加一个弹框
+        
     _scanState = scanState;
     
     [self configureWithState:scanState];
@@ -117,7 +124,6 @@ static CGFloat const kBottomHeight = 100.f;
 - (void)onScanAction:(id)sender {
     !_actionScanBlock? :_actionScanBlock(_scanState);
 }
-
 
 - (void)configExtensionViewWithState:(CMScanState)scanState {
     if (scanState == CMScanStateScanBefore) {

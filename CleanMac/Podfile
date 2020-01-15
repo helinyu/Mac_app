@@ -1,37 +1,38 @@
 # Uncomment the next line to define a global platform for your project
- platform :osx, '10.11'
+platform :osx, '10.11'
 
 target 'CleanMac' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for CleanMac
   pod 'Masonry', '~> 1.1.0'
   pod 'ReactiveCocoa', '~> 2.5'
-   pod 'YYModel', '~> 1.0.4'
-#   pod 'coobjc', '~> 1.2.0'
-    pod 'CocoaLumberjack', '~> 3.5.3'
-   pod 'DevMateKit', '~> 1.9.3'
-   pod 'Sparkle', '~> 1.21.3'
-   pod 'SDWebImage', '~> 5.0.6'
-#   pod 'PermissionsKit-macOS'
+  pod 'YYModel', '~> 1.0.4'
+  #   pod 'coobjc', '~> 1.2.0'
+  pod 'CocoaLumberjack', '~> 3.5.3'
+  pod 'DevMateKit', '~> 1.9.3'
+  pod 'Sparkle', '~> 1.21.3'
+  pod 'SDWebImage', '~> 5.0.6'
+  #   pod 'PermissionsKit-macOS'
 end
 
 target 'CleanMac copy' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for CleanMac
-   pod 'Masonry', '~> 1.1.0'
-   pod 'ReactiveCocoa', '~> 2.5'
-   pod 'YYModel', '~> 1.0.4'
-   pod 'CocoaLumberjack', '~> 3.5.3'
-    pod 'DevMateKit', '~> 1.9.3'
-    pod 'Sparkle', '~> 1.21.3'
-    pod 'SDWebImage', '~> 5.0.6'
-#  pod 'PermissionsKit-macOS'
-#   pod 'coobjc', '~> 1.2.0'
-
+  pod 'Masonry', '~> 1.1.0'
+  pod 'ReactiveCocoa', '~> 2.5'
+  pod 'YYModel', '~> 1.0.4'
+  pod 'CocoaLumberjack', '~> 3.5.3'
+  pod 'DevMateKit', '~> 1.9.3'
+  pod 'Sparkle', '~> 1.21.3'
+  pod 'SDWebImage', '~> 5.0.6'
+  pod 'MMKV'
+  #  pod 'PermissionsKit-macOS'
+  #   pod 'coobjc', '~> 1.2.0'
+  
 end
 
 target 'CleanMacTests' do

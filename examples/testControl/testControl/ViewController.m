@@ -8,12 +8,17 @@
 
 #import "ViewController.h"
 #import "FXTextView.h"
+#import "FXButton.h"
 
 
 @interface ViewController ()<NSTextViewDelegate, NSTextStorageDelegate, NSSearchFieldDelegate>
 
 @property (unsafe_unretained) IBOutlet FXTextView *textView;
 @property (weak) IBOutlet NSSearchField *searchField;
+@property (weak) IBOutlet NSTextField *textLabel;
+@property (weak) IBOutlet NSButton *singleRadio;
+
+@property (nonatomic, strong) NSSegmentedControl *segmentedControl;
 
 @end
 
@@ -23,16 +28,127 @@
     [super viewDidLoad];
 
 //    [self initTextView];
-   
-    [self initSearchField];
+//    [self initSearchField];
+//    [self initLabel];
+//    [self initButton];
+//    [self initCheckBox];
+//    [self initRadio];
+//    [self initSegmentalControl];
+//    [self initComboBox];
+    [self initPopUpBtn];
+    
 }
+
+- (void)initPopUpBtn {
+    
+}
+
+- (void)initComboBox {
+    
+}
+
+#pragma mark -- 分段选择器——————————
+
+- (IBAction)onSegmentControlClicked:(NSSegmentedControl *)sender {
+    NSLog(@"lt- segment control :%zd",sender.indexOfSelectedItem);
+}
+
+- (void)initSegmentalControl {
+    _segmentedControl = [[NSSegmentedControl alloc] initWithFrame:NSMakeRect(300.f, 200.f, 200.f, 200.f)];
+    _segmentedControl.layer = [CALayer layer];
+    _segmentedControl.layer.backgroundColor = [NSColor purpleColor].CGColor;
+    [self.view addSubview:_segmentedControl];
+    _segmentedControl.segmentCount = 3;
+    
+}
+
+#pragma mark -- 单选框——————————+——
+
+- (IBAction)onRadioClicked:(NSButton *)sender {
+    NSLog(@"lt- radio :%@",sender);
+}
+
+- (IBAction)onSenderClicked:(NSButtonCell *)sender {
+    
+}
+
+- (void)initRadio {
+    
+    self.singleRadio.allowsMixedState = YES;
+}
+
+#pragma mark -- 复选框 ——————————————————————
+// 允许多个选项同时选择的按钮控件，对应的类NSButton
+- (void)initCheckBox {
+    
+}
+
+- (IBAction)onCheckboxAction:(NSButton *)sender {
+    if (sender.state == NSControlStateValueOn) {
+        NSLog(@"lt- check is selected");
+    }
+    else {
+        NSLog(@"lt- check un selected");
+    }
+    NSLog(@"lt- selected state; %zd, sender tag :%zd",sender.state, sender.tag);
+}
+
+#pragma mark -- NSButton ——————————————————————
+
+- (IBAction)buttonClicked:(id)sender {
+    NSLog(@"lt- button clicked");
+}
+
+// 代码创建按钮
+- (void)initButton {
+    NSButton *btn = [[NSButton alloc] initWithFrame:NSMakeRect(0.f, 0.f, 150, 120.f)];
+    btn.bezelStyle = NSBezelStyleRounded;
+    btn.image = [NSImage imageNamed:@"Snip20191002_52"];
+    btn.imageScaling = NSImageScaleAxesIndependently;
+    btn.target = self;
+    btn.action = @selector(buttonClicked:);
+    [self.view addSubview:btn];
+}
+
+#pragma mark -- label ————————————————————————
+
+- (void)initLabel {
+    _textLabel.maximumNumberOfLines = 0;
+    
+    NSString *text = @"please visit http://www.apple.com";
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
+    NSString *linkURLText = @"http://www.apple.com";
+    NSURL *linkURL = [NSURL URLWithString:linkURLText];
+    
+//    查找字符串的范围
+    NSRange selectedRange = [text rangeOfString:linkURLText];
+    
+    [attributedString beginEditing];
+    
+//    设置连接属性
+    [attributedString addAttribute:NSLinkAttributeName value:linkURL range:selectedRange];
+//    设置文字颜色
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[NSColor blueColor] range:selectedRange];
+    
+//    设置下划线
+    [attributedString addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:selectedRange];
+    [attributedString endEditing];
+    
+    _textLabel.frame = CGRectMake(200.f, 100.f, 200,200.f);
+    _textLabel.editable = NO;
+    _textLabel.bezeled = NO;
+    _textLabel.drawsBackground = NO;
+    _textLabel.attributedStringValue = attributedString;
+    
+}
+
+#pragma mark -- search field ————————————————————————————-
 
 - (void)initSearchField {
     _searchField.delegate = self;
     _searchField.backgroundColor = [NSColor blueColor];
     [self registerSearchButtonAction];
 }
-
 
 - (void)registerSearchButtonAction {
     NSSearchFieldCell *searchButtonCell = self.searchField.cell;

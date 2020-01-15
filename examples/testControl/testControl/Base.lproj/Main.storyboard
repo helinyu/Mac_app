@@ -710,12 +710,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgC-Uw-7Oz" customClass="FXButton">
-                                <rect key="frame" x="121" y="335" width="81" height="32"/>
+                                <rect key="frame" x="418" y="317" width="81" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EBR-u1-TYy">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="buttonClicked:" target="XfG-lQ-9wD" id="lRW-Ox-ciU"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-2j-cSM">
                                 <rect key="frame" x="54" y="271" width="73" height="19"/>
@@ -734,7 +737,7 @@
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86O-Bc-SUF">
-                                <rect key="frame" x="240" y="219" width="44" height="16"/>
+                                <rect key="frame" x="287" y="401" width="194" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" placeholderString="你好呀" id="quv-xs-zbJ">
                                     <font key="font" metaFont="system"/>
@@ -830,10 +833,100 @@
                                     </connections>
                                 </searchFieldCell>
                             </searchField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDd-X2-aeP">
+                                <rect key="frame" x="431" y="265" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Qlr-EF-Egh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="1000" translatesAutoresizingMaskIntoConstraints="NO" id="OvA-Xr-hvT">
+                                <rect key="frame" x="429" y="285" width="53" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" alternateTitle="c0" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Nus-PK-VcE">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onCheckboxAction:" target="XfG-lQ-9wD" id="YlB-cC-KZa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="1001" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-7k-fhs">
+                                <rect key="frame" x="427" y="245" width="57" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="c1" bezelStyle="regularSquare" imagePosition="left" inset="2" id="U8c-Uc-cYP">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onCheckboxAction:" target="XfG-lQ-9wD" id="rGW-xp-afs"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="1002" translatesAutoresizingMaskIntoConstraints="NO" id="Sl8-jv-SQB">
+                                <rect key="frame" x="424" y="206" width="57" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="c2" bezelStyle="regularSquare" imagePosition="left" inset="2" id="dE3-6V-aEC">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onCheckboxAction:" target="XfG-lQ-9wD" id="7FF-oI-Ezi"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gKF-KC-j9B">
+                                <rect key="frame" x="425" y="161" width="57" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="radio" title="Radio" bezelStyle="regularSquare" imagePosition="left" inset="2" id="rNZ-ai-gwk">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="onSenderClicked:" target="XfG-lQ-9wD" id="5uX-gi-Sgp"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-qk-dJR">
+                                <rect key="frame" x="576" y="364" width="159" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="3qk-MC-ccH">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="第一" width="50"/>
+                                        <segment label="第二" width="51" selected="YES" tag="1"/>
+                                        <segment label="第三" width="50"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="onSegmentControlClicked:" target="XfG-lQ-9wD" id="P6d-of-1ZX"/>
+                                </connections>
+                            </segmentedControl>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3LJ-P8-1As">
+                                <rect key="frame" x="540" y="296" width="99" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="分类" drawsBackground="YES" completes="NO" numberOfVisibleItems="3" id="K1g-Zx-vnx">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Item 1</string>
+                                        <string>Item 2</string>
+                                        <string>Item 3</string>
+                                        <string>Item</string>
+                                        <string>Item</string>
+                                        <string>Item</string>
+                                        <string>Item</string>
+                                        <string>Item</string>
+                                        <string>Item</string>
+                                        <string>Item</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="searchField" destination="EjH-RK-Xrv" id="ZyN-Ec-06b"/>
+                        <outlet property="singleRadio" destination="gKF-KC-j9B" id="RH2-lu-iGc"/>
+                        <outlet property="textLabel" destination="86O-Bc-SUF" id="2fG-bi-447"/>
                         <outlet property="textView" destination="5xK-ci-GSO" id="kbR-sm-69j"/>
                     </connections>
                 </viewController>

@@ -8,10 +8,12 @@
 //  Copyright © 2019 Aka. All rights reserved.
 //  xcode 10.15 .
 //
-    
+
 
 #import "CMTrashEndView.h"
 #import "NSTextField+CMAdd.h"
+#import "NSAlert+CMAdd.h"
+
 
 @interface CMTrashEndView ()
 
@@ -29,6 +31,8 @@
 @property (nonatomic, strong) NSTextField *noDataTitleTF;
 @property (nonatomic, strong) NSTextField *noDataDescTF;
 
+@property (nonatomic, strong) NSButton *trackBackBtn;
+
 @end
 
 static CGFloat const kMarginLeft = 10.f;
@@ -45,7 +49,7 @@ static CGFloat const kVerticalSpace = 4.f;
         [self initView];
         [self initContraints];
         [self initStyle];
-
+        
         [self initbNoDataUI];
         [self configDataUIHidden:YES];
         [self configNoDataUIHidden:YES];
@@ -57,8 +61,38 @@ static CGFloat const kVerticalSpace = 4.f;
     [self initTitleView];
     [self initContentView];
     [self initBottomView];
-  
+    
     [self cm_addSubviews:@[_titleTF, _titleBottomLine, _trashDataTF, _intelligenceDescTF, _trashDataBottomLine, _includeTitleTF, _includeContentTF, _lookAtBtn, _totalDataSizeTF]];
+    
+    _trackBackBtn = [NSButton cm_buttonWithTitle:@"重新开始" imgName:@"icon_white_left_arrow16" target:self action:@selector(onTrachBackAction:)];
+    _trackBackBtn.attributedTitle = [[NSAttributedString alloc] initWithString:@"重新开始" attributes:@{NSForegroundColorAttributeName:[NSColor whiteColor]}];
+    _trackBackBtn.font = [NSFont systemFontOfSize:18.f];
+    if (@available(macOS 10.12.2, *)) {
+        _trackBackBtn.bezelColor = [NSColor whiteColor];
+    } else {
+        // Fallback on earlier versions
+    }
+    
+    if (@available(macOS 10.14, *)) {
+        [_trackBackBtn setContentTintColor:[NSColor whiteColor]];
+    } else {
+        // Fallback on earlier versions
+    }
+    _trackBackBtn.bezelStyle = NSBezelStyleRegularSquare;
+    
+    NSArray<NSView *> *subViews = _trackBackBtn.subviews;
+    for (NSView *subView in subViews) {
+        if ([subView isKindOfClass:NSClassFromString(@"NSButtonBezelView")]) {
+            subView.layer = CALayer.layer;
+            subView.layer.backgroundColor = [NSColor clearColor].CGColor;
+        }
+    }
+    
+    [self addSubview:_trackBackBtn];
+    [_trackBackBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(self);
+    }];
+    
 }
 
 - (void)initTitleView {
@@ -74,7 +108,7 @@ static CGFloat const kVerticalSpace = 4.f;
     _includeTitleTF = [NSTextField new];
     _includeContentTF = [NSTextField new];
     [self cm_addSubviews:@[_trashDataTF, _intelligenceDescTF, _trashDataBottomLine, _includeTitleTF, _includeContentTF]];
-
+    
 }
 - (void)initBottomView {
     _lookAtBtn = [NSButton cm_buttonWithTitle:@"查看项目" target:self action:@selector(onLookAtMoreAction:)];
@@ -178,7 +212,7 @@ static CGFloat const kVerticalSpace = 4.f;
 }
 
 - (void)initContentStyle {
-
+    
     [_trashDataTF configNoBorderedClearBGWithTextColor:[NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f] font:[NSFont systemFontOfSize:25.f] title:@"垃圾的数据"];
     
     [_intelligenceDescTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.8 alpha:0.7] font:[NSFont systemFontOfSize:11.f] title:@"智能选择" alignment:NSTextAlignmentRight];
@@ -285,6 +319,17 @@ static CGFloat const kVerticalSpace = 4.f;
 
 - (void)onLookAtMoreAction:(id)sender {
     NSLog(@"look at more project");
+}
+
+- (void)onTrachBackAction:(NSButton *)sender {
+    
+#warning -- fix the warning alert ui 
+    
+    [NSAlert showAtWindow:[self window] title:@"您是否要重置当前扫描结果并重新开始？" desc:@"当前扫描结果不会存储，您需要再运行一次扫描查找项目。" cancelText:@"取消" okText:@"重新开始" cancelThen:^{
+        NSLog(@"lt - 保持在这个页面");
+    } okThen:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"back.notification" object:nil];
+    }];
 }
 
 @end

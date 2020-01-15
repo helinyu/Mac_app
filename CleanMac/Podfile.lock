@@ -4,6 +4,7 @@ PODS:
   - CocoaLumberjack/Core (3.5.3)
   - DevMateKit (1.9.3)
   - Masonry (1.1.0)
+  - MMKV (1.0.23)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -21,13 +22,14 @@ DEPENDENCIES:
   - CocoaLumberjack (~> 3.5.3)
   - DevMateKit (~> 1.9.3)
   - Masonry (~> 1.1.0)
+  - MMKV
   - ReactiveCocoa (~> 2.5)
   - SDWebImage (~> 5.0.6)
   - Sparkle (~> 1.21.3)
   - YYModel (~> 1.0.4)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CocoaLumberjack
     - DevMateKit
     - Masonry
@@ -35,16 +37,19 @@ SPEC REPOS:
     - SDWebImage
     - Sparkle
     - YYModel
+  trunk:
+    - MMKV
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   DevMateKit: a7a46f498d4c549125109d826e858a49d508cbb8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MMKV: 031ae51aedc0af1b250922f7ed8a6b6ee2f94c4c
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: bac73ae8218336636be122062621d81a7229cacf
+PODFILE CHECKSUM: ba6f77cbc099e825eea54c4c9243b939422296c9
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.8.4

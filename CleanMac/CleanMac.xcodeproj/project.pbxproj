@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		4123886622D2FA9A00B89F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
 		4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887022D2FA9A00B89F9E /* CleanMacTests.m */; };
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
+		413579D523C88E5400E16B14 /* NSAlert+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */; };
 		414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEC233E578D00019A3E /* CMPreScanView.m */; };
 		414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */; };
 		414E1EF3233E585800019A3E /* CMPreScanLeftCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EF2233E585800019A3E /* CMPreScanLeftCellView.m */; };
@@ -117,6 +118,22 @@
 		4165FC3B22E00BF400656E00 /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		4165FC3C22E00BF400656E00 /* CMTopClassCItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C0990022DDB14500679541 /* CMTopClassCItem.xib */; };
 		4165FC4522E014C400656E00 /* NSURLResourceKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4165FC4422E014C400656E00 /* NSURLResourceKey.plist */; };
+		41B8276223C89B6900F133E8 /* CMAlertManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276123C89B6900F133E8 /* CMAlertManger.m */; };
+		41B8276323C89B6900F133E8 /* CMAlertManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276123C89B6900F133E8 /* CMAlertManger.m */; };
+		41B8276423C89B6900F133E8 /* CMAlertManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276123C89B6900F133E8 /* CMAlertManger.m */; };
+		41B8276523C89B6900F133E8 /* CMAlertManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276123C89B6900F133E8 /* CMAlertManger.m */; };
+		41B8276923CB31C900F133E8 /* CMNetManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276823CB31C900F133E8 /* CMNetManger.m */; };
+		41B8276A23CB31C900F133E8 /* CMNetManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276823CB31C900F133E8 /* CMNetManger.m */; };
+		41B8276B23CB31C900F133E8 /* CMNetManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276823CB31C900F133E8 /* CMNetManger.m */; };
+		41B8276C23CB31C900F133E8 /* CMNetManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8276823CB31C900F133E8 /* CMNetManger.m */; };
+		41B8277B23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */; };
+		41B8277C23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */; };
+		41B8277D23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */; };
+		41B8277E23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */; };
+		41B8277F23CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */; };
+		41B8278023CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */; };
+		41B8278123CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */; };
+		41B8278223CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
@@ -205,6 +222,8 @@
 		4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanMacUITests.m; sourceTree = "<group>"; };
 		4123887D22D2FA9A00B89F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		413579D323C88E5400E16B14 /* NSAlert+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+CMAdd.h"; sourceTree = "<group>"; };
+		413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+CMAdd.m"; sourceTree = "<group>"; };
 		414E1EEB233E578D00019A3E /* CMPreScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanView.h; sourceTree = "<group>"; };
 		414E1EEC233E578D00019A3E /* CMPreScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPreScanView.m; sourceTree = "<group>"; };
 		414E1EEE233E582200019A3E /* CMPreScanLeftTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanLeftTitleView.h; sourceTree = "<group>"; };
@@ -280,6 +299,15 @@
 		4165FC4022E00BF400656E00 /* CleanMac copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CleanMac copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4165FC4122E00BF500656E00 /* CleanMac copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CleanMac copy-Info.plist"; path = "/Users/felix/my_own_project/Mac_app/CleanMac/CleanMac copy-Info.plist"; sourceTree = "<absolute>"; };
 		4165FC4422E014C400656E00 /* NSURLResourceKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NSURLResourceKey.plist; sourceTree = "<group>"; };
+		41B8275E23C8979200F133E8 /* KMAbbreviationMacroExpress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAbbreviationMacroExpress.h; sourceTree = "<group>"; };
+		41B8276023C89B6900F133E8 /* CMAlertManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMAlertManger.h; sourceTree = "<group>"; };
+		41B8276123C89B6900F133E8 /* CMAlertManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMAlertManger.m; sourceTree = "<group>"; };
+		41B8276723CB31C900F133E8 /* CMNetManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMNetManger.h; sourceTree = "<group>"; };
+		41B8276823CB31C900F133E8 /* CMNetManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMNetManger.m; sourceTree = "<group>"; };
+		41B8277723CF3B4300F133E8 /* XNLeftTrashGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNLeftTrashGradientView.h; sourceTree = "<group>"; };
+		41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNRightTrashGradientView.m; sourceTree = "<group>"; };
+		41B8277923CF3B4300F133E8 /* XNRightTrashGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNRightTrashGradientView.h; sourceTree = "<group>"; };
+		41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNLeftTrashGradientView.m; sourceTree = "<group>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
@@ -571,6 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				41571EB922E336CF0090352D /* Maccro.pch */,
+				41B8275E23C8979200F133E8 /* KMAbbreviationMacroExpress.h */,
 			);
 			path = macro;
 			sourceTree = "<group>";
@@ -611,6 +640,8 @@
 			children = (
 				4165EEF822EAFAB200C67C22 /* NSTextField+CMAdd.h */,
 				4165EEF922EAFAB200C67C22 /* NSTextField+CMAdd.m */,
+				413579D323C88E5400E16B14 /* NSAlert+CMAdd.h */,
+				413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -804,6 +835,35 @@
 			path = file;
 			sourceTree = "<group>";
 		};
+		41B8275F23C89B5600F133E8 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				41B8276023C89B6900F133E8 /* CMAlertManger.h */,
+				41B8276123C89B6900F133E8 /* CMAlertManger.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		41B8276623CB31AC00F133E8 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				41B8276723CB31C900F133E8 /* CMNetManger.h */,
+				41B8276823CB31C900F133E8 /* CMNetManger.m */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		41B8277623CF355A00F133E8 /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				41B8277723CF3B4300F133E8 /* XNLeftTrashGradientView.h */,
+				41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */,
+				41B8277923CF3B4300F133E8 /* XNRightTrashGradientView.h */,
+				41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
 		41BAFD2E22DF005700AD96AC /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -816,6 +876,8 @@
 		41BAFD3122DF026D00AD96AC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				41B8276623CB31AC00F133E8 /* Net */,
+				41B8275F23C89B5600F133E8 /* Alert */,
 				410BA0E322E878CB006ABC35 /* thirdpart */,
 				4114460422E077FA00E5B4B6 /* category */,
 				4165FC4622E014CC00656E00 /* file */,
@@ -826,6 +888,7 @@
 		41C098E322DC6D7100679541 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				41B8277623CF355A00F133E8 /* GradientView */,
 				4165FC0822E00A5B00656E00 /* BaseClass */,
 				4165FBBF22DF234A00656E00 /* category */,
 			);
@@ -1075,30 +1138,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1133,16 +1177,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-resources.sh",
-				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1177,16 +1216,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-resources.sh",
-				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1243,30 +1277,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CleanMac copy/Pods-CleanMac copy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1290,6 +1305,7 @@
 				414E1EFC2340480900019A3E /* NSFont+CMAdd.m in Sources */,
 				4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */,
 				41571EB422E3358F0090352D /* CMTrashEndView.m in Sources */,
+				41B8277B23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
 				410BA10022E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
@@ -1315,11 +1331,15 @@
 				410BA10622E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */,
 				4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */,
 				41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */,
+				413579D523C88E5400E16B14 /* NSAlert+CMAdd.m in Sources */,
+				41B8276223C89B6900F133E8 /* CMAlertManger.m in Sources */,
+				41B8277F23CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */,
 				41571EAE22E3355D0090352D /* CMTrashWrapperView.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
 				410BA10222E878DE006ABC35 /* MPContactsAuthorization.m in Sources */,
 				4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */,
 				4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */,
+				41B8276923CB31C900F133E8 /* CMNetManger.m in Sources */,
 				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
 				414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */,
 				4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */,
@@ -1345,7 +1365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B8277C23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
+				41B8278023CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */,
+				41B8276323C89B6900F133E8 /* CMAlertManger.m in Sources */,
 				4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */,
+				41B8276A23CB31C900F133E8 /* CMNetManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1353,7 +1377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B8277D23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
+				41B8278123CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */,
+				41B8276423C89B6900F133E8 /* CMAlertManger.m in Sources */,
 				4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */,
+				41B8276B23CB31C900F133E8 /* CMNetManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1363,10 +1391,12 @@
 			files = (
 				4165FC0F22E00BF400656E00 /* CMShredderView.m in Sources */,
 				4165FC1022E00BF400656E00 /* ViewController.m in Sources */,
+				41B8278223CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */,
 				4165FC1122E00BF400656E00 /* NSView+CMAdd.m in Sources */,
 				4165FC1222E00BF400656E00 /* CMSpaceLensView.m in Sources */,
 				4165FC1322E00BF400656E00 /* CMUpdateProgramView.m in Sources */,
 				4165FC1522E00BF400656E00 /* CMSecondWindowController.m in Sources */,
+				41B8276523C89B6900F133E8 /* CMAlertManger.m in Sources */,
 				4165FC1622E00BF400656E00 /* CMPopViewController.m in Sources */,
 				4165FC1722E00BF400656E00 /* CMMaliciousSoftwareView.m in Sources */,
 				410BA0FF22E878DE006ABC35 /* MPCalendarAuthorizer.m in Sources */,
@@ -1392,6 +1422,7 @@
 				4165FC2522E00BF400656E00 /* CMBaseView.m in Sources */,
 				410BA10322E878DE006ABC35 /* MPContactsAuthorization.m in Sources */,
 				4165FC2622E00BF400656E00 /* CMFileManger.m in Sources */,
+				41B8276C23CB31C900F133E8 /* CMNetManger.m in Sources */,
 				4165FC2722E00BF400656E00 /* CMThirdWindowController.m in Sources */,
 				4165FC2822E00BF400656E00 /* NSButton+CMAdd.m in Sources */,
 				4165FC2922E00BF400656E00 /* CMOptimizationView.m in Sources */,
@@ -1407,6 +1438,7 @@
 				4165FC3122E00BF400656E00 /* CMMaintainView.m in Sources */,
 				41571EAB22E334EB0090352D /* CMRightLogoBaseView.m in Sources */,
 				4165FC3222E00BF400656E00 /* CMIntelligenceView.m in Sources */,
+				41B8277E23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
 				410BA0FD22E878DE006ABC35 /* MPPermissionsKit.m in Sources */,
 				410BA10122E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
 				4165FC3322E00BF400656E00 /* CMTrashScanBeforeView.m in Sources */,
@@ -1570,6 +1602,31 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AppKit\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"DevMateKit\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Sparkle\"",
+					"-framework",
+					"\"YYModel\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1589,6 +1646,31 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AppKit\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"DevMateKit\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Sparkle\"",
+					"-framework",
+					"\"YYModel\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.helinyu.music.CleanMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";

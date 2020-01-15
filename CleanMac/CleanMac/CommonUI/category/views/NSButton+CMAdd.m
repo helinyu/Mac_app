@@ -17,6 +17,10 @@
 
 @implementation NSButton (CMAdd)
 
++ (NSButton *)cm_buttonWithTitle:(NSString *)title imgName:(NSString *)imgName target:(nullable id)target action:(nullable SEL)sel {
+   return [self cm_buttonWithTitle:title image:[NSImage imageNamed:imgName] target:target action:sel];
+}
+
 + (NSButton *)cm_buttonWithTitle:(NSString *)title image:(NSImage *)image target:(nullable id)target action:(nullable SEL)action {
     if (@available(macOS 10.12, *)) {
         NSButton *btn = [NSButton buttonWithTitle:title image:image target:target action:action];

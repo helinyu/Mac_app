@@ -34,10 +34,18 @@
 #import "CMLODcumentView.h"
 #import "CMShredderView.h"
 #import "CMTrashWrapperView.h"
+#import "XNRightTrashGradientView.h"
+#import "XNLeftTrashGradientView.h"
 
 #define Create_right_view(cls) ([self createRightViewWithClass:[cls new]])
 
+kConstCGFloat(kClassWidth, 150.f);
+
 @interface CMMainPageViewController ()<NSTableViewDataSource, NSTableViewDelegate>
+
+@property (nonatomic, strong) XNRightTrashGradientView *rightTrashGradientView;
+@property (nonatomic, strong) XNLeftTrashGradientView *leftTrashGradientView;
+
 
 @property (weak) IBOutlet NSTableView *classTableView;
 @property (nonatomic, strong) NSArray<NSString *> *datasources;
@@ -79,11 +87,36 @@
 }
 
 - (void)viewInit {
-    self.view.window.backgroundColor = [NSColor cyanColor];
+    
+    self.view.layer = [CALayer layer];
+    self.view.layer.backgroundColor = [NSColor redColor].CGColor;
+    _leftTrashGradientView = [XNLeftTrashGradientView new];
+    [self.view addSubview:_leftTrashGradientView positioned:NSWindowBelow relativeTo:self.view];
+    _rightTrashGradientView = [XNRightTrashGradientView new];
+     [self.view addSubview:_rightTrashGradientView positioned:NSWindowBelow relativeTo:self.view];
+    [_leftTrashGradientView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.top.equalTo(self.view);
+        make.width.mas_equalTo(kClassWidth);
+    }];
+    
+    [_rightTrashGradientView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.bottom.top.equalTo(self.view);
+        make.left.equalTo(self.leftTrashGradientView.mas_right);
+    }];
     
     self.datasourceDic = [CMFileManger getMainClassInfoDic];
     self.datasources = [CMFileManger getMainClassInfos];
     [self.classTableView reloadData];
+    self.classTableView.layer.backgroundColor = [NSColor clearColor].CGColor;
+    self.classTableView.backgroundColor = [NSColor clearColor];
+    self.classTableView.layer.borderColor = [NSColor clearColor].CGColor;
+    self.classTableView.layer.borderWidth = CGFLOAT_MIN;
+    self.classTableView.headerView = [[NSTableHeaderView alloc] initWithFrame:CGRectMake(0.f, 0.f, CGFLOAT_MIN, CGFLOAT_MIN)];
+    if (@available(macOS 10.12, *)) {
+        self.classTableView.enclosingScrollView.borderType = NSTabViewBorderTypeNone;
+    } else {
+        // Fallback on earlier versions
+    }
     
     _intelligenceView = Create_right_view(CMIntelligenceView);
     _systemTrashView = Create_right_view(CMSystemTrashView);
@@ -200,6 +233,8 @@
     cellView.titleTF.cell.title = self.datasources[row];
     return cellView;
 }
+
+#warning -- 如何设置左边的列表的大小以及各种距离
 
 -(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     return 30;

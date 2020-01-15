@@ -33,7 +33,7 @@
 - (void)logoViewInit {
     _rightLogoImgView = [NSImageView new];
     [self addSubview:_rightLogoImgView];
-    _rightLogoImgView.image = [NSImage imageNamed:@"icon_trash_large"];
+    _rightLogoImgView.image = [NSImage imageNamed:@"icon_trash_large150"];
 }
 
 

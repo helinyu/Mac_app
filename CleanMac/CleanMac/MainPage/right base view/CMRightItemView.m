@@ -71,6 +71,7 @@
         _descTF.bordered = NO;
         _descTF.backgroundColor = [NSColor clearColor];
         _descTF.maximumNumberOfLines = 0;
+        _descTF.editable = NO;
     }
     
     {
@@ -79,9 +80,9 @@
         _titleTF.bordered = NO;
         _titleTF.backgroundColor = [NSColor clearColor];
         _titleTF.maximumNumberOfLines = 0;
+        _titleTF.editable = NO;
     }
 }
-
 
 - (void)configImgName:(NSString *)imgName title:(NSString *)title desc:(NSString *)desc {
     _iconImgView.image = [NSImage imageNamed:imgName];
