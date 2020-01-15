@@ -134,6 +134,14 @@
 		41B8278023CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */; };
 		41B8278123CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */; };
 		41B8278223CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */; };
+		41B8278623CF40E000F133E8 /* CMScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278523CF40E000F133E8 /* CMScanView.m */; };
+		41B8278723CF40E000F133E8 /* CMScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278523CF40E000F133E8 /* CMScanView.m */; };
+		41B8278823CF40E000F133E8 /* CMScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278523CF40E000F133E8 /* CMScanView.m */; };
+		41B8278923CF40E000F133E8 /* CMScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278523CF40E000F133E8 /* CMScanView.m */; };
+		41B8278C23CF441D00F133E8 /* CMScanContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278B23CF441D00F133E8 /* CMScanContentView.m */; };
+		41B8278D23CF441D00F133E8 /* CMScanContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278B23CF441D00F133E8 /* CMScanContentView.m */; };
+		41B8278E23CF441D00F133E8 /* CMScanContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278B23CF441D00F133E8 /* CMScanContentView.m */; };
+		41B8278F23CF441D00F133E8 /* CMScanContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8278B23CF441D00F133E8 /* CMScanContentView.m */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
@@ -308,6 +316,10 @@
 		41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNRightTrashGradientView.m; sourceTree = "<group>"; };
 		41B8277923CF3B4300F133E8 /* XNRightTrashGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNRightTrashGradientView.h; sourceTree = "<group>"; };
 		41B8277A23CF3B4300F133E8 /* XNLeftTrashGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNLeftTrashGradientView.m; sourceTree = "<group>"; };
+		41B8278423CF40E000F133E8 /* CMScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMScanView.h; sourceTree = "<group>"; };
+		41B8278523CF40E000F133E8 /* CMScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMScanView.m; sourceTree = "<group>"; };
+		41B8278A23CF441D00F133E8 /* CMScanContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMScanContentView.h; sourceTree = "<group>"; };
+		41B8278B23CF441D00F133E8 /* CMScanContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMScanContentView.m; sourceTree = "<group>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
@@ -607,6 +619,7 @@
 		415B5B8A22DDFA4C00E43F03 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				41B8278323CF40CC00F133E8 /* ScanView */,
 				414E1EEA233E574400019A3E /* PreScanView */,
 				41571E9B22E32E5E0090352D /* right base view */,
 				4165FBB822DF17B500656E00 /* Intelligence */,
@@ -862,6 +875,17 @@
 				41B8277823CF3B4300F133E8 /* XNRightTrashGradientView.m */,
 			);
 			path = GradientView;
+			sourceTree = "<group>";
+		};
+		41B8278323CF40CC00F133E8 /* ScanView */ = {
+			isa = PBXGroup;
+			children = (
+				41B8278423CF40E000F133E8 /* CMScanView.h */,
+				41B8278523CF40E000F133E8 /* CMScanView.m */,
+				41B8278A23CF441D00F133E8 /* CMScanContentView.h */,
+				41B8278B23CF441D00F133E8 /* CMScanContentView.m */,
+			);
+			path = ScanView;
 			sourceTree = "<group>";
 		};
 		41BAFD2E22DF005700AD96AC /* resource */ = {
@@ -1309,6 +1333,7 @@
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
 				410BA10022E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
+				41B8278C23CF441D00F133E8 /* CMScanContentView.m in Sources */,
 				4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */,
 				41C098E622DC6D9000679541 /* CMPanel.m in Sources */,
 				4123886622D2FA9A00B89F9E /* main.m in Sources */,
@@ -1318,6 +1343,7 @@
 				4165FBD822DF469B00656E00 /* CMEmailTrashView.m in Sources */,
 				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
 				4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */,
+				41B8278623CF40E000F133E8 /* CMScanView.m in Sources */,
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
 				410BA10422E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */,
 				4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */,
@@ -1365,7 +1391,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B8278D23CF441D00F133E8 /* CMScanContentView.m in Sources */,
 				41B8277C23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
+				41B8278723CF40E000F133E8 /* CMScanView.m in Sources */,
 				41B8278023CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */,
 				41B8276323C89B6900F133E8 /* CMAlertManger.m in Sources */,
 				4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */,
@@ -1377,7 +1405,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B8278E23CF441D00F133E8 /* CMScanContentView.m in Sources */,
 				41B8277D23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
+				41B8278823CF40E000F133E8 /* CMScanView.m in Sources */,
 				41B8278123CF3B4300F133E8 /* XNLeftTrashGradientView.m in Sources */,
 				41B8276423C89B6900F133E8 /* CMAlertManger.m in Sources */,
 				4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */,
@@ -1432,6 +1462,7 @@
 				4165FC2B22E00BF400656E00 /* CMLODcumentView.m in Sources */,
 				4165FC2C22E00BF400656E00 /* CMMainPageWindowController.m in Sources */,
 				4165FC2D22E00BF400656E00 /* CMTopClassCItem.m in Sources */,
+				41B8278923CF40E000F133E8 /* CMScanView.m in Sources */,
 				4165FC2E22E00BF400656E00 /* AppDelegate.m in Sources */,
 				4165FC2F22E00BF400656E00 /* CMItunesTrashView.m in Sources */,
 				4165FC3022E00BF400656E00 /* CMExtendView.m in Sources */,
@@ -1442,6 +1473,7 @@
 				410BA0FD22E878DE006ABC35 /* MPPermissionsKit.m in Sources */,
 				410BA10122E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
 				4165FC3322E00BF400656E00 /* CMTrashScanBeforeView.m in Sources */,
+				41B8278F23CF441D00F133E8 /* CMScanContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSButton *)cm_buttonWithTitle:(nullable NSString *)title target:(nullable id)target action:(nullable SEL)action;
 + (NSButton *)cm_buttonWithImage:(nullable NSImage *)image target:(nullable id)target action:(nullable SEL)action;
 
+- (void)cleanBgColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

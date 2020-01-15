@@ -61,4 +61,15 @@
     }
 }
 
+- (void)cleanBgColor {
+    NSArray<NSView *> *subViews = self.subviews;
+    for (NSView *subView in subViews) {
+        if ([subView isKindOfClass:NSClassFromString(@"NSButtonBezelView")]) {
+            subView.layer = CALayer.layer;
+            subView.layer.backgroundColor = [NSColor clearColor].CGColor;
+            break;
+        }
+    }
+}
+
 @end

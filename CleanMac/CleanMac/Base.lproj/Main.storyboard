@@ -722,7 +722,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ih5-vE-GGa">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="label" size="13"/>
                                         </buttonCell>
                                     </button>
                                 </toolbarItem>
@@ -732,7 +732,7 @@
                                         <rect key="frame" x="0.0" y="14" width="96" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="Zc8-0u-642">
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="label" size="13"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </searchFieldCell>
@@ -810,7 +810,7 @@
                                 <rect key="frame" x="67" y="272" width="80" height="32"/>
                                 <buttonCell key="cell" type="push" title="第三个" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vi3-5n-bkj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="label" size="13"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="O6p-pw-CCl" kind="show" id="Cub-jE-l8N"/>
@@ -820,7 +820,7 @@
                                 <rect key="frame" x="73" y="225" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="alert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q4b-mA-zy2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="label" size="13"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="onAlertAction:" target="XfG-lQ-9wD" id="JZx-oO-46S"/>
@@ -830,7 +830,7 @@
                                 <rect key="frame" x="73" y="180" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="主页" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qhp-M6-9Lt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="label" size="13"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="Z82-SM-CpH" kind="show" id="LRI-k2-Tfd"/>
@@ -840,7 +840,7 @@
                                 <rect key="frame" x="73" y="333" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="点击" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElT-wj-o8r">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="label" size="13"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="oS6-Na-5JH" kind="show" id="4is-bT-jUm"/>
@@ -850,7 +850,7 @@
                                 <rect key="frame" x="175" y="333" width="94" height="32"/>
                                 <buttonCell key="cell" type="push" title="更新程序" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pfc-ek-4ZF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="label" size="13"/>
                                     <connections>
                                         <action selector="onUpdateAction:" target="XfG-lQ-9wD" id="pk0-oC-cpb"/>
                                     </connections>
@@ -862,7 +862,7 @@
                                     <constraint firstAttribute="width" constant="96" id="yg3-hC-pt6"/>
                                 </constraints>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="HO6-jp-O4j">
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="label" size="13"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </searchFieldCell>
@@ -940,16 +940,16 @@
             <objects>
                 <viewController id="q01-m4-cKY" customClass="CMMainPageViewController" sceneMemberID="viewController">
                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-jA-KgY">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="678"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-wK-cuU">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
+                                <rect key="frame" x="0.0" y="30" width="150" height="648"/>
                                 <clipView key="contentView" drawsBackground="NO" id="Gb0-Rm-nYm">
-                                    <rect key="frame" x="1" y="0.0" width="148" height="599"/>
+                                    <rect key="frame" x="1" y="0.0" width="148" height="647"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="bus-qA-hAL" viewBased="YES" id="ChR-Ep-gnL">
-                                            <rect key="frame" x="0.0" y="0.0" width="148" height="574"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="622"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -957,12 +957,12 @@
                                             <tableColumns>
                                                 <tableColumn width="145" minWidth="40" maxWidth="1000" id="AUZ-nC-XRu">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                        <font key="font" metaFont="label" size="11"/>
+                                                        <font key="font" metaFont="message" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
                                                     <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="xGE-6q-LIg">
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" metaFont="label" size="13"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -987,7 +987,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="6cL-mL-nRP"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="igh-9Z-jaR">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="igh-9Z-jaR">
                                     <rect key="frame" x="1" y="583" width="148" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1002,10 +1002,9 @@
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="bo6-wK-cuU" firstAttribute="height" secondItem="uHg-jA-KgY" secondAttribute="height" id="7MI-Cd-JA7"/>
                             <constraint firstItem="bo6-wK-cuU" firstAttribute="leading" secondItem="uHg-jA-KgY" secondAttribute="leading" id="M3j-9B-UeU"/>
-                            <constraint firstItem="bo6-wK-cuU" firstAttribute="top" secondItem="uHg-jA-KgY" secondAttribute="top" id="c27-jx-efo"/>
-                            <constraint firstAttribute="bottom" secondItem="bo6-wK-cuU" secondAttribute="bottom" id="mdA-4x-C0G"/>
+                            <constraint firstItem="bo6-wK-cuU" firstAttribute="top" secondItem="uHg-jA-KgY" secondAttribute="top" id="bCR-GG-eVh"/>
+                            <constraint firstAttribute="bottom" secondItem="bo6-wK-cuU" secondAttribute="bottom" constant="30" id="buD-fL-wU1"/>
                         </constraints>
                     </view>
                     <connections>

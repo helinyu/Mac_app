@@ -36,15 +36,22 @@
 #import "CMTrashWrapperView.h"
 #import "XNRightTrashGradientView.h"
 #import "XNLeftTrashGradientView.h"
+#import "CMScanView.h"
+
+#import "NSButton+CMAdd.h"
 
 #define Create_right_view(cls) ([self createRightViewWithClass:[cls new]])
 
 kConstCGFloat(kClassWidth, 150.f);
+kConstCGFloat(kBottomViewH, 30.f);
+kConstCGFloat(kScanViewH, 60.f);
 
 @interface CMMainPageViewController ()<NSTableViewDataSource, NSTableViewDelegate>
 
 @property (nonatomic, strong) XNRightTrashGradientView *rightTrashGradientView;
 @property (nonatomic, strong) XNLeftTrashGradientView *leftTrashGradientView;
+
+@property (nonatomic, strong) CMScanView *scanView;
 
 
 @property (weak) IBOutlet NSTableView *classTableView;
@@ -74,6 +81,7 @@ kConstCGFloat(kClassWidth, 150.f);
 
 @property (nonatomic, assign) NSInteger curRow;
 
+
 @end
 
 @implementation CMMainPageViewController
@@ -95,12 +103,14 @@ kConstCGFloat(kClassWidth, 150.f);
     _rightTrashGradientView = [XNRightTrashGradientView new];
      [self.view addSubview:_rightTrashGradientView positioned:NSWindowBelow relativeTo:self.view];
     [_leftTrashGradientView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.top.equalTo(self.view);
+        make.left.top.equalTo(self.view);
         make.width.mas_equalTo(kClassWidth);
+        make.bottom.equalTo(self.view).offset(-kBottomViewH);
     }];
     
     [_rightTrashGradientView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.bottom.top.equalTo(self.view);
+        make.right.top.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-kBottomViewH);
         make.left.equalTo(self.leftTrashGradientView.mas_right);
     }];
     
@@ -108,7 +118,7 @@ kConstCGFloat(kClassWidth, 150.f);
     self.datasources = [CMFileManger getMainClassInfos];
     [self.classTableView reloadData];
     self.classTableView.layer.backgroundColor = [NSColor clearColor].CGColor;
-    self.classTableView.backgroundColor = [NSColor clearColor];
+    self.classTableView.backgroundColor = [NSColor redColor];
     self.classTableView.layer.borderColor = [NSColor clearColor].CGColor;
     self.classTableView.layer.borderWidth = CGFLOAT_MIN;
     self.classTableView.headerView = [[NSTableHeaderView alloc] initWithFrame:CGRectMake(0.f, 0.f, CGFLOAT_MIN, CGFLOAT_MIN)];
@@ -117,6 +127,9 @@ kConstCGFloat(kClassWidth, 150.f);
     } else {
         // Fallback on earlier versions
     }
+    
+    self.classTableView.backgroundColor = [NSColor redColor];
+    self.view.layer.backgroundColor = [NSColor yellowColor].CGColor;
     
     _intelligenceView = Create_right_view(CMIntelligenceView);
     _systemTrashView = Create_right_view(CMSystemTrashView);
@@ -141,6 +154,9 @@ kConstCGFloat(kClassWidth, 150.f);
         rightView.hidden = YES;
     }
     _intelligenceView.hidden = NO;
+    
+    [self initScanView];
+    
 }
 
 - (void)dataInit {
@@ -152,13 +168,24 @@ kConstCGFloat(kClassWidth, 150.f);
     
     NSArray *trashFiles = [[CMFileManger single]  trashFiles];
 //    NSLog(@"trashFiles :%@",trashFiles);
+}
 
+- (void)initScanView {
+    _scanView = [CMScanView new];
+    [self.view addSubview:_scanView];
+    [_scanView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view);
+        make.left.equalTo(self.view.mas_centerX).offset(-kScanViewH/2.f);
+    }];
+    
+//     block/delegate for some action
 }
 
 - (id)createRightViewWithClass:(NSView *)rightView {
     [self.view addSubview:rightView];
     [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.right.bottom.equalTo(self.view);
+        make.top.right.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-kBottomViewH);
         make.left.equalTo(self.classTableView.mas_right);
     }];
     return rightView;
