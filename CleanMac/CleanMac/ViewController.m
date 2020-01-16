@@ -14,6 +14,7 @@
 
 @interface ViewController ()
 
+@property (weak) IBOutlet NSButton *changeColorBtn;
 
 @end
 
@@ -81,7 +82,37 @@
 - (IBAction)onUpdateAction:(id)sender {
     NSLog(@"lt- update program");
     
-    
 }
+
+- (IBAction)onColorWellAction:(id)sender {
+    NSLog(@"lt - on color well");
+    
+//    NSColorWell *colorWell = [NSColorWell new];
+//    [colorWell activate:YES];
+//    colorWell.bordered = YES;
+    
+    NSColorPanel *colorPanel = [NSColorPanel sharedColorPanel];
+    [colorPanel setTarget:self];
+    [colorPanel setAction:@selector(onColorSelect:)];
+    [colorPanel orderFront:self];
+}
+
+
+- (void)onColorSelect:(NSColorPanel *)colorPanel {
+    self.changeColorBtn.layer.backgroundColor = colorPanel.color.CGColor;
+}
+
+
+// 颜色墙
+- (IBAction)onColorWellAction1:(id)sender {
+    NSColorWell *colorWell = (NSColorWell *)sender;
+    NSLog(@"color well :%@",colorWell.color); // 自动回弹出这个页面
+//    其实这个也是可以的饿，值要针对设置，好像m没有啥区别；
+//    有关的其他设计也是可以的
+}
+
+// ColorPanel 比ColorWell 更加灵活，并且全局单例
+
+
 
 @end

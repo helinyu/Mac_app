@@ -50,8 +50,6 @@ kConstCGFloat(kScanViewH, 60.f );
     _descTF.alignment = NSTextAlignmentLeft;
     [_descTF sizeToFit];
     _descTF.editable = NO;
-    
-    
 }
 
 @end
