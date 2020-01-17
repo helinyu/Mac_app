@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-CleanMac/Pods-CleanMac-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
 ${PODS_ROOT}/DevMateKit/DevMateKit.framework
+${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
 ${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

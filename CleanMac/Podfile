@@ -14,6 +14,7 @@ target 'CleanMac' do
   pod 'DevMateKit', '~> 1.9.3'
   pod 'Sparkle', '~> 1.21.3'
   pod 'SDWebImage', '~> 5.0.6'
+  pod 'FMDB'
   #   pod 'PermissionsKit-macOS'
 end
 
@@ -30,6 +31,7 @@ target 'CleanMac copy' do
   pod 'Sparkle', '~> 1.21.3'
   pod 'SDWebImage', '~> 5.0.6'
   pod 'MMKV'
+  pod 'FMDB'
   #  pod 'PermissionsKit-macOS'
   #   pod 'coobjc', '~> 1.2.0'
   

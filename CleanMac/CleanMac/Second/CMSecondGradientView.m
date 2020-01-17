@@ -7,8 +7,26 @@
 //
 
 #import "CMSecondGradientView.h"
+#import <Quartz/Quartz.h>
+
+@interface CMSecondGradientView ()
+
+@property (nonatomic, strong) CALayer *animationLayer;
+@property (nonatomic, strong) NSView *myView;
+
+@end
 
 @implementation CMSecondGradientView
+
+- (instancetype)initWithFrame:(NSRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self onImplicitAnimationAction];
+        [self addMyView];
+    }
+    return self;
+}
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
@@ -17,7 +35,9 @@
 //    [self drawRadialGradientView];
 //    [self drawArcPath];
 //    [self drawArcPath2];
-    [self drawBezierPath];
+//    [self drawBezierPath];
+//    [self onImplicitAnimationAction];
+//    [self onAnimationAciton];
 }
 
 // 1、直线渐变
@@ -61,6 +81,78 @@
     [bezierPath moveToPoint:NSMakePoint(20.f, 20.f)];
     [bezierPath curveToPoint:NSMakePoint(160.f, 60.f) controlPoint1:NSMakePoint(80.f, 50.f) controlPoint2:NSMakePoint(90.f, 5.f)];
     [bezierPath stroke];
+    
+    self.wantsLayer = YES;
+}
+
+- (CALayer *)makeBackingLayer {
+    return [CATextLayer new];
+}
+
+
+- (void)onImplicitAnimationAction {
+    NSButton *btn = [NSButton cm_buttonWithTitle:@"显示动画" target:self action:@selector(onAnimationMacAciton)];
+    [self addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self);
+        make.left.equalTo(self).offset(100.f);
+        make.width.height.mas_equalTo(100.f);
+    }];
+    btn.layer.backgroundColor = [NSColor greenColor].CGColor;
+    
+    [self addAniamationLayer];
+}
+
+- (void)addAniamationLayer {
+    CALayer *animationLayer = CALayer.layer;
+    animationLayer.frame = CGRectMake(10, 10.f, 50, 50);
+    animationLayer.backgroundColor = [NSColor redColor].CGColor;
+    
+//    要求view使用层
+    self.wantsLayer = YES;
+    [self.layer addSublayer:animationLayer];
+    self.animationLayer = animationLayer;
+    
+//    own layer backgournd color
+    
+    self.wantsLayer = YES;
+//    self.layer = CALayer.layer;
+    self.layer.backgroundColor = [NSColor cyanColor].CGColor;
+}
+
+// 这个例子证明layer-backed 的layer是没有隐式动画的；
+- (void)onChangeOplha {
+//    [self.animationLayer setOpacity:0.1f];
+//    [self.layer setOpacity:0.1];
+    
+//    CABasicAnimation *ba = [CABasicAnimation new];
+//    ba.fromValue = @10;
+//    ba.toValue = @1;
+//    [self.animationLayer addAnimation:ba forKey:@"property"];
+//
+}
+
+- (void)addMyView {
+    self.myView = [NSView new];
+    self.myView.frame = NSMakeRect(50.f, 50.f, 50.f, 50.f);
+    [self addSubview:self.myView];
+    self.myView.wantsLayer = YES;
+    self.myView.layer.backgroundColor = [NSColor magentaColor].CGColor;
+}
+
+
+//// ios 的方式
+//- (void)onAnimationAciton {
+//    CGPoint myNewPosition = CGPointMake(200.f, 150.f);
+//    CABasicAnimation *theAnim = [CABasicAnimation animationWithKeyPath:@"postion"];
+//    theAnim.fromValue = [NSValue valueWithPoint:self.myView.layer.position];
+//    theAnim.toValue = [NSValue valueWithPoint:myNewPosition];
+//    theAnim.duration = 3.f;
+//    [self.myView.layer addAnimation:theAnim forKey:@"animateFrame"];
+//}
+
+- (void)onAnimationMacAciton {
+    CAAnimation;
 }
 
 @end
