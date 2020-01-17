@@ -14,6 +14,7 @@
 #import "CMTrashScanBeforeView.h"
 #import "CMTrashScaningView.h"
 #import "CMTrashEndView.h"
+#import "CMTrashInfoDetailView.h"
 #import <Masonry.h>
 
 #import "CMFileManger.h"
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) CMTrashScanBeforeView *scanBeforeView;
 @property (nonatomic, strong) CMTrashScaningView *scaningView;
 @property (nonatomic, strong) CMTrashEndView *scanEndView;
+@property (nonatomic, strong) CMTrashInfoDetailView *trashInfoDetailView;
 
 @property (nonatomic, strong) NSButton *backBtn;
 
@@ -32,7 +34,7 @@
 
 @end
 
-static CGFloat const kBottomHeight = 100.f;
+static CGFloat const kBottomHeight = 0.f;
 
 @implementation CMTrashWrapperView
 
@@ -53,7 +55,8 @@ static CGFloat const kBottomHeight = 100.f;
     _scanBeforeView = [CMTrashScanBeforeView new];
     _scaningView = [CMTrashScaningView new];
     _scanEndView = [CMTrashEndView new];
-    [self cm_addSubviews:@[_scanEndView, _scaningView, _scanBeforeView]];
+    _trashInfoDetailView = [CMTrashInfoDetailView new];
+    [self cm_addSubviews:@[_scanEndView, _scaningView, _scanBeforeView, _trashInfoDetailView]];
     
     _scanBtn = [NSButton cm_buttonWithTitle:@"扫描" target:self action:@selector(onScanAction:)];
     [self addSubview:_scanBtn];
@@ -77,6 +80,11 @@ static CGFloat const kBottomHeight = 100.f;
         make.left.top.right.equalTo(self);
         make.bottom.equalTo(self).offset(-kBottomHeight);
     }];
+    
+    [_trashInfoDetailView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.equalTo(self);
+        make.bottom.equalTo(self).offset(-kBottomHeight);
+    }];
 
     [_scanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
@@ -97,17 +105,25 @@ static CGFloat const kBottomHeight = 100.f;
 
 - (void)initData {
     
-    _scanBtnTexts = @[@"扫描",@"暂停",@"清除"];
+    _scanBtnTexts = @[@"扫描",@"暂停",@"清除",@"清除"];
 
     _scanBeforeView.viewTag = CMScanStateScanBefore;
     _scaningView.viewTag = CMScanStateScaning;
     _scanEndView.viewTag = CMScanStateScanEnd;
+    _trashInfoDetailView.viewTag = CMScanStateScanInfoDetail;
 
     self.scanState = CMScanStateScanBefore;
 }
 
 - (void)initBind {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onBackAction:) name:@"back.notification" object:nil];
+    
+    W_S;
+    _scanEndView.seeMoreInfoBlock = ^{
+        if ([weakSelf.delegate respondsToSelector:@selector(trashView:actionType:)]) {
+            [weakSelf.delegate trashView:weakSelf actionType:CMTrashViewActionTypeInfoDetail];
+        };
+    };
 }
 
 - (void)setScanState:(CMScanState)scanState {
@@ -147,6 +163,12 @@ static CGFloat const kBottomHeight = 100.f;
     self.scanBeforeView.hidden = !(scanState == self.scanBeforeView.viewTag);
     self.scaningView.hidden = !(scanState == self.scaningView.viewTag);
     self.scanEndView.hidden = !(scanState == self.scanEndView.viewTag);
+    self.trashInfoDetailView.hidden =!(scanState == self.trashInfoDetailView.viewTag);
+    
+//     update info detail view
+    if (!self.trashInfoDetailView.hidden) {
+        self.trashInfoDetailView.files = self.files;
+    }
 }
 
 - (void)onBackAction:(id)sender {
@@ -155,7 +177,7 @@ static CGFloat const kBottomHeight = 100.f;
 
 - (void)configScaningPath:(NSString *)path {
     if (path.length >0) {
-        self.scaningView.curFilePathTF.cell.title = path;
+        self.scaningView.curFilePath = path;
     }
 }
 

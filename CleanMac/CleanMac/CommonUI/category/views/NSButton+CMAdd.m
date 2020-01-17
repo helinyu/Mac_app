@@ -48,9 +48,14 @@
     }
 }
 
++ (NSButton *)cm_buttonWithImgName:(NSString *)imgName target:(nullable id)target action:(nullable SEL)action {
+    NSImage *img = [NSImage imageNamed:imgName];
+    return [NSButton cm_buttonWithImage:img target:target action:action];
+}
+
 + (NSButton *)cm_buttonWithImage:(NSImage *)image target:(nullable id)target action:(nullable SEL)action {
     if (@available(macOS 10.12, *)) {
-        NSButton *btn = [NSButton buttonWithImage:image target:target action:action];
+        NSButton *btn = [NSButton buttonWithImage:image target:target action:action]; // 好像这个image不可以为空，怎么处理
         return btn;
     } else {
         NSButton *btn = [NSButton new];
@@ -61,7 +66,7 @@
     }
 }
 
-- (void)cleanBgColor {
+- (void)cleanBezelView {
     NSArray<NSView *> *subViews = self.subviews;
     for (NSView *subView in subViews) {
         if ([subView isKindOfClass:NSClassFromString(@"NSButtonBezelView")]) {

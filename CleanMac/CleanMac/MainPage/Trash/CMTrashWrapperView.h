@@ -14,17 +14,35 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, CMTrashViewActionType) {
+    CMTrashViewActionTypeNone,
+    CMTrashViewActionTypeInfoDetail,
+};
+
+@protocol CMTrashViewDelegate <NSObject>
+
+@optional
+- (void)trashView:(id)view actionType:(CMTrashViewActionType)actionType;
+
+@end
+
 
 typedef NS_ENUM(NSUInteger, CMScanState) {
     CMScanStateScanBefore,
     CMScanStateScaning,
     CMScanStateScanEnd,
+    CMScanStateScanInfoDetail,
 };
 
 @interface CMTrashWrapperView : CMBaseView
 
+//
+@property (nonatomic, weak) id<CMTrashViewDelegate> delegate;
+
 @property (nonatomic, assign) CMScanState scanState;
 @property (nonatomic, copy) IntegerBlock actionScanBlock;
+
+@property (nonatomic, copy) NSArray *files;
 
 - (void)configScaningPath:(NSString *)path;
 - (void)configureEndScanSizeText:(NSString *)sizeText;

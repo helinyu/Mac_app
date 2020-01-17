@@ -116,6 +116,7 @@ kConstCGFloat(kLineWidth, 400.f);
     _lookAtBtn = [NSButton cm_buttonWithTitle:@"查看项目" target:self action:@selector(onLookAtMoreAction:)];
     _totalDataSizeTF = [NSTextField new];
     [self cm_addSubviews:@[_lookAtBtn, _totalDataSizeTF]];
+    
 }
 
 
@@ -225,6 +226,7 @@ kConstCGFloat(kLineWidth, 400.f);
     [_trashDataTF sizeToFit];
     
     [_intelligenceDescTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.8 alpha:0.7] font:[NSFont systemFontOfSize:14.f] title:@"智能选择" alignment:NSTextAlignmentRight];
+    _intelligenceDescTF.editable = NO;
     
     _trashDataBottomLine.layer = CALayer.layer;
     _trashDataBottomLine.layer.backgroundColor = [NSColor colorWithRed:104.f/255.f green:118.f/255.f blue:123.f/255.f alpha:1.f].CGColor;
@@ -252,6 +254,7 @@ kConstCGFloat(kLineWidth, 400.f);
     _totalDataSizeTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.6];
     _totalDataSizeTF.backgroundColor = [NSColor clearColor];
     _totalDataSizeTF.bordered = NO;
+    _totalDataSizeTF.editable = NO;
     [_totalDataSizeTF sizeToFit];
 }
 
@@ -310,6 +313,7 @@ kConstCGFloat(kLineWidth, 400.f);
     _noDataTitleTF.bordered = NO;
     _noDataTitleTF.alignment = NSTextAlignmentLeft;
     _noDataTitleTF.cell.title = @"非常干净";
+    _noDataTitleTF.editable = NO;
     [_noDataTitleTF sizeToFit];
     
     _noDataDescTF.font = [NSFont systemFontOfSize:13.f];
@@ -318,6 +322,7 @@ kConstCGFloat(kLineWidth, 400.f);
     _noDataDescTF.bordered = NO;
     _noDataDescTF.alignment = NSTextAlignmentLeft;
     _noDataDescTF.cell.title = @"任何废纸篓中都没有文件";
+    _noDataDescTF.editable = NO;
     [_noDataDescTF sizeToFit];
 }
 
@@ -347,6 +352,7 @@ kConstCGFloat(kLineWidth, 400.f);
 
 - (void)onLookAtMoreAction:(id)sender {
     NSLog(@"look at more project");
+    !_seeMoreInfoBlock? :_seeMoreInfoBlock();
 }
 
 - (void)onTrachBackAction:(NSButton *)sender {

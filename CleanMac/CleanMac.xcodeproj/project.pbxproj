@@ -31,6 +31,7 @@
 		4123886622D2FA9A00B89F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123886522D2FA9A00B89F9E /* main.m */; };
 		4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887022D2FA9A00B89F9E /* CleanMacTests.m */; };
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
+		41284D0223D2299A00F1ADC1 /* CMFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D0023D2299A00F1ADC1 /* CMFourthViewController.m */; };
 		413579D523C88E5400E16B14 /* NSAlert+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */; };
 		414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEC233E578D00019A3E /* CMPreScanView.m */; };
 		414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */; };
@@ -147,6 +148,13 @@
 		41B8279823D055D000F133E8 /* CMSecondGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279723D055D000F133E8 /* CMSecondGradientView.m */; };
 		41B8279B23D1516800F133E8 /* XNSecondCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279A23D1516800F133E8 /* XNSecondCustomView.m */; };
 		41B8279E23D1639700F133E8 /* CMTrashManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279D23D1639700F133E8 /* CMTrashManger.m */; };
+		41B827A123D1AB5600F133E8 /* CMTrashInfoDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B827A023D1AB5500F133E8 /* CMTrashInfoDetailView.m */; };
+		41B827A423D1B0B500F133E8 /* CMTrashInfoDetailLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B827A323D1B0B500F133E8 /* CMTrashInfoDetailLeftView.m */; };
+		41B827A723D1B0BF00F133E8 /* CMTrashInfoDetailRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B827A623D1B0BF00F133E8 /* CMTrashInfoDetailRightView.m */; };
+		41B827AA23D1B6A600F133E8 /* CMTrashInfoDetailCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B827A923D1B6A600F133E8 /* CMTrashInfoDetailCellView.m */; };
+		41B827AD23D1C82900F133E8 /* NSMutableArray+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B827AC23D1C82900F133E8 /* NSMutableArray+CMAdd.m */; };
+		41B827B023D1CB3000F133E8 /* CMFileInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B827AF23D1CB3000F133E8 /* CMFileInfoModel.m */; };
+		41B827B323D1D82B00F133E8 /* CMTrashInfoDetailRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B827B223D1D82B00F133E8 /* CMTrashInfoDetailRowView.m */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
@@ -235,6 +243,9 @@
 		4123887722D2FA9A00B89F9E /* CleanMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanMacUITests.m; sourceTree = "<group>"; };
 		4123887D22D2FA9A00B89F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41284CFF23D2299A00F1ADC1 /* CMFourthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFourthViewController.h; sourceTree = "<group>"; };
+		41284D0023D2299A00F1ADC1 /* CMFourthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFourthViewController.m; sourceTree = "<group>"; };
+		41284D0523D2423100F1ADC1 /* CMViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMViewProtocol.h; sourceTree = "<group>"; };
 		413579D323C88E5400E16B14 /* NSAlert+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+CMAdd.h"; sourceTree = "<group>"; };
 		413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+CMAdd.m"; sourceTree = "<group>"; };
 		414E1EEB233E578D00019A3E /* CMPreScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanView.h; sourceTree = "<group>"; };
@@ -335,6 +346,20 @@
 		41B8279A23D1516800F133E8 /* XNSecondCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XNSecondCustomView.m; sourceTree = "<group>"; };
 		41B8279C23D1639700F133E8 /* CMTrashManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashManger.h; sourceTree = "<group>"; };
 		41B8279D23D1639700F133E8 /* CMTrashManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashManger.m; sourceTree = "<group>"; };
+		41B8279F23D1AB5500F133E8 /* CMTrashInfoDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashInfoDetailView.h; sourceTree = "<group>"; };
+		41B827A023D1AB5500F133E8 /* CMTrashInfoDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashInfoDetailView.m; sourceTree = "<group>"; };
+		41B827A223D1B0B500F133E8 /* CMTrashInfoDetailLeftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashInfoDetailLeftView.h; sourceTree = "<group>"; };
+		41B827A323D1B0B500F133E8 /* CMTrashInfoDetailLeftView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashInfoDetailLeftView.m; sourceTree = "<group>"; };
+		41B827A523D1B0BF00F133E8 /* CMTrashInfoDetailRightView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashInfoDetailRightView.h; sourceTree = "<group>"; };
+		41B827A623D1B0BF00F133E8 /* CMTrashInfoDetailRightView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashInfoDetailRightView.m; sourceTree = "<group>"; };
+		41B827A823D1B6A600F133E8 /* CMTrashInfoDetailCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashInfoDetailCellView.h; sourceTree = "<group>"; };
+		41B827A923D1B6A600F133E8 /* CMTrashInfoDetailCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashInfoDetailCellView.m; sourceTree = "<group>"; };
+		41B827AB23D1C82900F133E8 /* NSMutableArray+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CMAdd.h"; sourceTree = "<group>"; };
+		41B827AC23D1C82900F133E8 /* NSMutableArray+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CMAdd.m"; sourceTree = "<group>"; };
+		41B827AE23D1CB3000F133E8 /* CMFileInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFileInfoModel.h; sourceTree = "<group>"; };
+		41B827AF23D1CB3000F133E8 /* CMFileInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFileInfoModel.m; sourceTree = "<group>"; };
+		41B827B123D1D82B00F133E8 /* CMTrashInfoDetailRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashInfoDetailRowView.h; sourceTree = "<group>"; };
+		41B827B223D1D82B00F133E8 /* CMTrashInfoDetailRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashInfoDetailRowView.m; sourceTree = "<group>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
@@ -527,6 +552,8 @@
 		4123885822D2FA9700B89F9E /* CleanMac */ = {
 			isa = PBXGroup;
 			children = (
+				41284D0423D2421100F1ADC1 /* CommonProtocol */,
+				41284CFB23D2291700F1ADC1 /* Practice */,
 				41571EB822E336B30090352D /* macro */,
 				41BAFD2E22DF005700AD96AC /* resource */,
 				415B5B8A22DDFA4C00E43F03 /* MainPage */,
@@ -566,6 +593,23 @@
 				4123887D22D2FA9A00B89F9E /* Info.plist */,
 			);
 			path = CleanMacUITests;
+			sourceTree = "<group>";
+		};
+		41284CFB23D2291700F1ADC1 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				41284CFF23D2299A00F1ADC1 /* CMFourthViewController.h */,
+				41284D0023D2299A00F1ADC1 /* CMFourthViewController.m */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		41284D0423D2421100F1ADC1 /* CommonProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				41284D0523D2423100F1ADC1 /* CMViewProtocol.h */,
+			);
+			path = CommonProtocol;
 			sourceTree = "<group>";
 		};
 		414E1EEA233E574400019A3E /* PreScanView */ = {
@@ -679,6 +723,8 @@
 			children = (
 				4114460522E0780C00E5B4B6 /* NSNumber+CMAdd.h */,
 				4114460622E0780C00E5B4B6 /* NSNumber+CMAdd.m */,
+				41B827AB23D1C82900F133E8 /* NSMutableArray+CMAdd.h */,
+				41B827AC23D1C82900F133E8 /* NSMutableArray+CMAdd.m */,
 			);
 			path = var;
 			sourceTree = "<group>";
@@ -712,8 +758,18 @@
 				41571EB022E335820090352D /* CMTrashScaningView.m */,
 				41571EB222E3358F0090352D /* CMTrashEndView.h */,
 				41571EB322E3358F0090352D /* CMTrashEndView.m */,
+				41B8279F23D1AB5500F133E8 /* CMTrashInfoDetailView.h */,
+				41B827A023D1AB5500F133E8 /* CMTrashInfoDetailView.m */,
+				41B827A223D1B0B500F133E8 /* CMTrashInfoDetailLeftView.h */,
+				41B827A323D1B0B500F133E8 /* CMTrashInfoDetailLeftView.m */,
+				41B827A523D1B0BF00F133E8 /* CMTrashInfoDetailRightView.h */,
+				41B827A623D1B0BF00F133E8 /* CMTrashInfoDetailRightView.m */,
 				41B8279C23D1639700F133E8 /* CMTrashManger.h */,
 				41B8279D23D1639700F133E8 /* CMTrashManger.m */,
+				41B827A823D1B6A600F133E8 /* CMTrashInfoDetailCellView.h */,
+				41B827A923D1B6A600F133E8 /* CMTrashInfoDetailCellView.m */,
+				41B827B123D1D82B00F133E8 /* CMTrashInfoDetailRowView.h */,
+				41B827B223D1D82B00F133E8 /* CMTrashInfoDetailRowView.m */,
 			);
 			path = Trash;
 			sourceTree = "<group>";
@@ -861,6 +917,8 @@
 				4165FC4422E014C400656E00 /* NSURLResourceKey.plist */,
 				4114460822E0797F00E5B4B6 /* KMSystem.h */,
 				4114460922E0797F00E5B4B6 /* KMSystem.m */,
+				41B827AE23D1CB3000F133E8 /* CMFileInfoModel.h */,
+				41B827AF23D1CB3000F133E8 /* CMFileInfoModel.m */,
 			);
 			path = file;
 			sourceTree = "<group>";
@@ -1353,10 +1411,12 @@
 				41B8279E23D1639700F133E8 /* CMTrashManger.m in Sources */,
 				41571EB122E335820090352D /* CMTrashScaningView.m in Sources */,
 				414E1EFC2340480900019A3E /* NSFont+CMAdd.m in Sources */,
+				41B827B323D1D82B00F133E8 /* CMTrashInfoDetailRowView.m in Sources */,
 				4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */,
 				41571EB422E3358F0090352D /* CMTrashEndView.m in Sources */,
 				41B8277B23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
+				41B827B023D1CB3000F133E8 /* CMFileInfoModel.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
 				410BA10022E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
 				41B8278C23CF441D00F133E8 /* CMScanContentView.m in Sources */,
@@ -1370,6 +1430,7 @@
 				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
 				4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */,
 				41B8278623CF40E000F133E8 /* CMScanView.m in Sources */,
+				41B827AA23D1B6A600F133E8 /* CMTrashInfoDetailCellView.m in Sources */,
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
 				410BA10422E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */,
 				4165FBE022DF46E900656E00 /* CMPrivacyView.m in Sources */,
@@ -1379,6 +1440,7 @@
 				4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */,
 				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
+				41B827A723D1B0BF00F133E8 /* CMTrashInfoDetailRightView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
 				410BA10622E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */,
 				4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */,
@@ -1397,8 +1459,10 @@
 				41B8276923CB31C900F133E8 /* CMNetManger.m in Sources */,
 				41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */,
 				414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */,
+				41B827A423D1B0B500F133E8 /* CMTrashInfoDetailLeftView.m in Sources */,
 				4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,
+				41284D0223D2299A00F1ADC1 /* CMFourthViewController.m in Sources */,
 				41C0990122DDB14500679541 /* CMTopClassCItem.m in Sources */,
 				41B8279523D0535E00F133E8 /* CMShadowDrawView.m in Sources */,
 				41571EAA22E333540090352D /* CMRightLogoBaseView.m in Sources */,
@@ -1406,12 +1470,14 @@
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
 				4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */,
 				4165FBF422DF488000656E00 /* CMExtendView.m in Sources */,
+				41B827A123D1AB5600F133E8 /* CMTrashInfoDetailView.m in Sources */,
 				4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */,
 				41571EA122E32ECE0090352D /* CMRightItemView.m in Sources */,
 				4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */,
 				4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */,
 				41571EA622E333070090352D /* CMRightScaningBaseView.m in Sources */,
 				414E1EF3233E585800019A3E /* CMPreScanLeftCellView.m in Sources */,
+				41B827AD23D1C82900F133E8 /* NSMutableArray+CMAdd.m in Sources */,
 				4165FBC522DF3B3D00656E00 /* CMTrashScanBeforeView.m in Sources */,
 				414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */,
 			);

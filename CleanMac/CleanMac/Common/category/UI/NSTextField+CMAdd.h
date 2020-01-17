@@ -24,6 +24,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)configNoBorderedWithTextColor:(NSColor *)textColor font:(NSFont *)font bgColor:(NSColor *)bgColor title:(NSString *)title alignment:(NSTextAlignment)alignment;
 - (void)configWithTextColor:(NSColor *)textColor font:(NSFont *)font bordered:(BOOL)bordered bgColor:(NSColor *)bgColor title:(NSString *)title alignment:(NSTextAlignment)alignment;
 
+
+// 不可编辑以及没有边框
+- (void)configLabelNotBorderTitle:(NSString *)title systemFontSize:(CGFloat)fontSize bgColor:(NSColor *)bgColor textColor:(NSColor *)textColor;
+
+- (void)configLabelTitle:(NSString *)title systemFontSize:(CGFloat)fontSize bgColor:(NSColor *)bgColor textColor:(NSColor *)textColor bordered:(BOOL)bordered;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

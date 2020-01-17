@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -763,6 +763,40 @@
             <point key="canvasLocation" x="-165" y="165"/>
         </scene>
         <!--Window Controller-->
+        <scene sceneID="Ptk-MA-TCg">
+            <objects>
+                <windowController id="zpN-wi-JbM" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Cge-Ep-KMB">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="zpN-wi-JbM" id="5VM-Qv-Ze7"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="vZw-ZJ-3AK" kind="relationship" relationship="window.shadowedContentViewController" id="mnz-JP-erx"/>
+                    </connections>
+                </windowController>
+                <customObject id="jsP-SG-xpH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="27"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="Ixa-db-QDy">
+            <objects>
+                <viewController id="vZw-ZJ-3AK" customClass="CMFourthViewController" sceneMemberID="viewController">
+                    <view key="view" id="qrW-xw-Bix">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="AgC-Kr-APf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="6"/>
+        </scene>
+        <!--Window Controller-->
         <scene sceneID="5bI-j8-Pj5">
             <objects>
                 <windowController id="oS6-Na-5JH" customClass="CMSecondWindowController" sceneMemberID="viewController">
@@ -783,7 +817,7 @@
                 <customObject id="OoH-hc-euc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="UbS-4l-QMV"/>
             </objects>
-            <point key="canvasLocation" x="520" y="386"/>
+            <point key="canvasLocation" x="510" y="426"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="3M2-uP-WeE">
@@ -808,26 +842,23 @@
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yBL-pm-E7h">
                                 <rect key="frame" x="67" y="272" width="80" height="32"/>
-                                <buttonCell key="cell" type="push" title="第三个" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vi3-5n-bkj">
+                                <buttonCell key="cell" type="push" title="第四个" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vi3-5n-bkj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="O6p-pw-CCl" kind="show" id="Cub-jE-l8N"/>
+                                    <segue destination="zpN-wi-JbM" kind="show" id="JLB-C8-Z9k"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8y3-kE-Hep">
-                                <rect key="frame" x="73" y="225" width="68" height="32"/>
-                                <buttonCell key="cell" type="push" title="alert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q4b-mA-zy2">
+                                <rect key="frame" x="72" y="225" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="none" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q4b-mA-zy2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="onAlertAction:" target="XfG-lQ-9wD" id="JZx-oO-46S"/>
-                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-mF-37T">
-                                <rect key="frame" x="73" y="180" width="68" height="32"/>
+                                <rect key="frame" x="72" y="180" width="70" height="32"/>
                                 <buttonCell key="cell" type="push" title="主页" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qhp-M6-9Lt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -980,7 +1011,7 @@
                                             <tableColumns>
                                                 <tableColumn width="145" minWidth="40" maxWidth="1000" id="AUZ-nC-XRu">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                        <font key="font" metaFont="controlContent" size="11"/>
+                                                        <font key="font" metaFont="message" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>

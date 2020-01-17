@@ -48,7 +48,7 @@ kConstCGFloat(kScanContentH, 80.f);
     _scanBtn.layer.backgroundColor = [NSColor clearColor].CGColor;
     _scanBtn.layer.cornerRadius = kScanContentH/2.f;
     _scanBtn.layer.masksToBounds = YES;
-    [_scanBtn cleanBgColor];
+    [_scanBtn cleanBezelView];
 }
 
 - (void)onScanAction:(NSButton *)sender {

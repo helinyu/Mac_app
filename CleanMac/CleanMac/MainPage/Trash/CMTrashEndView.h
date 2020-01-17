@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) NSTextField *trashDataTF;
 @property (nonatomic, strong, readonly) NSTextField *totalDataSizeTF;
+@property (nonatomic, copy) VoidBlock seeMoreInfoBlock;
 
 - (void)configDataIsEmpty:(BOOL)isEmtpy;
 

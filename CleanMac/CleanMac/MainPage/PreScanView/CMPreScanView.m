@@ -112,7 +112,7 @@
 }
 
 -(void)tableViewSelectionDidChange:(nonnull NSNotification *)notification{
-    
+
 }
 
 /* View Based TableView: The delegate can optionally implement this method to return a custom NSTableRowView for a particular 'row'. The reuse queue can be used in the same way as documented in tableView:viewForTableColumn:row:. The returned view will have attributes properly set to it before it is added to the tableView. Returning nil is acceptable. If nil is returned, or this method isn't implemented, a regular NSTableRowView will be created and used.

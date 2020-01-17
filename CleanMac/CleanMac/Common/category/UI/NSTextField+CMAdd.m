@@ -8,7 +8,7 @@
 //  Copyright © 2019 Aka. All rights reserved.
 //  xcode 10.15 .
 //
-    
+
 
 #import "NSTextField+CMAdd.h"
 
@@ -37,5 +37,20 @@
     self.cell.title = title;
     self.alignment = alignment;
 }
+
+- (void)configLabelNotBorderTitle:(NSString *)title systemFontSize:(CGFloat)fontSize bgColor:(NSColor *)bgColor textColor:(NSColor *)textColor {
+    [self configLabelTitle:title systemFontSize:fontSize bgColor:bgColor textColor:textColor bordered:NO];
+}
+
+- (void)configLabelTitle:(NSString *)title systemFontSize:(CGFloat)fontSize bgColor:(NSColor *)bgColor textColor:(NSColor *)textColor bordered:(BOOL)bordered {
+    self.cell.title = title;
+    [self setFont:[NSFont systemFontOfSize:fontSize]];
+    self.bordered = bordered;
+    self.editable = NO;
+    self.backgroundColor = bgColor;
+    self.textColor = textColor;
+    [self sizeToFit];
+}
+
 
 @end

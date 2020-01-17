@@ -39,6 +39,7 @@
 
 #import "CMFileManger.h"
 #import "CMTrashManger.h"
+#import "CMFileInfoModel.h"
 
 #define Create_right_view(cls) ([self createRightViewWithClass:[cls new]])
 
@@ -46,7 +47,7 @@ kConstCGFloat(kClassWidth, 150.f);
 kConstCGFloat(kBottomViewH, 30.f);
 kConstCGFloat(kScanViewH, 60.f);
 
-@interface CMMainPageViewController ()<NSTableViewDataSource, NSTableViewDelegate, CMScanViewDelegate>
+@interface CMMainPageViewController ()<NSTableViewDataSource, NSTableViewDelegate, CMScanViewDelegate, CMTrashViewDelegate>
 
 @property (nonatomic, strong) XNRightTrashGradientView *rightTrashGradientView;
 @property (nonatomic, strong) XNLeftTrashGradientView *leftTrashGradientView;
@@ -81,6 +82,7 @@ kConstCGFloat(kScanViewH, 60.f);
 
 @property (nonatomic, assign) NSInteger curRow;
 
+@property (nonatomic, strong) NSMutableArray *trashFiles;
 
 @end
 
@@ -168,6 +170,10 @@ kConstCGFloat(kScanViewH, 60.f);
     
     NSArray *trashFiles = [[CMFileManger single]  trashFiles];
     //    NSLog(@"trashFiles :%@",trashFiles);
+    
+//    _trashFiles = [NSMutableArray new];
+    _trashFiles = [NSMutableArray new];
+    
 }
 
 - (void)initScanView {
@@ -179,7 +185,8 @@ kConstCGFloat(kScanViewH, 60.f);
     }];
     _scanView.scanViewDelegate = self;
     
-    //     block/delegate for some action
+    _trashView.delegate = self;
+    
 }
 
 - (id)createRightViewWithClass:(NSView *)rightView {
@@ -188,6 +195,7 @@ kConstCGFloat(kScanViewH, 60.f);
         make.top.right.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(-kBottomViewH);
         make.left.equalTo(self.classTableView.mas_right);
+        make.height.mas_equalTo(self.view.bounds.size.height - kBottomViewH);
     }];
     return rightView;
 }
@@ -228,16 +236,37 @@ kConstCGFloat(kScanViewH, 60.f);
 }
 
 - (void)scaningTrashFolder {
+    [_trashFiles removeAllObjects];
+    __block NSMutableArray *files = [NSMutableArray new];
+    __block CGFloat totalSize = 0.f;
     NSString *folderPath = [CMFileManger scanTrashFolderThen:^(BOOL finished, NSError *error, NSString * _Nullable path, kInteger size) {
         if (finished) {
-            self.trashView.scanState = CMScanStateScanEnd;
+            if (files.count >0) {
+                #warning  -- also need to fix back
+                CMFileInfoModel *directoryItem = [CMFileInfoModel new];
+                directoryItem.name = @"Macintosh HD 上的废纸篓";
+                directoryItem.weight = totalSize;
+                [self.trashFiles addObject:directoryItem];
+            }
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self.trashView configureEndScanSize:size];
+                self.trashView.scanState = CMScanStateScanEnd;
             });
         }
         else {
-            self.trashView.scanState = CMScanStateScaning;
-            if (!path) {
+            CMFileInfoModel *fileItem = [CMFileInfoModel new];
+            fileItem.name = path;
+            fileItem.weight = size;
+            totalSize += size;
+#warning  -- need to fix back directon which is NO is temp
+            fileItem.isDirectory = NO;
+            [files addObject:fileItem];
+            
+            if (self.trashView.scanState != CMScanStateScaning) {
+                self.trashView.scanState = CMScanStateScaning;
+            }
+            NSLog(@"lt - path : %@",path);
+            if (path.length >0) {
                 [self.trashView configScaningPath:path];
             }
         }
@@ -249,7 +278,9 @@ kConstCGFloat(kScanViewH, 60.f);
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return self.datasources.count;
-} 
+}
+
+
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
     CMMainPageClassTCellView *cellView = [tableView makeViewWithIdentifier:NSStringFromClass([CMMainPageClassTCellView class]) owner:self];
@@ -301,6 +332,17 @@ kConstCGFloat(kScanViewH, 60.f);
 - (void)onScanCurSelectedCategory {
     
 }
+
+#pragma mark - trash view delegate
+
+- (void)trashView:(id)view actionType:(CMTrashViewActionType)actionType {
+    
+    if (actionType == CMTrashViewActionTypeInfoDetail) {
+        self.trashView.files = self.trashFiles;
+        self.trashView.scanState = CMScanStateScanInfoDetail;
+    }
+}
+
 
 @end
 

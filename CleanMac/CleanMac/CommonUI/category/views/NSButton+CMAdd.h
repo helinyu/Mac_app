@@ -22,9 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSButton *)cm_buttonWithTitle:(NSString *)title imgName:(NSString *)imgName target:(nullable id)target action:(nullable SEL)sel;
 + (NSButton *)cm_buttonWithTitle:(nullable NSString *)title image:(nullable NSImage *)image target:(nullable id)target action:(nullable SEL)action;
 + (NSButton *)cm_buttonWithTitle:(nullable NSString *)title target:(nullable id)target action:(nullable SEL)action;
+
++ (NSButton *)cm_buttonWithImgName:(NSString *)imgName target:(nullable id)target action:(nullable SEL)action;
 + (NSButton *)cm_buttonWithImage:(nullable NSImage *)image target:(nullable id)target action:(nullable SEL)action;
 
-- (void)cleanBgColor;
+- (void)cleanBezelView;
+
+
 
 @end
 

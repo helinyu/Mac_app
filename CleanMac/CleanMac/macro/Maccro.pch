@@ -21,8 +21,13 @@
 
 #import "NSView+CMAdd.h"
 #import "NSButton+CMAdd.h"
+
+#import "NSMutableArray+CMAdd.h"
+
 #import "PermissionsKit.h"
 #import "KMAbbreviationMacroExpress.h"
+
+#import "CMViewProtocol.h"
 
 #pragma mark -- block
 

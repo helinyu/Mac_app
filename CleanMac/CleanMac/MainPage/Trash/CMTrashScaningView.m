@@ -53,26 +53,36 @@
         make.centerX.equalTo(self);
         make.left.right.equalTo(self);
     }];
+    _titleTF.editable = NO;
     
     [_curFilePathTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self.titleTF.mas_bottom).offset(10.f);
         make.left.right.equalTo(self);
     }];
+    _curFilePathTF.editable = NO;
     
     [_folderNameTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self.curFilePathTF.mas_bottom).offset(10.f);
         make.left.right.equalTo(self);
     }];
+    _folderNameTF.editable = NO;
 }
 
 - (void)initStyle {
-    [_titleTF configNoBorderedClearBGWithTextColor:[NSColor whiteColor] font:[NSFont systemFontOfSize:18.f] title: @"正在计算废纸篓文件夹的大小..." alignment:NSTextAlignmentCenter];
+    [_titleTF configNoBorderedClearBGWithTextColor:[NSColor whiteColor] font:[NSFont systemFontOfSize:26.f] title: @"正在计算废纸篓文件夹的大小..." alignment:NSTextAlignmentCenter];
    
-    [_curFilePathTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:0.9] font:[NSFont systemFontOfSize:14.f] title:@"" alignment:NSTextAlignmentCenter];
+    [_curFilePathTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:0.9] font:[NSFont systemFontOfSize:14.f] title:@"· · · · · ·" alignment:NSTextAlignmentCenter];
  
     [_folderNameTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:0.9] font:[NSFont systemFontOfSize:14.f] title:@"系统废纸篓" alignment:NSTextAlignmentCenter];
+}
+
+- (void)setCurFilePath:(NSString *)curFilePath {
+    _curFilePath = curFilePath;
+    if (curFilePath.length <=0) return;
+    
+    [_curFilePathTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:0.9] font:[NSFont systemFontOfSize:14.f] title:curFilePath alignment:NSTextAlignmentCenter];
 }
 
 @end

@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CMTrashScaningView : CMRightLogoBaseView
 
-//@property (nonatomic, strong, readonly) NSTextField *titleTF;
-@property (nonatomic, strong, readonly) NSTextField *curFilePathTF;
-//@property (nonatomic, strong, readonly) NSTextField *folderNameTF;
+//@property (nonatomic, strong, readonly) NSTextField *curFilePathTF;
+
+@property (nonatomic, copy) NSString *curFilePath;
 
 @end
 
