@@ -145,6 +145,8 @@
 		41B8279223D0463700F133E8 /* CMSecondDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279123D0463700F133E8 /* CMSecondDrawView.m */; };
 		41B8279523D0535E00F133E8 /* CMShadowDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279423D0535E00F133E8 /* CMShadowDrawView.m */; };
 		41B8279823D055D000F133E8 /* CMSecondGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279723D055D000F133E8 /* CMSecondGradientView.m */; };
+		41B8279B23D1516800F133E8 /* XNSecondCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279A23D1516800F133E8 /* XNSecondCustomView.m */; };
+		41B8279E23D1639700F133E8 /* CMTrashManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B8279D23D1639700F133E8 /* CMTrashManger.m */; };
 		41BAFD2D22DEDFF200AD96AC /* CMMainPageClassTCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */; };
 		41BAFD3022DF007400AD96AC /* classList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BAFD2F22DF007400AD96AC /* classList.plist */; };
 		41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAFD3322DF028F00AD96AC /* CMFileManger.m */; };
@@ -329,6 +331,10 @@
 		41B8279423D0535E00F133E8 /* CMShadowDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMShadowDrawView.m; sourceTree = "<group>"; };
 		41B8279623D055D000F133E8 /* CMSecondGradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSecondGradientView.h; sourceTree = "<group>"; };
 		41B8279723D055D000F133E8 /* CMSecondGradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSecondGradientView.m; sourceTree = "<group>"; };
+		41B8279923D1516800F133E8 /* XNSecondCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XNSecondCustomView.h; sourceTree = "<group>"; };
+		41B8279A23D1516800F133E8 /* XNSecondCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XNSecondCustomView.m; sourceTree = "<group>"; };
+		41B8279C23D1639700F133E8 /* CMTrashManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTrashManger.h; sourceTree = "<group>"; };
+		41B8279D23D1639700F133E8 /* CMTrashManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTrashManger.m; sourceTree = "<group>"; };
 		41BAFD2B22DEDFF200AD96AC /* CMMainPageClassTCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMainPageClassTCellView.h; sourceTree = "<group>"; };
 		41BAFD2C22DEDFF200AD96AC /* CMMainPageClassTCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMainPageClassTCellView.m; sourceTree = "<group>"; };
 		41BAFD2F22DF007400AD96AC /* classList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = classList.plist; sourceTree = "<group>"; };
@@ -706,6 +712,8 @@
 				41571EB022E335820090352D /* CMTrashScaningView.m */,
 				41571EB222E3358F0090352D /* CMTrashEndView.h */,
 				41571EB322E3358F0090352D /* CMTrashEndView.m */,
+				41B8279C23D1639700F133E8 /* CMTrashManger.h */,
+				41B8279D23D1639700F133E8 /* CMTrashManger.m */,
 			);
 			path = Trash;
 			sourceTree = "<group>";
@@ -941,6 +949,8 @@
 				41B8279423D0535E00F133E8 /* CMShadowDrawView.m */,
 				41B8279623D055D000F133E8 /* CMSecondGradientView.h */,
 				41B8279723D055D000F133E8 /* CMSecondGradientView.m */,
+				41B8279923D1516800F133E8 /* XNSecondCustomView.h */,
+				41B8279A23D1516800F133E8 /* XNSecondCustomView.m */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -1340,6 +1350,7 @@
 				4123885E22D2FA9700B89F9E /* ViewController.m in Sources */,
 				4165FBC222DF235F00656E00 /* NSView+CMAdd.m in Sources */,
 				4165FBF822DF48A600656E00 /* CMSpaceLensView.m in Sources */,
+				41B8279E23D1639700F133E8 /* CMTrashManger.m in Sources */,
 				41571EB122E335820090352D /* CMTrashScaningView.m in Sources */,
 				414E1EFC2340480900019A3E /* NSFont+CMAdd.m in Sources */,
 				4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */,
@@ -1379,6 +1390,7 @@
 				41B8279823D055D000F133E8 /* CMSecondGradientView.m in Sources */,
 				41B8279223D0463700F133E8 /* CMSecondDrawView.m in Sources */,
 				41C098EB22DC6E2200679541 /* CMThirdWindowController.m in Sources */,
+				41B8279B23D1516800F133E8 /* XNSecondCustomView.m in Sources */,
 				410BA10222E878DE006ABC35 /* MPContactsAuthorization.m in Sources */,
 				4165FBBE22DF1D9D00656E00 /* NSButton+CMAdd.m in Sources */,
 				4165FBE422DF471000656E00 /* CMOptimizationView.m in Sources */,

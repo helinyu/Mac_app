@@ -35,9 +35,11 @@
 
 @end
 
-static CGFloat const kMarginLeft = 10.f;
+static CGFloat const kMarginLeft = 30.f;
 static CGFloat const kMarginRight = 10.f;
 static CGFloat const kVerticalSpace = 4.f;
+static CGFloat const kVLineSpace = 70.f;
+kConstCGFloat(kLineWidth, 400.f);
 
 @implementation CMTrashEndView
 
@@ -125,21 +127,21 @@ static CGFloat const kVerticalSpace = 4.f;
 
 - (void)initTitleContraints {
     [self.rightLogoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(20.f);
         make.width.height.mas_equalTo(150.f);
         make.centerY.equalTo(self);
+        make.centerX.equalTo(self).dividedBy(2.f);
     }];
     
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.rightLogoImgView).offset(10.f);
+        make.top.equalTo(self.rightLogoImgView);
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
         make.right.equalTo(self).offset(-kMarginRight);
     }];
     
     [_titleBottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.titleTF.mas_bottom).offset(kVerticalSpace);
+        make.top.equalTo(self.titleTF.mas_bottom).offset(20.f);
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
-        make.right.equalTo(self).offset(-kMarginRight);
+        make.width.mas_equalTo(kLineWidth);
         make.height.mas_equalTo(1.f);
     }];
 }
@@ -152,27 +154,27 @@ static CGFloat const kVerticalSpace = 4.f;
 - (void)initTrashDataContstraints {
     [_trashDataTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
-        make.top.equalTo(self.titleBottomLine.mas_bottom).offset(kVerticalSpace);
-    }];
-    
-    [_intelligenceDescTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(-kMarginRight);
-        make.bottom.equalTo(self.trashDataTF);
-        make.width.mas_equalTo(50.f);
+        make.top.equalTo(self.titleBottomLine.mas_bottom).offset(13.f);
     }];
     
     [_trashDataBottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.trashDataTF.mas_bottom).offset(kVerticalSpace);
+        make.top.equalTo(self.titleBottomLine.mas_bottom).offset(kVLineSpace);
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
-        make.right.equalTo(self).offset(-kMarginRight);
+        make.width.mas_equalTo(kLineWidth);
         make.height.mas_equalTo(1.f);
+    }];
+    
+    [_intelligenceDescTF mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.trashDataBottomLine);
+        make.bottom.equalTo(self.trashDataBottomLine.mas_top).offset(-13.f);
+        make.width.mas_equalTo(80.f);
     }];
 }
 
 - (void)initIncludeConstraints {
     [_includeTitleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
-        make.top.equalTo(self.trashDataBottomLine.mas_bottom).offset(kVerticalSpace);
+        make.top.equalTo(self.trashDataBottomLine.mas_bottom).offset(28.f);
     }];
     
     [_includeContentTF mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -182,13 +184,16 @@ static CGFloat const kVerticalSpace = 4.f;
     }];
 }
 - (void)initBottomConstraints {
+    _lookAtBtn.bezelStyle = NSBezelStyleShadowlessSquare;
     [_lookAtBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.rightLogoImgView.mas_right).offset(kMarginLeft);
-        make.top.equalTo(self.includeContentTF.mas_bottom).offset(13.f);
+        make.top.equalTo(self.includeContentTF.mas_bottom).offset(40.f);
+        make.width.mas_equalTo(80.f);
+        make.height.mas_equalTo(28.f);
     }];
     
     [_totalDataSizeTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.lookAtBtn.mas_right).offset(10.f);
+        make.left.equalTo(self.lookAtBtn.mas_right).offset(15.f);
         make.centerY.equalTo(self.lookAtBtn);
         make.right.equalTo(self).offset(-kMarginRight);
     }];
@@ -198,49 +203,73 @@ static CGFloat const kVerticalSpace = 4.f;
     [self initTitleStyle];
     [self initContentStyle];
     [self initBottomStyle];
+    [self initIncludeStyle];
 }
 
 - (void)initTitleStyle {
     _titleTF.cell.title = @"扫描完毕";
     _titleTF.textColor = [NSColor whiteColor];
     _titleTF.bordered = NO;
-    _titleTF.font = [NSFont systemFontOfSize:20.f];
+    _titleTF.font = [NSFont boldSystemFontOfSize:26.f];
     _titleTF.backgroundColor = [NSColor clearColor];
+    _titleTF.editable = NO;
     
     _titleBottomLine.layer = CALayer.layer;
-    _titleBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
+    _titleBottomLine.layer.backgroundColor = [NSColor colorWithRed:104.f/255.f green:118.f/255.f blue:123.f/255.f alpha:1.f].CGColor;
 }
 
 - (void)initContentStyle {
     
-    [_trashDataTF configNoBorderedClearBGWithTextColor:[NSColor colorWithRed:101.f/255.f green:217.f/255.f blue:1.f alpha:1.f] font:[NSFont systemFontOfSize:25.f] title:@"垃圾的数据"];
+    [_trashDataTF configNoBorderedClearBGWithTextColor:[NSColor colorWithRed:39.f/255.f green:217.f/255.f blue:1.f alpha:1.f] font:[NSFont systemFontOfSize:40.f] title:@"垃圾的数据"];
+    _trashDataTF.editable = NO;
+    [_trashDataTF sizeToFit];
     
-    [_intelligenceDescTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.8 alpha:0.7] font:[NSFont systemFontOfSize:11.f] title:@"智能选择" alignment:NSTextAlignmentRight];
+    [_intelligenceDescTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.8 alpha:0.7] font:[NSFont systemFontOfSize:14.f] title:@"智能选择" alignment:NSTextAlignmentRight];
     
     _trashDataBottomLine.layer = CALayer.layer;
-    _trashDataBottomLine.layer.backgroundColor = [NSColor colorWithWhite:0.8 alpha:0.7].CGColor;
+    _trashDataBottomLine.layer.backgroundColor = [NSColor colorWithRed:104.f/255.f green:118.f/255.f blue:123.f/255.f alpha:1.f].CGColor;
     
-    [_includeTitleTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:1.f] font:[NSFont systemFontOfSize:11.f] title:@"包括" alignment:NSTextAlignmentLeft];
-    [_includeTitleTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.8 alpha:0.7] font:[NSFont boldSystemFontOfSize:11.f] title:@"· Macintosh HD 上的废纸篓"];
+    [_includeTitleTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.9 alpha:1.f] font:[NSFont systemFontOfSize:13.f] title:@"包括" alignment:NSTextAlignmentLeft];
+    [_includeContentTF configNoBorderedClearBGWithTextColor:[NSColor colorWithWhite:0.8 alpha:0.7] font:[NSFont systemFontOfSize:13.f] title:@"· Macintosh HD 上的废纸篓"];
 }
 
 - (void)initBottomStyle {
-    _lookAtBtn.title = @"查看项目";
-    _lookAtBtn.font  = [NSFont systemFontOfSize:11.f];
+    _lookAtBtn.font  = [NSFont systemFontOfSize:13.f];
     _lookAtBtn.layer = CALayer.layer;
-    _lookAtBtn.layer.backgroundColor = [NSColor blackColor].CGColor;
-    _lookAtBtn.layer.cornerRadius = 2.f;
+    _lookAtBtn.layer.backgroundColor = [NSColor colorWithRed:52.f/255.f green:62.f/255.f blue:75.f/255.f alpha:1.f].CGColor;
+    _lookAtBtn.layer.cornerRadius = 10.f;
     _lookAtBtn.layer.masksToBounds  = YES;
+    NSArray<NSView *> *subViews = _lookAtBtn.subviews;
+    for (NSView *subView in subViews) {
+        if ([subView isKindOfClass:NSClassFromString(@"NSButtonBezelView")]) {
+            subView.layer = CALayer.layer;
+            subView.layer.backgroundColor = [NSColor clearColor].CGColor;
+        }
+    }
+    _lookAtBtn.attributedTitle = [[NSAttributedString alloc] initWithString:@"查看项目" attributes:@{NSForegroundColorAttributeName:[NSColor colorWithRed:122.f/255.f green:221.f/255.f blue:251.f/255.f alpha:1.f]}];
     
-    _totalDataSizeTF.font = [NSFont systemFontOfSize:11.f];
+    _totalDataSizeTF.font = [NSFont systemFontOfSize:13.f];
     _totalDataSizeTF.textColor = [NSColor colorWithWhite:0.8 alpha:0.6];
     _totalDataSizeTF.backgroundColor = [NSColor clearColor];
     _totalDataSizeTF.bordered = NO;
     [_totalDataSizeTF sizeToFit];
 }
 
-
-
+- (void)initIncludeStyle {
+    _includeTitleTF.cell.title = @"包括";
+    _includeTitleTF.textColor =[NSColor colorWithRed:170.f/255.f green:176.f/255.f blue:186.f/255.f alpha:1.f];
+    _includeTitleTF.bordered = NO;
+    _includeTitleTF.font = [NSFont boldSystemFontOfSize:13.f];
+    _includeTitleTF.backgroundColor = [NSColor clearColor];
+    _includeTitleTF.editable = NO;
+    
+    _includeContentTF.cell.title = @"· Macintosh HD 上的废纸篓";
+    _includeContentTF.textColor = [NSColor colorWithRed:170.f/255.f green:176.f/255.f blue:186.f/255.f alpha:1.f];
+    _includeContentTF.bordered = NO;
+    _includeContentTF.font = [NSFont boldSystemFontOfSize:13.f];
+    _includeContentTF.backgroundColor = [NSColor clearColor];
+    _includeContentTF.editable = NO;
+}
 
 #pragma mark -- no data
 
@@ -275,7 +304,6 @@ static CGFloat const kVerticalSpace = 4.f;
 
 - (void)initNoDataStyle {
     _noDataIconView.image = [NSImage imageNamed:@"icon_trahs_end_empty"];
-    
     _noDataTitleTF.font = [NSFont systemFontOfSize:23.f];
     _noDataTitleTF.textColor = [NSColor whiteColor];
     _noDataTitleTF.backgroundColor = [NSColor clearColor];

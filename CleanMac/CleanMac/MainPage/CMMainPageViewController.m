@@ -8,15 +8,11 @@
 //  Copyright © 2019 Aka. All rights reserved.
 //  xcode 10.15 .
 //
-    
+
 
 #import "CMMainPageViewController.h"
-#import <Masonry.h>
-#import "CMMainPageClassTCellView.h"
-#import "CMFileManger.h"
-//#import <ReactiveCocoa/ReactiveCocoa.h>
-#import "CMFileManger.h"
 
+#import "CMMainPageClassTCellView.h"
 #import "CMIntelligenceView.h"
 #import "CMSystemTrashView.h"
 #import "CMPhotoTrashView.h"
@@ -37,8 +33,12 @@
 #import "XNRightTrashGradientView.h"
 #import "XNLeftTrashGradientView.h"
 #import "CMScanView.h"
+#import "CMScanContentView.h"
 
 #import "NSButton+CMAdd.h"
+
+#import "CMFileManger.h"
+#import "CMTrashManger.h"
 
 #define Create_right_view(cls) ([self createRightViewWithClass:[cls new]])
 
@@ -46,7 +46,7 @@ kConstCGFloat(kClassWidth, 150.f);
 kConstCGFloat(kBottomViewH, 30.f);
 kConstCGFloat(kScanViewH, 60.f);
 
-@interface CMMainPageViewController ()<NSTableViewDataSource, NSTableViewDelegate>
+@interface CMMainPageViewController ()<NSTableViewDataSource, NSTableViewDelegate, CMScanViewDelegate>
 
 @property (nonatomic, strong) XNRightTrashGradientView *rightTrashGradientView;
 @property (nonatomic, strong) XNLeftTrashGradientView *leftTrashGradientView;
@@ -88,7 +88,7 @@ kConstCGFloat(kScanViewH, 60.f);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    
     [self viewInit];
     [self dataInit];
     [self bindInit];
@@ -101,7 +101,7 @@ kConstCGFloat(kScanViewH, 60.f);
     _leftTrashGradientView = [XNLeftTrashGradientView new];
     [self.view addSubview:_leftTrashGradientView positioned:NSWindowBelow relativeTo:self.view];
     _rightTrashGradientView = [XNRightTrashGradientView new];
-     [self.view addSubview:_rightTrashGradientView positioned:NSWindowBelow relativeTo:self.view];
+    [self.view addSubview:_rightTrashGradientView positioned:NSWindowBelow relativeTo:self.view];
     [_leftTrashGradientView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self.view);
         make.width.mas_equalTo(kClassWidth);
@@ -160,14 +160,14 @@ kConstCGFloat(kScanViewH, 60.f);
 }
 
 - (void)dataInit {
-//    NSArray*volumes =[[CMFileManger single] mountedVolumefileURls]; // 加载的券的内容
-//    NSLog(@"volumes :%@",volumes);
+    //    NSArray*volumes =[[CMFileManger single] mountedVolumefileURls]; // 加载的券的内容
+    //    NSLog(@"volumes :%@",volumes);
     
     NSArray *contents = [[CMFileManger single]  fileUrls];
-//    NSLog(@"contents :%@",contents);
+    //    NSLog(@"contents :%@",contents);
     
     NSArray *trashFiles = [[CMFileManger single]  trashFiles];
-//    NSLog(@"trashFiles :%@",trashFiles);
+    //    NSLog(@"trashFiles :%@",trashFiles);
 }
 
 - (void)initScanView {
@@ -177,8 +177,9 @@ kConstCGFloat(kScanViewH, 60.f);
         make.bottom.equalTo(self.view);
         make.left.equalTo(self.view.mas_centerX).offset(-kScanViewH/2.f);
     }];
+    _scanView.scanViewDelegate = self;
     
-//     block/delegate for some action
+    //     block/delegate for some action
 }
 
 - (id)createRightViewWithClass:(NSView *)rightView {
@@ -194,16 +195,16 @@ kConstCGFloat(kScanViewH, 60.f);
 #pragma mark -- method
 
 - (void)bindInit {
-
+    
     __weak typeof (self) weakSelf = self;
     _trashView.actionScanBlock = ^(NSInteger scanState) {
-        [weakSelf dealWithState:scanState];
+        [weakSelf onTrashActionWithState:scanState];
     };
 }
 
-#pragma mark -- trash View deal with
+#pragma mark - trash View deal with
 
-- (void)dealWithState:(NSInteger)scanState {
+- (void)onTrashActionWithState:(CMScanState)scanState {
     if (scanState == CMScanStateScanBefore) {
         self.trashView.scanState = CMScanStateScaning;
         [self scaningTrashFolder];
@@ -291,7 +292,24 @@ kConstCGFloat(kScanViewH, 60.f);
     NSString *newKey = [self.datasources objectAtIndex:_curRow];
     [self.datasourceDic setValue:@(YES) forKey:newKey];
     [self.rightViews objectAtIndex:_curRow].hidden = NO;
+    
+}
 
+
+#pragma mark -- scan
+
+- (void)onScanCurSelectedCategory {
+    
+}
+
+@end
+
+@implementation CMMainPageViewController (ScanView)
+
+- (void)scanView:(id)view actionType:(CMScanViewType)actionType {
+    if (view == self.scanView && actionType == CMScanViewTypeScanTap) {
+        [self onScanCurSelectedCategory];
+    }
 }
 
 @end

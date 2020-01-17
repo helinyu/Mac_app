@@ -15,6 +15,7 @@
 @interface ViewController ()
 
 @property (weak) IBOutlet NSButton *changeColorBtn;
+@property (weak) IBOutlet NSButton *updateBtn;
 
 @end
 
@@ -29,6 +30,7 @@
     layer.backgroundColor = [NSColor grayColor].CGColor;
     [self.view setNeedsDisplay:YES];
     
+    NSLog(@"lt - updaate btn style :%lu",(unsigned long)self.updateBtn.bezelStyle);
     
 //    NSButton *btn = [NSButton buttonWithTitle:@"点击" target:self action:@selector(ontapAction)];
 //    [self.view addSubview:btn];
@@ -44,6 +46,7 @@
 //    [window makeKeyAndOrderFront:self];
 
 }
+
 //- (IBAction)onTapAction:(id)sender {
 //    NSLog(@"ontapAction");
 //    NSWindow *window = [[NSWindow alloc]initWithContentRect:NSMakeRect(200.f, 200.f, 600, 400) styleMask: NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable backing:NSBackingStoreBuffered defer:YES];
@@ -51,7 +54,6 @@
 //    [window center];
 //    [window makeKeyAndOrderFront:self];
 //}
-
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];

@@ -35,6 +35,13 @@ kConstCGFloat(kScanViewH, 60.f );
     _scanContentView.layer = CALayer.layer;
     _scanContentView.layer.backgroundColor = [NSColor clearColor].CGColor;
     
+    W_S;
+    _scanContentView.scanActionBlock = ^{
+        if ([weakSelf.scanViewDelegate respondsToSelector:@selector(scanView:actionType:)]) {
+            [weakSelf.scanViewDelegate scanView:weakSelf actionType:CMScanViewTypeScanTap];
+        }
+    };
+    
     [_descTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
         make.left.equalTo(self.scanContentView.mas_right).offset(5.f);
@@ -50,6 +57,8 @@ kConstCGFloat(kScanViewH, 60.f );
     _descTF.alignment = NSTextAlignmentLeft;
     [_descTF sizeToFit];
     _descTF.editable = NO;
+    
+    
 }
 
 @end

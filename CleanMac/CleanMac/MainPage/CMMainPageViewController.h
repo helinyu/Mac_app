@@ -18,4 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface CMMainPageViewController (ScanView)
+
+
+@end
+
 NS_ASSUME_NONNULL_END

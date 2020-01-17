@@ -27,6 +27,7 @@ DEPENDENCIES:
   - FMDB
   - Masonry (~> 1.1.0)
   - MMKV
+  - ReactiveCocoa
   - ReactiveCocoa (~> 2.5)
   - SDWebImage (~> 5.0.6)
   - Sparkle (~> 1.21.3)
@@ -56,6 +57,6 @@ SPEC CHECKSUMS:
   Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 47ed65240ad8209de23c346460b25263c9c9098a
+PODFILE CHECKSUM: 8ec897d3c39bc9c336649e5507e73a4e14d5a93b
 
 COCOAPODS: 1.8.4

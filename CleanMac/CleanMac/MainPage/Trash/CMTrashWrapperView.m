@@ -154,7 +154,6 @@ static CGFloat const kBottomHeight = 100.f;
 }
 
 - (void)configScaningPath:(NSString *)path {
-//     为什么只是刷新最后一个值呢？
     if (path.length >0) {
         self.scaningView.curFilePathTF.cell.title = path;
     }
@@ -164,7 +163,7 @@ static CGFloat const kBottomHeight = 100.f;
     if (size >0) {
             NSString *sizeText =[CMFileManger fileSizeTranslateToLargerUnitWithOriginSize:size];
         self.scanEndView.trashDataTF.cell.title = sizeText;
-        self.scanEndView.totalDataSizeTF.cell.title = sizeText;
+        self.scanEndView.totalDataSizeTF.cell.title = [NSString stringWithFormat:@"共发现%@",sizeText];;
         [self.scanEndView configDataIsEmpty:NO];
     }
     else {
@@ -176,8 +175,8 @@ static CGFloat const kBottomHeight = 100.f;
     self.scanEndView.trashDataTF.cell.title = sizeText;
     
 //     为什么增加文件显示不出来
-//    NSString *totalSizeText = [NSString stringWithFormat:@"共发现%@",sizeText];
-    self.scanEndView.totalDataSizeTF.cell.title = sizeText;
+    NSString *totalSizeText = [NSString stringWithFormat:@"共发现%@",sizeText];
+    self.scanEndView.totalDataSizeTF.cell.title = totalSizeText;
     [self.scanEndView.totalDataSizeTF sizeToFit];
 }
 

@@ -17,6 +17,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import <Masonry.h>
+#import <ReactiveCocoa.h>
 
 #import "NSView+CMAdd.h"
 #import "NSButton+CMAdd.h"
@@ -27,5 +28,13 @@
 
 typedef void(^VoidBlock)(void);
 typedef void(^IntegerBlock)(NSInteger flag);
+
+
+// pro define
+#define W_S __weak typeof(self) weakSelf = self;
+#define S_S __strong typeof(self) strongSelf = weakSelf;
+#define weakself(self)  __weak __typeof(self) weakSelf = self
+#define strongself(self)  __strong __typeof(self) self = weakSelf
+#define weakObj(obj)  __weak __typeof(obj) weak##obj = obj
 
 #endif /* Maccro_pch */

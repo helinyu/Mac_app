@@ -722,7 +722,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ih5-vE-GGa">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="label" size="13"/>
+                                            <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
                                 </toolbarItem>
@@ -732,7 +732,7 @@
                                         <rect key="frame" x="0.0" y="14" width="96" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="Zc8-0u-642">
-                                            <font key="font" metaFont="label" size="13"/>
+                                            <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </searchFieldCell>
@@ -810,7 +810,7 @@
                                 <rect key="frame" x="67" y="272" width="80" height="32"/>
                                 <buttonCell key="cell" type="push" title="第三个" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vi3-5n-bkj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="O6p-pw-CCl" kind="show" id="Cub-jE-l8N"/>
@@ -820,7 +820,7 @@
                                 <rect key="frame" x="73" y="225" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="alert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q4b-mA-zy2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="onAlertAction:" target="XfG-lQ-9wD" id="JZx-oO-46S"/>
@@ -830,7 +830,7 @@
                                 <rect key="frame" x="73" y="180" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="主页" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qhp-M6-9Lt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="Z82-SM-CpH" kind="show" id="LRI-k2-Tfd"/>
@@ -840,17 +840,17 @@
                                 <rect key="frame" x="73" y="333" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="点击" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElT-wj-o8r">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="oS6-Na-5JH" kind="show" id="4is-bT-jUm"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="80b-yQ-V3H">
-                                <rect key="frame" x="175" y="333" width="94" height="32"/>
-                                <buttonCell key="cell" type="push" title="更新程序" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pfc-ek-4ZF">
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80b-yQ-V3H">
+                                <rect key="frame" x="180" y="340" width="82" height="21"/>
+                                <buttonCell key="cell" type="square" title="更新程序" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="pfc-ek-4ZF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                     <connections>
                                         <action selector="onUpdateAction:" target="XfG-lQ-9wD" id="pk0-oC-cpb"/>
                                     </connections>
@@ -861,7 +861,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="change color" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZzH-bg-NRf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="onColorWellAction:" target="XfG-lQ-9wD" id="5a9-BF-hpO"/>
@@ -881,7 +881,7 @@
                                     <constraint firstAttribute="width" constant="96" id="yg3-hC-pt6"/>
                                 </constraints>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="HO6-jp-O4j">
-                                    <font key="font" metaFont="label" size="13"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </searchFieldCell>
@@ -908,6 +908,7 @@
                     </view>
                     <connections>
                         <outlet property="changeColorBtn" destination="OWz-BC-fg7" id="odX-Ug-KMD"/>
+                        <outlet property="updateBtn" destination="80b-yQ-V3H" id="yQq-JL-YNq"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -984,7 +985,7 @@
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
                                                     <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="xGE-6q-LIg">
-                                                        <font key="font" metaFont="label" size="13"/>
+                                                        <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>

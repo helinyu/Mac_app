@@ -11,7 +11,7 @@
 
 @interface CMScanContentView ()
 
-@property (nonatomic, strong) NSButton *scanBtn;// 在最顶部
+@property (nonatomic, strong) NSButton *scanBtn;// 在最上层
 
 @property (nonatomic, strong) NSView *outsideCircleView;
 
@@ -40,7 +40,6 @@ kConstCGFloat(kScanContentH, 80.f);
     }];
 //     应该在中间画图一个贝塞尔曲线的圆
     
-    
     [_scanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
         make.height.width.mas_equalTo(kScanContentH);
@@ -50,11 +49,10 @@ kConstCGFloat(kScanContentH, 80.f);
     _scanBtn.layer.cornerRadius = kScanContentH/2.f;
     _scanBtn.layer.masksToBounds = YES;
     [_scanBtn cleanBgColor];
-    
 }
 
 - (void)onScanAction:(NSButton *)sender {
-    
+    !_scanActionBlock? :_scanActionBlock();
 }
 
 @end
