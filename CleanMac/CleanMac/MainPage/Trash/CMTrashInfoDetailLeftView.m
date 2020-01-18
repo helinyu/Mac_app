@@ -63,6 +63,7 @@ kConstString(kAllCancel, @"取消全选");
     scrollView.backgroundColor = [NSColor orangeColor];
     scrollView.hasVerticalRuler = YES;
     scrollView.alphaValue = 1.f;
+    scrollView.drawsBackground = NO;
     [self addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self);
@@ -140,7 +141,7 @@ kConstString(kAllCancel, @"取消全选");
         cellView.identifier = NSStringFromClass([CMTrashInfoDetailCellView class]);
     }
     CMFileInfoModel *fileItem = [self.datasources objectAtIndex:row];
-    [cellView configName:fileItem.name weight:fileItem.weight selectState:fileItem.isSelected];
+    [cellView configName:fileItem.path weight:fileItem.weight selectState:fileItem.isSelected];
     cellView.delegate = self;
     return cellView;
 }

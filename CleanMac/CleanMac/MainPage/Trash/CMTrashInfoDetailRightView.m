@@ -73,6 +73,7 @@ kConstCGFloat(kTableViewTopMargin, 100.f);
     NSScrollView *scrollView = [NSScrollView new];
     scrollView.hasVerticalRuler = YES;
     [self addSubview:scrollView];
+    scrollView.drawsBackground = NO;
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self);
         make.top.equalTo(self).offset(kTableViewTopMargin);
@@ -81,14 +82,11 @@ kConstCGFloat(kTableViewTopMargin, 100.f);
     _tableView = [[NSTableView alloc] init];
     NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:@"colum.left.view"];
     column.resizingMask =NSTableColumnUserResizingMask;
-    //    column.minWidth = 100.f;
-    //    column.maxWidth = CGFLOAT_MAX;
-    //    column.width = CGFLOAT_MAX;
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [_tableView addTableColumn:column];
     _tableView.layer.backgroundColor = [NSColor clearColor].CGColor;
-    _tableView.backgroundColor = [NSColor redColor];
+    _tableView.backgroundColor = [NSColor clearColor];
     _tableView.layer.borderColor = [NSColor clearColor].CGColor;
     _tableView.layer.borderWidth = CGFLOAT_MIN;
     _tableView.headerView = [[NSTableHeaderView alloc] initWithFrame:NSMakeRect(0.f, 0.f, CGFLOAT_MIN, CGFLOAT_MIN)];
@@ -124,8 +122,8 @@ kConstCGFloat(kTableViewTopMargin, 100.f);
         cellView.identifier = NSStringFromClass([CMTrashInfoDetailCellView class]);
     }
     CMFileInfoModel *fileItem = [self.datasources objectAtIndex:row];
-    NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:fileItem.name];
-    NSString *fileName = [fileItem.name stringByReplacingOccurrencesOfString:fileItem.prePath withString:@""];
+    NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:fileItem.path];
+    NSString *fileName = [fileItem.path stringByReplacingOccurrencesOfString:fileItem.prePath withString:@""];
     [cellView configIconImg:icon fileName:fileName weight:fileItem.weight selectState:fileItem.isSelected];
     cellView.delegate = self;
     return cellView;
@@ -166,6 +164,5 @@ kConstCGFloat(kTableViewTopMargin, 100.f);
     
     [self.tableView reloadData];
 }
-
 
 @end

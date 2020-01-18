@@ -11,7 +11,6 @@
 
 
 #import "CMMainPageViewController.h"
-
 #import "CMMainPageClassTCellView.h"
 #import "CMIntelligenceView.h"
 #import "CMSystemTrashView.h"
@@ -54,7 +53,7 @@ kConstCGFloat(kScanViewH, 60.f);
 
 @property (nonatomic, strong) CMScanView *scanView;
 
-
+@property (weak) IBOutlet NSScrollView *scrollView;
 @property (weak) IBOutlet NSTableView *classTableView;
 @property (nonatomic, strong) NSArray<NSString *> *datasources;
 @property (nonatomic, strong) NSDictionary<NSString *, NSNumber *> *datasourceDic;
@@ -129,6 +128,8 @@ kConstCGFloat(kScanViewH, 60.f);
     } else {
         // Fallback on earlier versions
     }
+    
+    self.scrollView.backgroundColor = [NSColor redColor];
     
     self.classTableView.backgroundColor = [NSColor clearColor];
     self.view.layer.backgroundColor = [NSColor clearColor].CGColor;
@@ -244,7 +245,7 @@ kConstCGFloat(kScanViewH, 60.f);
             if (files.count >0) {
                 #warning  -- also need to fix back
                 CMFileInfoModel *directoryItem = [CMFileInfoModel new];
-                directoryItem.name = @"Macintosh HD 上的废纸篓";
+                directoryItem.path = @"Macintosh HD 上的废纸篓";
                 directoryItem.weight = totalSize;
                 [directoryItem.sonFiles removeAllObjects];
                 directoryItem.prePath = [CMFileManger trashPath];
@@ -258,7 +259,7 @@ kConstCGFloat(kScanViewH, 60.f);
         }
         else {
             CMFileInfoModel *fileItem = [CMFileInfoModel new];
-            fileItem.name = path;
+            fileItem.path = path;
             fileItem.prePath = [CMFileManger trashPath];
             fileItem.weight = size;
             totalSize += size;

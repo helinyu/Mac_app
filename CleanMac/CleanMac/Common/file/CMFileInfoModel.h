@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat weight; // 文件大小
 
 @property (nonatomic, copy) NSString *prePath; // 前面的路径
-@property (nonatomic, copy) NSString *name; // 当前的文件以及目录名字
+@property (nonatomic, copy) NSString *path; // 当前的文件以及目录名字
 
 @property (nonatomic, assign) NSInteger state; // reverse state
 

@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NSButton *saveImgBtn;
 
 
+
 @end
 
 @implementation CMSecondViewController

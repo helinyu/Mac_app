@@ -880,13 +880,16 @@
                             </button>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80b-yQ-V3H">
                                 <rect key="frame" x="180" y="340" width="82" height="21"/>
-                                <buttonCell key="cell" type="square" title="更新程序" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="pfc-ek-4ZF">
+                                <buttonCell key="cell" type="square" title="第三个" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="pfc-ek-4ZF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <connections>
                                         <action selector="onUpdateAction:" target="XfG-lQ-9wD" id="pk0-oC-cpb"/>
                                     </connections>
                                 </buttonCell>
+                                <connections>
+                                    <segue destination="O6p-pw-CCl" kind="show" id="1PK-yj-3X5"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWz-BC-fg7">
                                 <rect key="frame" x="157" y="232" width="119" height="32"/>
@@ -966,7 +969,7 @@
                 </windowController>
                 <customObject id="k89-dG-SIV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-195" y="1287"/>
+            <point key="canvasLocation" x="550" y="1290"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="hYi-oj-Vp1">
@@ -1064,6 +1067,7 @@
                     </view>
                     <connections>
                         <outlet property="classTableView" destination="ChR-Ep-gnL" id="Fth-gd-gph"/>
+                        <outlet property="scrollView" destination="bo6-wK-cuU" id="Itk-0W-Nrf"/>
                     </connections>
                 </viewController>
                 <customObject id="CTa-BJ-39t" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1078,10 +1082,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfn-Tp-8dw">
-                                <rect key="frame" x="56" y="183" width="429" height="153"/>
+                            <scrollView canDrawConcurrently="YES" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" horizontalScrollElasticity="none" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="zfn-Tp-8dw">
+                                <rect key="frame" x="53" y="191" width="429" height="153"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="OvQ-aa-g2Z">
+                                <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="OvQ-aa-g2Z">
                                     <rect key="frame" x="0.0" y="0.0" width="429" height="153"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1089,12 +1093,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="429" height="153"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="systemIndigoColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="429" height="153"/>
                                             <size key="maxSize" width="429" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
+                                    <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="kuf-au-Zqc">
                                     <rect key="frame" x="-100" y="-100" width="240" height="16"/>
@@ -1109,11 +1114,12 @@
                     </view>
                     <connections>
                         <outlet property="textView" destination="Oy6-WB-7IA" id="Sx8-Oj-31w"/>
+                        <outlet property="textViewScrollView" destination="zfn-Tp-8dw" id="Swn-YN-Eco"/>
                     </connections>
                 </viewController>
                 <customObject id="XJH-Ra-fut" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616" y="808"/>
+            <point key="canvasLocation" x="1220" y="1182"/>
         </scene>
     </scenes>
     <resources>
