@@ -6,6 +6,7 @@
 [详情技术连接](https://helinyu.github.io/mac/)
 
 微信号： bruscar  
+邮箱： 2319979647@qq.com
 欢迎各位大佬来交流
 
 基本的界面架构：
