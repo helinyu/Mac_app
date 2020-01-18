@@ -79,6 +79,9 @@
     }];
     [_descTF configLabelNotBorderTitle:@"描述" systemFontSize:15.f bgColor:[NSColor clearColor] textColor:[NSColor whiteColor]];
     _descTF.maximumNumberOfLines = 1;
+    
+    self.wantsLayer = YES;
+    self.layer.backgroundColor = [NSColor clearColor].CGColor;
 }
 
 - (void)configName:(NSString *)name {

@@ -130,8 +130,8 @@ kConstCGFloat(kScanViewH, 60.f);
         // Fallback on earlier versions
     }
     
-    self.classTableView.backgroundColor = [NSColor redColor];
-    self.view.layer.backgroundColor = [NSColor yellowColor].CGColor;
+    self.classTableView.backgroundColor = [NSColor clearColor];
+    self.view.layer.backgroundColor = [NSColor clearColor].CGColor;
     
     _intelligenceView = Create_right_view(CMIntelligenceView);
     _systemTrashView = Create_right_view(CMSystemTrashView);

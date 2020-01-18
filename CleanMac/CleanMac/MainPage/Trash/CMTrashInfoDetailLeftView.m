@@ -57,7 +57,12 @@ kConstString(kAllCancel, @"取消全选");
     
 //     tableView
     NSScrollView *scrollView = [NSScrollView new];
+    scrollView.borderType = NSNoBorder;
+    scrollView.wantsLayer = YES;
+    scrollView.layer.backgroundColor = [NSColor blueColor].CGColor;
+    scrollView.backgroundColor = [NSColor orangeColor];
     scrollView.hasVerticalRuler = YES;
+    scrollView.alphaValue = 1.f;
     [self addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self);
@@ -67,14 +72,11 @@ kConstString(kAllCancel, @"取消全选");
     _tableView = [[NSTableView alloc] init];
     NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:@"colum.left.view"];
     column.resizingMask =NSTableColumnUserResizingMask;
-//    column.minWidth = 100.f;
-//    column.maxWidth = CGFLOAT_MAX;
-//    column.width = CGFLOAT_MAX;
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [_tableView addTableColumn:column];
     _tableView.layer.backgroundColor = [NSColor clearColor].CGColor;
-    _tableView.backgroundColor = [NSColor redColor];
+    _tableView.backgroundColor = [NSColor clearColor];
     _tableView.layer.borderColor = [NSColor clearColor].CGColor;
     _tableView.layer.borderWidth = CGFLOAT_MIN;
     _tableView.headerView = [[NSTableHeaderView alloc] initWithFrame:NSMakeRect(0.f, 0.f, CGFLOAT_MIN, CGFLOAT_MIN)];
@@ -84,6 +86,8 @@ kConstString(kAllCancel, @"取消全选");
         // Fallback on earlier versions
     }
     scrollView.contentView.documentView = _tableView;
+//    scrollView.contentView.backgroundColor = [NSColor clearColor];
+    
     W_S;
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.tableView.superview);

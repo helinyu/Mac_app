@@ -33,7 +33,7 @@ kConstCGFloat(leftLength, 5.f);
     [super baseInit];
     
     self.wantsLayer = YES;
-    self.layer.backgroundColor = [NSColor greenColor].CGColor;
+    self.layer.backgroundColor = [NSColor clearColor].CGColor;
     
     _leftView = [CMTrashInfoDetailLeftView new];
     _rightView = [CMTrashInfoDetailRightView new];
@@ -45,7 +45,7 @@ kConstCGFloat(leftLength, 5.f);
         make.right.equalTo(self).multipliedBy(ratio);
     }];
     _leftView.wantsLayer = YES;
-    _leftView.layer.backgroundColor = [NSColor cyanColor].CGColor;
+    _leftView.layer.backgroundColor = [NSColor clearColor].CGColor;
     
     [_rightView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.top.equalTo(self);
@@ -53,7 +53,7 @@ kConstCGFloat(leftLength, 5.f);
         make.bottom.lessThanOrEqualTo(self);
     }];
     _rightView.wantsLayer = YES;
-    _rightView.layer.backgroundColor = [NSColor purpleColor].CGColor;
+    _rightView.layer.backgroundColor = [NSColor clearColor].CGColor;
     
     _leftView.files = self.files;
     _rightView.files = self.files;
