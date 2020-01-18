@@ -11,6 +11,16 @@
 
 @implementation CMFileInfoModel
 
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.sonFiles = [NSMutableArray new];
+    }
+    return self;
+}
+
 @end
 
 @implementation CMFileInfoModel  (Extra)

@@ -67,7 +67,7 @@
     [_categoryImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.choiceBtn.mas_right).offset(5.f);
         make.centerY.equalTo(self);
-        make.width.height.mas_equalTo(60.f);
+        make.width.height.mas_equalTo(50.f);
     }];
     _categoryImgView.image = [NSImage imageNamed:@"icon_trash_water_cut_60"];
         
@@ -82,6 +82,7 @@
 }
 
 - (void)configName:(NSString *)name {
+    NSLog(@"lt - file name :%@",name);
     _descTF.cell.title = name;
 }
 
@@ -104,6 +105,17 @@
 }
 
 - (void)configName:(NSString *)name weight:(long long)weight selectState:(BOOL)isSelected{
+    [self configName:name];
+    [self configWeight:weight];
+    [self configChoiceBtnState:isSelected];
+}
+
+- (void)configIconImg:(NSImage *)iconImg {
+    self.categoryImgView.image = iconImg;
+}
+
+- (void)configIconImg:(NSImage *)icon fileName:(NSString *)name weight:(long long)weight selectState:(BOOL)isSelected {
+    [self configIconImg:icon];
     [self configName:name];
     [self configWeight:weight];
     [self configChoiceBtnState:isSelected];

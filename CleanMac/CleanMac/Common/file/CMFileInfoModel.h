@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger state; // reverse state
 
+@property (nonatomic, strong) NSMutableArray<CMFileInfoModel *> *sonFiles;
+
 @end
 
 @interface CMFileInfoModel  (Extra)

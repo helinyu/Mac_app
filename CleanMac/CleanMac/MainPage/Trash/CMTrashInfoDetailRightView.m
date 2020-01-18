@@ -8,11 +8,12 @@
 
 #import "CMTrashInfoDetailRightView.h"
 #import "CMTrashInfoDetailCellView.h"
+#import "CMFileInfoModel.h"
 
-@interface CMTrashInfoDetailRightView ()<NSTableViewDataSource, NSTableViewDelegate>
+@interface CMTrashInfoDetailRightView ()<NSTableViewDataSource, NSTableViewDelegate, CMViewProtocol>
 
 @property (nonatomic, strong) NSTableView *tableView;
-@property (nonatomic, strong) NSArray *datasources;
+@property (nonatomic, strong) NSMutableArray *datasources;
 
 @property (nonatomic, strong) NSTextField *titleTF;
 @property (nonatomic, strong) NSTextField *descTF;
@@ -21,10 +22,14 @@
 
 @end
 
+kConstCGFloat(kTableViewTopMargin, 100.f);
+
 @implementation CMTrashInfoDetailRightView
 
 - (void)baseInit {
     [super baseInit];
+    
+    _datasources = [NSMutableArray new];
     
     _titleTF = [NSTextField new];
     _descTF = [NSTextField new];
@@ -63,23 +68,41 @@
     [_rangeBtn cleanBezelView];
     [_rangeBtn sizeToFit];
     
-    _tableView = [[NSTableView alloc] init];
-    [self addSubview:_tableView];
-    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.right.equalTo(self);
-        make.top.equalTo(self).offset(110.f);
+    
+    //     tableView
+    NSScrollView *scrollView = [NSScrollView new];
+    scrollView.hasVerticalRuler = YES;
+    [self addSubview:scrollView];
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self);
+        make.top.equalTo(self).offset(kTableViewTopMargin);
     }];
+    
+    _tableView = [[NSTableView alloc] init];
+    NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:@"colum.left.view"];
+    column.resizingMask =NSTableColumnUserResizingMask;
+    //    column.minWidth = 100.f;
+    //    column.maxWidth = CGFLOAT_MAX;
+    //    column.width = CGFLOAT_MAX;
     _tableView.dataSource = self;
     _tableView.delegate = self;
+    [_tableView addTableColumn:column];
     _tableView.layer.backgroundColor = [NSColor clearColor].CGColor;
     _tableView.backgroundColor = [NSColor redColor];
     _tableView.layer.borderColor = [NSColor clearColor].CGColor;
     _tableView.layer.borderWidth = CGFLOAT_MIN;
+    _tableView.headerView = [[NSTableHeaderView alloc] initWithFrame:NSMakeRect(0.f, 0.f, CGFLOAT_MIN, CGFLOAT_MIN)];
     if (@available(macOS 10.12, *)) {
         _tableView.enclosingScrollView.borderType = NSTabViewBorderTypeNone;
     } else {
         // Fallback on earlier versions
     }
+    scrollView.contentView.documentView = _tableView;
+    W_S;
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(weakSelf.tableView.superview);
+    }];
+    [_tableView reloadData];
 }
 
 - (void)onRangeAction:(NSButton *)sender {
@@ -92,25 +115,42 @@
     return self.datasources.count;
 }
 
-- (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-    CMTrashInfoDetailCellView *cellView = [tableView makeViewWithIdentifier:NSStringFromClass([CMTrashInfoDetailCellView class]) owner:self];
-    return cellView;
-}
-
+#warning  -- 第一个row的cell为什么增加了两个
 -(NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    tableColumn.width = self.bounds.size.width;
     CMTrashInfoDetailCellView *cellView = [tableView makeViewWithIdentifier:NSStringFromClass([CMTrashInfoDetailCellView class]) owner:self];
-    //    cellView.titleTF.cell.title = self.datasources[row];
+    if (cellView == nil) {
+        cellView = [[CMTrashInfoDetailCellView alloc] initWithFrame:NSMakeRect(0.f, 0.f, tableColumn.width, 80.f)];
+        cellView.identifier = NSStringFromClass([CMTrashInfoDetailCellView class]);
+    }
+    CMFileInfoModel *fileItem = [self.datasources objectAtIndex:row];
+    NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:fileItem.name];
+    NSString *fileName = [fileItem.name stringByReplacingOccurrencesOfString:fileItem.prePath withString:@""];
+    [cellView configIconImg:icon fileName:fileName weight:fileItem.weight selectState:fileItem.isSelected];
+    cellView.delegate = self;
     return cellView;
 }
-
-#warning -- 如何设置左边的列表的大小以及各种距离
 
 -(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 80;
+    return 60;
+}
+
+- (BOOL)tableView:(NSTableView *)tableView shouldShowCellExpansionForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row{
+    return YES;
+}
+//设置是否可以进行编辑
+- (BOOL)tableView:(NSTableView *)tableView shouldEditTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row{
+    return YES;
+}
+
+//设置鼠标悬停在cell上显示的提示文本
+- (NSString *)tableView:(NSTableView *)tableView toolTipForCell:(NSCell *)cell rect:(NSRectPointer)rect tableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row mouseLocation:(NSPoint)mouseLocation{
+    return @"tip";
 }
 
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
     //    [self updateCurRowAndView:row];
+    NSLog(@"lt - shouldSelectRow: %ld",(long)row);
     return YES;
 }
 
@@ -121,7 +161,8 @@
 - (void)setFiles:(NSArray *)files {
     _files = files;
     
-//    [self.datasources addObjectsFromArray:files];
+    [self.datasources removeAllObjects];
+    [self.datasources addObjectsFromArray:files];
     
     [self.tableView reloadData];
 }

@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)configWeight:(long long)weight;
 - (void)configName:(NSString *)name weight:(long long)weight;
 - (void)configName:(NSString *)name weight:(long long)weight selectState:(BOOL)isSelected;
+- (void)configIconImg:(NSImage *)icon fileName:(NSString *)name weight:(long long)weight selectState:(BOOL)isSelected;
 
 @property (nonatomic, weak) id<CMViewProtocol> delegate;
 

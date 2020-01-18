@@ -28,9 +28,6 @@
 
 @end
 
-// default selected first
-kConstInterger(kDefaultSelectedIndex, 0);
-
 kConstString(kAllSelected, @"全选");
 kConstString(kAllCancel, @"取消全选");
 
@@ -96,16 +93,6 @@ kConstString(kAllCancel, @"取消全选");
 
 - (void)setFiles:(NSArray *)files {
     _files = files;
-    
-    for (NSInteger index =0; index< files.count; index++) {
-        CMFileInfoModel *fileItem = [files objectAtIndex:index];
-        if (index == kDefaultSelectedIndex) {
-            fileItem.isSelected = YES;
-        }
-        else {
-            fileItem.isSelected = NO;
-        }
-    }
     
     [self.datasources removeAllObjects];
     [self.datasources addObjectsFromArray:files];

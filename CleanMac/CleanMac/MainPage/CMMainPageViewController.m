@@ -246,6 +246,9 @@ kConstCGFloat(kScanViewH, 60.f);
                 CMFileInfoModel *directoryItem = [CMFileInfoModel new];
                 directoryItem.name = @"Macintosh HD 上的废纸篓";
                 directoryItem.weight = totalSize;
+                [directoryItem.sonFiles removeAllObjects];
+                directoryItem.prePath = [CMFileManger trashPath];
+                [directoryItem.sonFiles addObjectsFromArray:files.copy];
                 [self.trashFiles addObject:directoryItem];
             }
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -256,6 +259,7 @@ kConstCGFloat(kScanViewH, 60.f);
         else {
             CMFileInfoModel *fileItem = [CMFileInfoModel new];
             fileItem.name = path;
+            fileItem.prePath = [CMFileManger trashPath];
             fileItem.weight = size;
             totalSize += size;
 #warning  -- need to fix back directon which is NO is temp

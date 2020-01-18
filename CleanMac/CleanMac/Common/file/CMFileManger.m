@@ -192,6 +192,7 @@ static CGFloat const kMagnitude = 1024.f;
         return ;
     }
     
+    
     NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
     NSString* fileName;
     kInteger folderSize = 0;

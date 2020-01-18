@@ -9,13 +9,20 @@
 #import "CMTrashInfoDetailView.h"
 #import "CMTrashInfoDetailLeftView.h"
 #import "CMTrashInfoDetailRightView.h"
+#import "CMFileInfoModel.h"
 
 @interface CMTrashInfoDetailView ()
 
 @property (nonatomic, strong) CMTrashInfoDetailLeftView *leftView;
 @property (nonatomic, strong) CMTrashInfoDetailRightView *rightView;
 
+@property (nonatomic, assign) NSInteger selectedIndex;
+
 @end
+
+
+// default selected first
+kConstInterger(kDefaultSelectedIndex, 0);
 
 kConstCGFloat(totalLength, 11.f);
 kConstCGFloat(leftLength, 5.f);
@@ -55,9 +62,30 @@ kConstCGFloat(leftLength, 5.f);
 - (void)setFiles:(NSArray *)files {
     
     _files = files;
+    
+    _selectedIndex = kDefaultSelectedIndex;
+    for (NSInteger index =0; index< files.count; index++) {
+          CMFileInfoModel *fileItem = [files objectAtIndex:index];
+          if (index == kDefaultSelectedIndex) {
+              fileItem.isSelected = YES;
+          }
+          else {
+              fileItem.isSelected = NO;
+          }
+      }
 
     _leftView.files = files;
-    _rightView.files = files;
+   
+    NSArray<CMFileInfoModel *> *rightFiles ;
+    if (_selectedIndex < files.count) {
+        CMFileInfoModel *curFileItem = [files objectAtIndex:_selectedIndex];
+        rightFiles = curFileItem.sonFiles;
+        for (CMFileInfoModel *fileItem in rightFiles) {
+            fileItem.isSelected = YES;
+        }
+    }
+    
+    _rightView.files = rightFiles;
     
 }
 
