@@ -1,0 +1,6 @@
+framework module SFBPopovers {
+  umbrella header "SFBPopovers-umbrella.h"
+
+  export *
+  module * { export * }
+}
