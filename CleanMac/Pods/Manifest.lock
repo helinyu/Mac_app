@@ -1,4 +1,17 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
   - CocoaLumberjack (3.5.3):
     - CocoaLumberjack/Core (= 3.5.3)
   - CocoaLumberjack/Core (3.5.3)
@@ -22,12 +35,12 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - AFNetworking
   - CocoaLumberjack (~> 3.5.3)
   - DevMateKit (~> 1.9.3)
   - FMDB
   - Masonry (~> 1.1.0)
   - MMKV
-  - ReactiveCocoa
   - ReactiveCocoa (~> 2.5)
   - SDWebImage (~> 5.0.6)
   - Sparkle (~> 1.21.3)
@@ -43,10 +56,12 @@ SPEC REPOS:
     - Sparkle
     - YYModel
   trunk:
+    - AFNetworking
     - FMDB
     - MMKV
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   DevMateKit: a7a46f498d4c549125109d826e858a49d508cbb8
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -57,6 +72,6 @@ SPEC CHECKSUMS:
   Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 8ec897d3c39bc9c336649e5507e73a4e14d5a93b
+PODFILE CHECKSUM: b1ac89740e08563b3fa60b632df4872a40a4f11a
 
 COCOAPODS: 1.8.4

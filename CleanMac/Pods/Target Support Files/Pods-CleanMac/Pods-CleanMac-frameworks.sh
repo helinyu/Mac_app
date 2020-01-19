@@ -161,6 +161,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${PODS_ROOT}/DevMateKit/DevMateKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
@@ -172,6 +173,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${PODS_ROOT}/DevMateKit/DevMateKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"

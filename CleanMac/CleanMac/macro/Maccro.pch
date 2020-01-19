@@ -16,8 +16,11 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import <Masonry.h>
+
 #import <ReactiveCocoa.h>
+#import <Masonry.h>
+
+#import "KColor.h"
 
 #import "NSView+CMAdd.h"
 #import "NSButton+CMAdd.h"
@@ -41,5 +44,7 @@ typedef void(^IntegerBlock)(NSInteger flag);
 #define weakself(self)  __weak __typeof(self) weakSelf = self
 #define strongself(self)  __strong __typeof(self) self = weakSelf
 #define weakObj(obj)  __weak __typeof(obj) weak##obj = obj
+
+//
 
 #endif /* Maccro_pch */

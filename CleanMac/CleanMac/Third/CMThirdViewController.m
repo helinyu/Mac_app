@@ -11,13 +11,14 @@
 
 
 #import "CMThirdViewController.h"
+#import <AppKit/NSDiffableDataSource.h> // 可能这个方法可以进行定义
 
-@interface CMThirdViewController ()
+@interface CMThirdViewController ()<NSComboBoxDataSource, NSComboBoxDelegate>
 
-@property (nonatomic, strong) NSScrollView *scrollView;
+@property (nonatomic, strong) NSComboBox *comboBox;
+//@property (nonatomic, strong) NSComboBoxCell *comboBoxCell; // cell不是这么用的， 是对view的内容绘制以及填充进行使用的
 
-@property (unsafe_unretained) IBOutlet NSTextView *textView;
-@property (weak) IBOutlet NSScrollView *textViewScrollView;
+@property (nonatomic, strong) NSArray *datas;
 
 @end
 
@@ -26,49 +27,124 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.view.wantsLayer = YES;
-    self.view.layer.backgroundColor = [NSColor redColor].CGColor;
+    self.view.layer.backgroundColor = [NSColor grayColor].CGColor;
     
-    self.textView.backgroundColor = [NSColor clearColor];
+    [self test1];
     
-    _scrollView = [[NSScrollView alloc] initWithFrame:CGRectMake(50.f, 50.f, 200.f, 200.f)];
-    [self.view addSubview:_scrollView];
-    _scrollView.backgroundColor = [NSColor clearColor];
-    
-    NSArray *subViews = _scrollView.subviews;
-    NSLog(@"lt - subviews count :%lu",(unsigned long)subViews.count);
-    for (NSView *subView in subViews) {
-        NSLog(@"lt - cur subvie :%@",subView);
-        if ([subView isKindOfClass:[NSClipView class]]) {
-            NSClipView *clipView = (NSClipView *)subView;
-            clipView.backgroundColor = [NSColor clearColor];
-        }
-    }
-    
-    
-    self.scrollView.drawsBackground = NO; // 设置为no， scrollView是透明的， YES， scrollView设置颜色就有效
-    self.textViewScrollView.drawsBackground = YES;
-    
-    NSColor *scrollViewColor = self.scrollView.backgroundColor;
-    NSColor *textColor = self.textViewScrollView.backgroundColor;
-    
-    NSLog(@"lt - scroll color :%@ , text scroll color :%@",scrollViewColor, textColor);
-    
-    self.scrollView.backgroundColor = [NSColor greenColor];
-    self.textViewScrollView.backgroundColor = [NSColor greenColor];
-    
-    NSColor *scrollViewColor1 = self.scrollView.backgroundColor;
-    NSColor *textColor1 = self.textViewScrollView.backgroundColor;
-    NSLog(@"lt - scroll color :%@ , text scroll color :%@",scrollViewColor1, textColor1);
-    
-//    self.scrollView.backgroundColor = [NSColor clearColor];
-//      self.textViewScrollView.backgroundColor = [NSColor clearColor];
-//
-//      NSColor *scrollViewColor2 = self.scrollView.backgroundColor;
-//      NSColor *textColor2 = self.textViewScrollView.backgroundColor;
-//      NSLog(@"lt - scroll color :%@ , text scroll color :%@",scrollViewColor2, textColor2);
+//     看来是需要进行处理这个内容了， 这个内容看看要怎么样子处理比较好；写一个类似combo box的控件
+//     使用button + tableView 实现； 应该是没有问题的
 }
 
+// 使用数据源和代理 (为什么只有一个呢? 可不可以有两个的选择？)
+- (void)test1 {
+    NSComboBox *comboBox = [[NSComboBox alloc] initWithFrame:NSMakeRect(50.f, 50.f, 100.f, 25.f)];
+    comboBox.backgroundColor = [NSColor yellowColor];
+    comboBox.numberOfVisibleItems = 2;
+    self.datas = @[
+        @"羊肉泡馍",
+        @"油泼扯面",
+        @"板栗烧鸡",
+        @"豆腐花",
+    ];
+    comboBox.usesDataSource = YES;
+    comboBox.dataSource = self;
+    comboBox.delegate = self;
+    [self.view addSubview:comboBox];
+}
+
+- (void)test0 {
+    NSComboBox *comboBox = [[NSComboBox alloc] init];
+    comboBox.hasVerticalScroller = YES;
+    comboBox.intercellSpacing = CGSizeMake(10.f, 2.f);
+    comboBox.itemHeight = 20.f;
+    comboBox.numberOfVisibleItems = 4;
+    comboBox.buttonBordered = NO;
+    
+    //     below which undefined //不知道这个干嘛的 标识改变的内容 , 好像也不是这样使用的
+    //    [comboBox noteNumberOfItemsChanged];
+    
+    [self.view addSubview:comboBox];
+    self.comboBox = comboBox;
+    self.comboBox.placeholderString = @"请选择你的内容";
+    [self.comboBox mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(10.f);
+        make.width.mas_equalTo(100.f);
+        make.height.mas_equalTo(25.f);
+        make.top.equalTo(self.view).offset(30.f);
+    }];
+    self.comboBox.backgroundColor = [NSColor greenColor];
+    self.comboBox.textColor = [NSColor redColor];
+    
+    self.comboBox.dataSource = self;
+    self.comboBox.usesDataSource = YES;
+    self.comboBox.completes = YES;
+    [self.comboBox reloadData];
+    
+    //    comboBox.usesDataSource = NO;// 表示不用代理的方式，这样直接在前面添加的方式
+    //    上面这个属性决定了是走代理的数据源还是直接走这个数据源
+    [self.comboBox addItemWithObjectValue:@"你好呀0"];
+    [self.comboBox addItemWithObjectValue:@"你好呀1"];
+    [self.comboBox addItemWithObjectValue:@"你好呀2"];
+    [self.comboBox addItemWithObjectValue:@"你好呀3"];
+    [self.comboBox addItemWithObjectValue:@"你好呀4"];
+    
+    // 这个时候上面的饿插入的方法就不会起到了作用
+    
+    //    comboBox.delegate = self;
+    
+    [self.comboBox setAction:@selector(onSelectedChanged:)];
+}
+
+- (void)onSelectedChanged:(NSComboBox *)sender {
+    NSComboBox *comboBox = sender;
+        
+        NSInteger selectedIndex = comboBox.indexOfSelectedItem;
+        
+        NSString *selectedContent = comboBox.stringValue;
+        
+        NSLog(@"selectedContent %@ at index %ld",selectedContent,selectedIndex);
+}
+
+#pragma mark -- combox delegate
+
+//FIXME: 看看有关的饿选择问题
+// 我们在点击选择的时候会调用到
+- (void)comboBoxWillPopUp:(NSNotification *)notification {
+    NSLog(@"lt - comboBoxWillPopUp");
+}
+
+- (void)comboBoxWillDismiss:(NSNotification *)notification {
+    NSLog(@"lt - comboBoxWillDismiss");
+}
+
+- (void)comboBoxSelectionDidChange:(NSNotification *)notification {
+    NSLog(@"lt - comboBoxSelectionDidChange");
+}
+
+- (void)comboBoxSelectionIsChanging:(NSNotification *)notification {
+    NSLog(@"lt - comboBoxSelectionIsChanging");
+}
+
+#pragma mark - dataosurce
+//* These two methods are required when not using bindings */
+#pragma mark - NSComboBoxDataSource
+
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox {
+    return [self.datas count];
+}
+
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index {
+    return self.datas[index];
+}
+
+
+//- (NSUInteger)comboBox:(NSComboBox *)comboBox indexOfItemWithStringValue:(NSString *)string {
+//
+//}
+
+//- (nullable NSString *)comboBox:(NSComboBox *)comboBox completedString:(NSString *)string {
+//
+//}
 
 @end

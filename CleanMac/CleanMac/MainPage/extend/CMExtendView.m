@@ -12,6 +12,12 @@
 
 #import "CMExtendView.h"
 
+@interface CMExtendView ()
+
+
+
+@end
+
 @implementation CMExtendView
 
 - (void)baseInit {

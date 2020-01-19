@@ -7,7 +7,7 @@ target 'CleanMac' do
   
   # Pods for CleanMac
   pod 'Masonry', '~> 1.1.0'
-#  pod 'ReactiveCocoa', '~> 2.5'
+  pod 'ReactiveCocoa', '~> 2.5'
   pod 'YYModel', '~> 1.0.4'
   #   pod 'coobjc', '~> 1.2.0'
   pod 'CocoaLumberjack', '~> 3.5.3'
@@ -15,7 +15,8 @@ target 'CleanMac' do
   pod 'Sparkle', '~> 1.21.3'
   pod 'SDWebImage', '~> 5.0.6'
   pod 'FMDB'
-  pod 'ReactiveCocoa'
+  pod 'AFNetworking'
+#  pod 'WWDC'
   #   pod 'PermissionsKit-macOS'
 end
 

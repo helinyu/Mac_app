@@ -32,6 +32,17 @@
 		4123887122D2FA9A00B89F9E /* CleanMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887022D2FA9A00B89F9E /* CleanMacTests.m */; };
 		4123887C22D2FA9A00B89F9E /* CleanMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123887B22D2FA9A00B89F9E /* CleanMacUITests.m */; };
 		41284D0223D2299A00F1ADC1 /* CMFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D0023D2299A00F1ADC1 /* CMFourthViewController.m */; };
+		41284D0823D317F800F1ADC1 /* CMBeforeExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D0723D317F800F1ADC1 /* CMBeforeExtendView.m */; };
+		41284D0C23D3184F00F1ADC1 /* CMCommonBeforeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D0B23D3184F00F1ADC1 /* CMCommonBeforeScanView.m */; };
+		41284D0F23D3189F00F1ADC1 /* CMCommonTwoLevelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D0E23D3189F00F1ADC1 /* CMCommonTwoLevelListView.m */; };
+		41284D1223D318BA00F1ADC1 /* CMCommonEndScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D1123D318BA00F1ADC1 /* CMCommonEndScanView.m */; };
+		41284D1523D318D100F1ADC1 /* CMCommonScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D1423D318D100F1ADC1 /* CMCommonScanningView.m */; };
+		41284D1823D3191800F1ADC1 /* CMCommonRightBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D1723D3191800F1ADC1 /* CMCommonRightBaseView.m */; };
+		41284D1C23D3196B00F1ADC1 /* CMCommonLeftFirstlListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D1B23D3196B00F1ADC1 /* CMCommonLeftFirstlListView.m */; };
+		41284D1F23D3198400F1ADC1 /* CMCommonRightSecondlListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D1E23D3198400F1ADC1 /* CMCommonRightSecondlListView.m */; };
+		41284D2323D319CD00F1ADC1 /* CMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D2223D319CD00F1ADC1 /* CMTableView.m */; };
+		41284D2823D37C9D00F1ADC1 /* CMXPCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D2723D37C9D00F1ADC1 /* CMXPCViewController.m */; };
+		41284DA323D3FA0C00F1ADC1 /* CMPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DA223D3FA0C00F1ADC1 /* CMPopoverViewController.m */; };
 		413579D523C88E5400E16B14 /* NSAlert+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */; };
 		414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEC233E578D00019A3E /* CMPreScanView.m */; };
 		414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */; };
@@ -202,6 +213,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41284D3C23D37DF700F1ADC1 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -246,6 +267,30 @@
 		41284CFF23D2299A00F1ADC1 /* CMFourthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMFourthViewController.h; sourceTree = "<group>"; };
 		41284D0023D2299A00F1ADC1 /* CMFourthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMFourthViewController.m; sourceTree = "<group>"; };
 		41284D0523D2423100F1ADC1 /* CMViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMViewProtocol.h; sourceTree = "<group>"; };
+		41284D0623D317F800F1ADC1 /* CMBeforeExtendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBeforeExtendView.h; sourceTree = "<group>"; };
+		41284D0723D317F800F1ADC1 /* CMBeforeExtendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBeforeExtendView.m; sourceTree = "<group>"; };
+		41284D0A23D3184F00F1ADC1 /* CMCommonBeforeScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonBeforeScanView.h; sourceTree = "<group>"; };
+		41284D0B23D3184F00F1ADC1 /* CMCommonBeforeScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMCommonBeforeScanView.m; sourceTree = "<group>"; };
+		41284D0D23D3189F00F1ADC1 /* CMCommonTwoLevelListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonTwoLevelListView.h; sourceTree = "<group>"; };
+		41284D0E23D3189F00F1ADC1 /* CMCommonTwoLevelListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMCommonTwoLevelListView.m; sourceTree = "<group>"; };
+		41284D1023D318BA00F1ADC1 /* CMCommonEndScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonEndScanView.h; sourceTree = "<group>"; };
+		41284D1123D318BA00F1ADC1 /* CMCommonEndScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMCommonEndScanView.m; sourceTree = "<group>"; };
+		41284D1323D318D100F1ADC1 /* CMCommonScanningView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonScanningView.h; sourceTree = "<group>"; };
+		41284D1423D318D100F1ADC1 /* CMCommonScanningView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMCommonScanningView.m; sourceTree = "<group>"; };
+		41284D1623D3191800F1ADC1 /* CMCommonRightBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonRightBaseView.h; sourceTree = "<group>"; };
+		41284D1723D3191800F1ADC1 /* CMCommonRightBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMCommonRightBaseView.m; sourceTree = "<group>"; };
+		41284D1A23D3196B00F1ADC1 /* CMCommonLeftFirstlListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonLeftFirstlListView.h; sourceTree = "<group>"; };
+		41284D1B23D3196B00F1ADC1 /* CMCommonLeftFirstlListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMCommonLeftFirstlListView.m; sourceTree = "<group>"; };
+		41284D1D23D3198400F1ADC1 /* CMCommonRightSecondlListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonRightSecondlListView.h; sourceTree = "<group>"; };
+		41284D1E23D3198400F1ADC1 /* CMCommonRightSecondlListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMCommonRightSecondlListView.m; sourceTree = "<group>"; };
+		41284D2123D319CD00F1ADC1 /* CMTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTableView.h; sourceTree = "<group>"; };
+		41284D2223D319CD00F1ADC1 /* CMTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTableView.m; sourceTree = "<group>"; };
+		41284D2423D31B4200F1ADC1 /* KColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KColor.h; sourceTree = "<group>"; };
+		41284D2523D31C6400F1ADC1 /* CMCommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMCommonHeader.h; sourceTree = "<group>"; };
+		41284D2623D37C9D00F1ADC1 /* CMXPCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMXPCViewController.h; sourceTree = "<group>"; };
+		41284D2723D37C9D00F1ADC1 /* CMXPCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMXPCViewController.m; sourceTree = "<group>"; };
+		41284DA123D3FA0C00F1ADC1 /* CMPopoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPopoverViewController.h; sourceTree = "<group>"; };
+		41284DA223D3FA0C00F1ADC1 /* CMPopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopoverViewController.m; sourceTree = "<group>"; };
 		413579D323C88E5400E16B14 /* NSAlert+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+CMAdd.h"; sourceTree = "<group>"; };
 		413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+CMAdd.m"; sourceTree = "<group>"; };
 		414E1EEB233E578D00019A3E /* CMPreScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanView.h; sourceTree = "<group>"; };
@@ -600,6 +645,10 @@
 			children = (
 				41284CFF23D2299A00F1ADC1 /* CMFourthViewController.h */,
 				41284D0023D2299A00F1ADC1 /* CMFourthViewController.m */,
+				41284D2623D37C9D00F1ADC1 /* CMXPCViewController.h */,
+				41284D2723D37C9D00F1ADC1 /* CMXPCViewController.m */,
+				41284DA123D3FA0C00F1ADC1 /* CMPopoverViewController.h */,
+				41284DA223D3FA0C00F1ADC1 /* CMPopoverViewController.m */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -610,6 +659,46 @@
 				41284D0523D2423100F1ADC1 /* CMViewProtocol.h */,
 			);
 			path = CommonProtocol;
+			sourceTree = "<group>";
+		};
+		41284D0923D3183A00F1ADC1 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				41284D2523D31C6400F1ADC1 /* CMCommonHeader.h */,
+				41284D2023D3199D00F1ADC1 /* TableView */,
+				41284D1923D3195300F1ADC1 /* CMCommonTwoLevelListView */,
+				41284D0A23D3184F00F1ADC1 /* CMCommonBeforeScanView.h */,
+				41284D0B23D3184F00F1ADC1 /* CMCommonBeforeScanView.m */,
+				41284D1023D318BA00F1ADC1 /* CMCommonEndScanView.h */,
+				41284D1123D318BA00F1ADC1 /* CMCommonEndScanView.m */,
+				41284D1323D318D100F1ADC1 /* CMCommonScanningView.h */,
+				41284D1423D318D100F1ADC1 /* CMCommonScanningView.m */,
+				41284D1623D3191800F1ADC1 /* CMCommonRightBaseView.h */,
+				41284D1723D3191800F1ADC1 /* CMCommonRightBaseView.m */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		41284D1923D3195300F1ADC1 /* CMCommonTwoLevelListView */ = {
+			isa = PBXGroup;
+			children = (
+				41284D0D23D3189F00F1ADC1 /* CMCommonTwoLevelListView.h */,
+				41284D0E23D3189F00F1ADC1 /* CMCommonTwoLevelListView.m */,
+				41284D1A23D3196B00F1ADC1 /* CMCommonLeftFirstlListView.h */,
+				41284D1B23D3196B00F1ADC1 /* CMCommonLeftFirstlListView.m */,
+				41284D1D23D3198400F1ADC1 /* CMCommonRightSecondlListView.h */,
+				41284D1E23D3198400F1ADC1 /* CMCommonRightSecondlListView.m */,
+			);
+			path = CMCommonTwoLevelListView;
+			sourceTree = "<group>";
+		};
+		41284D2023D3199D00F1ADC1 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				41284D2123D319CD00F1ADC1 /* CMTableView.h */,
+				41284D2223D319CD00F1ADC1 /* CMTableView.m */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		414E1EEA233E574400019A3E /* PreScanView */ = {
@@ -671,6 +760,7 @@
 			children = (
 				41571EB922E336CF0090352D /* Maccro.pch */,
 				41B8275E23C8979200F133E8 /* KMAbbreviationMacroExpress.h */,
+				41284D2423D31B4200F1ADC1 /* KColor.h */,
 			);
 			path = macro;
 			sourceTree = "<group>";
@@ -678,6 +768,7 @@
 		415B5B8A22DDFA4C00E43F03 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				41284D0923D3183A00F1ADC1 /* CommonView */,
 				41B8278323CF40CC00F133E8 /* ScanView */,
 				414E1EEA233E574400019A3E /* PreScanView */,
 				41571E9B22E32E5E0090352D /* right base view */,
@@ -860,6 +951,8 @@
 			children = (
 				4165FBF222DF488000656E00 /* CMExtendView.h */,
 				4165FBF322DF488000656E00 /* CMExtendView.m */,
+				41284D0623D317F800F1ADC1 /* CMBeforeExtendView.h */,
+				41284D0723D317F800F1ADC1 /* CMBeforeExtendView.m */,
 			);
 			path = extend;
 			sourceTree = "<group>";
@@ -1080,6 +1173,7 @@
 				4123885422D2FA9700B89F9E /* Resources */,
 				360E5967E7CDCE0678F82E37 /* [CP] Embed Pods Frameworks */,
 				7727C26B830E2C01C3264614 /* [CP] Copy Pods Resources */,
+				41284D3C23D37DF700F1ADC1 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
@@ -1415,9 +1509,12 @@
 				4165FBEF22DF484A00656E00 /* CMUpdateProgramView.m in Sources */,
 				41571EB422E3358F0090352D /* CMTrashEndView.m in Sources */,
 				41B8277B23CF3B4300F133E8 /* XNRightTrashGradientView.m in Sources */,
+				41284D0823D317F800F1ADC1 /* CMBeforeExtendView.m in Sources */,
 				41C098E222DC56F200679541 /* CMSecondWindowController.m in Sources */,
+				41284D0C23D3184F00F1ADC1 /* CMCommonBeforeScanView.m in Sources */,
 				41B827B023D1CB3000F133E8 /* CMFileInfoModel.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
+				41284D0F23D3189F00F1ADC1 /* CMCommonTwoLevelListView.m in Sources */,
 				410BA10022E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
 				41B8278C23CF441D00F133E8 /* CMScanContentView.m in Sources */,
 				4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */,
@@ -1430,6 +1527,7 @@
 				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
 				4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */,
 				41B8278623CF40E000F133E8 /* CMScanView.m in Sources */,
+				41284D1823D3191800F1ADC1 /* CMCommonRightBaseView.m in Sources */,
 				41B827AA23D1B6A600F133E8 /* CMTrashInfoDetailCellView.m in Sources */,
 				41C098DE22DC557400679541 /* CMSecondViewController.m in Sources */,
 				410BA10422E878DE006ABC35 /* MPFullDiskAccessAuthorizer.m in Sources */,
@@ -1437,11 +1535,14 @@
 				410BA0FE22E878DE006ABC35 /* MPCalendarAuthorizer.m in Sources */,
 				4165EEFA22EAFAB200C67C22 /* NSTextField+CMAdd.m in Sources */,
 				415B5B9022DDFABD00E43F03 /* CMMainPageViewController.m in Sources */,
+				41284D1C23D3196B00F1ADC1 /* CMCommonLeftFirstlListView.m in Sources */,
 				4114460722E0780C00E5B4B6 /* NSNumber+CMAdd.m in Sources */,
+				41284D2323D319CD00F1ADC1 /* CMTableView.m in Sources */,
 				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41B827A723D1B0BF00F133E8 /* CMTrashInfoDetailRightView.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
+				41284DA323D3FA0C00F1ADC1 /* CMPopoverViewController.m in Sources */,
 				410BA10622E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */,
 				4165FC0B22E00A6B00656E00 /* CMBaseView.m in Sources */,
 				41BAFD3422DF028F00AD96AC /* CMFileManger.m in Sources */,
@@ -1461,20 +1562,24 @@
 				414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */,
 				41B827A423D1B0B500F133E8 /* CMTrashInfoDetailLeftView.m in Sources */,
 				4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */,
+				41284D1223D318BA00F1ADC1 /* CMCommonEndScanView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,
 				41284D0223D2299A00F1ADC1 /* CMFourthViewController.m in Sources */,
 				41C0990122DDB14500679541 /* CMTopClassCItem.m in Sources */,
 				41B8279523D0535E00F133E8 /* CMShadowDrawView.m in Sources */,
 				41571EAA22E333540090352D /* CMRightLogoBaseView.m in Sources */,
+				41284D1523D318D100F1ADC1 /* CMCommonScanningView.m in Sources */,
 				414E1EF6233E61CC00019A3E /* CMPreScanTitleModel.m in Sources */,
 				4123885B22D2FA9700B89F9E /* AppDelegate.m in Sources */,
 				4165FC0722DF4B1900656E00 /* CMItunesTrashView.m in Sources */,
 				4165FBF422DF488000656E00 /* CMExtendView.m in Sources */,
 				41B827A123D1AB5600F133E8 /* CMTrashInfoDetailView.m in Sources */,
 				4165FBE822DF473300656E00 /* CMMaintainView.m in Sources */,
+				41284D1F23D3198400F1ADC1 /* CMCommonRightSecondlListView.m in Sources */,
 				41571EA122E32ECE0090352D /* CMRightItemView.m in Sources */,
 				4114460A22E0797F00E5B4B6 /* KMSystem.m in Sources */,
 				4165FBBB22DF17D700656E00 /* CMIntelligenceView.m in Sources */,
+				41284D2823D37C9D00F1ADC1 /* CMXPCViewController.m in Sources */,
 				41571EA622E333070090352D /* CMRightScaningBaseView.m in Sources */,
 				414E1EF3233E585800019A3E /* CMPreScanLeftCellView.m in Sources */,
 				41B827AD23D1C82900F133E8 /* NSMutableArray+CMAdd.m in Sources */,
