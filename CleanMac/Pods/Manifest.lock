@@ -31,6 +31,7 @@ PODS:
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
+  - SFBPopovers (1.1.0)
   - Sparkle (1.21.3)
   - YYModel (1.0.4)
 
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - MMKV
   - ReactiveCocoa (~> 2.5)
   - SDWebImage (~> 5.0.6)
+  - SFBPopovers (~> 1.1.0)
   - Sparkle (~> 1.21.3)
   - YYModel (~> 1.0.4)
 
@@ -59,6 +61,7 @@ SPEC REPOS:
     - AFNetworking
     - FMDB
     - MMKV
+    - SFBPopovers
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -69,9 +72,10 @@ SPEC CHECKSUMS:
   MMKV: 031ae51aedc0af1b250922f7ed8a6b6ee2f94c4c
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SFBPopovers: a254c2dd379258e8ebbb6db8720f0ac9a424c0e9
   Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b1ac89740e08563b3fa60b632df4872a40a4f11a
+PODFILE CHECKSUM: fc9e6f60f37313d015e4b8edca028dcfd84ba2e3
 
 COCOAPODS: 1.8.4

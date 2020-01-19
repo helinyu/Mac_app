@@ -16,6 +16,7 @@ target 'CleanMac' do
   pod 'SDWebImage', '~> 5.0.6'
   pod 'FMDB'
   pod 'AFNetworking'
+  pod 'SFBPopovers', '~> 1.1.0'
 #  pod 'WWDC'
   #   pod 'PermissionsKit-macOS'
 end

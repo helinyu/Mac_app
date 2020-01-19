@@ -43,6 +43,8 @@
 		41284D2323D319CD00F1ADC1 /* CMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D2223D319CD00F1ADC1 /* CMTableView.m */; };
 		41284D2823D37C9D00F1ADC1 /* CMXPCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284D2723D37C9D00F1ADC1 /* CMXPCViewController.m */; };
 		41284DA323D3FA0C00F1ADC1 /* CMPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DA223D3FA0C00F1ADC1 /* CMPopoverViewController.m */; };
+		41284DAF23D4006800F1ADC1 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DAD23D4006800F1ADC1 /* PopViewController.m */; };
+		41284DB023D4006800F1ADC1 /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41284DAE23D4006800F1ADC1 /* PopViewController.xib */; };
 		413579D523C88E5400E16B14 /* NSAlert+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */; };
 		414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEC233E578D00019A3E /* CMPreScanView.m */; };
 		414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */; };
@@ -291,6 +293,9 @@
 		41284D2723D37C9D00F1ADC1 /* CMXPCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMXPCViewController.m; sourceTree = "<group>"; };
 		41284DA123D3FA0C00F1ADC1 /* CMPopoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPopoverViewController.h; sourceTree = "<group>"; };
 		41284DA223D3FA0C00F1ADC1 /* CMPopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopoverViewController.m; sourceTree = "<group>"; };
+		41284DAC23D4006800F1ADC1 /* PopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
+		41284DAD23D4006800F1ADC1 /* PopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
+		41284DAE23D4006800F1ADC1 /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
 		413579D323C88E5400E16B14 /* NSAlert+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+CMAdd.h"; sourceTree = "<group>"; };
 		413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+CMAdd.m"; sourceTree = "<group>"; };
 		414E1EEB233E578D00019A3E /* CMPreScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanView.h; sourceTree = "<group>"; };
@@ -649,6 +654,9 @@
 				41284D2723D37C9D00F1ADC1 /* CMXPCViewController.m */,
 				41284DA123D3FA0C00F1ADC1 /* CMPopoverViewController.h */,
 				41284DA223D3FA0C00F1ADC1 /* CMPopoverViewController.m */,
+				41284DAC23D4006800F1ADC1 /* PopViewController.h */,
+				41284DAD23D4006800F1ADC1 /* PopViewController.m */,
+				41284DAE23D4006800F1ADC1 /* PopViewController.xib */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -1294,6 +1302,7 @@
 				410BA10822E878DE006ABC35 /* Info.plist in Resources */,
 				41C098FA22DCA8EF00679541 /* CMPopViewController.xib in Resources */,
 				4123886022D2FA9A00B89F9E /* Assets.xcassets in Resources */,
+				41284DB023D4006800F1ADC1 /* PopViewController.xib in Resources */,
 				4165FBCA22DF416200656E00 /* classListDic.plist in Resources */,
 				4123886322D2FA9A00B89F9E /* Main.storyboard in Resources */,
 				4165FC4522E014C400656E00 /* NSURLResourceKey.plist in Resources */,
@@ -1562,6 +1571,7 @@
 				414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */,
 				41B827A423D1B0B500F133E8 /* CMTrashInfoDetailLeftView.m in Sources */,
 				4165FBFC22DF48D700656E00 /* CMLODcumentView.m in Sources */,
+				41284DAF23D4006800F1ADC1 /* PopViewController.m in Sources */,
 				41284D1223D318BA00F1ADC1 /* CMCommonEndScanView.m in Sources */,
 				415B5B8D22DDFAA200E43F03 /* CMMainPageWindowController.m in Sources */,
 				41284D0223D2299A00F1ADC1 /* CMFourthViewController.m in Sources */,

@@ -35,9 +35,9 @@
 
     
     _tableView = [NSTableView new];
-    _tableView.layer.backgroundColor = kCGClear;
+    _tableView.layer.backgroundColor = k_CG_Clear;
     _tableView.backgroundColor = kClear;
-    _tableView.layer.borderColor = kCGClear;
+    _tableView.layer.borderColor = k_CG_Clear;
     _tableView.layer.borderWidth = CGFLOAT_MIN;
     _tableView.headerView = [[NSTableHeaderView alloc] initWithFrame:NSMakeRect(0.f, 0.f, CGFLOAT_MIN, CGFLOAT_MIN)];
     if (@available(macOS 10.12, *)) {

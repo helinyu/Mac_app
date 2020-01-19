@@ -10,6 +10,10 @@
 #define KColor_h
 
 #define kClear [NSColor clearColor]
-#define kCGClear [NSColor clearColor].CGColor
+#define k_CG_Clear [NSColor clearColor].CGColor
+
+#define kFFF [NSColor whiteColor]
+#define k_CG_FFF [NSColor whiteColor].CGColor
+
 
 #endif /* KColor_h */
