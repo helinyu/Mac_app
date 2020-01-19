@@ -45,6 +45,10 @@
 		41284DA323D3FA0C00F1ADC1 /* CMPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DA223D3FA0C00F1ADC1 /* CMPopoverViewController.m */; };
 		41284DAF23D4006800F1ADC1 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DAD23D4006800F1ADC1 /* PopViewController.m */; };
 		41284DB023D4006800F1ADC1 /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41284DAE23D4006800F1ADC1 /* PopViewController.xib */; };
+		41284DB423D448BB00F1ADC1 /* CMMenuToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DB223D448BB00F1ADC1 /* CMMenuToolViewController.m */; };
+		41284DB823D44F3500F1ADC1 /* CMMenuToolWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DB723D44F3500F1ADC1 /* CMMenuToolWindowController.m */; };
+		41284DBC23D4645600F1ADC1 /* CMMenuToolCodewindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DBA23D4645600F1ADC1 /* CMMenuToolCodewindowController.m */; };
+		41284DC023D464E600F1ADC1 /* CMMenuToolCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DBF23D464E600F1ADC1 /* CMMenuToolCodeViewController.m */; };
 		413579D523C88E5400E16B14 /* NSAlert+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */; };
 		414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEC233E578D00019A3E /* CMPreScanView.m */; };
 		414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */; };
@@ -296,6 +300,14 @@
 		41284DAC23D4006800F1ADC1 /* PopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
 		41284DAD23D4006800F1ADC1 /* PopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
 		41284DAE23D4006800F1ADC1 /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
+		41284DB123D448BB00F1ADC1 /* CMMenuToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMenuToolViewController.h; sourceTree = "<group>"; };
+		41284DB223D448BB00F1ADC1 /* CMMenuToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMenuToolViewController.m; sourceTree = "<group>"; };
+		41284DB623D44F3500F1ADC1 /* CMMenuToolWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMenuToolWindowController.h; sourceTree = "<group>"; };
+		41284DB723D44F3500F1ADC1 /* CMMenuToolWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMenuToolWindowController.m; sourceTree = "<group>"; };
+		41284DB923D4645600F1ADC1 /* CMMenuToolCodewindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMenuToolCodewindowController.h; sourceTree = "<group>"; };
+		41284DBA23D4645600F1ADC1 /* CMMenuToolCodewindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMenuToolCodewindowController.m; sourceTree = "<group>"; };
+		41284DBE23D464E600F1ADC1 /* CMMenuToolCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMenuToolCodeViewController.h; sourceTree = "<group>"; };
+		41284DBF23D464E600F1ADC1 /* CMMenuToolCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMenuToolCodeViewController.m; sourceTree = "<group>"; };
 		413579D323C88E5400E16B14 /* NSAlert+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+CMAdd.h"; sourceTree = "<group>"; };
 		413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+CMAdd.m"; sourceTree = "<group>"; };
 		414E1EEB233E578D00019A3E /* CMPreScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanView.h; sourceTree = "<group>"; };
@@ -657,6 +669,14 @@
 				41284DAC23D4006800F1ADC1 /* PopViewController.h */,
 				41284DAD23D4006800F1ADC1 /* PopViewController.m */,
 				41284DAE23D4006800F1ADC1 /* PopViewController.xib */,
+				41284DB123D448BB00F1ADC1 /* CMMenuToolViewController.h */,
+				41284DB223D448BB00F1ADC1 /* CMMenuToolViewController.m */,
+				41284DB623D44F3500F1ADC1 /* CMMenuToolWindowController.h */,
+				41284DB723D44F3500F1ADC1 /* CMMenuToolWindowController.m */,
+				41284DB923D4645600F1ADC1 /* CMMenuToolCodewindowController.h */,
+				41284DBA23D4645600F1ADC1 /* CMMenuToolCodewindowController.m */,
+				41284DBE23D464E600F1ADC1 /* CMMenuToolCodeViewController.h */,
+				41284DBF23D464E600F1ADC1 /* CMMenuToolCodeViewController.m */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -1505,7 +1525,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41284DB423D448BB00F1ADC1 /* CMMenuToolViewController.m in Sources */,
 				4165FC0022DF499700656E00 /* CMShredderView.m in Sources */,
+				41284DC023D464E600F1ADC1 /* CMMenuToolCodeViewController.m in Sources */,
 				41571E9E22E32E6E0090352D /* CMRightBaseView.m in Sources */,
 				414E1EF9233E623100019A3E /* CMPreScanContentModel.m in Sources */,
 				4123885E22D2FA9700B89F9E /* ViewController.m in Sources */,
@@ -1532,6 +1554,7 @@
 				4165FBCF22DF465800656E00 /* CMSystemTrashView.m in Sources */,
 				410BA0FC22E878DE006ABC35 /* MPPermissionsKit.m in Sources */,
 				41C0990822DDB90800679541 /* CMPopFooterView.m in Sources */,
+				41284DBC23D4645600F1ADC1 /* CMMenuToolCodewindowController.m in Sources */,
 				4165FBD822DF469B00656E00 /* CMEmailTrashView.m in Sources */,
 				41C098EE22DC6E4200679541 /* CMThirdViewController.m in Sources */,
 				4165FBEC22DF483200656E00 /* CMUnloaderView.m in Sources */,
@@ -1550,6 +1573,7 @@
 				4165FBD422DF468100656E00 /* CMPhotoTrashView.m in Sources */,
 				41C0990522DDB87300679541 /* CMPopHeaderView.m in Sources */,
 				41B827A723D1B0BF00F133E8 /* CMTrashInfoDetailRightView.m in Sources */,
+				41284DB823D44F3500F1ADC1 /* CMMenuToolWindowController.m in Sources */,
 				41C098F122DC9B0A00679541 /* CMMainWindowController.m in Sources */,
 				41284DA323D3FA0C00F1ADC1 /* CMPopoverViewController.m in Sources */,
 				410BA10622E878DE006ABC35 /* MPPhotosAuthorizer.m in Sources */,

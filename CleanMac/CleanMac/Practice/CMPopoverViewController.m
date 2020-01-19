@@ -58,9 +58,7 @@
         [_popover closePopover:sender];
     else {
         NSPoint where = [self.toggleButton frame].origin;
-        where.x += [self.toggleButton frame].size.width / 2;
-        //        where.y += [self.toggleButton frame].size.height;
-        
+        where.x += [self.toggleButton frame].size.width / 2;        
         [_popover displayPopoverInWindow:[self.toggleButton window] atPoint:where];
     }
 }

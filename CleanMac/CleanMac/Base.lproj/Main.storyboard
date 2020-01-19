@@ -867,6 +867,110 @@
             <point key="canvasLocation" x="1123" y="379"/>
         </scene>
         <!--Window Controller-->
+        <scene sceneID="R8L-ha-Qdv">
+            <objects>
+                <windowController id="Ynk-uh-xYN" customClass="CMMenuToolCodewindowController" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="qcb-qf-7Jo">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="Ynk-uh-xYN" id="ZyU-Sx-7no"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="QDg-d8-ZdB" kind="relationship" relationship="window.shadowedContentViewController" id="SOl-hi-4g4"/>
+                    </connections>
+                </windowController>
+                <customObject id="bYh-Qk-rHW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1371" y="196"/>
+        </scene>
+        <!--Menu Tool Code View Controller-->
+        <scene sceneID="mFH-Na-GW2">
+            <objects>
+                <viewController id="QDg-d8-ZdB" customClass="CMMenuToolCodeViewController" sceneMemberID="viewController">
+                    <view key="view" id="QDD-q4-vZu">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="T7A-nd-CYk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-769" y="186"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="DSa-C8-J0h">
+            <objects>
+                <windowController id="wne-pV-Nvf" customClass="CMMenuToolWindowController" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="6ZE-gl-Jwm">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1057"/>
+                        <toolbar key="toolbar" implicitIdentifier="9B264016-FD07-40D5-B391-206B9B909700" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="small" id="wfP-QT-Ce5">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="01S-xt-3dO"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="gCK-ra-dQe"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="kwA-5U-Ot2"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lpA-ke-IRq"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="LUm-Pn-Rgt"/>
+                                <toolbarItem implicitItemIdentifier="022A0705-D045-49AF-A8E6-6DFD735404FE" label="open" paletteLabel="open" tag="5" image="NSFolder" selectable="YES" id="h63-kR-N56">
+                                    <size key="minSize" width="32" height="32"/>
+                                    <size key="maxSize" width="32" height="32"/>
+                                    <connections>
+                                        <action selector="onToolbarMenuItemAction:" target="wne-pV-Nvf" id="ivV-XK-ANB"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="276AB62B-A5A0-4BFF-807C-76693CE29D1F" label="Custom View" paletteLabel="Custom View" sizingBehavior="auto" id="6pp-NA-bCX">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="0Wb-6a-CmF">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="按钮" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VNF-k6-Ghx">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                        </buttonCell>
+                                    </button>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="01S-xt-3dO"/>
+                                <toolbarItem reference="gCK-ra-dQe"/>
+                                <toolbarItem reference="LUm-Pn-Rgt"/>
+                                <toolbarItem reference="kwA-5U-Ot2"/>
+                                <toolbarItem reference="h63-kR-N56"/>
+                                <toolbarItem reference="6pp-NA-bCX"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="wne-pV-Nvf" id="bmB-Tg-9el"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <outlet property="toolbar" destination="wfP-QT-Ce5" id="ATt-db-wLk"/>
+                        <segue destination="qeJ-Z9-5By" kind="relationship" relationship="window.shadowedContentViewController" id="UPV-qZ-mTL"/>
+                    </connections>
+                </windowController>
+                <customObject id="S33-WP-bPQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-708" y="100"/>
+        </scene>
+        <!--Menu Tool View Controller-->
+        <scene sceneID="Wd6-MD-Abd">
+            <objects>
+                <viewController id="qeJ-Z9-5By" customClass="CMMenuToolViewController" sceneMemberID="viewController">
+                    <view key="view" id="hb9-J9-fOo">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="8Sq-3p-fY8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-708" y="-190"/>
+        </scene>
+        <!--Window Controller-->
         <scene sceneID="Dck-LM-74P">
             <objects>
                 <windowController id="tlH-c1-pO4" sceneMemberID="viewController">
@@ -885,7 +989,7 @@
                 </windowController>
                 <customObject id="eQZ-Ja-xa7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-942" y="541"/>
+            <point key="canvasLocation" x="-954" y="698"/>
         </scene>
         <!--Popover View Controller-->
         <scene sceneID="3XO-Ym-ETM">
@@ -1010,6 +1114,28 @@
                                     <segue destination="tlH-c1-pO4" kind="show" id="16y-uZ-9jZ"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eP-zV-Ioh">
+                                <rect key="frame" x="314" y="238" width="74" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Menu" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rze-nc-caa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="wne-pV-Nvf" kind="show" id="wYw-VM-fcX"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4k-Gf-shh">
+                                <rect key="frame" x="292" y="189" width="108" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="code menu" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Kf-iv-MMY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="Ynk-uh-xYN" kind="show" id="YIa-j3-M1z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="2Hr-mF-37T" firstAttribute="top" secondItem="8y3-kE-Hep" secondAttribute="bottom" constant="24" id="03Q-4u-xkg"/>
@@ -1037,7 +1163,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-165" y="698"/>
+            <point key="canvasLocation" x="-203" y="728"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="mKm-Co-FVY">

@@ -21,6 +21,8 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     
+//    self.window.titleVisibility = NSWindowTitleHidden;
+    
 }
 
 @end
