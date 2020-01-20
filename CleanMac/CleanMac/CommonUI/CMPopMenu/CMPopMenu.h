@@ -68,6 +68,16 @@ kConstString(kIsMixed, @"is.mixed");
 
 - (void)updateTitle:(NSString *)title;
 
+//    例子
+//    NSDictionary *categoryDict = @{kTitle:@"按照时间来排序", kRightIconName:@"icon_triangle_white_down_10",kCategories:@[@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"时间",kIsOn:@(YES)},@{kTitle:@"大小"}]},@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"升序"},@{kTitle:@"降序", kIsOn:@(YES)}]}]};
+//    self.popMenu = [CMPopMenu createMenuWithInfo:categoryDict onView:self];
+//    [self addSubview:self.popMenu];
+//    [self.popMenu mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.top.equalTo(self);
+////        make.height.mas_equalTo(25.f);
+//    }];
+//    self.popMenu.popMenuDelegate = self;
+
 @end
 
 NS_ASSUME_NONNULL_END

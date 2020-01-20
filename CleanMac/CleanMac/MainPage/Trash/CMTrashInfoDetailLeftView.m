@@ -11,18 +11,16 @@
 #import "CMMainPageClassTCellView.h"
 #import "CMTrashInfoDetailRowView.h"
 #import "CMTrashInfoDetailRowView.h"
-#import "CMPopMenu.h"
 
 #import "NSButton+CMAdd.h"
 
 #import "CMFileInfoModel.h"
 
-@interface CMTrashInfoDetailLeftView ()<NSTableViewDataSource, NSTableViewDelegate, CMViewProtocol, CMPopMenuProtocol>
+@interface CMTrashInfoDetailLeftView ()<NSTableViewDataSource, NSTableViewDelegate, CMViewProtocol>
 
 @property (nonatomic, strong) NSButton *allToggleBtn;
 @property (nonatomic, assign) BOOL isAllSelected;
 
-@property (nonatomic, strong) CMPopMenu *popMenu;
 @property (nonatomic, strong) NSButton *rangeBtn;
 
 @property (nonatomic, strong) NSTableView *tableView;
@@ -53,15 +51,7 @@ kConstString(kAllCancel, @"取消全选");
     _allToggleBtn.layer.masksToBounds = YES;
     [self setAllToggleSelected:_isAllSelected];
     [_allToggleBtn cleanBezelView];
-    
-//    NSDictionary *categoryDict = @{kTitle:@"按照时间来排序", kRightIconName:@"icon_triangle_white_down_10",kCategories:@[@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"时间",kIsOn:@(YES)},@{kTitle:@"大小"}]},@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"升序"},@{kTitle:@"降序", kIsOn:@(YES)}]}]};
-//    self.popMenu = [CMPopMenu createMenuWithInfo:categoryDict onView:self];
-//    [self addSubview:self.popMenu];
-//    [self.popMenu mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.right.top.equalTo(self);
-////        make.height.mas_equalTo(25.f);
-//    }];
-//    self.popMenu.popMenuDelegate = self;
+
     
     NSButton *rangeBtn = [NSButton cm_buttonWithTitle:@"排序" image:[NSImage imageNamed:@"icon_triangle_white_down_10"] target:self action:@selector(onRangeAction:)];
     [self addSubview:rangeBtn];
