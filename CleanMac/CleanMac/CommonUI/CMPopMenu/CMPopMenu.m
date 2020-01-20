@@ -16,7 +16,7 @@
 
 @end
 
-@interface CMPopMenu ()
+@interface CMPopMenu ()<NSMenuItemValidation>
 
 @property (nonatomic, strong) NSArray<CMPopMenuCategoryModel *> *categories;
 @property (nonatomic, strong) NSMenu *systemMenu;
@@ -85,6 +85,8 @@
     [self createSystemMenu];
     
     CGPoint point = self.frame.origin;
+    point.x = point.x + (self.frame.size.width - self.systemMenu.size.width)/2.f;
+
     [self.systemMenu popUpMenuPositioningItem:nil atLocation:point inView:self.parentView];
     return;
 }
@@ -157,6 +159,11 @@
 
 - (void)updateTitle:(NSString *)title {
     self.title = title;
+}
+
+
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
+    return YES;
 }
 
 @end

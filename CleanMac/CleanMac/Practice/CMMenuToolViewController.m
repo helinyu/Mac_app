@@ -34,9 +34,7 @@
 @interface CMMenuToolViewController ()<CMPopMenuProtocol>
 
 @property (nonatomic, strong) NSButton *customBtn;
-
 @property (nonatomic, strong) CMPopMenu *popMenu;
-@property (nonatomic, strong) NSArray *categories;
 
 @end
 
@@ -55,7 +53,9 @@
         make.left.top.equalTo(self.view).offset(100.f);
     }];
     self.popMenu.popMenuDelegate = self;
-
+    
+//    BOOL falg = [self.popMenu validateMenuItem:[self.popMenu itemArray].firstObject];
+//    NSLog(@"lt - flag :%d",falg);
 }
 
 - (void)popMenu:(id)popMenu didSelectedIndexPath:(NSIndexPath *)indexPath {

@@ -58,9 +58,17 @@ kConstString(kAllCancel, @"取消全选");
     [self addSubview:self.popMenu];
     [self.popMenu mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.top.equalTo(self);
-        make.height.mas_equalTo(25.f);
+//        make.height.mas_equalTo(25.f);
     }];
     self.popMenu.popMenuDelegate = self;
+    
+    NSButton *rangeBtn = [NSButton cm_buttonWithTitle:@"排序" image:[NSImage imageNamed:@"icon_triangle_white_down_10"] target:self action:@selector(onRangeAction:)];
+    [self addSubview:rangeBtn];
+    [rangeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.popMenu.mas_bottom).offset(2.f);
+        make.centerX.equalTo(self.popMenu);
+        make.width.mas_equalTo(100.f);
+    }];
     
 //     tableView
     NSScrollView *scrollView = [NSScrollView new];
@@ -182,8 +190,15 @@ kConstString(kAllCancel, @"取消全选");
     
 }
 
+// 为什么这样就可以呢？
 - (void)onRangeAction:(NSButton *)sender {
-    
+    NSMenu *menu = [NSMenu new];
+    NSMenuItem *firstItem = [[NSMenuItem alloc] initWithTitle:@"第一`" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
+    NSMenuItem *secondItem = [[NSMenuItem alloc] initWithTitle:@"第二`" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
+    [menu addItem:firstItem];
+    [menu addItem:secondItem];
+    CGPoint point = self.popMenu.frame.origin;
+    [menu popUpMenuPositioningItem:nil atLocation:point inView:self];
 }
 
 #pragma mark - pop menu delegate
