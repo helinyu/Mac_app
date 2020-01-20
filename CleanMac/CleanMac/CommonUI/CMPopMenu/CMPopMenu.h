@@ -43,6 +43,8 @@ kConstString(kIsOn, @"is.on");
 kConstString(kIsMixed, @"is.mixed");
 
 
+
+// 感觉这个类没有啥用， 直接用菜单选项
 @protocol CMPopMenuProtocol <NSObject>
 
 - (void)popMenu:(id)popMenu didSelectedIndexPath:(NSIndexPath *)indexPath;

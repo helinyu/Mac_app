@@ -122,9 +122,11 @@
             menuItem.tag = categoryKeyInt *100 + menuItemM.keyInt;
             menuItem.action = @selector(onMenuItemSelected:);
             menuItem.state = (NSInteger) menuItemM.isOn;
+            menuItem.enabled = YES;
             [systemMenu addItem:menuItem];
         }
     }
+    self.systemMenu.delegate = self;
     self.systemMenu = systemMenu;
 }
 

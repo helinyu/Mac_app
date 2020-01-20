@@ -23,6 +23,7 @@
 @property (nonatomic, assign) BOOL isAllSelected;
 
 @property (nonatomic, strong) CMPopMenu *popMenu;
+@property (nonatomic, strong) NSButton *rangeBtn;
 
 @property (nonatomic, strong) NSTableView *tableView;
 
@@ -53,22 +54,24 @@ kConstString(kAllCancel, @"取消全选");
     [self setAllToggleSelected:_isAllSelected];
     [_allToggleBtn cleanBezelView];
     
-    NSDictionary *categoryDict = @{kTitle:@"按照时间来排序", kRightIconName:@"icon_triangle_white_down_10",kCategories:@[@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"时间",kIsOn:@(YES)},@{kTitle:@"大小"}]},@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"升序"},@{kTitle:@"降序", kIsOn:@(YES)}]}]};
-    self.popMenu = [CMPopMenu createMenuWithInfo:categoryDict onView:self];
-    [self addSubview:self.popMenu];
-    [self.popMenu mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.top.equalTo(self);
-//        make.height.mas_equalTo(25.f);
-    }];
-    self.popMenu.popMenuDelegate = self;
+//    NSDictionary *categoryDict = @{kTitle:@"按照时间来排序", kRightIconName:@"icon_triangle_white_down_10",kCategories:@[@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"时间",kIsOn:@(YES)},@{kTitle:@"大小"}]},@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"升序"},@{kTitle:@"降序", kIsOn:@(YES)}]}]};
+//    self.popMenu = [CMPopMenu createMenuWithInfo:categoryDict onView:self];
+//    [self addSubview:self.popMenu];
+//    [self.popMenu mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.top.equalTo(self);
+////        make.height.mas_equalTo(25.f);
+//    }];
+//    self.popMenu.popMenuDelegate = self;
     
     NSButton *rangeBtn = [NSButton cm_buttonWithTitle:@"排序" image:[NSImage imageNamed:@"icon_triangle_white_down_10"] target:self action:@selector(onRangeAction:)];
     [self addSubview:rangeBtn];
     [rangeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.popMenu.mas_bottom).offset(2.f);
-        make.centerX.equalTo(self.popMenu);
+        make.top.equalTo(self).offset(10.f);
+        make.right.equalTo(self).offset(20.f);
         make.width.mas_equalTo(100.f);
     }];
+    self.rangeBtn = rangeBtn;
+//     有必要封装一下这个button的样式
     
 //     tableView
     NSScrollView *scrollView = [NSScrollView new];
@@ -109,6 +112,13 @@ kConstString(kAllCancel, @"取消全选");
         make.edges.equalTo(weakSelf.tableView.superview);
     }];
     [_tableView reloadData];
+    
+//     有关的内容处理
+  
+}
+
+- (void)onMenuAction:(NSMenuItem *)menuItem {
+    NSLog(@"lt - did selected ");
 }
 
 - (void)setFiles:(NSArray *)files {
@@ -193,12 +203,23 @@ kConstString(kAllCancel, @"取消全选");
 // 为什么这样就可以呢？
 - (void)onRangeAction:(NSButton *)sender {
     NSMenu *menu = [NSMenu new];
-    NSMenuItem *firstItem = [[NSMenuItem alloc] initWithTitle:@"第一`" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
-    NSMenuItem *secondItem = [[NSMenuItem alloc] initWithTitle:@"第二`" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
+    NSMenuItem *firstItem = [[NSMenuItem alloc] initWithTitle:@"名称" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
     [menu addItem:firstItem];
+    NSMenuItem *secondItem = [[NSMenuItem alloc] initWithTitle:@"排序" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
     [menu addItem:secondItem];
-    CGPoint point = self.popMenu.frame.origin;
+    NSMenuItem *separateItem = [NSMenuItem separatorItem];
+    [menu addItem:separateItem];
+    NSMenuItem *thirdItem = [[NSMenuItem alloc] initWithTitle:@"正序" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
+    [menu addItem:thirdItem];
+    NSMenuItem *fourItem = [[NSMenuItem alloc] initWithTitle:@"降序" action:@selector(onMenuItemClicked:) keyEquivalent:@""];
+    [menu addItem:fourItem];
+    CGPoint point = self.rangeBtn.frame.origin;
+    point.x = point.x + (self.rangeBtn.frame.size.width- menu.size.width)/2.f;
     [menu popUpMenuPositioningItem:nil atLocation:point inView:self];
+}
+
+- (void)onMenuItemClicked:(NSMenuItem *)item {
+    NSLog(@"lt - menu item :%@",item);
 }
 
 #pragma mark - pop menu delegate
