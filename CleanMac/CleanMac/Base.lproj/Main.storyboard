@@ -688,11 +688,37 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+                    <connections>
+                        <outlet property="dockMenu" destination="C9H-b6-QSj" id="ZFG-8g-inF"/>
+                    </connections>
+                </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <menu title="DockMenu" id="C9H-b6-QSj">
+                    <items>
+                        <menuItem title="Item 1" id="Nhp-ML-8IA">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onMenuItemClicked:" target="Voe-Tx-rLC" id="d9O-AQ-Q92"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Item 2" id="KiM-VZ-Tss">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onMenuItemClicked:" target="Voe-Tx-rLC" id="MsH-r0-b3X"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Item 3" id="O0A-WP-PlR">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onMenuItemClicked:" target="Voe-Tx-rLC" id="BgA-Mf-Rdg"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="-190"/>
+            <point key="canvasLocation" x="-122" y="-205"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -759,8 +785,21 @@
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu title="DockMenu" id="3IA-Xv-WIE">
+                    <items>
+                        <menuItem title="Item 1" id="QAu-H5-X90">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 2" id="maq-p4-2Cw">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 3" id="r5M-yl-IUV">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
             </objects>
-            <point key="canvasLocation" x="-165" y="165"/>
+            <point key="canvasLocation" x="-78" y="152"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="Ptk-MA-TCg">
@@ -909,53 +948,30 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="425" y="313" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1057"/>
-                        <toolbar key="toolbar" implicitIdentifier="9B264016-FD07-40D5-B391-206B9B909700" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="small" id="wfP-QT-Ce5">
-                            <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="01S-xt-3dO"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="gCK-ra-dQe"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="kwA-5U-Ot2"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lpA-ke-IRq"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="LUm-Pn-Rgt"/>
-                                <toolbarItem implicitItemIdentifier="022A0705-D045-49AF-A8E6-6DFD735404FE" label="open" paletteLabel="open" tag="5" image="NSFolder" selectable="YES" id="h63-kR-N56">
-                                    <size key="minSize" width="32" height="32"/>
-                                    <size key="maxSize" width="32" height="32"/>
-                                    <connections>
-                                        <action selector="onToolbarMenuItemAction:" target="wne-pV-Nvf" id="ivV-XK-ANB"/>
-                                    </connections>
-                                </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="276AB62B-A5A0-4BFF-807C-76693CE29D1F" label="Custom View" paletteLabel="Custom View" sizingBehavior="auto" id="6pp-NA-bCX">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="0Wb-6a-CmF">
-                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="按钮" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VNF-k6-Ghx">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                        </buttonCell>
-                                    </button>
-                                </toolbarItem>
-                            </allowedToolbarItems>
-                            <defaultToolbarItems>
-                                <toolbarItem reference="01S-xt-3dO"/>
-                                <toolbarItem reference="gCK-ra-dQe"/>
-                                <toolbarItem reference="LUm-Pn-Rgt"/>
-                                <toolbarItem reference="kwA-5U-Ot2"/>
-                                <toolbarItem reference="h63-kR-N56"/>
-                                <toolbarItem reference="6pp-NA-bCX"/>
-                            </defaultToolbarItems>
-                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="wne-pV-Nvf" id="bmB-Tg-9el"/>
                         </connections>
                     </window>
                     <connections>
-                        <outlet property="toolbar" destination="wfP-QT-Ce5" id="ATt-db-wLk"/>
                         <segue destination="qeJ-Z9-5By" kind="relationship" relationship="window.shadowedContentViewController" id="UPV-qZ-mTL"/>
                     </connections>
                 </windowController>
                 <customObject id="S33-WP-bPQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu title="dockMenu" id="yW0-lh-jWJ">
+                    <items>
+                        <menuItem title="Item 1" id="vCZ-Do-mfU">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 2" id="aV0-KN-vC0">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 3" id="z77-h3-nYq">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
             </objects>
-            <point key="canvasLocation" x="-708" y="100"/>
+            <point key="canvasLocation" x="-358" y="-433"/>
         </scene>
         <!--Menu Tool View Controller-->
         <scene sceneID="Wd6-MD-Abd">
@@ -968,7 +984,7 @@
                 </viewController>
                 <customObject id="8Sq-3p-fY8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-708" y="-190"/>
+            <point key="canvasLocation" x="314" y="-443"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="Dck-LM-74P">
@@ -1115,9 +1131,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eP-zV-Ioh">
-                                <rect key="frame" x="314" y="238" width="74" height="32"/>
+                                <rect key="frame" x="315" y="238" width="74" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Menu" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rze-nc-caa">
+                                <buttonCell key="cell" type="push" title="menu" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rze-nc-caa">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1126,9 +1142,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4k-Gf-shh">
-                                <rect key="frame" x="292" y="189" width="108" height="32"/>
+                                <rect key="frame" x="288" y="189" width="117" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="code menu" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Kf-iv-MMY">
+                                <buttonCell key="cell" type="push" title="code toolbar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Kf-iv-MMY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1230,7 +1246,7 @@
                                             <tableColumns>
                                                 <tableColumn width="147" minWidth="40" maxWidth="1000" id="AUZ-nC-XRu">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                        <font key="font" metaFont="controlContent" size="11"/>
+                                                        <font key="font" metaFont="menu" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>

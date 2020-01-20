@@ -11,16 +11,18 @@
 #import "CMMainPageClassTCellView.h"
 #import "CMTrashInfoDetailRowView.h"
 #import "CMTrashInfoDetailRowView.h"
+#import "CMPopMenu.h"
 
 #import "NSButton+CMAdd.h"
 
 #import "CMFileInfoModel.h"
 
-@interface CMTrashInfoDetailLeftView ()<NSTableViewDataSource, NSTableViewDelegate, CMViewProtocol>
+@interface CMTrashInfoDetailLeftView ()<NSTableViewDataSource, NSTableViewDelegate, CMViewProtocol, CMPopMenuProtocol>
 
 @property (nonatomic, strong) NSButton *allToggleBtn;
 @property (nonatomic, assign) BOOL isAllSelected;
-@property (nonatomic, strong) NSButton *rangeBtn;
+
+@property (nonatomic, strong) CMPopMenu *popMenu;
 
 @property (nonatomic, strong) NSTableView *tableView;
 
@@ -39,8 +41,7 @@ kConstString(kAllCancel, @"取消全选");
     _datasources = [NSMutableArray new];
     
     _allToggleBtn = [NSButton cm_buttonWithTitle:@"取消选择" target:self action:@selector(onAllToggleAciton:)];
-    _rangeBtn = [NSButton cm_buttonWithTitle:@"排列方式按 名称" target:self action:@selector(onRangeAction:)];
-    [self cm_addSubviews:@[_allToggleBtn, _rangeBtn]];
+    [self addSubview:_allToggleBtn];
     
     [_allToggleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(20.f);
@@ -52,8 +53,14 @@ kConstString(kAllCancel, @"取消全选");
     [self setAllToggleSelected:_isAllSelected];
     [_allToggleBtn cleanBezelView];
     
-    _rangeBtn.bezelStyle = NSBezelStyleShadowlessSquare;
-    [_rangeBtn setButtonType:NSButtonTypeRadio];
+    NSDictionary *categoryDict = @{kTitle:@"按照时间来排序", kRightIconName:@"icon_triangle_white_down_10",kCategories:@[@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"时间",kIsOn:@(YES)},@{kTitle:@"大小"}]},@{kOnImageName:@"icon_hook_black_14",kItems:@[@{kTitle:@"升序"},@{kTitle:@"降序", kIsOn:@(YES)}]}]};
+    self.popMenu = [CMPopMenu createMenuWithInfo:categoryDict onView:self];
+    [self addSubview:self.popMenu];
+    [self.popMenu mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.top.equalTo(self);
+        make.height.mas_equalTo(25.f);
+    }];
+    self.popMenu.popMenuDelegate = self;
     
 //     tableView
     NSScrollView *scrollView = [NSScrollView new];
@@ -177,6 +184,12 @@ kConstString(kAllCancel, @"取消全选");
 
 - (void)onRangeAction:(NSButton *)sender {
     
+}
+
+#pragma mark - pop menu delegate
+
+- (void)popMenu:(id)popMenu didSelectedIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"lt - didsele :%@",indexPath);
 }
 
 

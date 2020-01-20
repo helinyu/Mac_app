@@ -18,6 +18,7 @@
 @property (strong,nonatomic) NSStatusItem *rightTopStatusitem;
 @property (nonatomic ,strong) NSPopover *popover;
 @property(nonatomic)BOOL  isShow;
+@property (weak) IBOutlet NSMenu *dockMenu;
 
 @end
 
@@ -28,6 +29,7 @@
     
     [self onBind];
     [self createRightTipStatusItem];
+    [self getdSystemMenu];
 }
 - (void)applicationDidFinishLaunching:(NSNotification *)notification;{
 //    NSLog(@"lt- applicationDidFinishLaunching ;%@",self.window);
@@ -159,10 +161,10 @@
 }
 
 // 系统的方法， 右下图片youji
--(NSMenu *)applicationDockMenu:(NSApplication *)sender {
-    NSMenu *menu = [self createMenu];
-    return menu;
-}
+//-(NSMenu *)applicationDockMenu:(NSApplication *)sender {
+//    NSMenu *menu = [self createMenu];
+//    return menu;
+//}
 
 - (NSMenu *)createMenu {
     NSMenu *customMenu = [[NSMenu alloc]init];
@@ -213,5 +215,26 @@
     self.isShow = !self.isShow;
 }
 
+- (NSMenu *)applicationDockMenu:(NSApplication *)sender {
+    return self.dockMenu;
+}
+
+- (IBAction)onMenuItemClicked:(id)sender {
+    NSLog(@"lt - do what you want");
+}
+
+- (void)getdSystemMenu {
+    NSMenu *mainMenu =  [NSApp mainMenu];
+    NSArray *menuItems = [mainMenu itemArray];
+    for (NSMenuItem *item in menuItems) {
+        NSString *title = item.title;
+        NSLog(@"lt - menuItem tilte :%@",title);
+        NSMenu *subMenu = item.menu;
+        NSArray *submenus = [subMenu itemArray];
+        for (NSMenuItem *subItem in submenus) {
+            NSLog(@"lt - sub menuitem title :%@",subItem.title);
+        }
+    }
+}
 
 @end

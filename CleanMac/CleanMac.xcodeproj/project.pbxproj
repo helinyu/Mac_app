@@ -49,6 +49,7 @@
 		41284DB823D44F3500F1ADC1 /* CMMenuToolWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DB723D44F3500F1ADC1 /* CMMenuToolWindowController.m */; };
 		41284DBC23D4645600F1ADC1 /* CMMenuToolCodewindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DBA23D4645600F1ADC1 /* CMMenuToolCodewindowController.m */; };
 		41284DC023D464E600F1ADC1 /* CMMenuToolCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DBF23D464E600F1ADC1 /* CMMenuToolCodeViewController.m */; };
+		41284DC323D4BF0500F1ADC1 /* CMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 41284DC223D4BF0500F1ADC1 /* CMPopMenu.m */; };
 		413579D523C88E5400E16B14 /* NSAlert+CMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */; };
 		414E1EED233E578D00019A3E /* CMPreScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEC233E578D00019A3E /* CMPreScanView.m */; };
 		414E1EF0233E582200019A3E /* CMPreScanLeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414E1EEF233E582200019A3E /* CMPreScanLeftTitleView.m */; };
@@ -308,6 +309,8 @@
 		41284DBA23D4645600F1ADC1 /* CMMenuToolCodewindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMenuToolCodewindowController.m; sourceTree = "<group>"; };
 		41284DBE23D464E600F1ADC1 /* CMMenuToolCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMMenuToolCodeViewController.h; sourceTree = "<group>"; };
 		41284DBF23D464E600F1ADC1 /* CMMenuToolCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMMenuToolCodeViewController.m; sourceTree = "<group>"; };
+		41284DC123D4BF0500F1ADC1 /* CMPopMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPopMenu.h; sourceTree = "<group>"; };
+		41284DC223D4BF0500F1ADC1 /* CMPopMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPopMenu.m; sourceTree = "<group>"; };
 		413579D323C88E5400E16B14 /* NSAlert+CMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+CMAdd.h"; sourceTree = "<group>"; };
 		413579D423C88E5400E16B14 /* NSAlert+CMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+CMAdd.m"; sourceTree = "<group>"; };
 		414E1EEB233E578D00019A3E /* CMPreScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPreScanView.h; sourceTree = "<group>"; };
@@ -729,6 +732,15 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		41284DC423D4E53C00F1ADC1 /* CMPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				41284DC123D4BF0500F1ADC1 /* CMPopMenu.h */,
+				41284DC223D4BF0500F1ADC1 /* CMPopMenu.m */,
+			);
+			path = CMPopMenu;
+			sourceTree = "<group>";
+		};
 		414E1EEA233E574400019A3E /* PreScanView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1108,6 +1120,7 @@
 		41C098E322DC6D7100679541 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				41284DC423D4E53C00F1ADC1 /* CMPopMenu */,
 				41B8277623CF355A00F133E8 /* GradientView */,
 				4165FC0822E00A5B00656E00 /* BaseClass */,
 				4165FBBF22DF234A00656E00 /* category */,
@@ -1546,6 +1559,7 @@
 				41B827B023D1CB3000F133E8 /* CMFileInfoModel.m in Sources */,
 				41C098F922DCA8EF00679541 /* CMPopViewController.m in Sources */,
 				41284D0F23D3189F00F1ADC1 /* CMCommonTwoLevelListView.m in Sources */,
+				41284DC323D4BF0500F1ADC1 /* CMPopMenu.m in Sources */,
 				410BA10022E878DE006ABC35 /* MPContactsAuthorizer.m in Sources */,
 				41B8278C23CF441D00F133E8 /* CMScanContentView.m in Sources */,
 				4165FBDC22DF46CB00656E00 /* CMMaliciousSoftwareView.m in Sources */,
