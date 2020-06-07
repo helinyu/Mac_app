@@ -6,6 +6,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - lottie-ios (2.5.3)
   - Masonry (1.1.0)
   - MMKV (1.0.23)
   - ReactiveCocoa (2.5):
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - CocoaLumberjack (~> 3.5.3)
   - DevMateKit (~> 1.9.3)
   - FMDB
+  - lottie-ios (= 2.5.3)
   - Masonry (~> 1.1.0)
   - MMKV
   - ReactiveCocoa
@@ -44,12 +46,14 @@ SPEC REPOS:
     - YYModel
   trunk:
     - FMDB
+    - lottie-ios
     - MMKV
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   DevMateKit: a7a46f498d4c549125109d826e858a49d508cbb8
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MMKV: 031ae51aedc0af1b250922f7ed8a6b6ee2f94c4c
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
@@ -57,6 +61,6 @@ SPEC CHECKSUMS:
   Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 8ec897d3c39bc9c336649e5507e73a4e14d5a93b
+PODFILE CHECKSUM: 37f7ff25298596070155f975a9509eafe531a880
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
