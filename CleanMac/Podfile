@@ -16,6 +16,8 @@ target 'CleanMac' do
   pod 'SDWebImage', '~> 5.0.6'
   pod 'FMDB'
   pod 'ReactiveCocoa'
+	
+  pod 'WCDB', '~> 1.0.7.5'
   
   pod 'lottie-ios', '2.5.3'
   #   pod 'PermissionsKit-macOS'
